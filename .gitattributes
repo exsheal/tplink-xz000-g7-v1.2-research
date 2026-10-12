@@ -1,0 +1,9 @@
+* text=auto eol=lf
+*.md text
+*.json text
+*.tsv text
+*.py text
+*.sh text
+*.S text
+*.dts text
+*.config text
