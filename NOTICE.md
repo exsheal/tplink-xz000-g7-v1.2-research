@@ -1,7 +1,9 @@
-# Kaynak ve lisans notu
+# Ownership and licensing
 
-Bu depo bağımsız araştırma belgeleri, türetilmiş yapısal analiz katalogları ve araştırma sırasında hazırlanmış kaynak araçları içerir. TP-Link/Galachip veya operatör tarafından yayımlanmış bir firmware sürümü değildir.
+This repository contains independent research notes, derived structural catalogues and research-tool source code. It is not an official firmware release from TP-Link, Galachip or an ISP.
 
-Üçüncü taraf firmware binary’leri, kişisel cihaz dump’ları ve büyük GPL source bundle bu yayına dahil edilmez. Üretici arşivindeki bileşenlerin kendi lisansları geçerlidir; bazı sürücü/programlarda proprietary etiketleri vardır. Bir modülün GPLv2 etiketi tüm gerekli kaynakların arşivde bulunduğunu kanıtlamaz.
+Third-party firmware binaries, private device dumps and the full GPL source bundle are excluded. Components in the manufacturer's archives retain their own license terms; some drivers and applications carry proprietary labels. A GPLv2 module tag does not establish that all required source is present in an archive.
 
-Depo sahibinin yeni belge/araçlar için yeniden kullanım lisansı henüz seçilmemiştir; burada otomatik bir MIT/GPL/CC lisans grant’i yapılmaz. Uygun lisans seçildiğinde bu not ve LICENSE güncellenebilir. Model adları ve markalar ilgili sahiplerine aittir.
+The repository owner has not yet selected a reuse license for the original documents and tools. This notice does not grant an MIT, GPL or Creative Commons license to that work. A chosen license can be added later with an updated notice.
+
+Product names and trademarks belong to their respective owners.

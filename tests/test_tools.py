@@ -11,15 +11,15 @@ import unittest
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def module(name):
-    spec = importlib.util.spec_from_file_location(name, ROOT / 'tools' / (name + '.py'))
+def module(name, directory=ROOT / 'tools'):
+    spec = importlib.util.spec_from_file_location(name, directory / (name + '.py'))
     value = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(value)
     return value
 
 
-PASSWORD = module('default_admin_password')
-PUBLIC = module('verify_public')
+PASSWORD = module('admin_password')
+PUBLIC = module('check_public', ROOT / '.github' / 'scripts')
 BACKUP = module('backup_receiver')
 IMAGE = module('inspect_image')
 

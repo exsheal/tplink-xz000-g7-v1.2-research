@@ -1,19 +1,21 @@
 ---
-name: Teknik bulgu veya soru
-about: Revizyon/build ve kanıt düzeyiyle ayıklanmış bir bulgu paylaşın
+name: Device finding or question
+about: Report behavior with the hardware revision and firmware build
 title: ''
 labels: ''
 assignees: ''
 ---
 
-**Model / donanım revizyonu / ülke / firmware build:**
+**Model / reported hardware revision / region / firmware build:**
 
-**Bulgu veya soru:**
+**Finding or question:**
 
-**Ortam (web, TP-Link CLI, Linux shell, statik analiz):**
+**Interface (web, TP-Link CLI, Linux shell, offline analysis):**
 
-**Kanıt düzeyi (canlı, kod yolu, şema, belirsiz):**
+**Expected and observed behavior:**
 
-**Ayıklanmış örnek / yeniden üretim:**
+**Steps to reproduce / sanitized excerpt:**
 
-MAC, GPON SN, LOID, password/hash, abonelik/WAN, Device ID, ham dump, kalibrasyon ve özel config eklemeyin. Kimlikler için yapay değer kullanın.
+**Evidence (live observation, traced code, schema/template, unresolved):**
+
+Use synthetic identifiers. Exclude real MAC/GPON serial/LOID values, credentials, account hashes, WAN/subscription details, Device IDs, raw dumps, calibration and private configuration.

@@ -14,35 +14,35 @@ send_file() {
 }
 
 stop_backup() {
-    echo "YEDEK DURDU: $*"
-    echo "PC alicisindaki dosyalar korunuyor. Bu mesaji paylas."
+    echo "BACKUP STOPPED: $*"
+    echo "Files already received on the PC have been preserved."
     exit 1
 }
 
 awk '$1 == "Uid:" && $2 == 0 && $3 == 0 && $4 == 0 && $5 == 0 { ok=1 }
-     END { exit !ok }' /proc/self/status || stop_backup "Root yetkisi yok."
+     END { exit !ok }' /proc/self/status || stop_backup "Root authority is required."
 awk '$1 == "mtd0:" && $2 == "00800000" && $3 == "00010000" && $4 == "\"whole\"" { ok=1 }
-     END { exit !ok }' /proc/mtd || stop_backup "mtd0 beklenen 8 MiB whole degil."
-[ -c /dev/mtd0 ] && [ -r /dev/mtd0 ] || stop_backup "mtd0 okunamiyor."
+     END { exit !ok }' /proc/mtd || stop_backup "mtd0 is not the expected 8 MiB whole partition."
+[ -c /dev/mtd0 ] && [ -r /dev/mtd0 ] || stop_backup "mtd0 is not readable."
 
 case "${1-}" in
     '')
         ONT_FLASH_READS=2
-        echo "1/4: Ag aktarimi deneniyor..."
-        send_file /proc/version meta/probe.txt || stop_backup "TFTP testi basarisiz."
-        echo "2/4: Flash 1. kez dogrudan PC'ye okunuyor..."
-        send_file /dev/mtd0 flash-a.bin || stop_backup "Birinci flash aktarimi basarisiz."
-        echo "3/4: Flash 2. kez dogrudan PC'ye okunuyor..."
-        send_file /dev/mtd0 flash-b.bin || stop_backup "Ikinci flash aktarimi basarisiz."
+        echo "1/4: Testing the transfer path..."
+        send_file /proc/version meta/probe.txt || stop_backup "TFTP probe failed."
+        echo "2/4: Sending the first full flash read directly to the PC..."
+        send_file /dev/mtd0 flash-a.bin || stop_backup "First flash transfer failed."
+        echo "3/4: Sending the second full flash read directly to the PC..."
+        send_file /dev/mtd0 flash-b.bin || stop_backup "Second flash transfer failed."
         ;;
     --runtime-only)
         ONT_FLASH_READS=manual
-        echo "Tam flash aktarimlari elle yapildi; calisan sistem kopyasina geciliyor."
+        echo "Full flash reads were sent manually; continuing with runtime capture."
         ;;
-    *) stop_backup "Bilinmeyen secenek: $1" ;;
+    *) stop_backup "Unknown option: $1" ;;
 esac
 
-echo "4/4: Calisan sistemin dosyalari ve bilgiler aktariliyor..."
+echo "4/4: Sending runtime files and system information..."
 {
     echo '=== PROC VERSION ==='; cat /proc/version
     echo '=== CMDLINE ==='; cat /proc/cmdline
@@ -57,7 +57,7 @@ echo "4/4: Calisan sistemin dosyalari ve bilgiler aktariliyor..."
     echo '=== PROCESSES ==='; ps w
     echo '=== BUSYBOX ==='; busybox
 } > "$ONT_WORK/system.txt" 2>&1
-send_file "$ONT_WORK/system.txt" meta/system.txt || stop_backup "Sistem bilgisi aktarilamadi."
+send_file "$ONT_WORK/system.txt" meta/system.txt || stop_backup "System information transfer failed."
 
 set -- /etc /var
 if [ -e /tmp ]; then
@@ -72,12 +72,12 @@ while IFS= read -r ONT_ENTRY; do
         echo "METADATA_ERROR: cannot list $ONT_ENTRY" >> "$ONT_ERRORS"
     fi
 done < "$ONT_WORK/metadata-paths.txt"
-send_file "$ONT_WORK/file-metadata.txt" meta/file-metadata.txt || stop_backup "Dosya listesi aktarilamadi."
+send_file "$ONT_WORK/file-metadata.txt" meta/file-metadata.txt || stop_backup "File metadata transfer failed."
 
 if ! find "$@" -type f > "$ONT_WORK/file-list.txt" 2>> "$ONT_ERRORS"; then
     echo 'FIND_ERROR: file inventory failed' >> "$ONT_ERRORS"
 fi
-send_file "$ONT_WORK/file-list.txt" meta/file-list.txt || stop_backup "Dosya envanteri aktarilamadi."
+send_file "$ONT_WORK/file-list.txt" meta/file-list.txt || stop_backup "File inventory transfer failed."
 
 while IFS= read -r ONT_FILE; do
     case "$ONT_FILE" in
@@ -92,7 +92,7 @@ while IFS= read -r ONT_FILE; do
     fi
 done < "$ONT_WORK/file-list.txt"
 
-send_file "$ONT_ERRORS" meta/errors.txt || stop_backup "Hata raporu aktarilamadi."
+send_file "$ONT_ERRORS" meta/errors.txt || stop_backup "Error report transfer failed."
 ONT_FAILED=$(wc -l < "$ONT_ERRORS")
 {
     echo "CAPTURE_COMPLETE=1"
@@ -100,10 +100,10 @@ ONT_FAILED=$(wc -l < "$ONT_ERRORS")
     echo "FLASH_BYTES=8388608"
     echo "FLASH_READS=$ONT_FLASH_READS"
 } > "$ONT_WORK/complete.txt"
-send_file "$ONT_WORK/complete.txt" meta/complete.txt || stop_backup "Tamamlama kaydi aktarilamadi."
+send_file "$ONT_WORK/complete.txt" meta/complete.txt || stop_backup "Completion record transfer failed."
 
-echo "Aktarim bitti. PC alicisindaki dogrulama sonucunu paylas."
+echo "Transfer finished. Check the PC receiver verification report."
 if [ "$ONT_FAILED" -ne 0 ]; then
-    echo "UYARI: $ONT_FAILED dosya/arama hatasi var; ayrintilar PC'deki meta/errors.txt icinde."
+    echo "WARNING: $ONT_FAILED file/inventory errors; see meta/errors.txt on the PC."
     exit 2
 fi

@@ -1,4 +1,4 @@
-name: Publication checks
+name: Repository checks
 on: [push, pull_request]
 permissions:
   contents: read
@@ -8,6 +8,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Check public files and links
-        run: python3 tools/verify_public.py .
+        run: python3 .github/scripts/check_public.py .
       - name: Check offline tools
         run: python3 -m unittest discover -s tests -v

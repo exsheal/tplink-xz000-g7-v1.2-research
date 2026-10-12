@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""XZ000-G7 TR Build 250926 varsayılan admin parolasını MAC'ten hesapla."""
+"""Calculate the XZ000-G7 TR Build 250926 default admin password from a LAN MAC."""
 
 import argparse
 import re
@@ -12,7 +12,7 @@ def default_admin_password(mac: str) -> str:
         or re.fullmatch(r"[0-9a-fA-F]{2}(?::[0-9a-fA-F]{2}){5}", mac)
         or re.fullmatch(r"[0-9a-fA-F]{2}(?:-[0-9a-fA-F]{2}){5}", mac)
     ):
-        raise ValueError("MAC adresi 6 bayt olmalı: 02:00:00:12:34:56 gibi.")
+        raise ValueError("Expected a six-byte MAC address, for example 02:00:00:12:34:56.")
     normalized = mac.replace(":", "").replace("-", "").upper()
     return "TsPeLbN" + normalized[-8:]
 
@@ -20,11 +20,11 @@ def default_admin_password(mac: str) -> str:
 def main() -> None:
     parser = argparse.ArgumentParser(
         description=(
-            "XZ000-G7 TR v1.20 Build 250926 varsayılan parolası. "
-            "Sonradan değiştirilmiş parola veya başka firmware için geçerli olmayabilir."
+            "Calculate the conditional default password for XZ000-G7 TR v1.20 Build 250926. "
+            "The result does not recover a changed password or establish defaults for another build."
         )
     )
-    parser.add_argument("mac", help="ONT'nin gerçek LAN MAC adresi")
+    parser.add_argument("mac", help="the ONT's LAN MAC address")
     args = parser.parse_args()
     try:
         password = default_admin_password(args.mac)

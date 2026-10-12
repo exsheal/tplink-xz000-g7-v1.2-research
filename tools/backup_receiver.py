@@ -80,7 +80,7 @@ def verify_backup(folder, extract=False):
                     target = target_dir / f"{partition}.bin"
                     if target.exists():
                         if sha256_file(target) != entry["sha256"]:
-                            raise ValueError(f"Mevcut bolum kopyasi farkli: {target}")
+                            raise ValueError(f"Existing partition copy differs: {target}")
                     else:
                         with target.open("xb") as output:
                             output.write(data)
@@ -124,7 +124,7 @@ class Receiver:
     def abort(self, reason):
         if self.active is not None:
             self.active["stream"].close()
-            self.announce(f"YARIM AKTARIM KORUNDU: {self.active['name']} ({reason})", flush=True)
+            self.announce(f"PARTIAL TRANSFER PRESERVED: {self.active['name']} ({reason})", flush=True)
             self.active = None
 
     def allowed_name(self, name):
@@ -141,7 +141,7 @@ class Receiver:
             return None
         self.recent = {key: value for key, value in self.recent.items() if value[3] > now}
         if self.active and now - self.active["activity"] > 60:
-            self.abort("60 saniye veri gelmedi")
+            self.abort("no data received for 60 seconds")
         if len(packet) < 2:
             return error_packet(4, "Malformed packet")
         opcode = struct.unpack("!H", packet[:2])[0]
@@ -168,13 +168,13 @@ class Receiver:
                 self.active = {"name": name, "target": target, "partial": partial, "stream": stream,
                                "peer": peer, "request": packet, "ack": struct.pack("!HH", 4, 0),
                                "block": 0, "payload": None, "size": 0, "hash": hashlib.sha256(), "activity": now}
-                self.announce(f"ALINIYOR: {name}", flush=True)
+                self.announce(f"RECEIVING: {name}", flush=True)
                 return self.active["ack"]
             except (OSError, UnicodeError, ValueError) as error:
                 return error_packet(2, str(error))
         if opcode == 5:
             if self.active and peer == self.active["peer"]:
-                self.abort("istemci hata bildirdi")
+                self.abort("client reported an error")
             return None
         if opcode != 3 or len(packet) < 4 or len(packet) > 516:
             return error_packet(4, "Expected a 512-byte DATA packet")
@@ -197,7 +197,7 @@ class Receiver:
             return state["ack"]
         size = state["size"] + len(payload)
         if size > FLASH_SIZE or self.total_bytes + size > 64 * 1024 * 1024:
-            self.abort("boyut siniri asildi")
+            self.abort("size limit exceeded")
             return error_packet(3, "File or session size limit exceeded")
         try:
             state["stream"].write(payload)
@@ -207,14 +207,14 @@ class Receiver:
             state["payload"] = payload
             state["ack"] = struct.pack("!HH", 4, block)
             if state["name"] in ("flash-a.bin", "flash-b.bin") and size and len(payload) == 512 and size % (1024 * 1024) == 0:
-                self.announce(f"ILERLEME: {state['name']} {size // (1024 * 1024)}/8 MiB", flush=True)
+                self.announce(f"PROGRESS: {state['name']} {size // (1024 * 1024)}/8 MiB", flush=True)
             if len(payload) == 512:
                 return state["ack"]
             if state["name"] in ("flash-a.bin", "flash-b.bin") and size != FLASH_SIZE:
-                self.abort(f"tam flash boyutu {size}, beklenen {FLASH_SIZE}")
+                self.abort(f"full flash size is {size}; expected {FLASH_SIZE}")
                 return error_packet(3, "Flash size must be exactly 8388608 bytes")
             if state["name"] == "meta/probe.txt" and size == 0:
-                self.abort("sifir baytlik test")
+                self.abort("empty probe file")
                 return error_packet(4, "Probe file must not be empty")
             state["stream"].flush()
             os.fsync(state["stream"].fileno())
@@ -225,7 +225,7 @@ class Receiver:
             atomic_json(self.folder / "received-files.json", self.files)
             self.recent[peer] = (block, payload, state["ack"], now + 30)
             self.active = None
-            self.announce(f"KAYDEDILDI: {state['name']} ({size} bayt)", flush=True)
+            self.announce(f"SAVED: {state['name']} ({size} bytes)", flush=True)
             if state["name"] == "meta/complete.txt":
                 self.completed_at = now
             return state["ack"]
@@ -255,21 +255,21 @@ def script_handler(script_bytes, peer_ip):
 
 
 def show_report(report, folder):
-    print(f"\nYEDEK KLASORU: {folder}", flush=True)
+    print(f"\nBACKUP DIRECTORY: {folder}", flush=True)
     if report["full_flash_verified"]:
-        print("TAM FLASH DOGRULANDI: Iki okuma da 8388608 bayt; SHA-256 ayni.", flush=True)
+        print("FULL FLASH VERIFIED: Both reads contain 8388608 bytes and have matching SHA-256 hashes.", flush=True)
     else:
-        print("UYARI: Tam flash kopyalari eksik veya farkli; dosyalar korundu.", flush=True)
-    print(f"CALISAN SISTEM: tamamlanma kaydi={report['capture_complete']}, hata={report['runtime_errors']}", flush=True)
+        print("WARNING: Full flash copies are missing or differ; saved files have been preserved.", flush=True)
+    print(f"RUNTIME CAPTURE: completion record={report['capture_complete']}, errors={report['runtime_errors']}", flush=True)
 
 
 def main():
-    parser = argparse.ArgumentParser(description="XZ000-G7 iki okumali tam flash ve sistem yedegi alicisi")
+    parser = argparse.ArgumentParser(description="Receive and verify two full XZ000-G7 flash reads and a runtime file capture")
     parser.add_argument("--bind", default="192.168.10.2")
     parser.add_argument("--peer", default="192.168.10.254")
     parser.add_argument("--port", type=int, default=1069)
     parser.add_argument("--http-port", type=int, default=8000)
-    parser.add_argument("--verify", type=Path, metavar="YEDEK_KLASORU")
+    parser.add_argument("--verify", type=Path, metavar="BACKUP_DIRECTORY")
     args = parser.parse_args()
     os.umask(0o077)
     if args.verify:
@@ -279,7 +279,7 @@ def main():
     bind = str(ipaddress.IPv4Address(args.bind))
     peer_ip = str(ipaddress.IPv4Address(args.peer))
     if not (1024 <= args.port <= 65535 and 1024 <= args.http_port <= 65535):
-        parser.error("Portlar 1024..65535 araliginda olmali.")
+        parser.error("Ports must be in the range 1024..65535.")
     base = Path(__file__).resolve().parent
     script = (base / "backup.sh").read_text(encoding="utf-8")
     script = script.replace("ONT_PC_IP=192.168.10.2", f"ONT_PC_IP={bind}").replace("ONT_PC_PORT=1069", f"ONT_PC_PORT={args.port}")
@@ -293,9 +293,9 @@ def main():
         folder.mkdir(mode=0o700, parents=True)
         receiver = Receiver(folder, peer_ip)
         thread.start()
-        print(f"HAZIR: TFTP {bind}:{args.port}, betik HTTP {bind}:{args.http_port}", flush=True)
-        print(f"YEDEK KLASORU: {folder}", flush=True)
-        print("ONT UART terminalinde sirayla calistir:", flush=True)
+        print(f"READY: TFTP {bind}:{args.port}, script HTTP {bind}:{args.http_port}", flush=True)
+        print(f"BACKUP DIRECTORY: {folder}", flush=True)
+        print("Run these commands in the ONT Linux shell, one at a time:", flush=True)
         print(f"wget -O /var/tmp/backup.sh http://{bind}:{args.http_port}/backup.sh", flush=True)
         print("sh /var/tmp/backup.sh", flush=True)
         try:
@@ -304,15 +304,15 @@ def main():
                     packet, remote = udp.recvfrom(65535)
                 except socket.timeout:
                     if receiver.active and time.monotonic() - receiver.active["activity"] > 60:
-                        receiver.abort("60 saniye veri gelmedi")
+                        receiver.abort("no data received for 60 seconds")
                     continue
                 reply = receiver.handle(packet, remote)
                 if reply is not None:
                     udp.sendto(reply, remote)
         except KeyboardInterrupt:
-            print("\nAlici durduruldu; alinmis dosyalar korunuyor.", flush=True)
+            print("\nReceiver stopped; saved files have been preserved.", flush=True)
         finally:
-            receiver.abort("alici kapatildi")
+            receiver.abort("receiver stopped")
             http.shutdown()
             http.server_close()
         report = verify_backup(folder, extract=True)
@@ -324,5 +324,5 @@ if __name__ == "__main__":
     try:
         sys.exit(main())
     except (OSError, ValueError) as error:
-        print(f"ALICI BASLATILAMADI/DOGRULANAMADI: {error}", file=sys.stderr)
+        print(f"RECEIVER ERROR: {error}", file=sys.stderr)
         sys.exit(1)
