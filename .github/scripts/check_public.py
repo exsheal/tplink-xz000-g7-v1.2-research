@@ -20,7 +20,7 @@ SKIP_DIRS = {'.git', '__pycache__', 'local-private'}
 BLOCKED_DIRS = {'backups', 'logs', 'analysis', 'runtime', 'serve'}
 # Approved README photograph, pinned to the reviewed bytes.
 APPROVED_IMAGES = {
-    'assets/xz000-g7.png': '1317a46d9066af0bbe0488916a9cce37735250c9273daf822d81fa4a4589bbc5',
+    'assets/xz000-g7.webp': '00a67a04e4f621bf4fbbaa282e2ca62c5412f5e76e12e60bce7c9eca09dad6f8',
 }
 EXAMPLE_MACS = {'02:00:00:12:34:56', '02-00-00-12-34-56',
                 '00:00:00:00:00:00', '00-00-00-00-00-00',
