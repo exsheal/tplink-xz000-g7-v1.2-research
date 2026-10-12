@@ -1,7 +1,9 @@
 <h1 align="center">TP-Link XZ000-G7 v1.2</h1>
-<p align="center">
-  <img src="assets/xz000-g7.png" alt="TP-Link XZ000-G7 ONT" width="420">
-</p>
+<div align="center">
+
+![TP-Link XZ000-G7 ONT](./assets/xz000-g7.png)
+
+</div>
 <p align="center"><strong>Local access · Admin password · Flash backups · Firmware internals</strong></p>
 <p align="center">TR variant · Hardware revision v1.20 · Galachip GC1601</p>
 
