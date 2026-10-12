@@ -18,6 +18,10 @@ ALLOWED_SUFFIXES = {'.md', '.json', '.tsv', '.txt', '.py', '.sh', '.S', '.dts',
 ALLOWED_DOTFILES = {'.gitignore', '.gitattributes'}
 SKIP_DIRS = {'.git', '__pycache__', 'local-private'}
 BLOCKED_DIRS = {'backups', 'logs', 'analysis', 'runtime', 'serve'}
+# Approved README photograph, pinned to the reviewed bytes.
+APPROVED_IMAGES = {
+    'assets/xz000-g7.png': '1317a46d9066af0bbe0488916a9cce37735250c9273daf822d81fa4a4589bbc5',
+}
 EXAMPLE_MACS = {'02:00:00:12:34:56', '02-00-00-12-34-56',
                 '00:00:00:00:00:00', '00-00-00-00-00-00',
                 'FF:FF:FF:FF:FF:FF', 'FF-FF-FF-FF-FF-FF'}  # Ethernet broadcast
@@ -27,6 +31,7 @@ PRIVATE_KEY = re.compile(r'-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----')
 TOKEN = re.compile(r'\b(?:gh[pousr]_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,})\b')
 LOCAL_HOME = re.compile(r'/home/[A-Za-z0-9_.-]+(?:/|\b)')
 LINK = re.compile(r'(?<!!)\[[^\]\n]+\]\(([^)\n]+)\)|!\[[^\]\n]*\]\(([^)\n]+)\)')
+HTML_IMAGE = re.compile(r'''<img\b[^>]*\bsrc=["']([^"']+)["']''', re.IGNORECASE)
 
 
 def scan(root, private_fingerprints=()):
@@ -51,9 +56,13 @@ def scan(root, private_fingerprints=()):
         files.append(path)
         if any(part in BLOCKED_DIRS for part in relative.parts):
             fail(name, 'private-directory')
+        raw = path.read_bytes()
+        if name in APPROVED_IMAGES:
+            if hashlib.sha256(raw).hexdigest() != APPROVED_IMAGES[name]:
+                fail(name, 'unapproved-image-content')
+            continue
         if path.suffix not in ALLOWED_SUFFIXES and path.name not in ALLOWED_DOTFILES:
             fail(name, 'unapproved-file-type')
-        raw = path.read_bytes()
         if raw.startswith((b'\x7fELF', b'PK\x03\x04', b'\x1f\x8b', b'hsqs')) or b'\x00' in raw:
             fail(name, 'binary-content')
             continue
@@ -77,8 +86,10 @@ def scan(root, private_fingerprints=()):
             except ValueError:
                 fail(name, 'invalid-json')
         if path.suffix == '.md':
-            for match in LINK.finditer(content):
-                url = (match.group(1) or match.group(2)).strip().strip('<>')
+            urls = [match.group(1) or match.group(2) for match in LINK.finditer(content)]
+            urls.extend(HTML_IMAGE.findall(content))
+            for url in urls:
+                url = url.strip().strip('<>')
                 parsed = urlsplit(url)
                 if parsed.scheme or url.startswith('#'):
                     continue
