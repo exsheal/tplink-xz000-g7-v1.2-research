@@ -1,0 +1,19 @@
+{
+  "model": "TP-Link XZ000-G7",
+  "public_revision": "v1.2",
+  "device_reported_revision": "v1.20",
+  "region": "TR",
+  "active_build": "250926",
+  "previous_bank_build": "250603",
+  "input_inventory_records": 857,
+  "distinct_regular_contents": 333,
+  "numbered_text_lines_including_duplicates": 70249,
+  "active_rootfs_regular_files": 255,
+  "active_elf": 49,
+  "cli_entries": 130,
+  "web_pages": 22,
+  "full_semantic_proof_of_all_native_functions": false,
+  "private_data_included": false,
+  "gpl_semantic_scope": "selected build/platform sources, not all archive files",
+  "sources_modified": false
+}

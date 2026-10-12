@@ -1,0 +1,9 @@
+{
+  "sdk/gc1601a/apps/private": false,
+  "sdk/gc1601a/modules/Makefile.mk": false,
+  "platform/apps/private": false,
+  "platform/build/makes/Makefile.apps.private": false,
+  "platform/build/makes/Makefile.kmod.private": false,
+  "platform/build/model/XZ000-G7/TR": false,
+  "platform/build/model/XZ000-G7/UN/mkimage4": false
+}

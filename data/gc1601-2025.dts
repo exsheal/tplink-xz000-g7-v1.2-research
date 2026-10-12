@@ -1,0 +1,433 @@
+/dts-v1/;
+
+/ {
+	#address-cells = <0x01>;
+	#size-cells = <0x01>;
+	model = "gc1601";
+	compatible = "faraday,gc1601";
+
+	chosen {
+		bootargs = "console=ttyS0,115200n8 root=/dev/mtdblock2 mtdparts=a0000000.ftspi020:256k(uboot),64k(hwconfig),7872k(rootfs-1),7872k(rootfs-2),320k(userconfig) init=/sbin/init mem=32M";
+	};
+
+	aliases {
+	};
+
+	memory {
+		device_type = "memory";
+		reg = <0x40000000 0x2000000>;
+	};
+
+	cpus {
+		#address-cells = <0x01>;
+		#size-cells = <0x00>;
+	};
+
+	reserved-memory {
+		#address-cells = <0x01>;
+		#size-cells = <0x01>;
+		ranges;
+
+		sdk_reserved@41c00000 {
+			compatible = "shared-dma-pool";
+			reg = <0x41c00000 0x400000>;
+			alignment = <0x1000>;
+			no-map;
+			linux,phandle = <0x0f>;
+			phandle = <0x0f>;
+		};
+	};
+
+	clocks {
+		compatible = "faraday,gc1601-clk";
+
+		osc0-25mhz {
+			#clock-cells = <0x00>;
+			compatible = "gc1601,osc0";
+			clock-frequency = <0x17d7840>;
+			clock-output-names = "osc0";
+			linux,phandle = <0x01>;
+			phandle = <0x01>;
+		};
+
+		pll0_ckout1 {
+			#clock-cells = <0x00>;
+			compatible = "gc1601,pll0_ckout1";
+			clock-mult = <0x40>;
+			clock-div = <0x03>;
+			clock-output-names = "pll0_ckout1";
+			clocks = <0x01>;
+			linux,phandle = <0x02>;
+			phandle = <0x02>;
+		};
+
+		pll0_ckout2 {
+			#clock-cells = <0x00>;
+			compatible = "gc1601,pll0_ckout2";
+			clock-mult = <0x40>;
+			clock-div = <0x04>;
+			clock-output-names = "pll0_ckout2";
+			clocks = <0x01>;
+			linux,phandle = <0x04>;
+			phandle = <0x04>;
+		};
+
+		pll0_ckout3 {
+			#clock-cells = <0x00>;
+			compatible = "gc1601,pll0_ckout3";
+			clock-mult = <0x40>;
+			clock-div = <0x05>;
+			clock-output-names = "pll0_ckout3";
+			clocks = <0x01>;
+			linux,phandle = <0x03>;
+			phandle = <0x03>;
+		};
+
+		aclk {
+			#clock-cells = <0x00>;
+			compatible = "gc1601,aclk";
+			clock-mult = <0x01>;
+			clock-div = <0x04>;
+			clock-output-names = "aclk";
+			clocks = <0x02>;
+		};
+
+		apb {
+			#clock-cells = <0x00>;
+			compatible = "gc1601,apb";
+			clock-mult = <0x01>;
+			clock-div = <0x04>;
+			clock-output-names = "APB";
+			clocks = <0x02>;
+			linux,phandle = <0x06>;
+			phandle = <0x06>;
+		};
+
+		pclk {
+			#clock-cells = <0x00>;
+			compatible = "gc1601,pclk";
+			clock-mult = <0x01>;
+			clock-div = <0x04>;
+			clock-output-names = "pclk";
+			clocks = <0x02>;
+			linux,phandle = <0x08>;
+			phandle = <0x08>;
+		};
+
+		cpu {
+			#clock-cells = <0x00>;
+			compatible = "gc1601,cpu";
+			clock-mult = <0x01>;
+			clock-div = <0x01>;
+			clock-output-names = "cpu";
+			clocks = <0x02>;
+		};
+
+		ddrmclk {
+			#clock-cells = <0x00>;
+			compatible = "gc1601,ddrmclk";
+			clock-mult = <0x01>;
+			clock-div = <0x01>;
+			clock-output-names = "ddrmclk";
+			clocks = <0x02 0x03 0x04>;
+		};
+
+		spiclk {
+			#clock-cells = <0x00>;
+			compatible = "gc1601,spiclk";
+			clock-mult = <0x01>;
+			clock-div = <0x08>;
+			clock-output-names = "spiclk";
+			clocks = <0x04>;
+			linux,phandle = <0x07>;
+			phandle = <0x07>;
+		};
+	};
+
+	pinctrl {
+		compatible = "faraday,pinctrl-gc1601", "ftscu010-pinmux";
+		reg = <0x90a00000 0x1000>;
+		status = "okay";
+
+		clk_gen {
+			scu010,function = <0x09>;
+		};
+
+		gphy_led {
+			scu010,function = <0x08>;
+		};
+
+		gpio_1 {
+			scu010,function = <0x00>;
+			linux,phandle = <0x0a>;
+			phandle = <0x0a>;
+		};
+
+		gpio_0 {
+			scu010,function = <0x00>;
+			linux,phandle = <0x0c>;
+			phandle = <0x0c>;
+		};
+
+		gpio_2 {
+			scu010,function = <0x00>;
+			linux,phandle = <0x0d>;
+			phandle = <0x0d>;
+		};
+
+		gpio_13 {
+			scu010,function = <0x00>;
+			linux,phandle = <0x0e>;
+			phandle = <0x0e>;
+		};
+
+		gpio_19 {
+			scu010,function = <0x00>;
+			linux,phandle = <0x15>;
+			phandle = <0x15>;
+		};
+
+		mdio_0 {
+			scu010,function = <0x02>;
+			linux,phandle = <0x12>;
+			phandle = <0x12>;
+		};
+
+		i2c_0 {
+			scu010,function = <0x03>;
+		};
+
+		i2c_1 {
+			scu010,function = <0x04>;
+			linux,phandle = <0x09>;
+			phandle = <0x09>;
+		};
+	};
+
+	soc {
+		#address-cells = <0x01>;
+		#size-cells = <0x01>;
+		compatible = "simple-bus";
+		interrupt-parent = <0x05>;
+		ranges;
+
+		scu@90a00000 {
+			compatible = "faraday,ftscu100";
+			reg = <0x90a00000 0x20000>;
+		};
+
+		interrupt-controller@96000000 {
+			compatible = "faraday,ftintc030";
+			interrupt-controller;
+			#interrupt-cells = <0x02>;
+			reg = <0x96000000 0x1000>;
+			cpu-match-id = <0x01>;
+			linux,phandle = <0x05>;
+			phandle = <0x05>;
+		};
+
+		timer@90200000 {
+			compatible = "faraday,fttmr010";
+			interrupt-parent = <0x05>;
+			interrupts = <0x07 0x04>;
+			reg = <0x90200000 0x100>;
+			clocks = <0x06>;
+			clock-names = "APB";
+			status = "okay";
+		};
+
+		timer@90300000 {
+			compatible = "faraday,fttmr010";
+			interrupt-parent = <0x05>;
+			interrupts = <0x0b 0x04>;
+			reg = <0x90300000 0x100>;
+			clocks = <0x06>;
+			clock-names = "APB";
+			status = "disabled";
+		};
+
+		serial@90400000 {
+			compatible = "faraday,ftuart010", "ns16550a";
+			reg = <0x90400000 0x1000>;
+			clock-frequency = <0x1f78a40>;
+			interrupts = <0x0c 0x04>;
+			reg-shift = <0x02>;
+		};
+
+		ftspi020@a0000000 {
+			compatible = "faraday,ftspi020";
+			reg = <0xa0000000 0x1000>;
+			interrupts = <0x0e 0x04>;
+			clocks = <0x07>;
+			clock-names = "spiclk";
+			status = "okay";
+		};
+
+		gpio@90900000s {
+			compatible = "faraday,ftgpio010";
+			reg = <0x90900000 0x1000>;
+			dev_id = <0x00>;
+			gpio-controller;
+			#gpio-cells = <0x02>;
+			interrupts = <0x01 0x04>;
+			status = "okay";
+			linux,phandle = <0x0b>;
+			phandle = <0x0b>;
+		};
+
+		wdt@90800000 {
+			compatible = "faraday,ftwdt010";
+			interrupt-parent = <0x05>;
+			reg = <0x90800000 0x1000>;
+			interrupts = <0x0d 0x01>;
+			clocks = <0x08>;
+			clock-names = "pclk";
+			status = "okay";
+		};
+
+		i2c0@90600000 {
+			compatible = "faraday,ftiic010";
+			interrupt-parent = <0x05>;
+			#address-cells = <0x01>;
+			#size-cells = <0x00>;
+			reg = <0x90600000 0x1000>;
+			dev_id = <0x00>;
+			interrupts = <0x02 0x04>;
+			clocks = <0x08>;
+			clock-names = "pclk";
+			status = "okay";
+		};
+
+		i2c@90700000 {
+			compatible = "faraday,ftiic010";
+			interrupt-parent = <0x05>;
+			reg = <0x90700000 0x1000>;
+			dev_id = <0x01>;
+			interrupts = <0x03 0x04>;
+			clocks = <0x08>;
+			clock-names = "pclk";
+			pinctrl-0 = <0x09>;
+			pinctrl-names = "default";
+			status = "disabled";
+		};
+
+		serdes@91000000 {
+			compatible = "gala,pon_serdes";
+			reg = <0x91000000 0x300000 0x91300000 0x100>;
+			status = "okay";
+		};
+
+		gphy0 {
+			compatible = "faraday,gphy";
+			reg = <0x90c00000 0x10000>;
+			status = "okay";
+		};
+
+		phy-leds {
+			compatible = "gpio-leds";
+			pinctrl-0 = <0x0a>;
+			pinctrl-names = "default";
+
+			gpio-leds@1 {
+				label = "phy:manual:led0";
+				gpios = <0x0b 0x01 0x01>;
+				linux,default-trigger = "gphy_led0_manaul";
+				retain-state-suspended;
+				default-state = "off";
+				status = "okay";
+				linux,phandle = <0x14>;
+				phandle = <0x14>;
+			};
+		};
+
+		user-leds {
+			compatible = "gpio-leds";
+			pinctrl-0 = <0x0c 0x0d 0x0e>;
+			pinctrl-names = "default";
+
+			gpio-leds@0 {
+				label = "pwr_led";
+				gpios = <0x0b 0x00 0x01>;
+				retain-state-suspended;
+				default-state = "on";
+				status = "okay";
+			};
+
+			gpio-leds@2 {
+				label = "pon_led";
+				gpios = <0x0b 0x02 0x01>;
+				linux,default-trigger = "pon_led_trigger";
+				retain-state-suspended;
+				default-state = "off";
+				status = "okay";
+				linux,phandle = <0x10>;
+				phandle = <0x10>;
+			};
+
+			gpio-leds@13 {
+				label = "los_led";
+				gpios = <0x0b 0x0d 0x01>;
+				linux,default-trigger = "los_led_trigger";
+				retain-state-suspended;
+				default-state = "off";
+				status = "okay";
+				linux,phandle = <0x11>;
+				phandle = <0x11>;
+			};
+		};
+
+		xpon_sdk {
+			compatible = "xpon,sdk";
+			interrupt-parent = <0x05>;
+			reg = <0x90c00000 0x1000000 0x90100000 0x1000>;
+			interrupts = <0x14 0x04 0x12 0x04 0x13 0x01 0x15 0x01 0x16 0x04 0x17 0x04>;
+			interrupt-names = "edev", "ponmac", "mci", "oam";
+			memory-region = <0x0f>;
+			chip_id = <0x01>;
+			phy_dbg_reg = <0x91400008>;
+			status = "ok";
+			led-handle = <0x10 0x11>;
+
+			gala_mdio0 {
+				compatible = "gala,gala_mdio0";
+				#address-cells = <0x01>;
+				#size-cells = <0x00>;
+				pinctrl-0 = <0x12>;
+				pinctrl-names = "default";
+				status = "okay";
+
+				ethernet-phy@0 {
+					reg = <0x18>;
+					linux,phandle = <0x13>;
+					phandle = <0x13>;
+				};
+			};
+
+			ethernet@0 {
+				compatible = "gala,sw_uni";
+				cell-index = <0x00>;
+				mac-address = [00 00 00 00 00 00];
+				phy-mode = "sgmii";
+				phy-handle = <0x13>;
+				led-handle = <0x14>;
+				max-frame-size = <0x2328>;
+				status = "okay";
+			};
+		};
+
+		sys-buttons {
+			compatible = "gpio-keys-polled";
+			autorepeat;
+			poll-interval = <0x0a>;
+			pinctrl-0 = <0x15>;
+			pinctrl-names = "default";
+
+			reset_button {
+				label = "reset_button";
+				gpios = <0x0b 0x13 0x01>;
+				linux,code = <0x100>;
+				status = "okay";
+			};
+		};
+	};
+};

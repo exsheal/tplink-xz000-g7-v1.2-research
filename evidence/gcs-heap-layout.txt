@@ -1,0 +1,2261 @@
+0000f118 <gcsXml_getDefaultParameter>:
+    f118: e92d4ff0     	push	{r4, r5, r6, r7, r8, r9, r10, r11, lr}
+    f11c: e59f42c8     	ldr	r4, [pc, #0x2c8]        @ 0xf3ec <gcsXml_getDefaultParameter+0x2d4>
+    f120: e59f52c8     	ldr	r5, [pc, #0x2c8]        @ 0xf3f0 <gcsXml_getDefaultParameter+0x2d8>
+    f124: e59fc2c8     	ldr	r12, [pc, #0x2c8]       @ 0xf3f4 <gcsXml_getDefaultParameter+0x2dc>
+    f128: e08f4004     	add	r4, pc, r4  ; PIC literal "gcsXml_getDefaultParameter" @0x36650
+    f12c: e24dd02c     	sub	sp, sp, #44
+    f130: e08fc00c     	add	r12, pc, r12  ; PIC literal "enter\n" @0x3674c
+    f134: e08f5005     	add	r5, pc, r5  ; PIC literal "gcs_directParameter.c" @0x36718
+    f138: e2844078     	add	r4, r4, #120
+    f13c: e58d000c     	str	r0, [sp, #0xc]
+    f140: e58d2008     	str	r2, [sp, #0x8]
+    f144: e1a0b003     	mov	r11, r3
+    f148: e1a0a001     	mov	r10, r1
+    f14c: e1a00005     	mov	r0, r5
+    f150: e1a01004     	mov	r1, r4
+    f154: e58dc000     	str	r12, [sp]
+    f158: e59f2298     	ldr	r2, [pc, #0x298]        @ 0xf3f8 <gcsXml_getDefaultParameter+0x2e0>
+    f15c: e3a03005     	mov	r3, #5
+    f160: ebffda2f     	bl	0x5a24 <log_print@plt>  @ imm = #-0x9744
+    f164: e35b0000     	cmp	r11, #0
+    f168: 0a000095     	beq	0xf3c4 <gcsXml_getDefaultParameter+0x2ac> @ imm = #0x254
+    f16c: e35a0000     	cmp	r10, #0
+    f170: 159d300c     	ldrne	r3, [sp, #0xc]
+    f174: e59d5008     	ldr	r5, [sp, #0x8]
+    f178: 15933008     	ldrne	r3, [r3, #0x8]
+    f17c: e1a04285     	lsl	r4, r5, #5
+    f180: e1a00004     	mov	r0, r4
+    f184: 1083a00a     	addne	r10, r3, r10
+    f188: ebffda7c     	bl	0x5b80 <malloc@plt>     @ imm = #-0x9610
+    f18c: e1a02004     	mov	r2, r4
+    f190: e3a01000     	mov	r1, #0
+    f194: e1a06000     	mov	r6, r0
+    f198: e58d0014     	str	r0, [sp, #0x14]
+    f19c: ebffdba3     	bl	0x6030 <memset@plt>     @ imm = #-0x9174
+    f1a0: e3550000     	cmp	r5, #0
+    f1a4: da00005d     	ble	0xf320 <gcsXml_getDefaultParameter+0x208> @ imm = #0x174
+    f1a8: e59f124c     	ldr	r1, [pc, #0x24c]        @ 0xf3fc <gcsXml_getDefaultParameter+0x2e4>
+    f1ac: e59f224c     	ldr	r2, [pc, #0x24c]        @ 0xf400 <gcsXml_getDefaultParameter+0x2e8>
+    f1b0: e08f1001     	add	r1, pc, r1  ; PIC literal "gcs_directParameter.c" @0x36718
+    f1b4: e59f3248     	ldr	r3, [pc, #0x248]        @ 0xf404 <gcsXml_getDefaultParameter+0x2ec>
+    f1b8: e58d1018     	str	r1, [sp, #0x18]
+    f1bc: e59f1244     	ldr	r1, [pc, #0x244]        @ 0xf408 <gcsXml_getDefaultParameter+0x2f0>
+    f1c0: e08f2002     	add	r2, pc, r2  ; PIC literal "gcsXml_getDefaultParameter" @0x36650
+    f1c4: e08f3003     	add	r3, pc, r3  ; PIC literal "gcsXml_getDefaultParameter" @0x36650
+    f1c8: e08f1001     	add	r1, pc, r1  ; PIC literal "Warning!! Name = %p.\n" @0x36788
+    f1cc: e2822078     	add	r2, r2, #120
+    f1d0: e2833078     	add	r3, r3, #120
+    f1d4: e2869020     	add	r9, r6, #32
+    f1d8: e58d1020     	str	r1, [sp, #0x20]
+    f1dc: e58d201c     	str	r2, [sp, #0x1c]
+    f1e0: e58d3024     	str	r3, [sp, #0x24]
+    f1e4: e51a3004     	ldr	r3, [r10, #-0x4]
+    f1e8: e51a6008     	ldr	r6, [r10, #-0x8]
+    f1ec: e3530000     	cmp	r3, #0
+    f1f0: 159d200c     	ldrne	r2, [sp, #0xc]
+    f1f4: 01a07003     	moveq	r7, r3
+    f1f8: 15922008     	ldrne	r2, [r2, #0x8]
+    f1fc: e1a0c00b     	mov	r12, r11
+    f200: 10827003     	addne	r7, r2, r3
+    f204: e3560000     	cmp	r6, #0
+    f208: 0a000027     	beq	0xf2ac <gcsXml_getDefaultParameter+0x194> @ imm = #0x9c
+    f20c: e59d300c     	ldr	r3, [sp, #0xc]
+    f210: e49b5004     	ldr	r5, [r11], #4
+    f214: e5933008     	ldr	r3, [r3, #0x8]
+    f218: e3550000     	cmp	r5, #0
+    f21c: e0836006     	add	r6, r3, r6
+    f220: e58d3010     	str	r3, [sp, #0x10]
+    f224: e1d642b8     	ldrh	r4, [r6, #40]
+    f228: 0a00004c     	beq	0xf360 <gcsXml_getDefaultParameter+0x248> @ imm = #0x130
+    f22c: e3540000     	cmp	r4, #0
+    f230: 0a00000c     	beq	0xf268 <gcsXml_getDefaultParameter+0x150> @ imm = #0x30
+    f234: e5d78000     	ldrb	r8, [r7]
+    f238: e3580004     	cmp	r8, #4
+    f23c: 0a000004     	beq	0xf254 <gcsXml_getDefaultParameter+0x13c> @ imm = #0x10
+    f240: e1a00005     	mov	r0, r5
+    f244: e2871001     	add	r1, r7, #1
+    f248: ebffdba8     	bl	0x60f0 <strcmp@plt>     @ imm = #-0x9160
+    f24c: e3500000     	cmp	r0, #0
+    f250: 0a000017     	beq	0xf2b4 <gcsXml_getDefaultParameter+0x19c> @ imm = #0x5c
+    f254: e2444001     	sub	r4, r4, #1
+    f258: e1a04804     	lsl	r4, r4, #16
+    f25c: e1b04824     	lsrs	r4, r4, #16
+    f260: e0877008     	add	r7, r7, r8
+    f264: 1afffff2     	bne	0xf234 <gcsXml_getDefaultParameter+0x11c> @ imm = #-0x38
+    f268: e59d0014     	ldr	r0, [sp, #0x14]
+    f26c: ebffdc62     	bl	0x63fc <free@plt>       @ imm = #-0x8e78
+    f270: e59f1194     	ldr	r1, [pc, #0x194]        @ 0xf40c <gcsXml_getDefaultParameter+0x2f4>
+    f274: e59f3194     	ldr	r3, [pc, #0x194]        @ 0xf410 <gcsXml_getDefaultParameter+0x2f8>
+    f278: e59f0194     	ldr	r0, [pc, #0x194]        @ 0xf414 <gcsXml_getDefaultParameter+0x2fc>
+    f27c: e08f3003     	add	r3, pc, r3  ; PIC literal "cannot find parameter, %s\n" @0x367a0
+    f280: e08f1001     	add	r1, pc, r1  ; PIC literal "gcsXml_getDefaultParameter" @0x36650
+    f284: e58d3000     	str	r3, [sp]
+    f288: e58d5004     	str	r5, [sp, #0x4]
+    f28c: e2811078     	add	r1, r1, #120
+    f290: e08f0000     	add	r0, pc, r0  ; PIC literal "gcs_directParameter.c" @0x36718
+    f294: e59f217c     	ldr	r2, [pc, #0x17c]        @ 0xf418 <gcsXml_getDefaultParameter+0x300>
+    f298: e3a03001     	mov	r3, #1
+    f29c: ebffd9e0     	bl	0x5a24 <log_print@plt>  @ imm = #-0x9880
+    f2a0: e3a00000     	mov	r0, #0
+    f2a4: e28dd02c     	add	sp, sp, #44
+    f2a8: e8bd8ff0     	pop	{r4, r5, r6, r7, r8, r9, r10, r11, pc}
+    f2ac: e1d632b8     	ldrh	r3, [r6, #40]
+    f2b0: e7f000f0     	udf	#0x0
+    f2b4: e0873008     	add	r3, r7, r8
+    f2b8: e5132004     	ldr	r2, [r3, #-0x4]
+    f2bc: e5095020     	str	r5, [r9, #-0x20]
+    f2c0: e5092018     	str	r2, [r9, #-0x18]
+    f2c4: e5961014     	ldr	r1, [r6, #0x14]
+    f2c8: e513000c     	ldr	r0, [r3, #-0xc]
+    f2cc: e3110004     	tst	r1, #4
+    f2d0: 0a000019     	beq	0xf33c <gcsXml_getDefaultParameter+0x224> @ imm = #0x64
+    f2d4: e5963004     	ldr	r3, [r6, #0x4]
+    f2d8: e3530000     	cmp	r3, #0
+    f2dc: 0a000014     	beq	0xf334 <gcsXml_getDefaultParameter+0x21c> @ imm = #0x50
+    f2e0: e59d2010     	ldr	r2, [sp, #0x10]
+    f2e4: e7923003     	ldr	r3, [r2, r3]
+    f2e8: e3530000     	cmp	r3, #0
+    f2ec: 0a00000e     	beq	0xf32c <gcsXml_getDefaultParameter+0x214> @ imm = #0x38
+    f2f0: e0823003     	add	r3, r2, r3
+    f2f4: e593301c     	ldr	r3, [r3, #0x1c]
+    f2f8: e3530000     	cmp	r3, #0
+    f2fc: 10828003     	addne	r8, r2, r3
+    f300: 01a08003     	moveq	r8, r3
+    f304: e0883000     	add	r3, r8, r0
+    f308: e509301c     	str	r3, [r9, #-0x1c]
+    f30c: e59d3008     	ldr	r3, [sp, #0x8]
+    f310: e2899020     	add	r9, r9, #32
+    f314: e2533001     	subs	r3, r3, #1
+    f318: e58d3008     	str	r3, [sp, #0x8]
+    f31c: 1affffb0     	bne	0xf1e4 <gcsXml_getDefaultParameter+0xcc> @ imm = #-0x140
+    f320: e59d0014     	ldr	r0, [sp, #0x14]
+    f324: e28dd02c     	add	sp, sp, #44
+    f328: e8bd8ff0     	pop	{r4, r5, r6, r7, r8, r9, r10, r11, pc}
+    f32c: e593301c     	ldr	r3, [r3, #0x1c]
+    f330: e7f000f0     	udf	#0x0
+    f334: e5933000     	ldr	r3, [r3]
+    f338: e7f000f0     	udf	#0x0
+    f33c: e5133008     	ldr	r3, [r3, #-0x8]
+    f340: e79a3003     	ldr	r3, [r10, r3]
+    f344: e3130010     	tst	r3, #16
+    f348: 0a000011     	beq	0xf394 <gcsXml_getDefaultParameter+0x27c> @ imm = #0x44
+    f34c: e3c2220f     	bic	r2, r2, #-268435456
+    f350: e0823000     	add	r3, r2, r0
+    f354: e08a3003     	add	r3, r10, r3
+    f358: e509301c     	str	r3, [r9, #-0x1c]
+    f35c: eaffffea     	b	0xf30c <gcsXml_getDefaultParameter+0x1f4> @ imm = #-0x58
+    f360: e59d3020     	ldr	r3, [sp, #0x20]
+    f364: e59d0018     	ldr	r0, [sp, #0x18]
+    f368: e88d0028     	stm	sp, {r3, r5}
+    f36c: e59d101c     	ldr	r1, [sp, #0x1c]
+    f370: e59f20a4     	ldr	r2, [pc, #0xa4]         @ 0xf41c <gcsXml_getDefaultParameter+0x304>
+    f374: e3a03002     	mov	r3, #2
+    f378: e58dc010     	str	r12, [sp, #0x10]
+    f37c: ebffd9a8     	bl	0x5a24 <log_print@plt>  @ imm = #-0x9960
+    f380: e3540000     	cmp	r4, #0
+    f384: e59dc010     	ldr	r12, [sp, #0x10]
+    f388: 1affffdf     	bne	0xf30c <gcsXml_getDefaultParameter+0x1f4> @ imm = #-0x84
+    f38c: e59c5000     	ldr	r5, [r12]
+    f390: eaffffb4     	b	0xf268 <gcsXml_getDefaultParameter+0x150> @ imm = #-0x130
+    f394: e59f3084     	ldr	r3, [pc, #0x84]         @ 0xf420 <gcsXml_getDefaultParameter+0x308>
+    f398: e59f0084     	ldr	r0, [pc, #0x84]         @ 0xf424 <gcsXml_getDefaultParameter+0x30c>
+    f39c: e08f3003     	add	r3, pc, r3  ; PIC literal "Warning!! Name = %p doesn't have default value.\n" @0x36754
+    f3a0: e58d3000     	str	r3, [sp]
+    f3a4: e51b3004     	ldr	r3, [r11, #-0x4]
+    f3a8: e08f0000     	add	r0, pc, r0  ; PIC literal "gcs_directParameter.c" @0x36718
+    f3ac: e58d3004     	str	r3, [sp, #0x4]
+    f3b0: e59d1024     	ldr	r1, [sp, #0x24]
+    f3b4: e59f206c     	ldr	r2, [pc, #0x6c]         @ 0xf428 <gcsXml_getDefaultParameter+0x310>
+    f3b8: e3a03002     	mov	r3, #2
+    f3bc: ebffd998     	bl	0x5a24 <log_print@plt>  @ imm = #-0x99a0
+    f3c0: eaffffd1     	b	0xf30c <gcsXml_getDefaultParameter+0x1f4> @ imm = #-0xbc
+    f3c4: e59f3060     	ldr	r3, [pc, #0x60]         @ 0xf42c <gcsXml_getDefaultParameter+0x314>
+    f3c8: e1a00005     	mov	r0, r5
+    f3cc: e08f3003     	add	r3, pc, r3  ; PIC literal "Error!! parameter is nil\n" @0x36730
+    f3d0: e58d3000     	str	r3, [sp]
+    f3d4: e1a01004     	mov	r1, r4
+    f3d8: e59f2050     	ldr	r2, [pc, #0x50]         @ 0xf430 <gcsXml_getDefaultParameter+0x318>
+    f3dc: e3a03001     	mov	r3, #1
+    f3e0: ebffd98f     	bl	0x5a24 <log_print@plt>  @ imm = #-0x99c4
+    f3e4: e1a0000b     	mov	r0, r11
+    f3e8: eaffffcd     	b	0xf324 <gcsXml_getDefaultParameter+0x20c> @ imm = #-0xcc
+    f3ec: 000274a8     	andeq	r7, r2, r8, lsr #9
+    f3f0: 000275dc     	ldrdeq	r7, r8, [r2], -r12
+    f3f4: 00027614     	andeq	r7, r2, r4, lsl r6
+    f3f8: 00000105     	andeq	r0, r0, r5, lsl #2
+    f3fc: 00027560     	andeq	r7, r2, r0, ror #10
+    f400: 00027410     	andeq	r7, r2, r0, lsl r4
+    f404: 0002740c     	andeq	r7, r2, r12, lsl #8
+    f408: 000275b8     	strheq	r7, [r2], -r8
+    f40c: 00027350     	andeq	r7, r2, r0, asr r3
+    f410: 0002751c     	andeq	r7, r2, r12, lsl r5
+    f414: 00027480     	andeq	r7, r2, r0, lsl #9
+    f418: 00000151     	andeq	r0, r0, r1, asr r1
+    f41c: 0000014d     	andeq	r0, r0, sp, asr #2
+    f420: 000273b0     	strheq	r7, [r2], -r0
+    f424: 00027368     	andeq	r7, r2, r8, ror #6
+    f428: 00000141     	andeq	r0, r0, r1, asr #2
+    f42c: 0002735c     	andeq	r7, r2, r12, asr r3
+    f430: 00000107     	andeq	r0, r0, r7, lsl #2
+
+0000f434 <gcsXml_SearchParameter>:
+    f434: e92d43f0     	push	{r4, r5, r6, r7, r8, r9, lr}
+    f438: e59fc100     	ldr	r12, [pc, #0x100]       @ 0xf540 <gcsXml_SearchParameter+0x10c>
+    f43c: e59fe100     	ldr	lr, [pc, #0x100]        @ 0xf544 <gcsXml_SearchParameter+0x110>
+    f440: e1a06000     	mov	r6, r0
+    f444: e59f00fc     	ldr	r0, [pc, #0xfc]         @ 0xf548 <gcsXml_SearchParameter+0x114>
+    f448: e24dd00c     	sub	sp, sp, #12
+    f44c: e08fe00e     	add	lr, pc, lr
+    f450: e08fc00c     	add	r12, pc, r12  ; PIC literal "enter \n" @0x367bc
+    f454: e1a04001     	mov	r4, r1
+    f458: e1a07002     	mov	r7, r2
+    f45c: e1a08003     	mov	r8, r3
+    f460: e28e1094     	add	r1, lr, #148
+    f464: e3a03005     	mov	r3, #5
+    f468: e58dc000     	str	r12, [sp]
+    f46c: e08f0000     	add	r0, pc, r0
+    f470: e59f20d4     	ldr	r2, [pc, #0xd4]         @ 0xf54c <gcsXml_SearchParameter+0x118>
+    f474: ebffd96a     	bl	0x5a24 <log_print@plt>  @ imm = #-0x9a58
+    f478: e5945010     	ldr	r5, [r4, #0x10]
+    f47c: e1d442b8     	ldrh	r4, [r4, #40]
+    f480: e3550000     	cmp	r5, #0
+    f484: 15963008     	ldrne	r3, [r6, #0x8]
+    f488: 10835005     	addne	r5, r3, r5
+    f48c: e3540000     	cmp	r4, #0
+    f490: 0a00000c     	beq	0xf4c8 <gcsXml_SearchParameter+0x94> @ imm = #0x30
+    f494: e5d56000     	ldrb	r6, [r5]
+    f498: e2851001     	add	r1, r5, #1
+    f49c: e3560004     	cmp	r6, #4
+    f4a0: e1a00007     	mov	r0, r7
+    f4a4: 0a000002     	beq	0xf4b4 <gcsXml_SearchParameter+0x80> @ imm = #0x8
+    f4a8: ebffdb10     	bl	0x60f0 <strcmp@plt>     @ imm = #-0x93c0
+    f4ac: e2509000     	subs	r9, r0, #0
+    f4b0: 0a000013     	beq	0xf504 <gcsXml_SearchParameter+0xd0> @ imm = #0x4c
+    f4b4: e2441001     	sub	r1, r4, #1
+    f4b8: e1a01801     	lsl	r1, r1, #16
+    f4bc: e1b04821     	lsrs	r4, r1, #16
+    f4c0: e0855006     	add	r5, r5, r6
+    f4c4: 1afffff2     	bne	0xf494 <gcsXml_SearchParameter+0x60> @ imm = #-0x38
+    f4c8: e59f1080     	ldr	r1, [pc, #0x80]         @ 0xf550 <gcsXml_SearchParameter+0x11c>
+    f4cc: e59f3080     	ldr	r3, [pc, #0x80]         @ 0xf554 <gcsXml_SearchParameter+0x120>
+    f4d0: e59f0080     	ldr	r0, [pc, #0x80]         @ 0xf558 <gcsXml_SearchParameter+0x124>
+    f4d4: e08f3003     	add	r3, pc, r3  ; PIC literal "leave GCS_NOK\n" @0x367d4
+    f4d8: e08f1001     	add	r1, pc, r1  ; PIC literal "gcsXml_SearchParameter" @0x3666c
+    f4dc: e58d3000     	str	r3, [sp]
+    f4e0: e2811094     	add	r1, r1, #148
+    f4e4: e08f0000     	add	r0, pc, r0  ; PIC literal "gcs_directParameter.c" @0x36718
+    f4e8: e59f206c     	ldr	r2, [pc, #0x6c]         @ 0xf55c <gcsXml_SearchParameter+0x128>
+    f4ec: e3a03005     	mov	r3, #5
+    f4f0: ebffd94b     	bl	0x5a24 <log_print@plt>  @ imm = #-0x9ad4
+    f4f4: e3e09000     	mvn	r9, #0
+    f4f8: e1a00009     	mov	r0, r9
+    f4fc: e28dd00c     	add	sp, sp, #12
+    f500: e8bd83f0     	pop	{r4, r5, r6, r7, r8, r9, pc}
+    f504: e59f1054     	ldr	r1, [pc, #0x54]         @ 0xf560 <gcsXml_SearchParameter+0x12c>
+    f508: e59f3054     	ldr	r3, [pc, #0x54]         @ 0xf564 <gcsXml_SearchParameter+0x130>
+    f50c: e59f0054     	ldr	r0, [pc, #0x54]         @ 0xf568 <gcsXml_SearchParameter+0x134>
+    f510: e08f3003     	add	r3, pc, r3  ; PIC literal "leave GCS_OK\n" @0x367c4
+    f514: e08f1001     	add	r1, pc, r1  ; PIC literal "gcsXml_SearchParameter" @0x3666c
+    f518: e5885000     	str	r5, [r8]
+    f51c: e2811094     	add	r1, r1, #148
+    f520: e58d3000     	str	r3, [sp]
+    f524: e08f0000     	add	r0, pc, r0  ; PIC literal "gcs_directParameter.c" @0x36718
+    f528: e59f203c     	ldr	r2, [pc, #0x3c]         @ 0xf56c <gcsXml_SearchParameter+0x138>
+    f52c: e3a03005     	mov	r3, #5
+    f530: ebffd93b     	bl	0x5a24 <log_print@plt>  @ imm = #-0x9b14
+    f534: e1a00009     	mov	r0, r9
+    f538: e28dd00c     	add	sp, sp, #12
+    f53c: e8bd83f0     	pop	{r4, r5, r6, r7, r8, r9, pc}
+    f540: 00027364     	andeq	r7, r2, r4, ror #6
+    f544: 00027184     	andeq	r7, r2, r4, lsl #3
+    f548: 000272a4     	andeq	r7, r2, r4, lsr #5
+    f54c: 0000016e     	andeq	r0, r0, lr, ror #2
+    f550: 000270f8     	strdeq	r7, r8, [r2], -r8
+    f554: 000272f8     	strdeq	r7, r8, [r2], -r8
+    f558: 0002722c     	andeq	r7, r2, r12, lsr #4
+    f55c: 0000017e     	andeq	r0, r0, lr, ror r1
+    f560: 000270bc     	strheq	r7, [r2], -r12
+    f564: 000272ac     	andeq	r7, r2, r12, lsr #5
+    f568: 000271ec     	andeq	r7, r2, r12, ror #3
+    f56c: 00000177     	andeq	r0, r0, r7, ror r1
+
+00010d88 <gcsXml_getParameterNamePtr>:
+   10d88: e1d132b8     	ldrh	r3, [r1, #40]
+   10d8c: e1530002     	cmp	r3, r2
+   10d90: ba000010     	blt	0x10dd8 <gcsXml_getParameterNamePtr+0x50> @ imm = #0x40
+   10d94: e5913010     	ldr	r3, [r1, #0x10]
+   10d98: e3530000     	cmp	r3, #0
+   10d9c: 15901008     	ldrne	r1, [r0, #0x8]
+   10da0: 10813003     	addne	r3, r1, r3
+   10da4: e3520000     	cmp	r2, #0
+   10da8: ca000001     	bgt	0x10db4 <gcsXml_getParameterNamePtr+0x2c> @ imm = #0x4
+   10dac: ea000009     	b	0x10dd8 <gcsXml_getParameterNamePtr+0x50> @ imm = #0x24
+   10db0: e1a03000     	mov	r3, r0
+   10db4: e5d31000     	ldrb	r1, [r3]
+   10db8: e2522001     	subs	r2, r2, #1
+   10dbc: e0830001     	add	r0, r3, r1
+   10dc0: 1afffffa     	bne	0x10db0 <gcsXml_getParameterNamePtr+0x28> @ imm = #-0x18
+   10dc4: e3510004     	cmp	r1, #4
+   10dc8: e2830001     	add	r0, r3, #1
+   10dcc: 112fff1e     	bxne	lr
+   10dd0: e1a00002     	mov	r0, r2
+   10dd4: e12fff1e     	bx	lr
+   10dd8: e3a00000     	mov	r0, #0
+   10ddc: e12fff1e     	bx	lr
+
+00010f2c <gcsXml_getParameterByOID>:
+   10f2c: e92d47f0     	push	{r4, r5, r6, r7, r8, r9, r10, lr}
+   10f30: e24dd008     	sub	sp, sp, #8
+   10f34: e59d9028     	ldr	r9, [sp, #0x28]
+   10f38: e3590000     	cmp	r9, #0
+   10f3c: 13500000     	cmpne	r0, #0
+   10f40: 0a000030     	beq	0x11008 <gcsXml_getParameterByOID+0xdc> @ imm = #0xc0
+   10f44: e1a04000     	mov	r4, r0
+   10f48: e3a00004     	mov	r0, #4
+   10f4c: e1a06002     	mov	r6, r2
+   10f50: e1a07003     	mov	r7, r3
+   10f54: e1a05001     	mov	r5, r1
+   10f58: ebffd308     	bl	0x5b80 <malloc@plt>     @ imm = #-0xb3e0
+   10f5c: e3a0a001     	mov	r10, #1
+   10f60: e1a01005     	mov	r1, r5
+   10f64: e1a02006     	mov	r2, r6
+   10f68: e1a03007     	mov	r3, r7
+   10f6c: e58da000     	str	r10, [sp]
+   10f70: e1a08000     	mov	r8, r0
+   10f74: e1a00004     	mov	r0, r4
+   10f78: e5889000     	str	r9, [r8]
+   10f7c: ebffd2db     	bl	0x5af0 <gcsXml_GetObjectByOID@plt> @ imm = #-0xb494
+   10f80: e2501000     	subs	r1, r0, #0
+   10f84: 0a000021     	beq	0x11010 <gcsXml_getParameterByOID+0xe4> @ imm = #0x84
+   10f88: e1a00004     	mov	r0, r4
+   10f8c: ebffd460     	bl	0x6114 <gcsXmlGetPtrOffset@plt> @ imm = #-0xae80
+   10f90: e1a0200a     	mov	r2, r10
+   10f94: e1a03008     	mov	r3, r8
+   10f98: e1a01000     	mov	r1, r0
+   10f9c: e1a00004     	mov	r0, r4
+   10fa0: ebffd24b     	bl	0x58d4 <gcsXml_getParameter@plt> @ imm = #-0xb6d4
+   10fa4: e2504000     	subs	r4, r0, #0
+   10fa8: 0a000018     	beq	0x11010 <gcsXml_getParameterByOID+0xe4> @ imm = #0x60
+   10fac: e5942008     	ldr	r2, [r4, #0x8]
+   10fb0: e3520103     	cmp	r2, #-1073741824
+   10fb4: 0a00000b     	beq	0x10fe8 <gcsXml_getParameterByOID+0xbc> @ imm = #0x2c
+   10fb8: e3c2220f     	bic	r2, r2, #-268435456
+   10fbc: e59d002c     	ldr	r0, [sp, #0x2c]
+   10fc0: e5941004     	ldr	r1, [r4, #0x4]
+   10fc4: ebffd2c3     	bl	0x5ad8 <memcpy@plt>     @ imm = #-0xb4f4
+   10fc8: e1a00008     	mov	r0, r8
+   10fcc: ebffd50a     	bl	0x63fc <free@plt>       @ imm = #-0xabd8
+   10fd0: e1a00004     	mov	r0, r4
+   10fd4: e3a01001     	mov	r1, #1
+   10fd8: ebffd37e     	bl	0x5dd8 <gcsXml_freeParameterBuffer@plt> @ imm = #-0xb208
+   10fdc: e3a00000     	mov	r0, #0
+   10fe0: e28dd008     	add	sp, sp, #8
+   10fe4: e8bd87f0     	pop	{r4, r5, r6, r7, r8, r9, r10, pc}
+   10fe8: e5945004     	ldr	r5, [r4, #0x4]
+   10fec: e1a00005     	mov	r0, r5
+   10ff0: ebffd4c8     	bl	0x6318 <strlen@plt>     @ imm = #-0xace0
+   10ff4: e1a01005     	mov	r1, r5
+   10ff8: e2802001     	add	r2, r0, #1
+   10ffc: e59d002c     	ldr	r0, [sp, #0x2c]
+   11000: ebffd2b4     	bl	0x5ad8 <memcpy@plt>     @ imm = #-0xb530
+   11004: eaffffef     	b	0x10fc8 <gcsXml_getParameterByOID+0x9c> @ imm = #-0x44
+   11008: e3e00000     	mvn	r0, #0
+   1100c: eafffff3     	b	0x10fe0 <gcsXml_getParameterByOID+0xb4> @ imm = #-0x34
+   11010: e1a00008     	mov	r0, r8
+   11014: ebffd4f8     	bl	0x63fc <free@plt>       @ imm = #-0xac20
+   11018: e3e00000     	mvn	r0, #0
+   1101c: eaffffef     	b	0x10fe0 <gcsXml_getParameterByOID+0xb4> @ imm = #-0x44
+
+00014c80 <gcsXmlGetPtrOffset>:
+   14c80: e5900008     	ldr	r0, [r0, #0x8]
+   14c84: e0600001     	rsb	r0, r0, r1
+   14c88: e12fff1e     	bx	lr
+
+00014d44 <gcsXml_getObjectByID>:
+   14d44: e3510008     	cmp	r1, #8
+   14d48: e52de004     	str	lr, [sp, #-0x4]!
+   14d4c: e24dd00c     	sub	sp, sp, #12
+   14d50: 0a000019     	beq	0x14dbc <gcsXml_getObjectByID+0x78> @ imm = #0x64
+   14d54: e5902008     	ldr	r2, [r0, #0x8]
+   14d58: e0821001     	add	r1, r2, r1
+   14d5c: e5111008     	ldr	r1, [r1, #-0x8]
+   14d60: e3510000     	cmp	r1, #0
+   14d64: 0a000017     	beq	0x14dc8 <gcsXml_getObjectByID+0x84> @ imm = #0x5c
+   14d68: e0923001     	adds	r3, r2, r1
+   14d6c: 0a000015     	beq	0x14dc8 <gcsXml_getObjectByID+0x84> @ imm = #0x54
+   14d70: e593c014     	ldr	r12, [r3, #0x14]
+   14d74: e31c0002     	tst	r12, #2
+   14d78: 0a000004     	beq	0x14d90 <gcsXml_getObjectByID+0x4c> @ imm = #0x10
+   14d7c: e7923001     	ldr	r3, [r2, r1]
+   14d80: e3530000     	cmp	r3, #0
+   14d84: 0a000009     	beq	0x14db0 <gcsXml_getObjectByID+0x6c> @ imm = #0x24
+   14d88: e0923003     	adds	r3, r2, r3
+   14d8c: 0a000007     	beq	0x14db0 <gcsXml_getObjectByID+0x6c> @ imm = #0x1c
+   14d90: e593c01c     	ldr	r12, [r3, #0x1c]
+   14d94: e5931020     	ldr	r1, [r3, #0x20]
+   14d98: e35c0000     	cmp	r12, #0
+   14d9c: e3c114ff     	bic	r1, r1, #-16777216
+   14da0: e5801010     	str	r1, [r0, #0x10]
+   14da4: e5803018     	str	r3, [r0, #0x18]
+   14da8: 1082000c     	addne	r0, r2, r12
+   14dac: 1a000000     	bne	0x14db4 <gcsXml_getObjectByID+0x70> @ imm = #0x0
+   14db0: e3a00000     	mov	r0, #0
+   14db4: e28dd00c     	add	sp, sp, #12
+   14db8: e49df004     	ldr	pc, [sp], #4
+   14dbc: e3a03000     	mov	r3, #0
+   14dc0: e5933000     	ldr	r3, [r3]
+   14dc4: e7f000f0     	udf	#0x0
+   14dc8: e59f102c     	ldr	r1, [pc, #0x2c]         @ 0x14dfc <gcsXml_getObjectByID+0xb8>
+   14dcc: e59f302c     	ldr	r3, [pc, #0x2c]         @ 0x14e00 <gcsXml_getObjectByID+0xbc>
+   14dd0: e59f002c     	ldr	r0, [pc, #0x2c]         @ 0x14e04 <gcsXml_getObjectByID+0xc0>
+   14dd4: e08f3003     	add	r3, pc, r3  ; PIC literal "no this object\n" @0x37774
+   14dd8: e08f1001     	add	r1, pc, r1  ; PIC literal "gcsXml_getObjectByID" @0x37524
+   14ddc: e58d3000     	str	r3, [sp]
+   14de0: e08f0000     	add	r0, pc, r0  ; PIC literal "gcs_object.c" @0x37654
+   14de4: e2811054     	add	r1, r1, #84
+   14de8: e59f2018     	ldr	r2, [pc, #0x18]         @ 0x14e08 <gcsXml_getObjectByID+0xc4>
+   14dec: e3a03005     	mov	r3, #5
+   14df0: ebffc30b     	bl	0x5a24 <log_print@plt>  @ imm = #-0xf3d4
+   14df4: e3a00000     	mov	r0, #0
+   14df8: eaffffed     	b	0x14db4 <gcsXml_getObjectByID+0x70> @ imm = #-0x4c
+   14dfc: 000226f0     	strdeq	r2, r3, [r2], -r0
+   14e00: 00022998     	<unknown>
+   14e04: 0002286c     	andeq	r2, r2, r12, ror #16
+   14e08: 000001ed     	andeq	r0, r0, sp, ror #3
+
+000181ac <gcsXml_GetObjectByName>:
+   181ac: e92d40f0     	push	{r4, r5, r6, r7, lr}
+   181b0: e1a05000     	mov	r5, r0
+   181b4: e24dd014     	sub	sp, sp, #20
+   181b8: e1a06001     	mov	r6, r1
+   181bc: e590003c     	ldr	r0, [r0, #0x3c]
+   181c0: e1a07002     	mov	r7, r2
+   181c4: ebffb69a     	bl	0x5c34 <gcsXml_lock@plt> @ imm = #-0x12598
+   181c8: e1a01006     	mov	r1, r6
+   181cc: e1a00005     	mov	r0, r5
+   181d0: ebffb682     	bl	0x5be0 <gcsXml_GetObjListByName@plt> @ imm = #-0x125f8
+   181d4: e58d000c     	str	r0, [sp, #0xc]
+   181d8: e595003c     	ldr	r0, [r5, #0x3c]
+   181dc: ebffb787     	bl	0x6000 <gcsXml_unlock@plt> @ imm = #-0x121e4
+   181e0: e59d400c     	ldr	r4, [sp, #0xc]
+   181e4: e3540000     	cmp	r4, #0
+   181e8: 0a00000a     	beq	0x18218 <gcsXml_GetObjectByName+0x6c> @ imm = #0x28
+   181ec: e5941008     	ldr	r1, [r4, #0x8]
+   181f0: e1c421d0     	ldrd	r2, r3, [r4, #16]
+   181f4: e1a00005     	mov	r0, r5
+   181f8: e58d7000     	str	r7, [sp]
+   181fc: ebffb63b     	bl	0x5af0 <gcsXml_GetObjectByOID@plt> @ imm = #-0x12714
+   18200: e1a04000     	mov	r4, r0
+   18204: e28d000c     	add	r0, sp, #12
+   18208: ebffb5e7     	bl	0x59ac <gcsXml_FreeObjList@plt> @ imm = #-0x12864
+   1820c: e1a00004     	mov	r0, r4
+   18210: e28dd014     	add	sp, sp, #20
+   18214: e8bd80f0     	pop	{r4, r5, r6, r7, pc}
+   18218: e59f1030     	ldr	r1, [pc, #0x30]         @ 0x18250 <gcsXml_GetObjectByName+0xa4>
+   1821c: e59f3030     	ldr	r3, [pc, #0x30]         @ 0x18254 <gcsXml_GetObjectByName+0xa8>
+   18220: e59f0030     	ldr	r0, [pc, #0x30]         @ 0x18258 <gcsXml_GetObjectByName+0xac>
+   18224: e08f3003     	add	r3, pc, r3  ; PIC literal " %s get ObjList failed.\n" @0x37cd4
+   18228: e08f1001     	add	r1, pc, r1  ; PIC literal "gcsXml_GetObjectByName" @0x379a4
+   1822c: e58d3000     	str	r3, [sp]
+   18230: e08f0000     	add	r0, pc, r0  ; PIC literal "gcs_instance_array_func.c" @0x37a58
+   18234: e58d6004     	str	r6, [sp, #0x4]
+   18238: e2811f41     	add	r1, r1, #260
+   1823c: e3a02fcf     	mov	r2, #828
+   18240: e3a03001     	mov	r3, #1
+   18244: ebffb5f6     	bl	0x5a24 <log_print@plt>  @ imm = #-0x12828
+   18248: e1a00004     	mov	r0, r4
+   1824c: eaffffef     	b	0x18210 <gcsXml_GetObjectByName+0x64> @ imm = #-0x44
+   18250: 0001f670     	andeq	pc, r1, r0, ror r6
+   18254: 0001faa8     	andeq	pc, r1, r8, lsr #21
+   18258: 0001f820     	andeq	pc, r1, r0, lsr #16
+
+000189a4 <gcsXml_GetObjectChildList>:
+   189a4: e5913014     	ldr	r3, [r1, #0x14]
+   189a8: e92d4ff0     	push	{r4, r5, r6, r7, r8, r9, r10, r11, lr}
+   189ac: e2134004     	ands	r4, r3, #4
+   189b0: e24dd01c     	sub	sp, sp, #28
+   189b4: e1a06001     	mov	r6, r1
+   189b8: e1a0a002     	mov	r10, r2
+   189bc: e1a05000     	mov	r5, r0
+   189c0: 1a000038     	bne	0x18aa8 <gcsXml_GetObjectChildList+0x104> @ imm = #0xe0
+   189c4: e3130001     	tst	r3, #1
+   189c8: 1a00009e     	bne	0x18c48 <gcsXml_GetObjectChildList+0x2a4> @ imm = #0x278
+   189cc: e5963000     	ldr	r3, [r6]
+   189d0: e3530000     	cmp	r3, #0
+   189d4: 0a000022     	beq	0x18a64 <gcsXml_GetObjectChildList+0xc0> @ imm = #0x88
+   189d8: e5954008     	ldr	r4, [r5, #0x8]
+   189dc: e1a00005     	mov	r0, r5
+   189e0: e0844003     	add	r4, r4, r3
+   189e4: e594101c     	ldr	r1, [r4, #0x1c]
+   189e8: ebffb4f4     	bl	0x5dc0 <gcsXml_GetOIDByOffset@plt> @ imm = #-0x12c30
+   189ec: e59d3048     	ldr	r3, [sp, #0x48]
+   189f0: e1cd84d0     	ldrd	r8, r9, [sp, #64]
+   189f4: e58d3008     	str	r3, [sp, #0x8]
+   189f8: e1a01004     	mov	r1, r4
+   189fc: e1cd80f0     	strd	r8, r9, [sp]
+   18a00: e1a02000     	mov	r2, r0
+   18a04: e1a00005     	mov	r0, r5
+   18a08: ebffb4b6     	bl	0x5ce8 <gcsXml_GetObjectChildList@plt> @ imm = #-0x12d28
+   18a0c: e596300c     	ldr	r3, [r6, #0xc]
+   18a10: e3530000     	cmp	r3, #0
+   18a14: 1a000015     	bne	0x18a70 <gcsXml_GetObjectChildList+0xcc> @ imm = #0x54
+   18a18: e5963008     	ldr	r3, [r6, #0x8]
+   18a1c: e3530000     	cmp	r3, #0
+   18a20: 0a00000c     	beq	0x18a58 <gcsXml_GetObjectChildList+0xb4> @ imm = #0x30
+   18a24: e5954008     	ldr	r4, [r5, #0x8]
+   18a28: e1a00005     	mov	r0, r5
+   18a2c: e0844003     	add	r4, r4, r3
+   18a30: e594101c     	ldr	r1, [r4, #0x1c]
+   18a34: ebffb4e1     	bl	0x5dc0 <gcsXml_GetOIDByOffset@plt> @ imm = #-0x12c7c
+   18a38: e1cd64d0     	ldrd	r6, r7, [sp, #64]
+   18a3c: e59d3048     	ldr	r3, [sp, #0x48]
+   18a40: e1a01004     	mov	r1, r4
+   18a44: e1cd60f0     	strd	r6, r7, [sp]
+   18a48: e58d3008     	str	r3, [sp, #0x8]
+   18a4c: e1a02000     	mov	r2, r0
+   18a50: e1a00005     	mov	r0, r5
+   18a54: ebffb4a3     	bl	0x5ce8 <gcsXml_GetObjectChildList@plt> @ imm = #-0x12d74
+   18a58: e3a00001     	mov	r0, #1
+   18a5c: e28dd01c     	add	sp, sp, #28
+   18a60: e8bd8ff0     	pop	{r4, r5, r6, r7, r8, r9, r10, r11, pc}
+   18a64: e596300c     	ldr	r3, [r6, #0xc]
+   18a68: e3530000     	cmp	r3, #0
+   18a6c: 0affffe9     	beq	0x18a18 <gcsXml_GetObjectChildList+0x74> @ imm = #-0x5c
+   18a70: e5954008     	ldr	r4, [r5, #0x8]
+   18a74: e1a00005     	mov	r0, r5
+   18a78: e0844003     	add	r4, r4, r3
+   18a7c: e594101c     	ldr	r1, [r4, #0x1c]
+   18a80: ebffb4ce     	bl	0x5dc0 <gcsXml_GetOIDByOffset@plt> @ imm = #-0x12cc8
+   18a84: e1cd84d0     	ldrd	r8, r9, [sp, #64]
+   18a88: e59d3048     	ldr	r3, [sp, #0x48]
+   18a8c: e1a01004     	mov	r1, r4
+   18a90: e1cd80f0     	strd	r8, r9, [sp]
+   18a94: e58d3008     	str	r3, [sp, #0x8]
+   18a98: e1a02000     	mov	r2, r0
+   18a9c: e1a00005     	mov	r0, r5
+   18aa0: ebffb490     	bl	0x5ce8 <gcsXml_GetObjectChildList@plt> @ imm = #-0x12dc0
+   18aa4: eaffffdb     	b	0x18a18 <gcsXml_GetObjectChildList+0x74> @ imm = #-0x94
+   18aa8: e591101c     	ldr	r1, [r1, #0x1c]
+   18aac: ebffb4de     	bl	0x5e2c <gcsXmlGetPreObjIA@plt> @ imm = #-0x12c88
+   18ab0: e1903001     	orrs	r3, r0, r1
+   18ab4: 03a07000     	moveq	r7, #0
+   18ab8: 1a000091     	bne	0x18d04 <gcsXml_GetObjectChildList+0x360> @ imm = #0x244
+   18abc: e5953008     	ldr	r3, [r5, #0x8]
+   18ac0: e596201c     	ldr	r2, [r6, #0x1c]
+   18ac4: e0833002     	add	r3, r3, r2
+   18ac8: e5134010     	ldr	r4, [r3, #-0x10]
+   18acc: e3540000     	cmp	r4, #0
+   18ad0: 0affffe0     	beq	0x18a58 <gcsXml_GetObjectChildList+0xb4> @ imm = #-0x80
+   18ad4: e2477001     	sub	r7, r7, #1
+   18ad8: e20770ff     	and	r7, r7, #255
+   18adc: ea000004     	b	0x18af4 <gcsXml_GetObjectChildList+0x150> @ imm = #0x10
+   18ae0: e5953008     	ldr	r3, [r5, #0x8]
+   18ae4: e2444010     	sub	r4, r4, #16
+   18ae8: e7934004     	ldr	r4, [r3, r4]
+   18aec: e3540000     	cmp	r4, #0
+   18af0: 0affffd8     	beq	0x18a58 <gcsXml_GetObjectChildList+0xb4> @ imm = #-0xa0
+   18af4: e1a00005     	mov	r0, r5
+   18af8: e1a01004     	mov	r1, r4
+   18afc: ebffb4ca     	bl	0x5e2c <gcsXmlGetPreObjIA@plt> @ imm = #-0x12cd8
+   18b00: e58d7000     	str	r7, [sp]
+   18b04: e1a02000     	mov	r2, r0
+   18b08: e1a03001     	mov	r3, r1
+   18b0c: e1cd04d0     	ldrd	r0, r1, [sp, #64]
+   18b10: ebffb56a     	bl	0x60c0 <compareIAByDepth@plt> @ imm = #-0x12a58
+   18b14: e3500000     	cmp	r0, #0
+   18b18: 0afffff0     	beq	0x18ae0 <gcsXml_GetObjectChildList+0x13c> @ imm = #-0x40
+   18b1c: e1a00005     	mov	r0, r5
+   18b20: e1a01004     	mov	r1, r4
+   18b24: ebffb4c0     	bl	0x5e2c <gcsXmlGetPreObjIA@plt> @ imm = #-0x12d00
+   18b28: e5963014     	ldr	r3, [r6, #0x14]
+   18b2c: e3130001     	tst	r3, #1
+   18b30: e1a08000     	mov	r8, r0
+   18b34: e1a09001     	mov	r9, r1
+   18b38: 1a00000f     	bne	0x18b7c <gcsXml_GetObjectChildList+0x1d8> @ imm = #0x3c
+   18b3c: e5963000     	ldr	r3, [r6]
+   18b40: e3530000     	cmp	r3, #0
+   18b44: 0affffe5     	beq	0x18ae0 <gcsXml_GetObjectChildList+0x13c> @ imm = #-0x6c
+   18b48: e595b008     	ldr	r11, [r5, #0x8]
+   18b4c: e1a00005     	mov	r0, r5
+   18b50: e08bb003     	add	r11, r11, r3
+   18b54: e59b101c     	ldr	r1, [r11, #0x1c]
+   18b58: ebffb498     	bl	0x5dc0 <gcsXml_GetOIDByOffset@plt> @ imm = #-0x12da0
+   18b5c: e59d3048     	ldr	r3, [sp, #0x48]
+   18b60: e1a0100b     	mov	r1, r11
+   18b64: e1cd80f0     	strd	r8, r9, [sp]
+   18b68: e58d3008     	str	r3, [sp, #0x8]
+   18b6c: e1a02000     	mov	r2, r0
+   18b70: e1a00005     	mov	r0, r5
+   18b74: ebffb45b     	bl	0x5ce8 <gcsXml_GetObjectChildList@plt> @ imm = #-0x12e94
+   18b78: eaffffd8     	b	0x18ae0 <gcsXml_GetObjectChildList+0x13c> @ imm = #-0xa0
+   18b7c: e3a03001     	mov	r3, #1
+   18b80: e58d3000     	str	r3, [sp]
+   18b84: e1a00005     	mov	r0, r5
+   18b88: e1a0100a     	mov	r1, r10
+   18b8c: e1a02008     	mov	r2, r8
+   18b90: e1a03009     	mov	r3, r9
+   18b94: ebffb3d5     	bl	0x5af0 <gcsXml_GetObjectByOID@plt> @ imm = #-0x130ac
+   18b98: e3500000     	cmp	r0, #0
+   18b9c: 0affffe6     	beq	0x18b3c <gcsXml_GetObjectChildList+0x198> @ imm = #-0x68
+   18ba0: e1c523d0     	ldrd	r2, r3, [r5, #48]
+   18ba4: e5950028     	ldr	r0, [r5, #0x28]
+   18ba8: ebffb56b     	bl	0x615c <gcsXml_CreateObjListNode@plt> @ imm = #-0x12a54
+   18bac: e3a03000     	mov	r3, #0
+   18bb0: e5803004     	str	r3, [r0, #0x4]
+   18bb4: e5803000     	str	r3, [r0]
+   18bb8: e59d3048     	ldr	r3, [sp, #0x48]
+   18bbc: e1a0e000     	mov	lr, r0
+   18bc0: e593c000     	ldr	r12, [r3]
+   18bc4: e35c0000     	cmp	r12, #0
+   18bc8: 0a000057     	beq	0x18d2c <gcsXml_GetObjectChildList+0x388> @ imm = #0x15c
+   18bcc: e1c001d0     	ldrd	r0, r1, [r0, #16]
+   18bd0: e58d4014     	str	r4, [sp, #0x14]
+   18bd4: e58ec000     	str	r12, [lr]
+   18bd8: e200b0ff     	and	r11, r0, #255
+   18bdc: ea00000c     	b	0x18c14 <gcsXml_GetObjectChildList+0x270> @ imm = #0x30
+   18be0: e1904001     	orrs	r4, r0, r1
+   18be4: e3a03000     	mov	r3, #0
+   18be8: e20220ff     	and	r2, r2, #255
+   18bec: 0a000000     	beq	0x18bf4 <gcsXml_GetObjectChildList+0x250> @ imm = #0x0
+   18bf0: e1a0300b     	mov	r3, r11
+   18bf4: e1530002     	cmp	r3, r2
+   18bf8: aa00000b     	bge	0x18c2c <gcsXml_GetObjectChildList+0x288> @ imm = #0x2c
+   18bfc: e59c3000     	ldr	r3, [r12]
+   18c00: e58ec004     	str	r12, [lr, #0x4]
+   18c04: e3530000     	cmp	r3, #0
+   18c08: e58e3000     	str	r3, [lr]
+   18c0c: 0a000041     	beq	0x18d18 <gcsXml_GetObjectChildList+0x374> @ imm = #0x104
+   18c10: e1a0c003     	mov	r12, r3
+   18c14: e1cc21d0     	ldrd	r2, r3, [r12, #16]
+   18c18: e1924003     	orrs	r4, r2, r3
+   18c1c: 1affffef     	bne	0x18be0 <gcsXml_GetObjectChildList+0x23c> @ imm = #-0x44
+   18c20: e1903001     	orrs	r3, r0, r1
+   18c24: e3a02000     	mov	r2, #0
+   18c28: 1afffff0     	bne	0x18bf0 <gcsXml_GetObjectChildList+0x24c> @ imm = #-0x40
+   18c2c: e58ce004     	str	lr, [r12, #0x4]
+   18c30: e59ec004     	ldr	r12, [lr, #0x4]
+   18c34: e59d4014     	ldr	r4, [sp, #0x14]
+   18c38: e35c0000     	cmp	r12, #0
+   18c3c: 0a000039     	beq	0x18d28 <gcsXml_GetObjectChildList+0x384> @ imm = #0xe4
+   18c40: e58ce000     	str	lr, [r12]
+   18c44: eaffffbc     	b	0x18b3c <gcsXml_GetObjectChildList+0x198> @ imm = #-0x110
+   18c48: e3a03001     	mov	r3, #1
+   18c4c: e1a01002     	mov	r1, r2
+   18c50: e58d3000     	str	r3, [sp]
+   18c54: e1cd24d0     	ldrd	r2, r3, [sp, #64]
+   18c58: ebffb3a4     	bl	0x5af0 <gcsXml_GetObjectByOID@plt> @ imm = #-0x13170
+   18c5c: e3500000     	cmp	r0, #0
+   18c60: 0affff59     	beq	0x189cc <gcsXml_GetObjectChildList+0x28> @ imm = #-0x29c
+   18c64: e1c523d0     	ldrd	r2, r3, [r5, #48]
+   18c68: e5950028     	ldr	r0, [r5, #0x28]
+   18c6c: ebffb53a     	bl	0x615c <gcsXml_CreateObjListNode@plt> @ imm = #-0x12b18
+   18c70: e59d3048     	ldr	r3, [sp, #0x48]
+   18c74: e5804004     	str	r4, [r0, #0x4]
+   18c78: e5804000     	str	r4, [r0]
+   18c7c: e5933000     	ldr	r3, [r3]
+   18c80: e3530000     	cmp	r3, #0
+   18c84: 0a00002a     	beq	0x18d34 <gcsXml_GetObjectChildList+0x390> @ imm = #0xa8
+   18c88: e1c0a1d0     	ldrd	r10, r11, [r0, #16]
+   18c8c: e5803000     	str	r3, [r0]
+   18c90: e20a10ff     	and	r1, r10, #255
+   18c94: e1a0c003     	mov	r12, r3
+   18c98: ea00000c     	b	0x18cd0 <gcsXml_GetObjectChildList+0x32c> @ imm = #0x30
+   18c9c: e19ae00b     	orrs	lr, r10, r11
+   18ca0: e3a03000     	mov	r3, #0
+   18ca4: e20220ff     	and	r2, r2, #255
+   18ca8: 0a000000     	beq	0x18cb0 <gcsXml_GetObjectChildList+0x30c> @ imm = #0x0
+   18cac: e1a03001     	mov	r3, r1
+   18cb0: e1530002     	cmp	r3, r2
+   18cb4: aa00000b     	bge	0x18ce8 <gcsXml_GetObjectChildList+0x344> @ imm = #0x2c
+   18cb8: e59c3000     	ldr	r3, [r12]
+   18cbc: e580c004     	str	r12, [r0, #0x4]
+   18cc0: e3530000     	cmp	r3, #0
+   18cc4: e5803000     	str	r3, [r0]
+   18cc8: 0a000014     	beq	0x18d20 <gcsXml_GetObjectChildList+0x37c> @ imm = #0x50
+   18ccc: e1a0c003     	mov	r12, r3
+   18cd0: e1cc21d0     	ldrd	r2, r3, [r12, #16]
+   18cd4: e192e003     	orrs	lr, r2, r3
+   18cd8: 1affffef     	bne	0x18c9c <gcsXml_GetObjectChildList+0x2f8> @ imm = #-0x44
+   18cdc: e19a300b     	orrs	r3, r10, r11
+   18ce0: e3a02000     	mov	r2, #0
+   18ce4: 1afffff0     	bne	0x18cac <gcsXml_GetObjectChildList+0x308> @ imm = #-0x40
+   18ce8: e1a0300c     	mov	r3, r12
+   18cec: e5830004     	str	r0, [r3, #0x4]
+   18cf0: e5903004     	ldr	r3, [r0, #0x4]
+   18cf4: e3530000     	cmp	r3, #0
+   18cf8: 0a00000d     	beq	0x18d34 <gcsXml_GetObjectChildList+0x390> @ imm = #0x34
+   18cfc: e5830000     	str	r0, [r3]
+   18d00: eaffff31     	b	0x189cc <gcsXml_GetObjectChildList+0x28> @ imm = #-0x33c
+   18d04: e1a00005     	mov	r0, r5
+   18d08: e596101c     	ldr	r1, [r6, #0x1c]
+   18d0c: ebffb446     	bl	0x5e2c <gcsXmlGetPreObjIA@plt> @ imm = #-0x12ee8
+   18d10: e20070ff     	and	r7, r0, #255
+   18d14: eaffff68     	b	0x18abc <gcsXml_GetObjectChildList+0x118> @ imm = #-0x260
+   18d18: e59d4014     	ldr	r4, [sp, #0x14]
+   18d1c: eaffffc7     	b	0x18c40 <gcsXml_GetObjectChildList+0x29c> @ imm = #-0xe4
+   18d20: e1a0300c     	mov	r3, r12
+   18d24: eafffff4     	b	0x18cfc <gcsXml_GetObjectChildList+0x358> @ imm = #-0x30
+   18d28: e59d3048     	ldr	r3, [sp, #0x48]
+   18d2c: e583e000     	str	lr, [r3]
+   18d30: eaffff81     	b	0x18b3c <gcsXml_GetObjectChildList+0x198> @ imm = #-0x1fc
+   18d34: e59d3048     	ldr	r3, [sp, #0x48]
+   18d38: eaffffef     	b	0x18cfc <gcsXml_GetObjectChildList+0x358> @ imm = #-0x44
+
+0001e150 <gcsXml_ParseParameter>:
+   1e150: e92d4ff0     	push	{r4, r5, r6, r7, r8, r9, r10, r11, lr}
+   1e154: e24dd0a4     	sub	sp, sp, #164
+   1e158: e28d3064     	add	r3, sp, #100
+   1e15c: e1a0a001     	mov	r10, r1
+   1e160: e3a0203c     	mov	r2, #60
+   1e164: e3a01000     	mov	r1, #0
+   1e168: e1a07000     	mov	r7, r0
+   1e16c: e1a00003     	mov	r0, r3
+   1e170: e1a04003     	mov	r4, r3
+   1e174: e58d3048     	str	r3, [sp, #0x48]
+   1e178: ebff9fac     	bl	0x6030 <memset@plt>     @ imm = #-0x18150
+   1e17c: e1dab2b8     	ldrh	r11, [r10, #40]
+   1e180: e58d4060     	str	r4, [sp, #0x60]
+   1e184: e1a0010b     	lsl	r0, r11, #2
+   1e188: ebff9e7c     	bl	0x5b80 <malloc@plt>     @ imm = #-0x18610
+   1e18c: e59f3f30     	ldr	r3, [pc, #0xf30]        @ 0x1f0c4 <gcsXml_ParseParameter+0xf74>
+   1e190: e35b0000     	cmp	r11, #0
+   1e194: e08f3003     	add	r3, pc, r3
+   1e198: e58d3034     	str	r3, [sp, #0x34]
+   1e19c: e59f3f24     	ldr	r3, [pc, #0xf24]        @ 0x1f0c8 <gcsXml_ParseParameter+0xf78>
+   1e1a0: e1a04000     	mov	r4, r0
+   1e1a4: 0a000320     	beq	0x1ee2c <gcsXml_ParseParameter+0xcdc> @ imm = #0xc80
+   1e1a8: e59d2034     	ldr	r2, [sp, #0x34]
+   1e1ac: e24b5001     	sub	r5, r11, #1
+   1e1b0: e7926003     	ldr	r6, [r2, r3]
+   1e1b4: e1a08000     	mov	r8, r0
+   1e1b8: e3a09000     	mov	r9, #0
+   1e1bc: e2852001     	add	r2, r5, #1
+   1e1c0: e5960000     	ldr	r0, [r6]
+   1e1c4: e1a0100a     	mov	r1, r10
+   1e1c8: ebff9f8f     	bl	0x600c <gcsXml_getParameterNamePtr@plt> @ imm = #-0x181c4
+   1e1cc: e2893001     	add	r3, r9, #1
+   1e1d0: e1a03803     	lsl	r3, r3, #16
+   1e1d4: e3500000     	cmp	r0, #0
+   1e1d8: e5880000     	str	r0, [r8]
+   1e1dc: 11a09823     	lsrne	r9, r3, #16
+   1e1e0: 12888004     	addne	r8, r8, #4
+   1e1e4: e3550000     	cmp	r5, #0
+   1e1e8: e2455001     	sub	r5, r5, #1
+   1e1ec: 1afffff2     	bne	0x1e1bc <gcsXml_ParseParameter+0x6c> @ imm = #-0x38
+   1e1f0: e1a0b009     	mov	r11, r9
+   1e1f4: e59f5ed0     	ldr	r5, [pc, #0xed0]        @ 0x1f0cc <gcsXml_ParseParameter+0xf7c>
+   1e1f8: e3a0c002     	mov	r12, #2
+   1e1fc: e08f5005     	add	r5, pc, r5
+   1e200: e1c521d8     	ldrd	r2, r3, [r5, #24]
+   1e204: e5960000     	ldr	r0, [r6]
+   1e208: e5951014     	ldr	r1, [r5, #0x14]
+   1e20c: e58dc000     	str	r12, [sp]
+   1e210: ebff9e36     	bl	0x5af0 <gcsXml_GetObjectByOID@plt> @ imm = #-0x18728
+   1e214: e1c521d8     	ldrd	r2, r3, [r5, #24]
+   1e218: e1923003     	orrs	r3, r2, r3
+   1e21c: e58d0044     	str	r0, [sp, #0x44]
+   1e220: 1a000215     	bne	0x1ea7c <gcsXml_ParseParameter+0x92c> @ imm = #0x854
+   1e224: e59a301c     	ldr	r3, [r10, #0x1c]
+   1e228: e58d3010     	str	r3, [sp, #0x10]
+   1e22c: e59d5010     	ldr	r5, [sp, #0x10]
+   1e230: e1a0200b     	mov	r2, r11
+   1e234: e1a01005     	mov	r1, r5
+   1e238: e1a03004     	mov	r3, r4
+   1e23c: e5960000     	ldr	r0, [r6]
+   1e240: ebff9da3     	bl	0x58d4 <gcsXml_getParameter@plt> @ imm = #-0x18974
+   1e244: e1a01005     	mov	r1, r5
+   1e248: e1a0200b     	mov	r2, r11
+   1e24c: e1a03004     	mov	r3, r4
+   1e250: e58d003c     	str	r0, [sp, #0x3c]
+   1e254: e1a08000     	mov	r8, r0
+   1e258: e5960000     	ldr	r0, [r6]
+   1e25c: ebff9df9     	bl	0x5a48 <gcsXml_getDefaultParameter@plt> @ imm = #-0x1881c
+   1e260: e58d0040     	str	r0, [sp, #0x40]
+   1e264: e1a05000     	mov	r5, r0
+   1e268: e1a00004     	mov	r0, r4
+   1e26c: ebffa062     	bl	0x63fc <free@plt>       @ imm = #-0x17e78
+   1e270: e35b0000     	cmp	r11, #0
+   1e274: 0a0002ef     	beq	0x1ee38 <gcsXml_ParseParameter+0xce8> @ imm = #0xbbc
+   1e278: e59f3e50     	ldr	r3, [pc, #0xe50]        @ 0x1f0d0 <gcsXml_ParseParameter+0xf80>
+   1e27c: e2884020     	add	r4, r8, #32
+   1e280: e08f3003     	add	r3, pc, r3
+   1e284: e1a09003     	mov	r9, r3
+   1e288: e59f3e44     	ldr	r3, [pc, #0xe44]        @ 0x1f0d4 <gcsXml_ParseParameter+0xf84>
+   1e28c: e1a08005     	mov	r8, r5
+   1e290: e08f3003     	add	r3, pc, r3
+   1e294: e58d3028     	str	r3, [sp, #0x28]
+   1e298: e59f3e38     	ldr	r3, [pc, #0xe38]        @ 0x1f0d8 <gcsXml_ParseParameter+0xf88>
+   1e29c: e58da014     	str	r10, [sp, #0x14]
+   1e2a0: e08f3003     	add	r3, pc, r3
+   1e2a4: e58d302c     	str	r3, [sp, #0x2c]
+   1e2a8: e59f3e2c     	ldr	r3, [pc, #0xe2c]        @ 0x1f0dc <gcsXml_ParseParameter+0xf8c>
+   1e2ac: e08f3003     	add	r3, pc, r3
+   1e2b0: e58d3030     	str	r3, [sp, #0x30]
+   1e2b4: e59f3e24     	ldr	r3, [pc, #0xe24]        @ 0x1f0e0 <gcsXml_ParseParameter+0xf90>
+   1e2b8: e08f3003     	add	r3, pc, r3  ; PIC literal "</%s>\n" @0x39064
+   1e2bc: e58d3038     	str	r3, [sp, #0x38]
+   1e2c0: e59f3e1c     	ldr	r3, [pc, #0xe1c]        @ 0x1f0e4 <gcsXml_ParseParameter+0xf94>
+   1e2c4: e08f3003     	add	r3, pc, r3
+   1e2c8: e58d304c     	str	r3, [sp, #0x4c]
+   1e2cc: e3a03000     	mov	r3, #0
+   1e2d0: e58d301c     	str	r3, [sp, #0x1c]
+   1e2d4: e1c921d8     	ldrd	r2, r3, [r9, #24]
+   1e2d8: e5960000     	ldr	r0, [r6]
+   1e2dc: e1923003     	orrs	r3, r2, r3
+   1e2e0: 059d3014     	ldreq	r3, [sp, #0x14]
+   1e2e4: 159d1010     	ldrne	r1, [sp, #0x10]
+   1e2e8: 0593101c     	ldreq	r1, [r3, #0x1c]
+   1e2ec: e5142020     	ldr	r2, [r4, #-0x20]
+   1e2f0: ebff9ff3     	bl	0x62c4 <gcsXml_getParameterAttr@plt> @ imm = #-0x18034
+   1e2f4: e3100008     	tst	r0, #8
+   1e2f8: e1a05000     	mov	r5, r0
+   1e2fc: 0a0000cf     	beq	0x1e640 <gcsXml_ParseParameter+0x4f0> @ imm = #0x33c
+   1e300: e59d3028     	ldr	r3, [sp, #0x28]
+   1e304: e5960000     	ldr	r0, [r6]
+   1e308: e1c321d8     	ldrd	r2, r3, [r3, #24]
+   1e30c: e1923003     	orrs	r3, r2, r3
+   1e310: 059d3014     	ldreq	r3, [sp, #0x14]
+   1e314: 159d1010     	ldrne	r1, [sp, #0x10]
+   1e318: 0593101c     	ldreq	r1, [r3, #0x1c]
+   1e31c: e5142020     	ldr	r2, [r4, #-0x20]
+   1e320: ebff9f5a     	bl	0x6090 <gcsXml_getDefaultParameterAttr@plt> @ imm = #-0x18298
+   1e324: e59d302c     	ldr	r3, [sp, #0x2c]
+   1e328: e1c321d8     	ldrd	r2, r3, [r3, #24]
+   1e32c: e1923003     	orrs	r3, r2, r3
+   1e330: 059d3014     	ldreq	r3, [sp, #0x14]
+   1e334: 159d1010     	ldrne	r1, [sp, #0x10]
+   1e338: 0593101c     	ldreq	r1, [r3, #0x1c]
+   1e33c: e5142020     	ldr	r2, [r4, #-0x20]
+   1e340: e1a0a000     	mov	r10, r0
+   1e344: e5960000     	ldr	r0, [r6]
+   1e348: ebff9f92     	bl	0x6198 <gcsXml_getParameterExtAttr@plt> @ imm = #-0x181b8
+   1e34c: e59d3030     	ldr	r3, [sp, #0x30]
+   1e350: e1c321d8     	ldrd	r2, r3, [r3, #24]
+   1e354: e1923003     	orrs	r3, r2, r3
+   1e358: 059d3014     	ldreq	r3, [sp, #0x14]
+   1e35c: 159d1010     	ldrne	r1, [sp, #0x10]
+   1e360: 0593101c     	ldreq	r1, [r3, #0x1c]
+   1e364: e5142020     	ldr	r2, [r4, #-0x20]
+   1e368: e58d0018     	str	r0, [sp, #0x18]
+   1e36c: e5960000     	ldr	r0, [r6]
+   1e370: ebff9d9c     	bl	0x59e8 <gcsXml_getDefaultParameterExtAttr@plt> @ imm = #-0x18990
+   1e374: e3150006     	tst	r5, #6
+   1e378: 0a0000be     	beq	0x1e678 <gcsXml_ParseParameter+0x528> @ imm = #0x2f8
+   1e37c: e31a0006     	tst	r10, #6
+   1e380: 1a0000bc     	bne	0x1e678 <gcsXml_ParseParameter+0x528> @ imm = #0x2f0
+   1e384: e2053002     	and	r3, r5, #2
+   1e388: e58d3020     	str	r3, [sp, #0x20]
+   1e38c: e2053004     	and	r3, r5, #4
+   1e390: e58d3024     	str	r3, [sp, #0x24]
+   1e394: e59f3d4c     	ldr	r3, [pc, #0xd4c]        @ 0x1f0e8 <gcsXml_ParseParameter+0xf98>
+   1e398: e1a00007     	mov	r0, r7
+   1e39c: e08f3003     	add	r3, pc, r3
+   1e3a0: e5931020     	ldr	r1, [r3, #0x20]
+   1e3a4: ebff9d5f     	bl	0x5928 <printFileSpace@plt> @ imm = #-0x18a84
+   1e3a8: e59d301c     	ldr	r3, [sp, #0x1c]
+   1e3ac: e59f1d38     	ldr	r1, [pc, #0xd38]        @ 0x1f0ec <gcsXml_ParseParameter+0xf9c>
+   1e3b0: e5142020     	ldr	r2, [r4, #-0x20]
+   1e3b4: e08f1001     	add	r1, pc, r1  ; PIC literal "<%s" @0x38ef0
+   1e3b8: e080a003     	add	r10, r0, r3
+   1e3bc: e1a00007     	mov	r0, r7
+   1e3c0: ebff9e9c     	bl	0x5e38 <fprintf@plt>    @ imm = #-0x18590
+   1e3c4: e59f1d24     	ldr	r1, [pc, #0xd24]        @ 0x1f0f0 <gcsXml_ParseParameter+0xfa0>
+   1e3c8: e08f1001     	add	r1, pc, r1  ; PIC literal " PARAMETER=\"configured\"" @0x38ef4
+   1e3cc: e080a00a     	add	r10, r0, r10
+   1e3d0: e1a00007     	mov	r0, r7
+   1e3d4: ebff9e97     	bl	0x5e38 <fprintf@plt>    @ imm = #-0x185a4
+   1e3d8: e3150001     	tst	r5, #1
+   1e3dc: e080a00a     	add	r10, r0, r10
+   1e3e0: 1a000126     	bne	0x1e880 <gcsXml_ParseParameter+0x730> @ imm = #0x498
+   1e3e4: e59d3020     	ldr	r3, [sp, #0x20]
+   1e3e8: e3530000     	cmp	r3, #0
+   1e3ec: 1a0000bc     	bne	0x1e6e4 <gcsXml_ParseParameter+0x594> @ imm = #0x2f0
+   1e3f0: e59d3024     	ldr	r3, [sp, #0x24]
+   1e3f4: e3530000     	cmp	r3, #0
+   1e3f8: 1a0000c1     	bne	0x1e704 <gcsXml_ParseParameter+0x5b4> @ imm = #0x304
+   1e3fc: e59d3018     	ldr	r3, [sp, #0x18]
+   1e400: e3530000     	cmp	r3, #0
+   1e404: 1a0000c6     	bne	0x1e724 <gcsXml_ParseParameter+0x5d4> @ imm = #0x318
+   1e408: e5142018     	ldr	r2, [r4, #-0x18]
+   1e40c: e2023103     	and	r3, r2, #-1073741824
+   1e410: e3530103     	cmp	r3, #-1073741824
+   1e414: 0a0000cc     	beq	0x1e74c <gcsXml_ParseParameter+0x5fc> @ imm = #0x330
+   1e418: e3520001     	cmp	r2, #1
+   1e41c: e59f3cd0     	ldr	r3, [pc, #0xcd0]        @ 0x1f0f4 <gcsXml_ParseParameter+0xfa4>
+   1e420: 0a0000ea     	beq	0x1e7d0 <gcsXml_ParseParameter+0x680> @ imm = #0x3a8
+   1e424: e59d1034     	ldr	r1, [sp, #0x34]
+   1e428: e7915003     	ldr	r5, [r1, r3]
+   1e42c: ea000001     	b	0x1e438 <gcsXml_ParseParameter+0x2e8> @ imm = #0x4
+   1e430: e1520003     	cmp	r2, r3
+   1e434: 0a0000e7     	beq	0x1e7d8 <gcsXml_ParseParameter+0x688> @ imm = #0x39c
+   1e438: e5b53008     	ldr	r3, [r5, #0x8]!
+   1e43c: e3530000     	cmp	r3, #0
+   1e440: 1afffffa     	bne	0x1e430 <gcsXml_ParseParameter+0x2e0> @ imm = #-0x18
+   1e444: e5143018     	ldr	r3, [r4, #-0x18]
+   1e448: e353001b     	cmp	r3, #27
+   1e44c: 0a000122     	beq	0x1e8dc <gcsXml_ParseParameter+0x78c> @ imm = #0x488
+   1e450: e3530006     	cmp	r3, #6
+   1e454: 0a000154     	beq	0x1e9ac <gcsXml_ParseParameter+0x85c> @ imm = #0x550
+   1e458: e3530212     	cmp	r3, #536870913
+   1e45c: 0a00017f     	beq	0x1ea60 <gcsXml_ParseParameter+0x910> @ imm = #0x5fc
+   1e460: 9a00010e     	bls	0x1e8a0 <gcsXml_ParseParameter+0x750> @ imm = #0x438
+   1e464: e353010a     	cmp	r3, #-2147483646
+   1e468: 0a00016a     	beq	0x1ea18 <gcsXml_ParseParameter+0x8c8> @ imm = #0x5a8
+   1e46c: 9a00015f     	bls	0x1e9f0 <gcsXml_ParseParameter+0x8a0> @ imm = #0x57c
+   1e470: e3530112     	cmp	r3, #-2147483644
+   1e474: 0a000144     	beq	0x1e98c <gcsXml_ParseParameter+0x83c> @ imm = #0x510
+   1e478: e3530122     	cmp	r3, #-2147483640
+   1e47c: 1a0000c8     	bne	0x1e7a4 <gcsXml_ParseParameter+0x654> @ imm = #0x320
+   1e480: e514301c     	ldr	r3, [r4, #-0x1c]
+   1e484: e59f1c6c     	ldr	r1, [pc, #0xc6c]        @ 0x1f0f8 <gcsXml_ParseParameter+0xfa8>
+   1e488: e1a00007     	mov	r0, r7
+   1e48c: e1c320d0     	ldrd	r2, r3, [r3]
+   1e490: e08f1001     	add	r1, pc, r1  ; PIC literal "%lld" @0x3905c
+   1e494: ebff9e67     	bl	0x5e38 <fprintf@plt>    @ imm = #-0x18664
+   1e498: e08aa000     	add	r10, r10, r0
+   1e49c: ea0000c0     	b	0x1e7a4 <gcsXml_ParseParameter+0x654> @ imm = #0x300
+   1e4a0: e2153004     	ands	r3, r5, #4
+   1e4a4: e58d3024     	str	r3, [sp, #0x24]
+   1e4a8: 0a000001     	beq	0x1e4b4 <gcsXml_ParseParameter+0x364> @ imm = #0x4
+   1e4ac: e31a0004     	tst	r10, #4
+   1e4b0: 0affffb7     	beq	0x1e394 <gcsXml_ParseParameter+0x244> @ imm = #-0x124
+   1e4b4: e59d3018     	ldr	r3, [sp, #0x18]
+   1e4b8: e1530000     	cmp	r3, r0
+   1e4bc: 1affffb4     	bne	0x1e394 <gcsXml_ParseParameter+0x244> @ imm = #-0x130
+   1e4c0: e5142018     	ldr	r2, [r4, #-0x18]
+   1e4c4: e2023103     	and	r3, r2, #-1073741824
+   1e4c8: e352001b     	cmp	r2, #27
+   1e4cc: 13530103     	cmpne	r3, #-1073741824
+   1e4d0: 1a000108     	bne	0x1e8f8 <gcsXml_ParseParameter+0x7a8> @ imm = #0x420
+   1e4d4: e5981004     	ldr	r1, [r8, #0x4]
+   1e4d8: e3510000     	cmp	r1, #0
+   1e4dc: 0a00026f     	beq	0x1eea0 <gcsXml_ParseParameter+0xd50> @ imm = #0x9bc
+   1e4e0: e514001c     	ldr	r0, [r4, #-0x1c]
+   1e4e4: e3500000     	cmp	r0, #0
+   1e4e8: 0a000002     	beq	0x1e4f8 <gcsXml_ParseParameter+0x3a8> @ imm = #0x8
+   1e4ec: ebff9eff     	bl	0x60f0 <strcmp@plt>     @ imm = #-0x18404
+   1e4f0: e3500000     	cmp	r0, #0
+   1e4f4: 0a000051     	beq	0x1e640 <gcsXml_ParseParameter+0x4f0> @ imm = #0x144
+   1e4f8: e514a020     	ldr	r10, [r4, #-0x20]
+   1e4fc: e59f1bf8     	ldr	r1, [pc, #0xbf8]        @ 0x1f0fc <gcsXml_ParseParameter+0xfac>
+   1e500: e1a0000a     	mov	r0, r10
+   1e504: e08f1001     	add	r1, pc, r1  ; PIC literal "DNSServers" @0x38d10
+   1e508: ebff9ef8     	bl	0x60f0 <strcmp@plt>     @ imm = #-0x18420
+   1e50c: e3500000     	cmp	r0, #0
+   1e510: 0a000196     	beq	0x1eb70 <gcsXml_ParseParameter+0xa20> @ imm = #0x658
+   1e514: e59f1be4     	ldr	r1, [pc, #0xbe4]        @ 0x1f100 <gcsXml_ParseParameter+0xfb0>
+   1e518: e1a0000a     	mov	r0, r10
+   1e51c: e08f1001     	add	r1, pc, r1  ; PIC literal "DefaultGateway" @0x38d20
+   1e520: ebff9ef2     	bl	0x60f0 <strcmp@plt>     @ imm = #-0x18438
+   1e524: e3500000     	cmp	r0, #0
+   1e528: 0a000190     	beq	0x1eb70 <gcsXml_ParseParameter+0xa20> @ imm = #0x640
+   1e52c: e59f1bd0     	ldr	r1, [pc, #0xbd0]        @ 0x1f104 <gcsXml_ParseParameter+0xfb4>
+   1e530: e1a0000a     	mov	r0, r10
+   1e534: e08f1001     	add	r1, pc, r1  ; PIC literal "SubnetMask" @0x38d30
+   1e538: ebff9eec     	bl	0x60f0 <strcmp@plt>     @ imm = #-0x18450
+   1e53c: e3500000     	cmp	r0, #0
+   1e540: 0a00018a     	beq	0x1eb70 <gcsXml_ParseParameter+0xa20> @ imm = #0x628
+   1e544: e59f1bbc     	ldr	r1, [pc, #0xbbc]        @ 0x1f108 <gcsXml_ParseParameter+0xfb8>
+   1e548: e1a0000a     	mov	r0, r10
+   1e54c: e08f1001     	add	r1, pc, r1  ; PIC literal "ExternalIPAddress" @0x38d3c
+   1e550: ebff9ee6     	bl	0x60f0 <strcmp@plt>     @ imm = #-0x18468
+   1e554: e3500000     	cmp	r0, #0
+   1e558: 0a000184     	beq	0x1eb70 <gcsXml_ParseParameter+0xa20> @ imm = #0x610
+   1e55c: e59f1ba8     	ldr	r1, [pc, #0xba8]        @ 0x1f10c <gcsXml_ParseParameter+0xfbc>
+   1e560: e1a0000a     	mov	r0, r10
+   1e564: e08f1001     	add	r1, pc, r1  ; PIC literal "X_CT-COM_IPv6DNSServers" @0x38d8c
+   1e568: ebff9ee0     	bl	0x60f0 <strcmp@plt>     @ imm = #-0x18480
+   1e56c: e2501000     	subs	r1, r0, #0
+   1e570: 0a000330     	beq	0x1f238 <gcsXml_ParseParameter+0x10e8> @ imm = #0xcc0
+   1e574: e59f1b94     	ldr	r1, [pc, #0xb94]        @ 0x1f110 <gcsXml_ParseParameter+0xfc0>
+   1e578: e1a0000a     	mov	r0, r10
+   1e57c: e08f1001     	add	r1, pc, r1  ; PIC literal "X_CT-COM_IPv6IPAddress" @0x38df8
+   1e580: ebff9eda     	bl	0x60f0 <strcmp@plt>     @ imm = #-0x18498
+   1e584: e2501000     	subs	r1, r0, #0
+   1e588: 0a00028a     	beq	0x1efb8 <gcsXml_ParseParameter+0xe68> @ imm = #0xa28
+   1e58c: e59f1b80     	ldr	r1, [pc, #0xb80]        @ 0x1f114 <gcsXml_ParseParameter+0xfc4>
+   1e590: e1a0000a     	mov	r0, r10
+   1e594: e08f1001     	add	r1, pc, r1  ; PIC literal "X_CT-COM_DefaultIPv6Gateway" @0x38e30
+   1e598: ebff9ed4     	bl	0x60f0 <strcmp@plt>     @ imm = #-0x184b0
+   1e59c: e2503000     	subs	r3, r0, #0
+   1e5a0: 0a0001c1     	beq	0x1ecac <gcsXml_ParseParameter+0xb5c> @ imm = #0x704
+   1e5a4: e59f1b6c     	ldr	r1, [pc, #0xb6c]        @ 0x1f118 <gcsXml_ParseParameter+0xfc8>
+   1e5a8: e1a0000a     	mov	r0, r10
+   1e5ac: e08f1001     	add	r1, pc, r1  ; PIC literal "X_CT-COM_IPv6Prefix" @0x38e68
+   1e5b0: ebff9ece     	bl	0x60f0 <strcmp@plt>     @ imm = #-0x184c8
+   1e5b4: e2501000     	subs	r1, r0, #0
+   1e5b8: 0a000396     	beq	0x1f418 <gcsXml_ParseParameter+0x12c8> @ imm = #0xe58
+   1e5bc: e59f1b58     	ldr	r1, [pc, #0xb58]        @ 0x1f11c <gcsXml_ParseParameter+0xfcc>
+   1e5c0: e1a0000a     	mov	r0, r10
+   1e5c4: e08f1001     	add	r1, pc, r1  ; PIC literal "Prefix" @0x38e98
+   1e5c8: ebff9ec8     	bl	0x60f0 <strcmp@plt>     @ imm = #-0x184e0
+   1e5cc: e3500000     	cmp	r0, #0
+   1e5d0: 0a000369     	beq	0x1f37c <gcsXml_ParseParameter+0x122c> @ imm = #0xda4
+   1e5d4: e59f1b44     	ldr	r1, [pc, #0xb44]        @ 0x1f120 <gcsXml_ParseParameter+0xfd0>
+   1e5d8: e1a0000a     	mov	r0, r10
+   1e5dc: e08f1001     	add	r1, pc, r1  ; PIC literal "X_CT-COM_Aftr" @0x38ecc
+   1e5e0: ebff9ec2     	bl	0x60f0 <strcmp@plt>     @ imm = #-0x184f8
+   1e5e4: e3500000     	cmp	r0, #0
+   1e5e8: 1affff69     	bne	0x1e394 <gcsXml_ParseParameter+0x244> @ imm = #-0x25c
+   1e5ec: e59feb30     	ldr	lr, [pc, #0xb30]        @ 0x1f124 <gcsXml_ParseParameter+0xfd4>
+   1e5f0: e59d3044     	ldr	r3, [sp, #0x44]
+   1e5f4: e08fe00e     	add	lr, pc, lr
+   1e5f8: e3530000     	cmp	r3, #0
+   1e5fc: e8be000f     	ldm	lr!, {r0, r1, r2, r3}
+   1e600: e59dc048     	ldr	r12, [sp, #0x48]
+   1e604: e59ee000     	ldr	lr, [lr]
+   1e608: e8ac000f     	stm	r12!, {r0, r1, r2, r3}
+   1e60c: e1cce0b0     	strh	lr, [r12]
+   1e610: 0affff5f     	beq	0x1e394 <gcsXml_ParseParameter+0x244> @ imm = #-0x284
+   1e614: e59d1010     	ldr	r1, [sp, #0x10]
+   1e618: e28d3060     	add	r3, sp, #96
+   1e61c: e5960000     	ldr	r0, [r6]
+   1e620: e3a02001     	mov	r2, #1
+   1e624: ebff9caa     	bl	0x58d4 <gcsXml_getParameter@plt> @ imm = #-0x18d58
+   1e628: e3a01001     	mov	r1, #1
+   1e62c: e5903004     	ldr	r3, [r0, #0x4]
+   1e630: e5d33000     	ldrb	r3, [r3]
+   1e634: e3530000     	cmp	r3, #0
+   1e638: 1a00034d     	bne	0x1f374 <gcsXml_ParseParameter+0x1224> @ imm = #0xd34
+   1e63c: ebff9de5     	bl	0x5dd8 <gcsXml_freeParameterBuffer@plt> @ imm = #-0x1886c
+   1e640: e25bb001     	subs	r11, r11, #1
+   1e644: e2888020     	add	r8, r8, #32
+   1e648: e2844020     	add	r4, r4, #32
+   1e64c: 1affff20     	bne	0x1e2d4 <gcsXml_ParseParameter+0x184> @ imm = #-0x380
+   1e650: e59da014     	ldr	r10, [sp, #0x14]
+   1e654: e1da12b8     	ldrh	r1, [r10, #40]
+   1e658: e59d003c     	ldr	r0, [sp, #0x3c]
+   1e65c: ebff9ddd     	bl	0x5dd8 <gcsXml_freeParameterBuffer@plt> @ imm = #-0x1888c
+   1e660: e59d0040     	ldr	r0, [sp, #0x40]
+   1e664: e1da12b8     	ldrh	r1, [r10, #40]
+   1e668: ebff9dda     	bl	0x5dd8 <gcsXml_freeParameterBuffer@plt> @ imm = #-0x18898
+   1e66c: e59d001c     	ldr	r0, [sp, #0x1c]
+   1e670: e28dd0a4     	add	sp, sp, #164
+   1e674: e8bd8ff0     	pop	{r4, r5, r6, r7, r8, r9, r10, r11, pc}
+   1e678: e2153002     	ands	r3, r5, #2
+   1e67c: e58d3020     	str	r3, [sp, #0x20]
+   1e680: 0affff86     	beq	0x1e4a0 <gcsXml_ParseParameter+0x350> @ imm = #-0x1e8
+   1e684: e31a0002     	tst	r10, #2
+   1e688: 1affff84     	bne	0x1e4a0 <gcsXml_ParseParameter+0x350> @ imm = #-0x1f0
+   1e68c: e59f3a94     	ldr	r3, [pc, #0xa94]        @ 0x1f128 <gcsXml_ParseParameter+0xfd8>
+   1e690: e1a00007     	mov	r0, r7
+   1e694: e08f3003     	add	r3, pc, r3
+   1e698: e5931020     	ldr	r1, [r3, #0x20]
+   1e69c: ebff9ca1     	bl	0x5928 <printFileSpace@plt> @ imm = #-0x18d7c
+   1e6a0: e59d301c     	ldr	r3, [sp, #0x1c]
+   1e6a4: e59f1a80     	ldr	r1, [pc, #0xa80]        @ 0x1f12c <gcsXml_ParseParameter+0xfdc>
+   1e6a8: e5142020     	ldr	r2, [r4, #-0x20]
+   1e6ac: e08f1001     	add	r1, pc, r1  ; PIC literal "<%s" @0x38ef0
+   1e6b0: e080a003     	add	r10, r0, r3
+   1e6b4: e1a00007     	mov	r0, r7
+   1e6b8: ebff9dde     	bl	0x5e38 <fprintf@plt>    @ imm = #-0x18888
+   1e6bc: e59f1a6c     	ldr	r1, [pc, #0xa6c]        @ 0x1f130 <gcsXml_ParseParameter+0xfe0>
+   1e6c0: e08f1001     	add	r1, pc, r1  ; PIC literal " PARAMETER=\"configured\"" @0x38ef4
+   1e6c4: e080a00a     	add	r10, r0, r10
+   1e6c8: e1a00007     	mov	r0, r7
+   1e6cc: ebff9dd9     	bl	0x5e38 <fprintf@plt>    @ imm = #-0x1889c
+   1e6d0: e2053004     	and	r3, r5, #4
+   1e6d4: e3150001     	tst	r5, #1
+   1e6d8: e58d3024     	str	r3, [sp, #0x24]
+   1e6dc: e080a00a     	add	r10, r0, r10
+   1e6e0: 1a000066     	bne	0x1e880 <gcsXml_ParseParameter+0x730> @ imm = #0x198
+   1e6e4: e59f1a48     	ldr	r1, [pc, #0xa48]        @ 0x1f134 <gcsXml_ParseParameter+0xfe4>
+   1e6e8: e1a00007     	mov	r0, r7
+   1e6ec: e08f1001     	add	r1, pc, r1  ; PIC literal " NOTIFICATION=\"active\"" @0x38f20
+   1e6f0: ebff9dd0     	bl	0x5e38 <fprintf@plt>    @ imm = #-0x188c0
+   1e6f4: e59d3024     	ldr	r3, [sp, #0x24]
+   1e6f8: e3530000     	cmp	r3, #0
+   1e6fc: e08aa000     	add	r10, r10, r0
+   1e700: 0affff3d     	beq	0x1e3fc <gcsXml_ParseParameter+0x2ac> @ imm = #-0x30c
+   1e704: e59f1a2c     	ldr	r1, [pc, #0xa2c]        @ 0x1f138 <gcsXml_ParseParameter+0xfe8>
+   1e708: e1a00007     	mov	r0, r7
+   1e70c: e08f1001     	add	r1, pc, r1  ; PIC literal " NOTIFICATION=\"passive\"" @0x38f38
+   1e710: ebff9dc8     	bl	0x5e38 <fprintf@plt>    @ imm = #-0x188e0
+   1e714: e59d3018     	ldr	r3, [sp, #0x18]
+   1e718: e3530000     	cmp	r3, #0
+   1e71c: e08aa000     	add	r10, r10, r0
+   1e720: 0affff38     	beq	0x1e408 <gcsXml_ParseParameter+0x2b8> @ imm = #-0x320
+   1e724: e59f1a10     	ldr	r1, [pc, #0xa10]        @ 0x1f13c <gcsXml_ParseParameter+0xfec>
+   1e728: e1a02003     	mov	r2, r3
+   1e72c: e1a00007     	mov	r0, r7
+   1e730: e08f1001     	add	r1, pc, r1  ; PIC literal " EXTATTR=\"0x%04x\"" @0x38f50
+   1e734: ebff9dbf     	bl	0x5e38 <fprintf@plt>    @ imm = #-0x18904
+   1e738: e5142018     	ldr	r2, [r4, #-0x18]
+   1e73c: e2023103     	and	r3, r2, #-1073741824
+   1e740: e3530103     	cmp	r3, #-1073741824
+   1e744: e08aa000     	add	r10, r10, r0
+   1e748: 1affff32     	bne	0x1e418 <gcsXml_ParseParameter+0x2c8> @ imm = #-0x338
+   1e74c: e59f19ec     	ldr	r1, [pc, #0x9ec]        @ 0x1f140 <gcsXml_ParseParameter+0xff0>
+   1e750: e1a00007     	mov	r0, r7
+   1e754: e08f1001     	add	r1, pc, r1  ; PIC literal " TYPE=\"string\"" @0x38f64
+   1e758: ebff9db6     	bl	0x5e38 <fprintf@plt>    @ imm = #-0x18928
+   1e75c: e5142018     	ldr	r2, [r4, #-0x18]
+   1e760: e59f19dc     	ldr	r1, [pc, #0x9dc]        @ 0x1f144 <gcsXml_ParseParameter+0xff4>
+   1e764: e2422107     	sub	r2, r2, #-1073741823
+   1e768: e08f1001     	add	r1, pc, r1  ; PIC literal " LENGTH=\"%d\">" @0x38f74
+   1e76c: e080a00a     	add	r10, r0, r10
+   1e770: e1a00007     	mov	r0, r7
+   1e774: ebff9daf     	bl	0x5e38 <fprintf@plt>    @ imm = #-0x18944
+   1e778: e080a00a     	add	r10, r0, r10
+   1e77c: e5143018     	ldr	r3, [r4, #-0x18]
+   1e780: e2032103     	and	r2, r3, #-1073741824
+   1e784: e3520103     	cmp	r2, #-1073741824
+   1e788: 1affff2e     	bne	0x1e448 <gcsXml_ParseParameter+0x2f8> @ imm = #-0x348
+   1e78c: e59f19b4     	ldr	r1, [pc, #0x9b4]        @ 0x1f148 <gcsXml_ParseParameter+0xff8>
+   1e790: e1a00007     	mov	r0, r7
+   1e794: e08f1001     	add	r1, pc, r1
+   1e798: e514201c     	ldr	r2, [r4, #-0x1c]
+   1e79c: ebff9da5     	bl	0x5e38 <fprintf@plt>    @ imm = #-0x1896c
+   1e7a0: e08aa000     	add	r10, r10, r0
+   1e7a4: e5142020     	ldr	r2, [r4, #-0x20]
+   1e7a8: e1a00007     	mov	r0, r7
+   1e7ac: e59d1038     	ldr	r1, [sp, #0x38]
+   1e7b0: ebff9da0     	bl	0x5e38 <fprintf@plt>    @ imm = #-0x18980
+   1e7b4: e25bb001     	subs	r11, r11, #1
+   1e7b8: e2888020     	add	r8, r8, #32
+   1e7bc: e2844020     	add	r4, r4, #32
+   1e7c0: e080300a     	add	r3, r0, r10
+   1e7c4: e58d301c     	str	r3, [sp, #0x1c]
+   1e7c8: 1afffec1     	bne	0x1e2d4 <gcsXml_ParseParameter+0x184> @ imm = #-0x4fc
+   1e7cc: eaffff9f     	b	0x1e650 <gcsXml_ParseParameter+0x500> @ imm = #-0x184
+   1e7d0: e59d2034     	ldr	r2, [sp, #0x34]
+   1e7d4: e7925003     	ldr	r5, [r2, r3]
+   1e7d8: e59f196c     	ldr	r1, [pc, #0x96c]        @ 0x1f14c <gcsXml_ParseParameter+0xffc>
+   1e7dc: e1a00007     	mov	r0, r7
+   1e7e0: e08f1001     	add	r1, pc, r1  ; PIC literal " TYPE=\"%s\"" @0x38f84
+   1e7e4: e5952004     	ldr	r2, [r5, #0x4]
+   1e7e8: ebff9d92     	bl	0x5e38 <fprintf@plt>    @ imm = #-0x189b8
+   1e7ec: e5953000     	ldr	r3, [r5]
+   1e7f0: e3530001     	cmp	r3, #1
+   1e7f4: e08aa000     	add	r10, r10, r0
+   1e7f8: 0a0000a4     	beq	0x1ea90 <gcsXml_ParseParameter+0x940> @ imm = #0x290
+   1e7fc: e3530002     	cmp	r3, #2
+   1e800: 0a0000af     	beq	0x1eac4 <gcsXml_ParseParameter+0x974> @ imm = #0x2bc
+   1e804: e3530004     	cmp	r3, #4
+   1e808: 0a0000ba     	beq	0x1eaf8 <gcsXml_ParseParameter+0x9a8> @ imm = #0x2e8
+   1e80c: e3530006     	cmp	r3, #6
+   1e810: 0a0000fe     	beq	0x1ec10 <gcsXml_ParseParameter+0xac0> @ imm = #0x3f8
+   1e814: e3530008     	cmp	r3, #8
+   1e818: 0a000102     	beq	0x1ec28 <gcsXml_ParseParameter+0xad8> @ imm = #0x408
+   1e81c: e3530212     	cmp	r3, #536870913
+   1e820: 0a000108     	beq	0x1ec48 <gcsXml_ParseParameter+0xaf8> @ imm = #0x420
+   1e824: e353001b     	cmp	r3, #27
+   1e828: 0a00010c     	beq	0x1ec60 <gcsXml_ParseParameter+0xb10> @ imm = #0x430
+   1e82c: e3530106     	cmp	r3, #-2147483647
+   1e830: 0a000110     	beq	0x1ec78 <gcsXml_ParseParameter+0xb28> @ imm = #0x440
+   1e834: e353010a     	cmp	r3, #-2147483646
+   1e838: 0a000180     	beq	0x1ee40 <gcsXml_ParseParameter+0xcf0> @ imm = #0x600
+   1e83c: e3530112     	cmp	r3, #-2147483644
+   1e840: 0a0000c2     	beq	0x1eb50 <gcsXml_ParseParameter+0xa00> @ imm = #0x308
+   1e844: e3530122     	cmp	r3, #-2147483640
+   1e848: 1affffcb     	bne	0x1e77c <gcsXml_ParseParameter+0x62c> @ imm = #-0xd4
+   1e84c: e59f18fc     	ldr	r1, [pc, #0x8fc]        @ 0x1f150 <gcsXml_ParseParameter+0x1000>
+   1e850: e1a00007     	mov	r0, r7
+   1e854: e08f1001     	add	r1, pc, r1  ; PIC literal " MAX=\"%lld\"" @0x3900c
+   1e858: e14421d0     	ldrd	r2, r3, [r4, #-16]
+   1e85c: ebff9d75     	bl	0x5e38 <fprintf@plt>    @ imm = #-0x18a2c
+   1e860: e59f18ec     	ldr	r1, [pc, #0x8ec]        @ 0x1f154 <gcsXml_ParseParameter+0x1004>
+   1e864: e08f1001     	add	r1, pc, r1  ; PIC literal " MIN=\"%lld\">" @0x39018
+   1e868: e080a00a     	add	r10, r0, r10
+   1e86c: e14420d8     	ldrd	r2, r3, [r4, #-8]
+   1e870: e1a00007     	mov	r0, r7
+   1e874: ebff9d6f     	bl	0x5e38 <fprintf@plt>    @ imm = #-0x18a44
+   1e878: e080a00a     	add	r10, r0, r10
+   1e87c: eaffffbe     	b	0x1e77c <gcsXml_ParseParameter+0x62c> @ imm = #-0x108
+   1e880: e59f18d0     	ldr	r1, [pc, #0x8d0]        @ 0x1f158 <gcsXml_ParseParameter+0x1008>
+   1e884: e59f28d0     	ldr	r2, [pc, #0x8d0]        @ 0x1f15c <gcsXml_ParseParameter+0x100c>
+   1e888: e1a00007     	mov	r0, r7
+   1e88c: e08f1001     	add	r1, pc, r1  ; PIC literal " READONLY=%s" @0x38f0c
+   1e890: e08f2002     	add	r2, pc, r2  ; PIC literal "\"y\"" @0x38f1c
+   1e894: ebff9d67     	bl	0x5e38 <fprintf@plt>    @ imm = #-0x18a64
+   1e898: e08aa000     	add	r10, r10, r0
+   1e89c: eafffed0     	b	0x1e3e4 <gcsXml_ParseParameter+0x294> @ imm = #-0x4c0
+   1e8a0: e3530002     	cmp	r3, #2
+   1e8a4: 0a000063     	beq	0x1ea38 <gcsXml_ParseParameter+0x8e8> @ imm = #0x18c
+   1e8a8: 9a00006a     	bls	0x1ea58 <gcsXml_ParseParameter+0x908> @ imm = #0x1a8
+   1e8ac: e3530004     	cmp	r3, #4
+   1e8b0: 0a00002d     	beq	0x1e96c <gcsXml_ParseParameter+0x81c> @ imm = #0xb4
+   1e8b4: e3530008     	cmp	r3, #8
+   1e8b8: 1affffb9     	bne	0x1e7a4 <gcsXml_ParseParameter+0x654> @ imm = #-0x11c
+   1e8bc: e514301c     	ldr	r3, [r4, #-0x1c]
+   1e8c0: e59f1898     	ldr	r1, [pc, #0x898]        @ 0x1f160 <gcsXml_ParseParameter+0x1010>
+   1e8c4: e1a00007     	mov	r0, r7
+   1e8c8: e1c320d0     	ldrd	r2, r3, [r3]
+   1e8cc: e08f1001     	add	r1, pc, r1  ; PIC literal "%llu" @0x39050
+   1e8d0: ebff9d58     	bl	0x5e38 <fprintf@plt>    @ imm = #-0x18aa0
+   1e8d4: e08aa000     	add	r10, r10, r0
+   1e8d8: eaffffb1     	b	0x1e7a4 <gcsXml_ParseParameter+0x654> @ imm = #-0x13c
+   1e8dc: e59f1880     	ldr	r1, [pc, #0x880]        @ 0x1f164 <gcsXml_ParseParameter+0x1014>
+   1e8e0: e1a00007     	mov	r0, r7
+   1e8e4: e08f1001     	add	r1, pc, r1
+   1e8e8: e514201c     	ldr	r2, [r4, #-0x1c]
+   1e8ec: ebff9d51     	bl	0x5e38 <fprintf@plt>    @ imm = #-0x18abc
+   1e8f0: e08aa000     	add	r10, r10, r0
+   1e8f4: eaffffaa     	b	0x1e7a4 <gcsXml_ParseParameter+0x654> @ imm = #-0x158
+   1e8f8: e3520006     	cmp	r2, #6
+   1e8fc: 0a000140     	beq	0x1ee04 <gcsXml_ParseParameter+0xcb4> @ imm = #0x500
+   1e900: e3c23202     	bic	r3, r2, #536870912
+   1e904: e3530001     	cmp	r3, #1
+   1e908: 0a000087     	beq	0x1eb2c <gcsXml_ParseParameter+0x9dc> @ imm = #0x21c
+   1e90c: e3520002     	cmp	r2, #2
+   1e910: 0a000176     	beq	0x1eef0 <gcsXml_ParseParameter+0xda0> @ imm = #0x5d8
+   1e914: e3520004     	cmp	r2, #4
+   1e918: 0a00017d     	beq	0x1ef14 <gcsXml_ParseParameter+0xdc4> @ imm = #0x5f4
+   1e91c: e3520008     	cmp	r2, #8
+   1e920: 0a000007     	beq	0x1e944 <gcsXml_ParseParameter+0x7f4> @ imm = #0x1c
+   1e924: e3520106     	cmp	r2, #-2147483647
+   1e928: 0a000194     	beq	0x1ef80 <gcsXml_ParseParameter+0xe30> @ imm = #0x650
+   1e92c: e352010a     	cmp	r2, #-2147483646
+   1e930: 0a000189     	beq	0x1ef5c <gcsXml_ParseParameter+0xe0c> @ imm = #0x624
+   1e934: e3520112     	cmp	r2, #-2147483644
+   1e938: 0a000175     	beq	0x1ef14 <gcsXml_ParseParameter+0xdc4> @ imm = #0x5d4
+   1e93c: e3520122     	cmp	r2, #-2147483640
+   1e940: 1afffe93     	bne	0x1e394 <gcsXml_ParseParameter+0x244> @ imm = #-0x5b4
+   1e944: e5983004     	ldr	r3, [r8, #0x4]
+   1e948: e3530000     	cmp	r3, #0
+   1e94c: 0a000194     	beq	0x1efa4 <gcsXml_ParseParameter+0xe54> @ imm = #0x650
+   1e950: e514201c     	ldr	r2, [r4, #-0x1c]
+   1e954: e1c300d0     	ldrd	r0, r1, [r3]
+   1e958: e1c220d0     	ldrd	r2, r3, [r2]
+   1e95c: e1510003     	cmp	r1, r3
+   1e960: 01500002     	cmpeq	r0, r2
+   1e964: 1afffe8a     	bne	0x1e394 <gcsXml_ParseParameter+0x244> @ imm = #-0x5d8
+   1e968: eaffff34     	b	0x1e640 <gcsXml_ParseParameter+0x4f0> @ imm = #-0x330
+   1e96c: e514301c     	ldr	r3, [r4, #-0x1c]
+   1e970: e59f17f0     	ldr	r1, [pc, #0x7f0]        @ 0x1f168 <gcsXml_ParseParameter+0x1018>
+   1e974: e1a00007     	mov	r0, r7
+   1e978: e5932000     	ldr	r2, [r3]
+   1e97c: e08f1001     	add	r1, pc, r1  ; PIC literal "%lu" @0x3904c
+   1e980: ebff9d2c     	bl	0x5e38 <fprintf@plt>    @ imm = #-0x18b50
+   1e984: e08aa000     	add	r10, r10, r0
+   1e988: eaffff85     	b	0x1e7a4 <gcsXml_ParseParameter+0x654> @ imm = #-0x1ec
+   1e98c: e514301c     	ldr	r3, [r4, #-0x1c]
+   1e990: e59f17d4     	ldr	r1, [pc, #0x7d4]        @ 0x1f16c <gcsXml_ParseParameter+0x101c>
+   1e994: e1a00007     	mov	r0, r7
+   1e998: e5932000     	ldr	r2, [r3]
+   1e99c: e08f1001     	add	r1, pc, r1  ; PIC literal "%ld" @0x39058
+   1e9a0: ebff9d24     	bl	0x5e38 <fprintf@plt>    @ imm = #-0x18b70
+   1e9a4: e08aa000     	add	r10, r10, r0
+   1e9a8: eaffff7d     	b	0x1e7a4 <gcsXml_ParseParameter+0x654> @ imm = #-0x20c
+   1e9ac: e514101c     	ldr	r1, [r4, #-0x1c]
+   1e9b0: e1a00007     	mov	r0, r7
+   1e9b4: e5d1c002     	ldrb	r12, [r1, #0x2]
+   1e9b8: e5d12000     	ldrb	r2, [r1]
+   1e9bc: e5d13001     	ldrb	r3, [r1, #0x1]
+   1e9c0: e58dc000     	str	r12, [sp]
+   1e9c4: e5d1c003     	ldrb	r12, [r1, #0x3]
+   1e9c8: e58dc004     	str	r12, [sp, #0x4]
+   1e9cc: e5d1c004     	ldrb	r12, [r1, #0x4]
+   1e9d0: e58dc008     	str	r12, [sp, #0x8]
+   1e9d4: e5d1c005     	ldrb	r12, [r1, #0x5]
+   1e9d8: e59f1790     	ldr	r1, [pc, #0x790]        @ 0x1f170 <gcsXml_ParseParameter+0x1020>
+   1e9dc: e58dc00c     	str	r12, [sp, #0xc]
+   1e9e0: e08f1001     	add	r1, pc, r1  ; PIC literal "%02x:%02x:%02x:%02x:%02x:%02x" @0x39028
+   1e9e4: ebff9d13     	bl	0x5e38 <fprintf@plt>    @ imm = #-0x18bb4
+   1e9e8: e08aa000     	add	r10, r10, r0
+   1e9ec: eaffff6c     	b	0x1e7a4 <gcsXml_ParseParameter+0x654> @ imm = #-0x250
+   1e9f0: e3530106     	cmp	r3, #-2147483647
+   1e9f4: 1affff6a     	bne	0x1e7a4 <gcsXml_ParseParameter+0x654> @ imm = #-0x258
+   1e9f8: e514301c     	ldr	r3, [r4, #-0x1c]
+   1e9fc: e59f1770     	ldr	r1, [pc, #0x770]        @ 0x1f174 <gcsXml_ParseParameter+0x1024>
+   1ea00: e1a00007     	mov	r0, r7
+   1ea04: e1d320d0     	ldrsb	r2, [r3]
+   1ea08: e08f1001     	add	r1, pc, r1
+   1ea0c: ebff9d09     	bl	0x5e38 <fprintf@plt>    @ imm = #-0x18bdc
+   1ea10: e08aa000     	add	r10, r10, r0
+   1ea14: eaffff62     	b	0x1e7a4 <gcsXml_ParseParameter+0x654> @ imm = #-0x278
+   1ea18: e514301c     	ldr	r3, [r4, #-0x1c]
+   1ea1c: e59f1754     	ldr	r1, [pc, #0x754]        @ 0x1f178 <gcsXml_ParseParameter+0x1028>
+   1ea20: e1a00007     	mov	r0, r7
+   1ea24: e1d320f0     	ldrsh	r2, [r3]
+   1ea28: e08f1001     	add	r1, pc, r1
+   1ea2c: ebff9d01     	bl	0x5e38 <fprintf@plt>    @ imm = #-0x18bfc
+   1ea30: e08aa000     	add	r10, r10, r0
+   1ea34: eaffff5a     	b	0x1e7a4 <gcsXml_ParseParameter+0x654> @ imm = #-0x298
+   1ea38: e514301c     	ldr	r3, [r4, #-0x1c]
+   1ea3c: e59f1738     	ldr	r1, [pc, #0x738]        @ 0x1f17c <gcsXml_ParseParameter+0x102c>
+   1ea40: e1a00007     	mov	r0, r7
+   1ea44: e1d320b0     	ldrh	r2, [r3]
+   1ea48: e08f1001     	add	r1, pc, r1
+   1ea4c: ebff9cf9     	bl	0x5e38 <fprintf@plt>    @ imm = #-0x18c1c
+   1ea50: e08aa000     	add	r10, r10, r0
+   1ea54: eaffff52     	b	0x1e7a4 <gcsXml_ParseParameter+0x654> @ imm = #-0x2b8
+   1ea58: e3530001     	cmp	r3, #1
+   1ea5c: 1affff50     	bne	0x1e7a4 <gcsXml_ParseParameter+0x654> @ imm = #-0x2c0
+   1ea60: e514301c     	ldr	r3, [r4, #-0x1c]
+   1ea64: e1a00007     	mov	r0, r7
+   1ea68: e5d32000     	ldrb	r2, [r3]
+   1ea6c: e59d104c     	ldr	r1, [sp, #0x4c]
+   1ea70: ebff9cf0     	bl	0x5e38 <fprintf@plt>    @ imm = #-0x18c40
+   1ea74: e08aa000     	add	r10, r10, r0
+   1ea78: eaffff49     	b	0x1e7a4 <gcsXml_ParseParameter+0x654> @ imm = #-0x2dc
+   1ea7c: e5960000     	ldr	r0, [r6]
+   1ea80: e59d1044     	ldr	r1, [sp, #0x44]
+   1ea84: ebff9da2     	bl	0x6114 <gcsXmlGetPtrOffset@plt> @ imm = #-0x18978
+   1ea88: e58d0010     	str	r0, [sp, #0x10]
+   1ea8c: eafffde6     	b	0x1e22c <gcsXml_ParseParameter+0xdc> @ imm = #-0x868
+   1ea90: e59f16e8     	ldr	r1, [pc, #0x6e8]        @ 0x1f180 <gcsXml_ParseParameter+0x1030>
+   1ea94: e5542010     	ldrb	r2, [r4, #-0x10]
+   1ea98: e08f1001     	add	r1, pc, r1  ; PIC literal " MAX=\"%u\"" @0x38f90
+   1ea9c: e1a00007     	mov	r0, r7
+   1eaa0: ebff9ce4     	bl	0x5e38 <fprintf@plt>    @ imm = #-0x18c70
+   1eaa4: e59f16d8     	ldr	r1, [pc, #0x6d8]        @ 0x1f184 <gcsXml_ParseParameter+0x1034>
+   1eaa8: e5542008     	ldrb	r2, [r4, #-0x8]
+   1eaac: e08f1001     	add	r1, pc, r1  ; PIC literal " MIN=\"%u\">" @0x38f9c
+   1eab0: e080a00a     	add	r10, r0, r10
+   1eab4: e1a00007     	mov	r0, r7
+   1eab8: ebff9cde     	bl	0x5e38 <fprintf@plt>    @ imm = #-0x18c88
+   1eabc: e080a00a     	add	r10, r0, r10
+   1eac0: eaffff2d     	b	0x1e77c <gcsXml_ParseParameter+0x62c> @ imm = #-0x34c
+   1eac4: e59f16bc     	ldr	r1, [pc, #0x6bc]        @ 0x1f188 <gcsXml_ParseParameter+0x1038>
+   1eac8: e15421b0     	ldrh	r2, [r4, #-16]
+   1eacc: e08f1001     	add	r1, pc, r1  ; PIC literal " MAX=\"%u\"" @0x38f90
+   1ead0: e1a00007     	mov	r0, r7
+   1ead4: ebff9cd7     	bl	0x5e38 <fprintf@plt>    @ imm = #-0x18ca4
+   1ead8: e59f16ac     	ldr	r1, [pc, #0x6ac]        @ 0x1f18c <gcsXml_ParseParameter+0x103c>
+   1eadc: e15420b8     	ldrh	r2, [r4, #-8]
+   1eae0: e08f1001     	add	r1, pc, r1  ; PIC literal " MIN=\"%u\">" @0x38f9c
+   1eae4: e080a00a     	add	r10, r0, r10
+   1eae8: e1a00007     	mov	r0, r7
+   1eaec: ebff9cd1     	bl	0x5e38 <fprintf@plt>    @ imm = #-0x18cbc
+   1eaf0: e080a00a     	add	r10, r0, r10
+   1eaf4: eaffff20     	b	0x1e77c <gcsXml_ParseParameter+0x62c> @ imm = #-0x380
+   1eaf8: e59f1690     	ldr	r1, [pc, #0x690]        @ 0x1f190 <gcsXml_ParseParameter+0x1040>
+   1eafc: e1a00007     	mov	r0, r7
+   1eb00: e08f1001     	add	r1, pc, r1  ; PIC literal " MAX=\"%lu\"" @0x38fa8
+   1eb04: e5142010     	ldr	r2, [r4, #-0x10]
+   1eb08: ebff9cca     	bl	0x5e38 <fprintf@plt>    @ imm = #-0x18cd8
+   1eb0c: e59f1680     	ldr	r1, [pc, #0x680]        @ 0x1f194 <gcsXml_ParseParameter+0x1044>
+   1eb10: e08f1001     	add	r1, pc, r1  ; PIC literal " MIN=\"%lu\">" @0x38fb4
+   1eb14: e080a00a     	add	r10, r0, r10
+   1eb18: e5142008     	ldr	r2, [r4, #-0x8]
+   1eb1c: e1a00007     	mov	r0, r7
+   1eb20: ebff9cc4     	bl	0x5e38 <fprintf@plt>    @ imm = #-0x18cf0
+   1eb24: e080a00a     	add	r10, r0, r10
+   1eb28: eaffff13     	b	0x1e77c <gcsXml_ParseParameter+0x62c> @ imm = #-0x3b4
+   1eb2c: e5983004     	ldr	r3, [r8, #0x4]
+   1eb30: e3530000     	cmp	r3, #0
+   1eb34: 0a0000ff     	beq	0x1ef38 <gcsXml_ParseParameter+0xde8> @ imm = #0x3fc
+   1eb38: e514101c     	ldr	r1, [r4, #-0x1c]
+   1eb3c: e5d32000     	ldrb	r2, [r3]
+   1eb40: e5d13000     	ldrb	r3, [r1]
+   1eb44: e1520003     	cmp	r2, r3
+   1eb48: 1afffe11     	bne	0x1e394 <gcsXml_ParseParameter+0x244> @ imm = #-0x7bc
+   1eb4c: eafffebb     	b	0x1e640 <gcsXml_ParseParameter+0x4f0> @ imm = #-0x514
+   1eb50: e59f1640     	ldr	r1, [pc, #0x640]        @ 0x1f198 <gcsXml_ParseParameter+0x1048>
+   1eb54: e1a00007     	mov	r0, r7
+   1eb58: e08f1001     	add	r1, pc, r1  ; PIC literal " MAX=\"%ld\"" @0x38ff4
+   1eb5c: e5142010     	ldr	r2, [r4, #-0x10]
+   1eb60: ebff9cb4     	bl	0x5e38 <fprintf@plt>    @ imm = #-0x18d30
+   1eb64: e59f1630     	ldr	r1, [pc, #0x630]        @ 0x1f19c <gcsXml_ParseParameter+0x104c>
+   1eb68: e08f1001     	add	r1, pc, r1  ; PIC literal " MIN=\"%ld\">" @0x39000
+   1eb6c: eaffffe8     	b	0x1eb14 <gcsXml_ParseParameter+0x9c4> @ imm = #-0x60
+   1eb70: e59d3014     	ldr	r3, [sp, #0x14]
+   1eb74: e5960000     	ldr	r0, [r6]
+   1eb78: e593101c     	ldr	r1, [r3, #0x1c]
+   1eb7c: ebff9bab     	bl	0x5a30 <gcsXml_getFullPathByID@plt> @ imm = #-0x19154
+   1eb80: e59f1618     	ldr	r1, [pc, #0x618]        @ 0x1f1a0 <gcsXml_ParseParameter+0x1050>
+   1eb84: e08f1001     	add	r1, pc, r1  ; PIC literal "WANIPConnection" @0x38d50
+   1eb88: e1a0a000     	mov	r10, r0
+   1eb8c: e58d005c     	str	r0, [sp, #0x5c]
+   1eb90: ebff9cd2     	bl	0x5ee0 <strstr@plt>     @ imm = #-0x18cb8
+   1eb94: e3500000     	cmp	r0, #0
+   1eb98: 0a0000b5     	beq	0x1ee74 <gcsXml_ParseParameter+0xd24> @ imm = #0x2d4
+   1eb9c: e59f3600     	ldr	r3, [pc, #0x600]        @ 0x1f1a4 <gcsXml_ParseParameter+0x1054>
+   1eba0: e59d2044     	ldr	r2, [sp, #0x44]
+   1eba4: e08f3003     	add	r3, pc, r3  ; PIC literal "AddressingType" @0x38d60
+   1eba8: e3520000     	cmp	r2, #0
+   1ebac: e893000f     	ldm	r3, {r0, r1, r2, r3}
+   1ebb0: e59dc048     	ldr	r12, [sp, #0x48]
+   1ebb4: e1a0e823     	lsr	lr, r3, #16
+   1ebb8: e8ac0007     	stm	r12!, {r0, r1, r2}
+   1ebbc: e0cc30b2     	strh	r3, [r12], #2
+   1ebc0: e5cce000     	strb	lr, [r12]
+   1ebc4: 0a00008b     	beq	0x1edf8 <gcsXml_ParseParameter+0xca8> @ imm = #0x22c
+   1ebc8: e59d1010     	ldr	r1, [sp, #0x10]
+   1ebcc: e5960000     	ldr	r0, [r6]
+   1ebd0: e3a02001     	mov	r2, #1
+   1ebd4: e28d3060     	add	r3, sp, #96
+   1ebd8: ebff9b3d     	bl	0x58d4 <gcsXml_getParameter@plt> @ imm = #-0x1930c
+   1ebdc: e59f15c4     	ldr	r1, [pc, #0x5c4]        @ 0x1f1a8 <gcsXml_ParseParameter+0x1058>
+   1ebe0: e08f1001     	add	r1, pc, r1  ; PIC literal "DHCP" @0x38d70
+   1ebe4: e1a0a000     	mov	r10, r0
+   1ebe8: e5900004     	ldr	r0, [r0, #0x4]
+   1ebec: ebff9d3f     	bl	0x60f0 <strcmp@plt>     @ imm = #-0x18b04
+   1ebf0: e3a01001     	mov	r1, #1
+   1ebf4: e3500000     	cmp	r0, #0
+   1ebf8: e1a0000a     	mov	r0, r10
+   1ebfc: 1a0000a5     	bne	0x1ee98 <gcsXml_ParseParameter+0xd48> @ imm = #0x294
+   1ec00: ebff9c74     	bl	0x5dd8 <gcsXml_freeParameterBuffer@plt> @ imm = #-0x18e30
+   1ec04: e28d005c     	add	r0, sp, #92
+   1ec08: ebff9d6e     	bl	0x61c8 <gcsXml_freeFullPathBuffer@plt> @ imm = #-0x18a48
+   1ec0c: eafffe8b     	b	0x1e640 <gcsXml_ParseParameter+0x4f0> @ imm = #-0x5d4
+   1ec10: e59f1594     	ldr	r1, [pc, #0x594]        @ 0x1f1ac <gcsXml_ParseParameter+0x105c>
+   1ec14: e1a00007     	mov	r0, r7
+   1ec18: e08f1001     	add	r1, pc, r1
+   1ec1c: ebff9c85     	bl	0x5e38 <fprintf@plt>    @ imm = #-0x18dec
+   1ec20: e08aa000     	add	r10, r10, r0
+   1ec24: eafffed4     	b	0x1e77c <gcsXml_ParseParameter+0x62c> @ imm = #-0x4b0
+   1ec28: e59f1580     	ldr	r1, [pc, #0x580]        @ 0x1f1b0 <gcsXml_ParseParameter+0x1060>
+   1ec2c: e1a00007     	mov	r0, r7
+   1ec30: e08f1001     	add	r1, pc, r1  ; PIC literal " MAX=\"%llu\"" @0x38fc0
+   1ec34: e14421d0     	ldrd	r2, r3, [r4, #-16]
+   1ec38: ebff9c7e     	bl	0x5e38 <fprintf@plt>    @ imm = #-0x18e08
+   1ec3c: e59f1570     	ldr	r1, [pc, #0x570]        @ 0x1f1b4 <gcsXml_ParseParameter+0x1064>
+   1ec40: e08f1001     	add	r1, pc, r1  ; PIC literal " MIN=\"%llu\">" @0x38fcc
+   1ec44: eaffff07     	b	0x1e868 <gcsXml_ParseParameter+0x718> @ imm = #-0x3e4
+   1ec48: e59f1568     	ldr	r1, [pc, #0x568]        @ 0x1f1b8 <gcsXml_ParseParameter+0x1068>
+   1ec4c: e1a00007     	mov	r0, r7
+   1ec50: e08f1001     	add	r1, pc, r1
+   1ec54: ebff9c77     	bl	0x5e38 <fprintf@plt>    @ imm = #-0x18e24
+   1ec58: e08aa000     	add	r10, r10, r0
+   1ec5c: eafffec6     	b	0x1e77c <gcsXml_ParseParameter+0x62c> @ imm = #-0x4e8
+   1ec60: e59f1554     	ldr	r1, [pc, #0x554]        @ 0x1f1bc <gcsXml_ParseParameter+0x106c>
+   1ec64: e1a00007     	mov	r0, r7
+   1ec68: e08f1001     	add	r1, pc, r1
+   1ec6c: ebff9c71     	bl	0x5e38 <fprintf@plt>    @ imm = #-0x18e3c
+   1ec70: e08aa000     	add	r10, r10, r0
+   1ec74: eafffec0     	b	0x1e77c <gcsXml_ParseParameter+0x62c> @ imm = #-0x500
+   1ec78: e59f1540     	ldr	r1, [pc, #0x540]        @ 0x1f1c0 <gcsXml_ParseParameter+0x1070>
+   1ec7c: e15421d0     	ldrsb	r2, [r4, #-16]
+   1ec80: e08f1001     	add	r1, pc, r1  ; PIC literal " MAX=\"%d\"" @0x38fdc
+   1ec84: e1a00007     	mov	r0, r7
+   1ec88: ebff9c6a     	bl	0x5e38 <fprintf@plt>    @ imm = #-0x18e58
+   1ec8c: e59f1530     	ldr	r1, [pc, #0x530]        @ 0x1f1c4 <gcsXml_ParseParameter+0x1074>
+   1ec90: e15420d8     	ldrsb	r2, [r4, #-8]
+   1ec94: e08f1001     	add	r1, pc, r1  ; PIC literal " MIN=\"%d\">" @0x38fe8
+   1ec98: e080a00a     	add	r10, r0, r10
+   1ec9c: e1a00007     	mov	r0, r7
+   1eca0: ebff9c64     	bl	0x5e38 <fprintf@plt>    @ imm = #-0x18e70
+   1eca4: e080a00a     	add	r10, r0, r10
+   1eca8: eafffeb3     	b	0x1e77c <gcsXml_ParseParameter+0x62c> @ imm = #-0x534
+   1ecac: e58d3050     	str	r3, [sp, #0x50]
+   1ecb0: e59d3014     	ldr	r3, [sp, #0x14]
+   1ecb4: e5960000     	ldr	r0, [r6]
+   1ecb8: e593101c     	ldr	r1, [r3, #0x1c]
+   1ecbc: ebff9b5b     	bl	0x5a30 <gcsXml_getFullPathByID@plt> @ imm = #-0x19294
+   1ecc0: e59f1500     	ldr	r1, [pc, #0x500]        @ 0x1f1c8 <gcsXml_ParseParameter+0x1078>
+   1ecc4: e08f1001     	add	r1, pc, r1  ; PIC literal "WANIPConnection" @0x38d50
+   1ecc8: e58d005c     	str	r0, [sp, #0x5c]
+   1eccc: ebff9c83     	bl	0x5ee0 <strstr@plt>     @ imm = #-0x18df4
+   1ecd0: e3500000     	cmp	r0, #0
+   1ecd4: 0a000047     	beq	0x1edf8 <gcsXml_ParseParameter+0xca8> @ imm = #0x11c
+   1ecd8: e59da048     	ldr	r10, [sp, #0x48]
+   1ecdc: e59d3050     	ldr	r3, [sp, #0x50]
+   1ece0: e1a0000a     	mov	r0, r10
+   1ece4: e1a01003     	mov	r1, r3
+   1ece8: e3a0203c     	mov	r2, #60
+   1ecec: ebff9ccf     	bl	0x6030 <memset@plt>     @ imm = #-0x18cc4
+   1ecf0: e59fe4d4     	ldr	lr, [pc, #0x4d4]        @ 0x1f1cc <gcsXml_ParseParameter+0x107c>
+   1ecf4: e1a0c00a     	mov	r12, r10
+   1ecf8: e08fe00e     	add	lr, pc, lr
+   1ecfc: e8be000f     	ldm	lr!, {r0, r1, r2, r3}
+   1ed00: e59da044     	ldr	r10, [sp, #0x44]
+   1ed04: e8ac000f     	stm	r12!, {r0, r1, r2, r3}
+   1ed08: e89e000f     	ldm	lr, {r0, r1, r2, r3}
+   1ed0c: e35a0000     	cmp	r10, #0
+   1ed10: e1a0e823     	lsr	lr, r3, #16
+   1ed14: e8ac0007     	stm	r12!, {r0, r1, r2}
+   1ed18: e0cc30b2     	strh	r3, [r12], #2
+   1ed1c: e5cce000     	strb	lr, [r12]
+   1ed20: 0a000034     	beq	0x1edf8 <gcsXml_ParseParameter+0xca8> @ imm = #0xd0
+   1ed24: e28da060     	add	r10, sp, #96
+   1ed28: e1a0300a     	mov	r3, r10
+   1ed2c: e59d1010     	ldr	r1, [sp, #0x10]
+   1ed30: e3a02001     	mov	r2, #1
+   1ed34: e5960000     	ldr	r0, [r6]
+   1ed38: ebff9ae5     	bl	0x58d4 <gcsXml_getParameter@plt> @ imm = #-0x1946c
+   1ed3c: e59f148c     	ldr	r1, [pc, #0x48c]        @ 0x1f1d0 <gcsXml_ParseParameter+0x1080>
+   1ed40: e08f1001     	add	r1, pc, r1  ; PIC literal "Auto" @0x38dc4
+   1ed44: e5902004     	ldr	r2, [r0, #0x4]
+   1ed48: e58d0054     	str	r0, [sp, #0x54]
+   1ed4c: e1a00002     	mov	r0, r2
+   1ed50: e58d2050     	str	r2, [sp, #0x50]
+   1ed54: ebff9ce5     	bl	0x60f0 <strcmp@plt>     @ imm = #-0x18c6c
+   1ed58: e59d2050     	ldr	r2, [sp, #0x50]
+   1ed5c: e59d3054     	ldr	r3, [sp, #0x54]
+   1ed60: e3500000     	cmp	r0, #0
+   1ed64: 0a0001f6     	beq	0x1f544 <gcsXml_ParseParameter+0x13f4> @ imm = #0x7d8
+   1ed68: e59f1464     	ldr	r1, [pc, #0x464]        @ 0x1f1d4 <gcsXml_ParseParameter+0x1084>
+   1ed6c: e1a00002     	mov	r0, r2
+   1ed70: e08f1001     	add	r1, pc, r1  ; PIC literal "Manual" @0x38dcc
+   1ed74: e58d3050     	str	r3, [sp, #0x50]
+   1ed78: ebff9cdc     	bl	0x60f0 <strcmp@plt>     @ imm = #-0x18c90
+   1ed7c: e59d3050     	ldr	r3, [sp, #0x50]
+   1ed80: e2501000     	subs	r1, r0, #0
+   1ed84: 1a000018     	bne	0x1edec <gcsXml_ParseParameter+0xc9c> @ imm = #0x60
+   1ed88: e3a0203c     	mov	r2, #60
+   1ed8c: e59d0048     	ldr	r0, [sp, #0x48]
+   1ed90: ebff9ca6     	bl	0x6030 <memset@plt>     @ imm = #-0x18d68
+   1ed94: e59fe43c     	ldr	lr, [pc, #0x43c]        @ 0x1f1d8 <gcsXml_ParseParameter+0x1088>
+   1ed98: e59dc048     	ldr	r12, [sp, #0x48]
+   1ed9c: e08fe00e     	add	lr, pc, lr
+   1eda0: e8be000f     	ldm	lr!, {r0, r1, r2, r3}
+   1eda4: e8ac000f     	stm	r12!, {r0, r1, r2, r3}
+   1eda8: e89e0007     	ldm	lr, {r0, r1, r2}
+   1edac: e1a0300a     	mov	r3, r10
+   1edb0: e8ac0003     	stm	r12!, {r0, r1}
+   1edb4: e59d1010     	ldr	r1, [sp, #0x10]
+   1edb8: e1cc20b0     	strh	r2, [r12]
+   1edbc: e5960000     	ldr	r0, [r6]
+   1edc0: e3a02001     	mov	r2, #1
+   1edc4: ebff9ac2     	bl	0x58d4 <gcsXml_getParameter@plt> @ imm = #-0x194f8
+   1edc8: e59f140c     	ldr	r1, [pc, #0x40c]        @ 0x1f1dc <gcsXml_ParseParameter+0x108c>
+   1edcc: e08f1001     	add	r1, pc, r1  ; PIC literal "Static" @0x38df0
+   1edd0: e1a03000     	mov	r3, r0
+   1edd4: e5900004     	ldr	r0, [r0, #0x4]
+   1edd8: e58d3050     	str	r3, [sp, #0x50]
+   1eddc: ebff9cc3     	bl	0x60f0 <strcmp@plt>     @ imm = #-0x18cf4
+   1ede0: e59d3050     	ldr	r3, [sp, #0x50]
+   1ede4: e3500000     	cmp	r0, #0
+   1ede8: 1a0001d5     	bne	0x1f544 <gcsXml_ParseParameter+0x13f4> @ imm = #0x754
+   1edec: e1a00003     	mov	r0, r3
+   1edf0: e3a01001     	mov	r1, #1
+   1edf4: ebff9bf7     	bl	0x5dd8 <gcsXml_freeParameterBuffer@plt> @ imm = #-0x19024
+   1edf8: e28d005c     	add	r0, sp, #92
+   1edfc: ebff9cf1     	bl	0x61c8 <gcsXml_freeFullPathBuffer@plt> @ imm = #-0x18c3c
+   1ee00: eafffd63     	b	0x1e394 <gcsXml_ParseParameter+0x244> @ imm = #-0xa74
+   1ee04: e5981004     	ldr	r1, [r8, #0x4]
+   1ee08: e3510000     	cmp	r1, #0
+   1ee0c: 0a00004e     	beq	0x1ef4c <gcsXml_ParseParameter+0xdfc> @ imm = #0x138
+   1ee10: e514001c     	ldr	r0, [r4, #-0x1c]
+   1ee14: e3500000     	cmp	r0, #0
+   1ee18: 0afffd5d     	beq	0x1e394 <gcsXml_ParseParameter+0x244> @ imm = #-0xa8c
+   1ee1c: ebff9c62     	bl	0x5fac <memcmp@plt>     @ imm = #-0x18e78
+   1ee20: e3500000     	cmp	r0, #0
+   1ee24: 0afffe05     	beq	0x1e640 <gcsXml_ParseParameter+0x4f0> @ imm = #-0x7ec
+   1ee28: eafffd59     	b	0x1e394 <gcsXml_ParseParameter+0x244> @ imm = #-0xa9c
+   1ee2c: e59d2034     	ldr	r2, [sp, #0x34]
+   1ee30: e7926003     	ldr	r6, [r2, r3]
+   1ee34: eafffcee     	b	0x1e1f4 <gcsXml_ParseParameter+0xa4> @ imm = #-0xc48
+   1ee38: e58db01c     	str	r11, [sp, #0x1c]
+   1ee3c: eafffe04     	b	0x1e654 <gcsXml_ParseParameter+0x504> @ imm = #-0x7f0
+   1ee40: e59f1398     	ldr	r1, [pc, #0x398]        @ 0x1f1e0 <gcsXml_ParseParameter+0x1090>
+   1ee44: e15421f0     	ldrsh	r2, [r4, #-16]
+   1ee48: e08f1001     	add	r1, pc, r1  ; PIC literal " MAX=\"%d\"" @0x38fdc
+   1ee4c: e1a00007     	mov	r0, r7
+   1ee50: ebff9bf8     	bl	0x5e38 <fprintf@plt>    @ imm = #-0x19020
+   1ee54: e59f1388     	ldr	r1, [pc, #0x388]        @ 0x1f1e4 <gcsXml_ParseParameter+0x1094>
+   1ee58: e15420f8     	ldrsh	r2, [r4, #-8]
+   1ee5c: e08f1001     	add	r1, pc, r1  ; PIC literal " MIN=\"%d\">" @0x38fe8
+   1ee60: e080a00a     	add	r10, r0, r10
+   1ee64: e1a00007     	mov	r0, r7
+   1ee68: ebff9bf2     	bl	0x5e38 <fprintf@plt>    @ imm = #-0x19038
+   1ee6c: e080a00a     	add	r10, r0, r10
+   1ee70: eafffe41     	b	0x1e77c <gcsXml_ParseParameter+0x62c> @ imm = #-0x6fc
+   1ee74: e59f136c     	ldr	r1, [pc, #0x36c]        @ 0x1f1e8 <gcsXml_ParseParameter+0x1098>
+   1ee78: e1a0000a     	mov	r0, r10
+   1ee7c: e08f1001     	add	r1, pc, r1  ; PIC literal "WANPPPConnection" @0x38d78
+   1ee80: ebff9c16     	bl	0x5ee0 <strstr@plt>     @ imm = #-0x18fa8
+   1ee84: e59d3044     	ldr	r3, [sp, #0x44]
+   1ee88: e3500000     	cmp	r0, #0
+   1ee8c: 13530000     	cmpne	r3, #0
+   1ee90: 1affff5b     	bne	0x1ec04 <gcsXml_ParseParameter+0xab4> @ imm = #-0x294
+   1ee94: eaffffd7     	b	0x1edf8 <gcsXml_ParseParameter+0xca8> @ imm = #-0xa4
+   1ee98: ebff9bce     	bl	0x5dd8 <gcsXml_freeParameterBuffer@plt> @ imm = #-0x190c8
+   1ee9c: eaffffd5     	b	0x1edf8 <gcsXml_ParseParameter+0xca8> @ imm = #-0xac
+   1eea0: e514a01c     	ldr	r10, [r4, #-0x1c]
+   1eea4: e35a0000     	cmp	r10, #0
+   1eea8: 0afffde4     	beq	0x1e640 <gcsXml_ParseParameter+0x4f0> @ imm = #-0x870
+   1eeac: e5da3000     	ldrb	r3, [r10]
+   1eeb0: e3530000     	cmp	r3, #0
+   1eeb4: 0afffde1     	beq	0x1e640 <gcsXml_ParseParameter+0x4f0> @ imm = #-0x87c
+   1eeb8: e1a0000a     	mov	r0, r10
+   1eebc: ebff9d15     	bl	0x6318 <strlen@plt>     @ imm = #-0x18bac
+   1eec0: e3500001     	cmp	r0, #1
+   1eec4: 1afffd8b     	bne	0x1e4f8 <gcsXml_ParseParameter+0x3a8> @ imm = #-0x9d4
+   1eec8: e59f131c     	ldr	r1, [pc, #0x31c]        @ 0x1f1ec <gcsXml_ParseParameter+0x109c>
+   1eecc: e1a0000a     	mov	r0, r10
+   1eed0: e08f1001     	add	r1, pc, r1
+   1eed4: ebff9bd1     	bl	0x5e20 <stricmp@plt>    @ imm = #-0x190bc
+   1eed8: e3500000     	cmp	r0, #0
+   1eedc: 0afffdd7     	beq	0x1e640 <gcsXml_ParseParameter+0x4f0> @ imm = #-0x8a4
+   1eee0: e5981004     	ldr	r1, [r8, #0x4]
+   1eee4: e3510000     	cmp	r1, #0
+   1eee8: 1afffd7c     	bne	0x1e4e0 <gcsXml_ParseParameter+0x390> @ imm = #-0xa10
+   1eeec: eafffd81     	b	0x1e4f8 <gcsXml_ParseParameter+0x3a8> @ imm = #-0x9fc
+   1eef0: e5983004     	ldr	r3, [r8, #0x4]
+   1eef4: e3530000     	cmp	r3, #0
+   1eef8: 0a000113     	beq	0x1f34c <gcsXml_ParseParameter+0x11fc> @ imm = #0x44c
+   1eefc: e514101c     	ldr	r1, [r4, #-0x1c]
+   1ef00: e1d320b0     	ldrh	r2, [r3]
+   1ef04: e1d130b0     	ldrh	r3, [r1]
+   1ef08: e1520003     	cmp	r2, r3
+   1ef0c: 1afffd20     	bne	0x1e394 <gcsXml_ParseParameter+0x244> @ imm = #-0xb80
+   1ef10: eafffdca     	b	0x1e640 <gcsXml_ParseParameter+0x4f0> @ imm = #-0x8d8
+   1ef14: e5983004     	ldr	r3, [r8, #0x4]
+   1ef18: e3530000     	cmp	r3, #0
+   1ef1c: 0a00010f     	beq	0x1f360 <gcsXml_ParseParameter+0x1210> @ imm = #0x43c
+   1ef20: e514101c     	ldr	r1, [r4, #-0x1c]
+   1ef24: e5932000     	ldr	r2, [r3]
+   1ef28: e5913000     	ldr	r3, [r1]
+   1ef2c: e1520003     	cmp	r2, r3
+   1ef30: 1afffd17     	bne	0x1e394 <gcsXml_ParseParameter+0x244> @ imm = #-0xba4
+   1ef34: eafffdc1     	b	0x1e640 <gcsXml_ParseParameter+0x4f0> @ imm = #-0x8fc
+   1ef38: e514301c     	ldr	r3, [r4, #-0x1c]
+   1ef3c: e5d33000     	ldrb	r3, [r3]
+   1ef40: e3530000     	cmp	r3, #0
+   1ef44: 0afffdbd     	beq	0x1e640 <gcsXml_ParseParameter+0x4f0> @ imm = #-0x90c
+   1ef48: eafffd11     	b	0x1e394 <gcsXml_ParseParameter+0x244> @ imm = #-0xbbc
+   1ef4c: e514301c     	ldr	r3, [r4, #-0x1c]
+   1ef50: e3530000     	cmp	r3, #0
+   1ef54: 1afffff8     	bne	0x1ef3c <gcsXml_ParseParameter+0xdec> @ imm = #-0x20
+   1ef58: eafffdb8     	b	0x1e640 <gcsXml_ParseParameter+0x4f0> @ imm = #-0x920
+   1ef5c: e5983004     	ldr	r3, [r8, #0x4]
+   1ef60: e3530000     	cmp	r3, #0
+   1ef64: 0a000121     	beq	0x1f3f0 <gcsXml_ParseParameter+0x12a0> @ imm = #0x484
+   1ef68: e514101c     	ldr	r1, [r4, #-0x1c]
+   1ef6c: e1d320f0     	ldrsh	r2, [r3]
+   1ef70: e1d130f0     	ldrsh	r3, [r1]
+   1ef74: e1520003     	cmp	r2, r3
+   1ef78: 1afffd05     	bne	0x1e394 <gcsXml_ParseParameter+0x244> @ imm = #-0xbec
+   1ef7c: eafffdaf     	b	0x1e640 <gcsXml_ParseParameter+0x4f0> @ imm = #-0x944
+   1ef80: e5983004     	ldr	r3, [r8, #0x4]
+   1ef84: e3530000     	cmp	r3, #0
+   1ef88: 0a00011d     	beq	0x1f404 <gcsXml_ParseParameter+0x12b4> @ imm = #0x474
+   1ef8c: e514101c     	ldr	r1, [r4, #-0x1c]
+   1ef90: e1d320d0     	ldrsb	r2, [r3]
+   1ef94: e1d130d0     	ldrsb	r3, [r1]
+   1ef98: e1520003     	cmp	r2, r3
+   1ef9c: 1afffcfc     	bne	0x1e394 <gcsXml_ParseParameter+0x244> @ imm = #-0xc10
+   1efa0: eafffda6     	b	0x1e640 <gcsXml_ParseParameter+0x4f0> @ imm = #-0x968
+   1efa4: e514301c     	ldr	r3, [r4, #-0x1c]
+   1efa8: e1c320d0     	ldrd	r2, r3, [r3]
+   1efac: e1923003     	orrs	r3, r2, r3
+   1efb0: 0afffda2     	beq	0x1e640 <gcsXml_ParseParameter+0x4f0> @ imm = #-0x978
+   1efb4: eafffcf6     	b	0x1e394 <gcsXml_ParseParameter+0x244> @ imm = #-0xc28
+   1efb8: e59da048     	ldr	r10, [sp, #0x48]
+   1efbc: e3a0203c     	mov	r2, #60
+   1efc0: e1a0000a     	mov	r0, r10
+   1efc4: ebff9c19     	bl	0x6030 <memset@plt>     @ imm = #-0x18f9c
+   1efc8: e59fe220     	ldr	lr, [pc, #0x220]        @ 0x1f1f0 <gcsXml_ParseParameter+0x10a0>
+   1efcc: e1a0c00a     	mov	r12, r10
+   1efd0: e08fe00e     	add	lr, pc, lr
+   1efd4: e8be000f     	ldm	lr!, {r0, r1, r2, r3}
+   1efd8: e59da044     	ldr	r10, [sp, #0x44]
+   1efdc: e8ac000f     	stm	r12!, {r0, r1, r2, r3}
+   1efe0: e89e000f     	ldm	lr, {r0, r1, r2, r3}
+   1efe4: e35a0000     	cmp	r10, #0
+   1efe8: e1a0e823     	lsr	lr, r3, #16
+   1efec: e8ac0007     	stm	r12!, {r0, r1, r2}
+   1eff0: e0cc30b2     	strh	r3, [r12], #2
+   1eff4: e5cce000     	strb	lr, [r12]
+   1eff8: 0afffce5     	beq	0x1e394 <gcsXml_ParseParameter+0x244> @ imm = #-0xc6c
+   1effc: e28d3060     	add	r3, sp, #96
+   1f000: e59d1010     	ldr	r1, [sp, #0x10]
+   1f004: e3a02001     	mov	r2, #1
+   1f008: e5960000     	ldr	r0, [r6]
+   1f00c: e58d3050     	str	r3, [sp, #0x50]
+   1f010: ebff9a2f     	bl	0x58d4 <gcsXml_getParameter@plt> @ imm = #-0x19744
+   1f014: e59f11d8     	ldr	r1, [pc, #0x1d8]        @ 0x1f1f4 <gcsXml_ParseParameter+0x10a4>
+   1f018: e08f1001     	add	r1, pc, r1  ; PIC literal "Auto" @0x38dc4
+   1f01c: e5902004     	ldr	r2, [r0, #0x4]
+   1f020: e1a0a000     	mov	r10, r0
+   1f024: e1a00002     	mov	r0, r2
+   1f028: e58d2054     	str	r2, [sp, #0x54]
+   1f02c: ebff9c2f     	bl	0x60f0 <strcmp@plt>     @ imm = #-0x18f44
+   1f030: e59d2054     	ldr	r2, [sp, #0x54]
+   1f034: e3500000     	cmp	r0, #0
+   1f038: 0a0000bf     	beq	0x1f33c <gcsXml_ParseParameter+0x11ec> @ imm = #0x2fc
+   1f03c: e59f11b4     	ldr	r1, [pc, #0x1b4]        @ 0x1f1f8 <gcsXml_ParseParameter+0x10a8>
+   1f040: e1a00002     	mov	r0, r2
+   1f044: e08f1001     	add	r1, pc, r1  ; PIC literal "Manual" @0x38dcc
+   1f048: ebff9c28     	bl	0x60f0 <strcmp@plt>     @ imm = #-0x18f60
+   1f04c: e2501000     	subs	r1, r0, #0
+   1f050: 1a000017     	bne	0x1f0b4 <gcsXml_ParseParameter+0xf64> @ imm = #0x5c
+   1f054: e59da048     	ldr	r10, [sp, #0x48]
+   1f058: e3a0203c     	mov	r2, #60
+   1f05c: e1a0000a     	mov	r0, r10
+   1f060: ebff9bf2     	bl	0x6030 <memset@plt>     @ imm = #-0x19038
+   1f064: e59fe190     	ldr	lr, [pc, #0x190]        @ 0x1f1fc <gcsXml_ParseParameter+0x10ac>
+   1f068: e1a0c00a     	mov	r12, r10
+   1f06c: e08fe00e     	add	lr, pc, lr
+   1f070: e8be000f     	ldm	lr!, {r0, r1, r2, r3}
+   1f074: e8ac000f     	stm	r12!, {r0, r1, r2, r3}
+   1f078: e89e000f     	ldm	lr, {r0, r1, r2, r3}
+   1f07c: e8ac0007     	stm	r12!, {r0, r1, r2}
+   1f080: e59d1010     	ldr	r1, [sp, #0x10]
+   1f084: e5cc3000     	strb	r3, [r12]
+   1f088: e3a02001     	mov	r2, #1
+   1f08c: e59d3050     	ldr	r3, [sp, #0x50]
+   1f090: e5960000     	ldr	r0, [r6]
+   1f094: ebff9a0e     	bl	0x58d4 <gcsXml_getParameter@plt> @ imm = #-0x197c8
+   1f098: e59f1160     	ldr	r1, [pc, #0x160]        @ 0x1f200 <gcsXml_ParseParameter+0x10b0>
+   1f09c: e08f1001     	add	r1, pc, r1  ; PIC literal "Static" @0x38df0
+   1f0a0: e1a0a000     	mov	r10, r0
+   1f0a4: e5900004     	ldr	r0, [r0, #0x4]
+   1f0a8: ebff9c10     	bl	0x60f0 <strcmp@plt>     @ imm = #-0x18fc0
+   1f0ac: e3500000     	cmp	r0, #0
+   1f0b0: 1a0000a1     	bne	0x1f33c <gcsXml_ParseParameter+0x11ec> @ imm = #0x284
+   1f0b4: e1a0000a     	mov	r0, r10
+   1f0b8: e3a01001     	mov	r1, #1
+   1f0bc: ebff9b45     	bl	0x5dd8 <gcsXml_freeParameterBuffer@plt> @ imm = #-0x192ec
+   1f0c0: eafffcb3     	b	0x1e394 <gcsXml_ParseParameter+0x244> @ imm = #-0xd34
+   1f0c4: 0002ce64     	andeq	r12, r2, r4, ror #28
+   1f0c8: 000003f8     	strdeq	r0, r1, [r0], -r8
+   1f0cc: 0003505c     	andeq	r5, r3, r12, asr r0
+   1f0d0: 00034fd8     	ldrdeq	r4, r5, [r3], -r8
+   1f0d4: 00034fc8     	andeq	r4, r3, r8, asr #31
+   1f0d8: 00034fb8     	strheq	r4, [r3], -r8
+   1f0dc: 00034fac     	andeq	r4, r3, r12, lsr #31
+   1f0e0: 0001ada4     	andeq	r10, r1, r4, lsr #27
+   1f0e4: 0001ad7c     	andeq	r10, r1, r12, ror sp
+   1f0e8: 00034ebc     	strheq	r4, [r3], -r12
+   1f0ec: 0001ab34     	andeq	r10, r1, r4, lsr r11
+   1f0f0: 0001ab24     	andeq	r10, r1, r4, lsr #22
+   1f0f4: 0000040c     	andeq	r0, r0, r12, lsl #8
+   1f0f8: 0001abc4     	andeq	r10, r1, r4, asr #23
+   1f0fc: 0001a804     	andeq	r10, r1, r4, lsl #16
+   1f100: 0001a7fc     	strdeq	r10, r11, [r1], -r12
+   1f104: 0001a7f4     	strdeq	r10, r11, [r1], -r4
+   1f108: 0001a7e8     	andeq	r10, r1, r8, ror #15
+   1f10c: 0001a820     	andeq	r10, r1, r0, lsr #16
+   1f110: 0001a874     	andeq	r10, r1, r4, ror r8
+   1f114: 0001a894     	<unknown>
+   1f118: 0001a8b4     	strheq	r10, [r1], -r4
+   1f11c: 0001a8cc     	andeq	r10, r1, r12, asr #17
+   1f120: 0001a8e8     	andeq	r10, r1, r8, ror #17
+   1f124: 0001a8e0     	andeq	r10, r1, r0, ror #17
+   1f128: 00034bc4     	andeq	r4, r3, r4, asr #23
+   1f12c: 0001a83c     	andeq	r10, r1, r12, lsr r8
+   1f130: 0001a82c     	andeq	r10, r1, r12, lsr #16
+   1f134: 0001a82c     	andeq	r10, r1, r12, lsr #16
+   1f138: 0001a824     	andeq	r10, r1, r4, lsr #16
+   1f13c: 0001a818     	andeq	r10, r1, r8, lsl r8
+   1f140: 0001a808     	andeq	r10, r1, r8, lsl #16
+   1f144: 0001a804     	andeq	r10, r1, r4, lsl #16
+   1f148: 00019f08     	andeq	r9, r1, r8, lsl #30
+   1f14c: 0001a79c     	<unknown>
+   1f150: 0001a7b0     	strheq	r10, [r1], -r0
+   1f154: 0001a7ac     	andeq	r10, r1, r12, lsr #15
+   1f158: 0001a678     	andeq	r10, r1, r8, ror r6
+   1f15c: 0001a684     	andeq	r10, r1, r4, lsl #13
+   1f160: 0001a77c     	andeq	r10, r1, r12, ror r7
+   1f164: 00019db8     	strheq	r9, [r1], -r8
+   1f168: 0001a6c8     	andeq	r10, r1, r8, asr #13
+   1f16c: 0001a6b4     	strheq	r10, [r1], -r4
+   1f170: 0001a640     	andeq	r10, r1, r0, asr #12
+   1f174: 00018dc0     	andeq	r8, r1, r0, asr #27
+   1f178: 00018da0     	andeq	r8, r1, r0, lsr #27
+   1f17c: 0001a5f8     	strdeq	r10, r11, [r1], -r8
+   1f180: 0001a4f0     	strdeq	r10, r11, [r1], -r0
+   1f184: 0001a4e8     	andeq	r10, r1, r8, ror #9
+   1f188: 0001a4bc     	strheq	r10, [r1], -r12
+   1f18c: 0001a4b4     	strheq	r10, [r1], -r4
+   1f190: 0001a4a0     	andeq	r10, r1, r0, lsr #9
+   1f194: 0001a49c     	<unknown>
+   1f198: 0001a494     	<unknown>
+   1f19c: 0001a490     	<unknown>
+   1f1a0: 0001a1c4     	andeq	r10, r1, r4, asr #3
+   1f1a4: 0001a1b4     	strheq	r10, [r1], -r4
+   1f1a8: 0001a188     	andeq	r10, r1, r8, lsl #3
+   1f1ac: 0001a360     	andeq	r10, r1, r0, ror #6
+   1f1b0: 0001a388     	andeq	r10, r1, r8, lsl #7
+   1f1b4: 0001a384     	andeq	r10, r1, r4, lsl #7
+   1f1b8: 0001a328     	andeq	r10, r1, r8, lsr #6
+   1f1bc: 0001a310     	andeq	r10, r1, r0, lsl r3
+   1f1c0: 0001a354     	andeq	r10, r1, r4, asr r3
+   1f1c4: 0001a34c     	andeq	r10, r1, r12, asr #6
+   1f1c8: 0001a084     	andeq	r10, r1, r4, lsl #1
+   1f1cc: 0001a0a4     	andeq	r10, r1, r4, lsr #1
+   1f1d0: 0001a07c     	andeq	r10, r1, r12, ror r0
+   1f1d4: 0001a054     	andeq	r10, r1, r4, asr r0
+   1f1d8: 0001a0a8     	andeq	r10, r1, r8, lsr #1
+   1f1dc: 0001a01c     	andeq	r10, r1, r12, lsl r0
+   1f1e0: 0001a18c     	andeq	r10, r1, r12, lsl #3
+   1f1e4: 0001a184     	andeq	r10, r1, r4, lsl #3
+   1f1e8: 00019ef4     	strdeq	r9, r10, [r1], -r4
+   1f1ec: 00019e44     	andeq	r9, r1, r4, asr #28
+   1f1f0: 00019dcc     	andeq	r9, r1, r12, asr #27
+   1f1f4: 00019da4     	andeq	r9, r1, r4, lsr #27
+   1f1f8: 00019d80     	andeq	r9, r1, r0, lsl #27
+   1f1fc: 00019d9c     	<unknown>
+   1f200: 00019d4c     	andeq	r9, r1, r12, asr #26
+   1f204: 00019b4c     	andeq	r9, r1, r12, asr #22
+   1f208: 00019b24     	andeq	r9, r1, r4, lsr #22
+   1f20c: 00019b00     	andeq	r9, r1, r0, lsl #22
+   1f210: 00019ae0     	andeq	r9, r1, r0, ror #21
+   1f214: 00019ac4     	andeq	r9, r1, r4, asr #21
+   1f218: 00019b08     	andeq	r9, r1, r8, lsl #22
+   1f21c: 00019b00     	andeq	r9, r1, r0, lsl #22
+   1f220: 00019ad4     	ldrdeq	r9, r10, [r1], -r4
+   1f224: 0001996c     	andeq	r9, r1, r12, ror #18
+   1f228: 00019944     	andeq	r9, r1, r4, asr #18
+   1f22c: 0001991c     	andeq	r9, r1, r12, lsl r9
+   1f230: 000199a0     	andeq	r9, r1, r0, lsr #19
+   1f234: 000198e4     	andeq	r9, r1, r4, ror #17
+   1f238: e59da048     	ldr	r10, [sp, #0x48]
+   1f23c: e3a0203c     	mov	r2, #60
+   1f240: e1a0000a     	mov	r0, r10
+   1f244: ebff9b79     	bl	0x6030 <memset@plt>     @ imm = #-0x1921c
+   1f248: e51fe04c     	ldr	lr, [pc, #-0x4c]        @ 0x1f204 <gcsXml_ParseParameter+0x10b4>
+   1f24c: e1a0c00a     	mov	r12, r10
+   1f250: e08fe00e     	add	lr, pc, lr
+   1f254: e8be000f     	ldm	lr!, {r0, r1, r2, r3}
+   1f258: e59da044     	ldr	r10, [sp, #0x44]
+   1f25c: e8ac000f     	stm	r12!, {r0, r1, r2, r3}
+   1f260: e89e000f     	ldm	lr, {r0, r1, r2, r3}
+   1f264: e35a0000     	cmp	r10, #0
+   1f268: e1a0e823     	lsr	lr, r3, #16
+   1f26c: e8ac0007     	stm	r12!, {r0, r1, r2}
+   1f270: e0cc30b2     	strh	r3, [r12], #2
+   1f274: e5cce000     	strb	lr, [r12]
+   1f278: 0afffc45     	beq	0x1e394 <gcsXml_ParseParameter+0x244> @ imm = #-0xeec
+   1f27c: e28d3060     	add	r3, sp, #96
+   1f280: e59d1010     	ldr	r1, [sp, #0x10]
+   1f284: e3a02001     	mov	r2, #1
+   1f288: e5960000     	ldr	r0, [r6]
+   1f28c: e58d3050     	str	r3, [sp, #0x50]
+   1f290: ebff998f     	bl	0x58d4 <gcsXml_getParameter@plt> @ imm = #-0x199c4
+   1f294: e51f1094     	ldr	r1, [pc, #-0x94]        @ 0x1f208 <gcsXml_ParseParameter+0x10b8>
+   1f298: e08f1001     	add	r1, pc, r1  ; PIC literal "Auto" @0x38dc4
+   1f29c: e5902004     	ldr	r2, [r0, #0x4]
+   1f2a0: e1a0a000     	mov	r10, r0
+   1f2a4: e1a00002     	mov	r0, r2
+   1f2a8: e58d2054     	str	r2, [sp, #0x54]
+   1f2ac: ebff9b8f     	bl	0x60f0 <strcmp@plt>     @ imm = #-0x191c4
+   1f2b0: e59d2054     	ldr	r2, [sp, #0x54]
+   1f2b4: e3500000     	cmp	r0, #0
+   1f2b8: 0a00001f     	beq	0x1f33c <gcsXml_ParseParameter+0x11ec> @ imm = #0x7c
+   1f2bc: e51f10b8     	ldr	r1, [pc, #-0xb8]        @ 0x1f20c <gcsXml_ParseParameter+0x10bc>
+   1f2c0: e1a00002     	mov	r0, r2
+   1f2c4: e08f1001     	add	r1, pc, r1  ; PIC literal "Manual" @0x38dcc
+   1f2c8: ebff9b88     	bl	0x60f0 <strcmp@plt>     @ imm = #-0x191e0
+   1f2cc: e2501000     	subs	r1, r0, #0
+   1f2d0: 1affff77     	bne	0x1f0b4 <gcsXml_ParseParameter+0xf64> @ imm = #-0x224
+   1f2d4: e59da048     	ldr	r10, [sp, #0x48]
+   1f2d8: e3a0203c     	mov	r2, #60
+   1f2dc: e1a0000a     	mov	r0, r10
+   1f2e0: ebff9b52     	bl	0x6030 <memset@plt>     @ imm = #-0x192b8
+   1f2e4: e51fe0dc     	ldr	lr, [pc, #-0xdc]        @ 0x1f210 <gcsXml_ParseParameter+0x10c0>
+   1f2e8: e1a0c00a     	mov	r12, r10
+   1f2ec: e08fe00e     	add	lr, pc, lr
+   1f2f0: e8be000f     	ldm	lr!, {r0, r1, r2, r3}
+   1f2f4: e8ac000f     	stm	r12!, {r0, r1, r2, r3}
+   1f2f8: e59d3050     	ldr	r3, [sp, #0x50]
+   1f2fc: e89e0007     	ldm	lr, {r0, r1, r2}
+   1f300: e1a0e822     	lsr	lr, r2, #16
+   1f304: e8ac0003     	stm	r12!, {r0, r1}
+   1f308: e59d1010     	ldr	r1, [sp, #0x10]
+   1f30c: e0cc20b2     	strh	r2, [r12], #2
+   1f310: e5960000     	ldr	r0, [r6]
+   1f314: e3a02001     	mov	r2, #1
+   1f318: e5cce000     	strb	lr, [r12]
+   1f31c: ebff996c     	bl	0x58d4 <gcsXml_getParameter@plt> @ imm = #-0x19a50
+   1f320: e51f1114     	ldr	r1, [pc, #-0x114]       @ 0x1f214 <gcsXml_ParseParameter+0x10c4>
+   1f324: e08f1001     	add	r1, pc, r1  ; PIC literal "Static" @0x38df0
+   1f328: e1a0a000     	mov	r10, r0
+   1f32c: e5900004     	ldr	r0, [r0, #0x4]
+   1f330: ebff9b6e     	bl	0x60f0 <strcmp@plt>     @ imm = #-0x19248
+   1f334: e3500000     	cmp	r0, #0
+   1f338: 0affff5d     	beq	0x1f0b4 <gcsXml_ParseParameter+0xf64> @ imm = #-0x28c
+   1f33c: e1a0000a     	mov	r0, r10
+   1f340: e3a01001     	mov	r1, #1
+   1f344: ebff9aa3     	bl	0x5dd8 <gcsXml_freeParameterBuffer@plt> @ imm = #-0x19574
+   1f348: eafffcbc     	b	0x1e640 <gcsXml_ParseParameter+0x4f0> @ imm = #-0xd10
+   1f34c: e514301c     	ldr	r3, [r4, #-0x1c]
+   1f350: e1d330b0     	ldrh	r3, [r3]
+   1f354: e3530000     	cmp	r3, #0
+   1f358: 0afffcb8     	beq	0x1e640 <gcsXml_ParseParameter+0x4f0> @ imm = #-0xd20
+   1f35c: eafffc0c     	b	0x1e394 <gcsXml_ParseParameter+0x244> @ imm = #-0xfd0
+   1f360: e514301c     	ldr	r3, [r4, #-0x1c]
+   1f364: e5933000     	ldr	r3, [r3]
+   1f368: e3530000     	cmp	r3, #0
+   1f36c: 0afffcb3     	beq	0x1e640 <gcsXml_ParseParameter+0x4f0> @ imm = #-0xd34
+   1f370: eafffc07     	b	0x1e394 <gcsXml_ParseParameter+0x244> @ imm = #-0xfe4
+   1f374: ebff9a97     	bl	0x5dd8 <gcsXml_freeParameterBuffer@plt> @ imm = #-0x195a4
+   1f378: eafffc05     	b	0x1e394 <gcsXml_ParseParameter+0x244> @ imm = #-0xfec
+   1f37c: e59d3014     	ldr	r3, [sp, #0x14]
+   1f380: e5960000     	ldr	r0, [r6]
+   1f384: e593101c     	ldr	r1, [r3, #0x1c]
+   1f388: ebff99a8     	bl	0x5a30 <gcsXml_getFullPathByID@plt> @ imm = #-0x19960
+   1f38c: e51f117c     	ldr	r1, [pc, #-0x17c]       @ 0x1f218 <gcsXml_ParseParameter+0x10c8>
+   1f390: e08f1001     	add	r1, pc, r1  ; PIC literal "PrefixInformation" @0x38ea0
+   1f394: e58d005c     	str	r0, [sp, #0x5c]
+   1f398: ebff9ad0     	bl	0x5ee0 <strstr@plt>     @ imm = #-0x194c0
+   1f39c: e3500000     	cmp	r0, #0
+   1f3a0: 0afffe94     	beq	0x1edf8 <gcsXml_ParseParameter+0xca8> @ imm = #-0x5b0
+   1f3a4: e51f3190     	ldr	r3, [pc, #-0x190]       @ 0x1f21c <gcsXml_ParseParameter+0x10cc>
+   1f3a8: e59d2044     	ldr	r2, [sp, #0x44]
+   1f3ac: e08f3003     	add	r3, pc, r3  ; PIC literal "Mode" @0x38eb4
+   1f3b0: e8930003     	ldm	r3, {r0, r1}
+   1f3b4: e59d3048     	ldr	r3, [sp, #0x48]
+   1f3b8: e3520000     	cmp	r2, #0
+   1f3bc: e5830000     	str	r0, [r3]
+   1f3c0: e5cd1068     	strb	r1, [sp, #0x68]
+   1f3c4: 0afffe8b     	beq	0x1edf8 <gcsXml_ParseParameter+0xca8> @ imm = #-0x5d4
+   1f3c8: e59d1010     	ldr	r1, [sp, #0x10]
+   1f3cc: e5960000     	ldr	r0, [r6]
+   1f3d0: e3a02001     	mov	r2, #1
+   1f3d4: e28d3060     	add	r3, sp, #96
+   1f3d8: ebff993d     	bl	0x58d4 <gcsXml_getParameter@plt> @ imm = #-0x19b0c
+   1f3dc: e51f11c4     	ldr	r1, [pc, #-0x1c4]       @ 0x1f220 <gcsXml_ParseParameter+0x10d0>
+   1f3e0: e08f1001     	add	r1, pc, r1  ; PIC literal "WANDelegated" @0x38ebc
+   1f3e4: e1a0a000     	mov	r10, r0
+   1f3e8: e5900004     	ldr	r0, [r0, #0x4]
+   1f3ec: eafffdfe     	b	0x1ebec <gcsXml_ParseParameter+0xa9c> @ imm = #-0x808
+   1f3f0: e514301c     	ldr	r3, [r4, #-0x1c]
+   1f3f4: e1d330f0     	ldrsh	r3, [r3]
+   1f3f8: e3530000     	cmp	r3, #0
+   1f3fc: 0afffc8f     	beq	0x1e640 <gcsXml_ParseParameter+0x4f0> @ imm = #-0xdc4
+   1f400: eafffbe3     	b	0x1e394 <gcsXml_ParseParameter+0x244> @ imm = #-0x1074
+   1f404: e514301c     	ldr	r3, [r4, #-0x1c]
+   1f408: e1d330d0     	ldrsb	r3, [r3]
+   1f40c: e3530000     	cmp	r3, #0
+   1f410: 0afffc8a     	beq	0x1e640 <gcsXml_ParseParameter+0x4f0> @ imm = #-0xdd8
+   1f414: eafffbde     	b	0x1e394 <gcsXml_ParseParameter+0x244> @ imm = #-0x1088
+   1f418: e59da048     	ldr	r10, [sp, #0x48]
+   1f41c: e3a0203c     	mov	r2, #60
+   1f420: e1a0000a     	mov	r0, r10
+   1f424: ebff9b01     	bl	0x6030 <memset@plt>     @ imm = #-0x193fc
+   1f428: e51fe20c     	ldr	lr, [pc, #-0x20c]       @ 0x1f224 <gcsXml_ParseParameter+0x10d4>
+   1f42c: e1a0c00a     	mov	r12, r10
+   1f430: e08fe00e     	add	lr, pc, lr
+   1f434: e8be000f     	ldm	lr!, {r0, r1, r2, r3}
+   1f438: e59da044     	ldr	r10, [sp, #0x44]
+   1f43c: e8ac000f     	stm	r12!, {r0, r1, r2, r3}
+   1f440: e89e000f     	ldm	lr, {r0, r1, r2, r3}
+   1f444: e35a0000     	cmp	r10, #0
+   1f448: e1a0e823     	lsr	lr, r3, #16
+   1f44c: e8ac0007     	stm	r12!, {r0, r1, r2}
+   1f450: e0cc30b2     	strh	r3, [r12], #2
+   1f454: e5cce000     	strb	lr, [r12]
+   1f458: 0afffbcd     	beq	0x1e394 <gcsXml_ParseParameter+0x244> @ imm = #-0x10cc
+   1f45c: e28da060     	add	r10, sp, #96
+   1f460: e1a0300a     	mov	r3, r10
+   1f464: e59d1010     	ldr	r1, [sp, #0x10]
+   1f468: e3a02001     	mov	r2, #1
+   1f46c: e5960000     	ldr	r0, [r6]
+   1f470: ebff9917     	bl	0x58d4 <gcsXml_getParameter@plt> @ imm = #-0x19ba4
+   1f474: e51f1254     	ldr	r1, [pc, #-0x254]       @ 0x1f228 <gcsXml_ParseParameter+0x10d8>
+   1f478: e08f1001     	add	r1, pc, r1  ; PIC literal "Auto" @0x38dc4
+   1f47c: e5902004     	ldr	r2, [r0, #0x4]
+   1f480: e58d0054     	str	r0, [sp, #0x54]
+   1f484: e1a00002     	mov	r0, r2
+   1f488: e58d2050     	str	r2, [sp, #0x50]
+   1f48c: ebff9b17     	bl	0x60f0 <strcmp@plt>     @ imm = #-0x193a4
+   1f490: e59d2050     	ldr	r2, [sp, #0x50]
+   1f494: e59d3054     	ldr	r3, [sp, #0x54]
+   1f498: e3500000     	cmp	r0, #0
+   1f49c: 0a000024     	beq	0x1f534 <gcsXml_ParseParameter+0x13e4> @ imm = #0x90
+   1f4a0: e51f127c     	ldr	r1, [pc, #-0x27c]       @ 0x1f22c <gcsXml_ParseParameter+0x10dc>
+   1f4a4: e1a00002     	mov	r0, r2
+   1f4a8: e08f1001     	add	r1, pc, r1  ; PIC literal "Manual" @0x38dcc
+   1f4ac: e58d3050     	str	r3, [sp, #0x50]
+   1f4b0: ebff9b0e     	bl	0x60f0 <strcmp@plt>     @ imm = #-0x193c8
+   1f4b4: e59d3050     	ldr	r3, [sp, #0x50]
+   1f4b8: e2501000     	subs	r1, r0, #0
+   1f4bc: 1a000018     	bne	0x1f524 <gcsXml_ParseParameter+0x13d4> @ imm = #0x60
+   1f4c0: e3a0203c     	mov	r2, #60
+   1f4c4: e59d0048     	ldr	r0, [sp, #0x48]
+   1f4c8: ebff9ad8     	bl	0x6030 <memset@plt>     @ imm = #-0x194a0
+   1f4cc: e51fe2a4     	ldr	lr, [pc, #-0x2a4]       @ 0x1f230 <gcsXml_ParseParameter+0x10e0>
+   1f4d0: e59dc048     	ldr	r12, [sp, #0x48]
+   1f4d4: e08fe00e     	add	lr, pc, lr
+   1f4d8: e8be000f     	ldm	lr!, {r0, r1, r2, r3}
+   1f4dc: e8ac000f     	stm	r12!, {r0, r1, r2, r3}
+   1f4e0: e89e0007     	ldm	lr, {r0, r1, r2}
+   1f4e4: e1a0300a     	mov	r3, r10
+   1f4e8: e8ac0003     	stm	r12!, {r0, r1}
+   1f4ec: e59d1010     	ldr	r1, [sp, #0x10]
+   1f4f0: e1cc20b0     	strh	r2, [r12]
+   1f4f4: e5960000     	ldr	r0, [r6]
+   1f4f8: e3a02001     	mov	r2, #1
+   1f4fc: ebff98f4     	bl	0x58d4 <gcsXml_getParameter@plt> @ imm = #-0x19c30
+   1f500: e51f12d4     	ldr	r1, [pc, #-0x2d4]       @ 0x1f234 <gcsXml_ParseParameter+0x10e4>
+   1f504: e08f1001     	add	r1, pc, r1  ; PIC literal "Static" @0x38df0
+   1f508: e1a03000     	mov	r3, r0
+   1f50c: e5900004     	ldr	r0, [r0, #0x4]
+   1f510: e58d3050     	str	r3, [sp, #0x50]
+   1f514: ebff9af5     	bl	0x60f0 <strcmp@plt>     @ imm = #-0x1942c
+   1f518: e59d3050     	ldr	r3, [sp, #0x50]
+   1f51c: e3500000     	cmp	r0, #0
+   1f520: 1a000003     	bne	0x1f534 <gcsXml_ParseParameter+0x13e4> @ imm = #0xc
+   1f524: e1a00003     	mov	r0, r3
+   1f528: e3a01001     	mov	r1, #1
+   1f52c: ebff9a29     	bl	0x5dd8 <gcsXml_freeParameterBuffer@plt> @ imm = #-0x1975c
+   1f530: eafffb97     	b	0x1e394 <gcsXml_ParseParameter+0x244> @ imm = #-0x11a4
+   1f534: e1a00003     	mov	r0, r3
+   1f538: e3a01001     	mov	r1, #1
+   1f53c: ebff9a25     	bl	0x5dd8 <gcsXml_freeParameterBuffer@plt> @ imm = #-0x1976c
+   1f540: eafffc3e     	b	0x1e640 <gcsXml_ParseParameter+0x4f0> @ imm = #-0xf08
+   1f544: e1a00003     	mov	r0, r3
+   1f548: e3a01001     	mov	r1, #1
+   1f54c: eafffdab     	b	0x1ec00 <gcsXml_ParseParameter+0xab0> @ imm = #-0x954
+
+0001f550 <gcsXml_ParseNodeToBuf>:
+   1f550: e92d4ff0     	push	{r4, r5, r6, r7, r8, r9, r10, r11, lr}
+   1f554: e1a05002     	mov	r5, r2
+   1f558: e59f23d4     	ldr	r2, [pc, #0x3d4]        @ 0x1f934 <gcsXml_ParseNodeToBuf+0x3e4>
+   1f55c: e251b000     	subs	r11, r1, #0
+   1f560: e24dd02c     	sub	sp, sp, #44
+   1f564: e08f2002     	add	r2, pc, r2
+   1f568: 0a0000ef     	beq	0x1f92c <gcsXml_ParseNodeToBuf+0x3dc> @ imm = #0x3bc
+   1f56c: e59f33c4     	ldr	r3, [pc, #0x3c4]        @ 0x1f938 <gcsXml_ParseNodeToBuf+0x3e8>
+   1f570: e59f83c4     	ldr	r8, [pc, #0x3c4]        @ 0x1f93c <gcsXml_ParseNodeToBuf+0x3ec>
+   1f574: e792a003     	ldr	r10, [r2, r3]
+   1f578: e59f33c0     	ldr	r3, [pc, #0x3c0]        @ 0x1f940 <gcsXml_ParseNodeToBuf+0x3f0>
+   1f57c: e59f23c0     	ldr	r2, [pc, #0x3c0]        @ 0x1f944 <gcsXml_ParseNodeToBuf+0x3f4>
+   1f580: e59f93c0     	ldr	r9, [pc, #0x3c0]        @ 0x1f948 <gcsXml_ParseNodeToBuf+0x3f8>
+   1f584: e1a06000     	mov	r6, r0
+   1f588: e08f3003     	add	r3, pc, r3  ; PIC literal "gcsXml_ParseNodeToBuf" @0x3891c
+   1f58c: e59a0000     	ldr	r0, [r10]
+   1f590: e2833078     	add	r3, r3, #120
+   1f594: e08f8008     	add	r8, pc, r8
+   1f598: e08f2002     	add	r2, pc, r2  ; PIC literal "gcsXml_ParseNodeToBuf" @0x3891c
+   1f59c: e2822078     	add	r2, r2, #120
+   1f5a0: e58d3024     	str	r3, [sp, #0x24]
+   1f5a4: e08f9009     	add	r9, pc, r9
+   1f5a8: e3a03000     	mov	r3, #0
+   1f5ac: e2888078     	add	r8, r8, #120
+   1f5b0: e58d2020     	str	r2, [sp, #0x20]
+   1f5b4: e58d3014     	str	r3, [sp, #0x14]
+   1f5b8: e59b4018     	ldr	r4, [r11, #0x18]
+   1f5bc: e59b101c     	ldr	r1, [r11, #0x1c]
+   1f5c0: e3540000     	cmp	r4, #0
+   1f5c4: 15903008     	ldrne	r3, [r0, #0x8]
+   1f5c8: e59f737c     	ldr	r7, [pc, #0x37c]        @ 0x1f94c <gcsXml_ParseNodeToBuf+0x3fc>
+   1f5cc: 10834004     	addne	r4, r3, r4
+   1f5d0: ebff99fa     	bl	0x5dc0 <gcsXml_GetOIDByOffset@plt> @ imm = #-0x19818
+   1f5d4: e59f3374     	ldr	r3, [pc, #0x374]        @ 0x1f950 <gcsXml_ParseNodeToBuf+0x400>
+   1f5d8: e08f7007     	add	r7, pc, r7  ; PIC literal "../gcs_mdm/pdm/gcs_pdm.c" @0x389bc
+   1f5dc: e08f3003     	add	r3, pc, r3  ; PIC literal "enter name:%s, OID %d\n" @0x3906c
+   1f5e0: e58d3000     	str	r3, [sp]
+   1f5e4: e1a01008     	mov	r1, r8
+   1f5e8: e3a03005     	mov	r3, #5
+   1f5ec: e59f2360     	ldr	r2, [pc, #0x360]        @ 0x1f954 <gcsXml_ParseNodeToBuf+0x404>
+   1f5f0: e1a0e000     	mov	lr, r0
+   1f5f4: e98d4010     	stmib	sp, {r4, lr}
+   1f5f8: e1a00007     	mov	r0, r7
+   1f5fc: e589e014     	str	lr, [r9, #0x14]
+   1f600: ebff9907     	bl	0x5a24 <log_print@plt>  @ imm = #-0x19be4
+   1f604: e59b3014     	ldr	r3, [r11, #0x14]
+   1f608: e3130004     	tst	r3, #4
+   1f60c: 1a00009f     	bne	0x1f890 <gcsXml_ParseNodeToBuf+0x340> @ imm = #0x27c
+   1f610: e3550000     	cmp	r5, #0
+   1f614: 0a000033     	beq	0x1f6e8 <gcsXml_ParseNodeToBuf+0x198> @ imm = #0xcc
+   1f618: e5952004     	ldr	r2, [r5, #0x4]
+   1f61c: e3520001     	cmp	r2, #1
+   1f620: 0a000030     	beq	0x1f6e8 <gcsXml_ParseNodeToBuf+0x198> @ imm = #0xc0
+   1f624: e3130008     	tst	r3, #8
+   1f628: 1a000020     	bne	0x1f6b0 <gcsXml_ParseNodeToBuf+0x160> @ imm = #0x80
+   1f62c: e3a04000     	mov	r4, #0
+   1f630: e59b300c     	ldr	r3, [r11, #0xc]
+   1f634: e3530000     	cmp	r3, #0
+   1f638: 0a000013     	beq	0x1f68c <gcsXml_ParseNodeToBuf+0x13c> @ imm = #0x4c
+   1f63c: e59a2000     	ldr	r2, [r10]
+   1f640: e1a00006     	mov	r0, r6
+   1f644: e5921008     	ldr	r1, [r2, #0x8]
+   1f648: e1a02005     	mov	r2, r5
+   1f64c: e0811003     	add	r1, r1, r3
+   1f650: ebff9ac4     	bl	0x6168 <gcsXml_ParseNodeToBuf@plt> @ imm = #-0x194f0
+   1f654: e59b3008     	ldr	r3, [r11, #0x8]
+   1f658: e3530000     	cmp	r3, #0
+   1f65c: e0844000     	add	r4, r4, r0
+   1f660: 0a00000c     	beq	0x1f698 <gcsXml_ParseNodeToBuf+0x148> @ imm = #0x30
+   1f664: e59a0000     	ldr	r0, [r10]
+   1f668: e59d2014     	ldr	r2, [sp, #0x14]
+   1f66c: e590c008     	ldr	r12, [r0, #0x8]
+   1f670: e0822004     	add	r2, r2, r4
+   1f674: e09cb003     	adds	r11, r12, r3
+   1f678: e58d2014     	str	r2, [sp, #0x14]
+   1f67c: 1affffcd     	bne	0x1f5b8 <gcsXml_ParseNodeToBuf+0x68> @ imm = #-0xcc
+   1f680: e59d0014     	ldr	r0, [sp, #0x14]
+   1f684: e28dd02c     	add	sp, sp, #44
+   1f688: e8bd8ff0     	pop	{r4, r5, r6, r7, r8, r9, r10, r11, pc}
+   1f68c: e59b3008     	ldr	r3, [r11, #0x8]
+   1f690: e3530000     	cmp	r3, #0
+   1f694: 1afffff2     	bne	0x1f664 <gcsXml_ParseNodeToBuf+0x114> @ imm = #-0x38
+   1f698: e59d3014     	ldr	r3, [sp, #0x14]
+   1f69c: e0833004     	add	r3, r3, r4
+   1f6a0: e58d3014     	str	r3, [sp, #0x14]
+   1f6a4: e59d0014     	ldr	r0, [sp, #0x14]
+   1f6a8: e28dd02c     	add	sp, sp, #44
+   1f6ac: e8bd8ff0     	pop	{r4, r5, r6, r7, r8, r9, r10, r11, pc}
+   1f6b0: e59f32a0     	ldr	r3, [pc, #0x2a0]        @ 0x1f958 <gcsXml_ParseNodeToBuf+0x408>
+   1f6b4: e5991014     	ldr	r1, [r9, #0x14]
+   1f6b8: e08f3003     	add	r3, pc, r3  ; PIC literal "enter name:%s, OID %d, index child configured\n" @0x390b0
+   1f6bc: e3a02002     	mov	r2, #2
+   1f6c0: e58d3000     	str	r3, [sp]
+   1f6c4: e58d1008     	str	r1, [sp, #0x8]
+   1f6c8: e58d4004     	str	r4, [sp, #0x4]
+   1f6cc: e3a03005     	mov	r3, #5
+   1f6d0: e5852004     	str	r2, [r5, #0x4]
+   1f6d4: e1a00007     	mov	r0, r7
+   1f6d8: e1a01008     	mov	r1, r8
+   1f6dc: e59f2278     	ldr	r2, [pc, #0x278]        @ 0x1f95c <gcsXml_ParseNodeToBuf+0x40c>
+   1f6e0: ebff98cf     	bl	0x5a24 <log_print@plt>  @ imm = #-0x19cc4
+   1f6e4: e59b3014     	ldr	r3, [r11, #0x14]
+   1f6e8: e3130008     	tst	r3, #8
+   1f6ec: 0affffce     	beq	0x1f62c <gcsXml_ParseNodeToBuf+0xdc> @ imm = #-0xc8
+   1f6f0: e59f2268     	ldr	r2, [pc, #0x268]        @ 0x1f960 <gcsXml_ParseNodeToBuf+0x410>
+   1f6f4: e59f3268     	ldr	r3, [pc, #0x268]        @ 0x1f964 <gcsXml_ParseNodeToBuf+0x414>
+   1f6f8: e08f2002     	add	r2, pc, r2
+   1f6fc: e5922014     	ldr	r2, [r2, #0x14]
+   1f700: e59f0260     	ldr	r0, [pc, #0x260]        @ 0x1f968 <gcsXml_ParseNodeToBuf+0x418>
+   1f704: e08f3003     	add	r3, pc, r3  ; PIC literal "enter name:%s, OID %d, object configured.\n" @0x390e0
+   1f708: e59d1020     	ldr	r1, [sp, #0x20]
+   1f70c: e58d4004     	str	r4, [sp, #0x4]
+   1f710: e58d2008     	str	r2, [sp, #0x8]
+   1f714: e58d3000     	str	r3, [sp]
+   1f718: e59f224c     	ldr	r2, [pc, #0x24c]        @ 0x1f96c <gcsXml_ParseNodeToBuf+0x41c>
+   1f71c: e3a03005     	mov	r3, #5
+   1f720: e08f0000     	add	r0, pc, r0  ; PIC literal "../gcs_mdm/pdm/gcs_pdm.c" @0x389bc
+   1f724: ebff98be     	bl	0x5a24 <log_print@plt>  @ imm = #-0x19d08
+   1f728: e59b7018     	ldr	r7, [r11, #0x18]
+   1f72c: e1a00006     	mov	r0, r6
+   1f730: e3570000     	cmp	r7, #0
+   1f734: 159a3000     	ldrne	r3, [r10]
+   1f738: e59f4230     	ldr	r4, [pc, #0x230]        @ 0x1f970 <gcsXml_ParseNodeToBuf+0x420>
+   1f73c: e08f4004     	add	r4, pc, r4
+   1f740: 15933008     	ldrne	r3, [r3, #0x8]
+   1f744: 10837007     	addne	r7, r3, r7
+   1f748: ebff9a3e     	bl	0x6048 <ftell@plt>      @ imm = #-0x19708
+   1f74c: e5941020     	ldr	r1, [r4, #0x20]
+   1f750: e58d001c     	str	r0, [sp, #0x1c]
+   1f754: e1a00006     	mov	r0, r6
+   1f758: ebff9872     	bl	0x5928 <printFileSpace@plt> @ imm = #-0x19e38
+   1f75c: e5942020     	ldr	r2, [r4, #0x20]
+   1f760: e59f120c     	ldr	r1, [pc, #0x20c]        @ 0x1f974 <gcsXml_ParseNodeToBuf+0x424>
+   1f764: e2822001     	add	r2, r2, #1
+   1f768: e5842020     	str	r2, [r4, #0x20]
+   1f76c: e08f1001     	add	r1, pc, r1  ; PIC literal "<%s>\n" @0x3910c
+   1f770: e1a02007     	mov	r2, r7
+   1f774: e58d0018     	str	r0, [sp, #0x18]
+   1f778: e1a00006     	mov	r0, r6
+   1f77c: ebff99ad     	bl	0x5e38 <fprintf@plt>    @ imm = #-0x1994c
+   1f780: e59b3014     	ldr	r3, [r11, #0x14]
+   1f784: e59dc018     	ldr	r12, [sp, #0x18]
+   1f788: e3130001     	tst	r3, #1
+   1f78c: e08c4000     	add	r4, r12, r0
+   1f790: 1a000023     	bne	0x1f824 <gcsXml_ParseNodeToBuf+0x2d4> @ imm = #0x8c
+   1f794: e59b1000     	ldr	r1, [r11]
+   1f798: e3510000     	cmp	r1, #0
+   1f79c: 0a00000d     	beq	0x1f7d8 <gcsXml_ParseNodeToBuf+0x288> @ imm = #0x34
+   1f7a0: e59a3000     	ldr	r3, [r10]
+   1f7a4: e5933008     	ldr	r3, [r3, #0x8]
+   1f7a8: e0931001     	adds	r1, r3, r1
+   1f7ac: 13a03000     	movne	r3, #0
+   1f7b0: 0a000008     	beq	0x1f7d8 <gcsXml_ParseNodeToBuf+0x288> @ imm = #0x20
+   1f7b4: e1a00006     	mov	r0, r6
+   1f7b8: e1a02005     	mov	r2, r5
+   1f7bc: e58d3018     	str	r3, [sp, #0x18]
+   1f7c0: ebff9a68     	bl	0x6168 <gcsXml_ParseNodeToBuf@plt> @ imm = #-0x19660
+   1f7c4: e59d3018     	ldr	r3, [sp, #0x18]
+   1f7c8: e3500000     	cmp	r0, #0
+   1f7cc: 10844000     	addne	r4, r4, r0
+   1f7d0: e1903003     	orrs	r3, r0, r3
+   1f7d4: 1a00001f     	bne	0x1f858 <gcsXml_ParseNodeToBuf+0x308> @ imm = #0x7c
+   1f7d8: e1a00006     	mov	r0, r6
+   1f7dc: ebff9a19     	bl	0x6048 <ftell@plt>      @ imm = #-0x1979c
+   1f7e0: e1a00006     	mov	r0, r6
+   1f7e4: ebff9abc     	bl	0x62dc <fileno@plt>     @ imm = #-0x19510
+   1f7e8: e59d101c     	ldr	r1, [sp, #0x1c]
+   1f7ec: ebff9928     	bl	0x5c94 <ftruncate@plt>  @ imm = #-0x19b60
+   1f7f0: e3500000     	cmp	r0, #0
+   1f7f4: ba00003f     	blt	0x1f8f8 <gcsXml_ParseNodeToBuf+0x3a8> @ imm = #0xfc
+   1f7f8: e2641000     	rsb	r1, r4, #0
+   1f7fc: e1a00006     	mov	r0, r6
+   1f800: e3a02001     	mov	r2, #1
+   1f804: ebff99a3     	bl	0x5e98 <fseek@plt>      @ imm = #-0x19974
+   1f808: e3a04000     	mov	r4, #0
+   1f80c: e59f2164     	ldr	r2, [pc, #0x164]        @ 0x1f978 <gcsXml_ParseNodeToBuf+0x428>
+   1f810: e08f2002     	add	r2, pc, r2
+   1f814: e5923020     	ldr	r3, [r2, #0x20]
+   1f818: e2433001     	sub	r3, r3, #1
+   1f81c: e5823020     	str	r3, [r2, #0x20]
+   1f820: eaffff82     	b	0x1f630 <gcsXml_ParseNodeToBuf+0xe0> @ imm = #-0x1f8
+   1f824: e1a00006     	mov	r0, r6
+   1f828: e1a0100b     	mov	r1, r11
+   1f82c: ebff990c     	bl	0x5c64 <gcsXml_ParseParameter@plt> @ imm = #-0x19bd0
+   1f830: e2503000     	subs	r3, r0, #0
+   1f834: 0affffd6     	beq	0x1f794 <gcsXml_ParseNodeToBuf+0x244> @ imm = #-0xa8
+   1f838: e59b1000     	ldr	r1, [r11]
+   1f83c: e0844003     	add	r4, r4, r3
+   1f840: e3510000     	cmp	r1, #0
+   1f844: 0a000003     	beq	0x1f858 <gcsXml_ParseNodeToBuf+0x308> @ imm = #0xc
+   1f848: e59a2000     	ldr	r2, [r10]
+   1f84c: e5922008     	ldr	r2, [r2, #0x8]
+   1f850: e0921001     	adds	r1, r2, r1
+   1f854: 1affffd6     	bne	0x1f7b4 <gcsXml_ParseNodeToBuf+0x264> @ imm = #-0xa8
+   1f858: e59f311c     	ldr	r3, [pc, #0x11c]        @ 0x1f97c <gcsXml_ParseNodeToBuf+0x42c>
+   1f85c: e1a00006     	mov	r0, r6
+   1f860: e08f3003     	add	r3, pc, r3
+   1f864: e5931020     	ldr	r1, [r3, #0x20]
+   1f868: e2411001     	sub	r1, r1, #1
+   1f86c: ebff982d     	bl	0x5928 <printFileSpace@plt> @ imm = #-0x19f4c
+   1f870: e59f1108     	ldr	r1, [pc, #0x108]        @ 0x1f980 <gcsXml_ParseNodeToBuf+0x430>
+   1f874: e1a02007     	mov	r2, r7
+   1f878: e08f1001     	add	r1, pc, r1  ; PIC literal "</%s>\n" @0x39064
+   1f87c: e0804004     	add	r4, r0, r4
+   1f880: e1a00006     	mov	r0, r6
+   1f884: ebff996b     	bl	0x5e38 <fprintf@plt>    @ imm = #-0x19a54
+   1f888: e0804004     	add	r4, r0, r4
+   1f88c: eaffffde     	b	0x1f80c <gcsXml_ParseNodeToBuf+0x2bc> @ imm = #-0x88
+   1f890: e59f30ec     	ldr	r3, [pc, #0xec]         @ 0x1f984 <gcsXml_ParseNodeToBuf+0x434>
+   1f894: e5992014     	ldr	r2, [r9, #0x14]
+   1f898: e08f3003     	add	r3, pc, r3  ; PIC literal "enter name:%s, OID %d, attr is index child\n" @0x39084
+   1f89c: e58d2008     	str	r2, [sp, #0x8]
+   1f8a0: e58d3000     	str	r3, [sp]
+   1f8a4: e59f20dc     	ldr	r2, [pc, #0xdc]         @ 0x1f988 <gcsXml_ParseNodeToBuf+0x438>
+   1f8a8: e3a03005     	mov	r3, #5
+   1f8ac: e58d4004     	str	r4, [sp, #0x4]
+   1f8b0: e1a00007     	mov	r0, r7
+   1f8b4: e1a01008     	mov	r1, r8
+   1f8b8: ebff9859     	bl	0x5a24 <log_print@plt>  @ imm = #-0x19e9c
+   1f8bc: e59a3000     	ldr	r3, [r10]
+   1f8c0: e59b201c     	ldr	r2, [r11, #0x1c]
+   1f8c4: e5933008     	ldr	r3, [r3, #0x8]
+   1f8c8: e0833002     	add	r3, r3, r2
+   1f8cc: e5133010     	ldr	r3, [r3, #-0x10]
+   1f8d0: e3530000     	cmp	r3, #0
+   1f8d4: 0affff69     	beq	0x1f680 <gcsXml_ParseNodeToBuf+0x130> @ imm = #-0x25c
+   1f8d8: e1a00006     	mov	r0, r6
+   1f8dc: e1a0100b     	mov	r1, r11
+   1f8e0: e3a02000     	mov	r2, #0
+   1f8e4: ebff985d     	bl	0x5a60 <gcsXml_ParseChildi@plt> @ imm = #-0x19e8c
+   1f8e8: e59d3014     	ldr	r3, [sp, #0x14]
+   1f8ec: e0833000     	add	r3, r3, r0
+   1f8f0: e58d3014     	str	r3, [sp, #0x14]
+   1f8f4: eaffff61     	b	0x1f680 <gcsXml_ParseNodeToBuf+0x130> @ imm = #-0x27c
+   1f8f8: ebff9a65     	bl	0x6294 <__errno_location@plt> @ imm = #-0x1966c
+   1f8fc: e59f3088     	ldr	r3, [pc, #0x88]         @ 0x1f98c <gcsXml_ParseNodeToBuf+0x43c>
+   1f900: e59d1024     	ldr	r1, [sp, #0x24]
+   1f904: e08f3003     	add	r3, pc, r3  ; PIC literal "ftruncate fail, errno %x.\r\n" @0x39114
+   1f908: e58d3000     	str	r3, [sp]
+   1f90c: e59f207c     	ldr	r2, [pc, #0x7c]         @ 0x1f990 <gcsXml_ParseNodeToBuf+0x440>
+   1f910: e3a03005     	mov	r3, #5
+   1f914: e590e000     	ldr	lr, [r0]
+   1f918: e59f0074     	ldr	r0, [pc, #0x74]         @ 0x1f994 <gcsXml_ParseNodeToBuf+0x444>
+   1f91c: e58de004     	str	lr, [sp, #0x4]
+   1f920: e08f0000     	add	r0, pc, r0  ; PIC literal "../gcs_mdm/pdm/gcs_pdm.c" @0x389bc
+   1f924: ebff983e     	bl	0x5a24 <log_print@plt>  @ imm = #-0x19f08
+   1f928: eaffffb2     	b	0x1f7f8 <gcsXml_ParseNodeToBuf+0x2a8> @ imm = #-0x138
+   1f92c: e58db014     	str	r11, [sp, #0x14]
+   1f930: eaffff52     	b	0x1f680 <gcsXml_ParseNodeToBuf+0x130> @ imm = #-0x2b8
+   1f934: 0002ba94     	<unknown>
+   1f938: 000003f8     	strdeq	r0, r1, [r0], -r8
+   1f93c: 00019308     	andeq	r9, r1, r8, lsl #6
+   1f940: 00019314     	andeq	r9, r1, r4, lsl r3
+   1f944: 00019304     	andeq	r9, r1, r4, lsl #6
+   1f948: 00033cb4     	strheq	r3, [r3], -r4
+   1f94c: 000193dc     	ldrdeq	r9, r10, [r1], -r12
+   1f950: 00019a88     	andeq	r9, r1, r8, lsl #21
+   1f954: 00000634     	andeq	r0, r0, r4, lsr r6
+   1f958: 000199f0     	strdeq	r9, r10, [r1], -r0
+   1f95c: 0000063f     	andeq	r0, r0, pc, lsr r6
+   1f960: 00033b60     	andeq	r3, r3, r0, ror #22
+   1f964: 000199d4     	ldrdeq	r9, r10, [r1], -r4
+   1f968: 00019294     	<unknown>
+   1f96c: 00000643     	andeq	r0, r0, r3, asr #12
+   1f970: 00033b1c     	andeq	r3, r3, r12, lsl r11
+   1f974: 00019998     	<unknown>
+   1f978: 00033a48     	andeq	r3, r3, r8, asr #20
+   1f97c: 000339f8     	strdeq	r3, r4, [r3], -r8
+   1f980: 000197e4     	andeq	r9, r1, r4, ror #15
+   1f984: 000197e4     	andeq	r9, r1, r4, ror #15
+   1f988: 00000637     	andeq	r0, r0, r7, lsr r6
+   1f98c: 00019808     	andeq	r9, r1, r8, lsl #16
+   1f990: 00000666     	andeq	r0, r0, r6, ror #12
+   1f994: 00019094     	<unknown>

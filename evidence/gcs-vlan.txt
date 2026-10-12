@@ -1,0 +1,1000 @@
+00027964 <gcsTask_DeviceInfoUpdate>:
+   27964: e92d4800     	push	{r11, lr}
+   27968: e28db004     	add	r11, sp, #4
+   2796c: e24dd018     	sub	sp, sp, #24
+   27970: e3a03000     	mov	r3, #0
+   27974: e50b3008     	str	r3, [r11, #-0x8]
+   27978: e3a03000     	mov	r3, #0
+   2797c: e50b3014     	str	r3, [r11, #-0x14]
+   27980: e3a03000     	mov	r3, #0
+   27984: e50b300c     	str	r3, [r11, #-0xc]
+   27988: ebff7d6f     	bl	0x6f4c <gcs_xmlShmInit@plt> @ imm = #-0x20a44
+   2798c: e1a03000     	mov	r3, r0
+   27990: e50b3014     	str	r3, [r11, #-0x14]
+   27994: e51b3014     	ldr	r3, [r11, #-0x14]
+   27998: e3530000     	cmp	r3, #0
+   2799c: 1a000003     	bne	0x279b0 <gcsTask_DeviceInfoUpdate+0x4c> @ imm = #0xc
+   279a0: e3e03000     	mvn	r3, #0
+   279a4: e50b3008     	str	r3, [r11, #-0x8]
+   279a8: e51b3008     	ldr	r3, [r11, #-0x8]
+   279ac: ea000016     	b	0x27a0c <gcsTask_DeviceInfoUpdate+0xa8> @ imm = #0x58
+   279b0: e51b2014     	ldr	r2, [r11, #-0x14]
+   279b4: e3a03001     	mov	r3, #1
+   279b8: e58d3000     	str	r3, [sp]
+   279bc: e1a00002     	mov	r0, r2
+   279c0: e3a01001     	mov	r1, #1
+   279c4: e3a02000     	mov	r2, #0
+   279c8: e3a03000     	mov	r3, #0
+   279cc: ebff7de2     	bl	0x715c <gcsXml_GetObjectByOID@plt> @ imm = #-0x20878
+   279d0: e50b0010     	str	r0, [r11, #-0x10]
+   279d4: e51b3010     	ldr	r3, [r11, #-0x10]
+   279d8: e3530000     	cmp	r3, #0
+   279dc: 0a000006     	beq	0x279fc <gcsTask_DeviceInfoUpdate+0x98> @ imm = #0x18
+   279e0: e51b3010     	ldr	r3, [r11, #-0x10]
+   279e4: e50b300c     	str	r3, [r11, #-0xc]
+   279e8: ebff7f85     	bl	0x7804 <uptime@plt>     @ imm = #-0x201ec
+   279ec: e1a03000     	mov	r3, r0
+   279f0: e1a02003     	mov	r2, r3
+   279f4: e51b300c     	ldr	r3, [r11, #-0xc]
+   279f8: e5832044     	str	r2, [r3, #0x44]
+   279fc: e24b3014     	sub	r3, r11, #20
+   27a00: e1a00003     	mov	r0, r3
+   27a04: ebff7d56     	bl	0x6f64 <gcs_xmlShmDeInit@plt> @ imm = #-0x20aa8
+   27a08: e51b3008     	ldr	r3, [r11, #-0x8]
+   27a0c: e1a00003     	mov	r0, r3
+   27a10: e24bd004     	sub	sp, r11, #4
+   27a14: e8bd8800     	pop	{r11, pc}
+
+00027a18 <gcsTask_regLanDevice_Init>:
+   27a18: e92d4800     	push	{r11, lr}
+   27a1c: e28db004     	add	r11, sp, #4
+   27a20: e24dd008     	sub	sp, sp, #8
+   27a24: e59f202c     	ldr	r2, [pc, #0x2c]         @ 0x27a58 <gcsTask_regLanDevice_Init+0x40>
+   27a28: e08f2002     	add	r2, pc, r2
+   27a2c: e3e03000     	mvn	r3, #0
+   27a30: e50b3008     	str	r3, [r11, #-0x8]
+   27a34: e59f3020     	ldr	r3, [pc, #0x20]         @ 0x27a5c <gcsTask_regLanDevice_Init+0x44>
+   27a38: e7923003     	ldr	r3, [r2, r3]
+   27a3c: e1a00003     	mov	r0, r3
+   27a40: ebff7d3e     	bl	0x6f40 <gcsTask_regObjectToGcs@plt> @ imm = #-0x20b08
+   27a44: e50b0008     	str	r0, [r11, #-0x8]
+   27a48: e51b3008     	ldr	r3, [r11, #-0x8]
+   27a4c: e1a00003     	mov	r0, r3
+   27a50: e24bd004     	sub	sp, r11, #4
+   27a54: e8bd8800     	pop	{r11, pc}
+   27a58: 0002b5d0     	ldrdeq	r11, r12, [r2], -r0
+   27a5c: 00000550     	andeq	r0, r0, r0, asr r5
+
+00027a60 <setBridgeDhcpFireall>:
+   27a60: e92d4830     	push	{r4, r5, r11, lr}
+   27a64: e28db00c     	add	r11, sp, #12
+   27a68: e24ddc31     	sub	sp, sp, #12544
+   27a6c: e24dd020     	sub	sp, sp, #32
+   27a70: e24b3a03     	sub	r3, r11, #12288
+   27a74: e243300c     	sub	r3, r3, #12
+   27a78: e5030114     	str	r0, [r3, #-0x114]
+   27a7c: e3a03000     	mov	r3, #0
+   27a80: e50b3010     	str	r3, [r11, #-0x10]
+   27a84: e24b3a03     	sub	r3, r11, #12288
+   27a88: e243300c     	sub	r3, r3, #12
+   27a8c: e2433f43     	sub	r3, r3, #268
+   27a90: e3a02c01     	mov	r2, #256
+   27a94: e1a00003     	mov	r0, r3
+   27a98: e3a01000     	mov	r1, #0
+   27a9c: ebff7f64     	bl	0x7834 <memset@plt>     @ imm = #-0x20270
+   27aa0: e24b3a03     	sub	r3, r11, #12288
+   27aa4: e243300c     	sub	r3, r3, #12
+   27aa8: e243300c     	sub	r3, r3, #12
+   27aac: e59f2794     	ldr	r2, [pc, #0x794]        @ 0x28248 <setBridgeDhcpFireall+0x7e8>
+   27ab0: e08f2002     	add	r2, pc, r2  ; PIC literal "eth0.0" @0x3e200
+   27ab4: e1a00002     	mov	r0, r2
+   27ab8: e1a01003     	mov	r1, r3
+   27abc: ebff7e6f     	bl	0x7480 <libgc_netApi_getDev@plt> @ imm = #-0x20644
+   27ac0: e3a00001     	mov	r0, #1
+   27ac4: e59f3780     	ldr	r3, [pc, #0x780]        @ 0x2824c <setBridgeDhcpFireall+0x7ec>
+   27ac8: e08f3003     	add	r3, pc, r3
+   27acc: e1a01003     	mov	r1, r3
+   27ad0: ebff8050     	bl	0x7c18 <gcsXmlConstructIAValue@plt> @ imm = #-0x1fec0
+   27ad4: e1a04000     	mov	r4, r0
+   27ad8: e1a05001     	mov	r5, r1
+   27adc: e24b3a03     	sub	r3, r11, #12288
+   27ae0: e243300c     	sub	r3, r3, #12
+   27ae4: e1a02003     	mov	r2, r3
+   27ae8: e3a03001     	mov	r3, #1
+   27aec: e58d3000     	str	r3, [sp]
+   27af0: e5120114     	ldr	r0, [r2, #-0x114]
+   27af4: e3a0101e     	mov	r1, #30
+   27af8: e1a02004     	mov	r2, r4
+   27afc: e1a03005     	mov	r3, r5
+   27b00: ebff7d95     	bl	0x715c <gcsXml_GetObjectByOID@plt> @ imm = #-0x209ac
+   27b04: e50b0010     	str	r0, [r11, #-0x10]
+   27b08: e51b3010     	ldr	r3, [r11, #-0x10]
+   27b0c: e50b3014     	str	r3, [r11, #-0x14]
+   27b10: e51b3014     	ldr	r3, [r11, #-0x14]
+   27b14: e5d33011     	ldrb	r3, [r3, #0x11]
+   27b18: e3530000     	cmp	r3, #0
+   27b1c: 0a00015d     	beq	0x28098 <setBridgeDhcpFireall+0x638> @ imm = #0x574
+   27b20: e24b3c31     	sub	r3, r11, #12544
+   27b24: e243300c     	sub	r3, r3, #12
+   27b28: e243300c     	sub	r3, r3, #12
+   27b2c: e59f271c     	ldr	r2, [pc, #0x71c]        @ 0x28250 <setBridgeDhcpFireall+0x7f0>
+   27b30: e08f2002     	add	r2, pc, r2  ; PIC literal "ebtables -D INPUT  --vlan-untagged -p IPv4 -d ff:ff:ff:ff:ff:ff -i pon0.0 --ip-proto 17 --ip-sport 68 --ip-dport 67 -j DROP 2>/dev/null" @0x3e20c
+   27b34: e1a01003     	mov	r1, r3
+   27b38: e3a03088     	mov	r3, #136
+   27b3c: e1a00001     	mov	r0, r1
+   27b40: e1a01002     	mov	r1, r2
+   27b44: e1a02003     	mov	r2, r3
+   27b48: ebff7d80     	bl	0x7150 <memcpy@plt>     @ imm = #-0x20a00
+   27b4c: e24b3c31     	sub	r3, r11, #12544
+   27b50: e243300c     	sub	r3, r3, #12
+   27b54: e243300c     	sub	r3, r3, #12
+   27b58: e1a00003     	mov	r0, r3
+   27b5c: ebff7fc4     	bl	0x7a74 <gcstask_dosystem@plt> @ imm = #-0x200f0
+   27b60: e24b3c31     	sub	r3, r11, #12544
+   27b64: e243300c     	sub	r3, r3, #12
+   27b68: e243300c     	sub	r3, r3, #12
+   27b6c: e59f26e0     	ldr	r2, [pc, #0x6e0]        @ 0x28254 <setBridgeDhcpFireall+0x7f4>
+   27b70: e08f2002     	add	r2, pc, r2  ; PIC literal "ebtables -I INPUT  --vlan-untagged -p IPv4 -d ff:ff:ff:ff:ff:ff -i pon0.0 --ip-proto 17 --ip-sport 68 --ip-dport 67 -j DROP 2>/dev/null" @0x3e294
+   27b74: e1a01003     	mov	r1, r3
+   27b78: e3a03088     	mov	r3, #136
+   27b7c: e1a00001     	mov	r0, r1
+   27b80: e1a01002     	mov	r1, r2
+   27b84: e1a02003     	mov	r2, r3
+   27b88: ebff7d70     	bl	0x7150 <memcpy@plt>     @ imm = #-0x20a40
+   27b8c: e24b3c31     	sub	r3, r11, #12544
+   27b90: e243300c     	sub	r3, r3, #12
+   27b94: e243300c     	sub	r3, r3, #12
+   27b98: e1a00003     	mov	r0, r3
+   27b9c: ebff7fb4     	bl	0x7a74 <gcstask_dosystem@plt> @ imm = #-0x20130
+   27ba0: e24b3c31     	sub	r3, r11, #12544
+   27ba4: e243300c     	sub	r3, r3, #12
+   27ba8: e243300c     	sub	r3, r3, #12
+   27bac: e59f26a4     	ldr	r2, [pc, #0x6a4]        @ 0x28258 <setBridgeDhcpFireall+0x7f8>
+   27bb0: e08f2002     	add	r2, pc, r2  ; PIC literal "ebtables -D FORWARD -p IPv4 -d ff:ff:ff:ff:ff:ff -o pon0.0 --ip-proto 17 --ip-sport 68 --ip-dport 67 -j DHCP_FORWARD 2>/dev/null" @0x3e31c
+   27bb4: e1a01003     	mov	r1, r3
+   27bb8: e3a03081     	mov	r3, #129
+   27bbc: e1a00001     	mov	r0, r1
+   27bc0: e1a01002     	mov	r1, r2
+   27bc4: e1a02003     	mov	r2, r3
+   27bc8: ebff7d60     	bl	0x7150 <memcpy@plt>     @ imm = #-0x20a80
+   27bcc: e24b3c31     	sub	r3, r11, #12544
+   27bd0: e243300c     	sub	r3, r3, #12
+   27bd4: e243300c     	sub	r3, r3, #12
+   27bd8: e1a00003     	mov	r0, r3
+   27bdc: ebff7fa4     	bl	0x7a74 <gcstask_dosystem@plt> @ imm = #-0x20170
+   27be0: e24b3c31     	sub	r3, r11, #12544
+   27be4: e243300c     	sub	r3, r3, #12
+   27be8: e243300c     	sub	r3, r3, #12
+   27bec: e59f2668     	ldr	r2, [pc, #0x668]        @ 0x2825c <setBridgeDhcpFireall+0x7fc>
+   27bf0: e08f2002     	add	r2, pc, r2  ; PIC literal "ebtables -F DHCP_FORWARD 2>/dev/null" @0x3e3a0
+   27bf4: e1a0c003     	mov	r12, r3
+   27bf8: e1a0e002     	mov	lr, r2
+   27bfc: e8be000f     	ldm	lr!, {r0, r1, r2, r3}
+   27c00: e8ac000f     	stm	r12!, {r0, r1, r2, r3}
+   27c04: e8be000f     	ldm	lr!, {r0, r1, r2, r3}
+   27c08: e8ac000f     	stm	r12!, {r0, r1, r2, r3}
+   27c0c: e89e0003     	ldm	lr, {r0, r1}
+   27c10: e58c0000     	str	r0, [r12]
+   27c14: e28cc004     	add	r12, r12, #4
+   27c18: e5cc1000     	strb	r1, [r12]
+   27c1c: e24b3c31     	sub	r3, r11, #12544
+   27c20: e243300c     	sub	r3, r3, #12
+   27c24: e243300c     	sub	r3, r3, #12
+   27c28: e1a00003     	mov	r0, r3
+   27c2c: ebff7f90     	bl	0x7a74 <gcstask_dosystem@plt> @ imm = #-0x201c0
+   27c30: e24b3c31     	sub	r3, r11, #12544
+   27c34: e243300c     	sub	r3, r3, #12
+   27c38: e243300c     	sub	r3, r3, #12
+   27c3c: e59f261c     	ldr	r2, [pc, #0x61c]        @ 0x28260 <setBridgeDhcpFireall+0x800>
+   27c40: e08f2002     	add	r2, pc, r2  ; PIC literal "ebtables -X DHCP_FORWARD 2>/dev/null" @0x3e3c8
+   27c44: e1a0c003     	mov	r12, r3
+   27c48: e1a0e002     	mov	lr, r2
+   27c4c: e8be000f     	ldm	lr!, {r0, r1, r2, r3}
+   27c50: e8ac000f     	stm	r12!, {r0, r1, r2, r3}
+   27c54: e8be000f     	ldm	lr!, {r0, r1, r2, r3}
+   27c58: e8ac000f     	stm	r12!, {r0, r1, r2, r3}
+   27c5c: e89e0003     	ldm	lr, {r0, r1}
+   27c60: e58c0000     	str	r0, [r12]
+   27c64: e28cc004     	add	r12, r12, #4
+   27c68: e5cc1000     	strb	r1, [r12]
+   27c6c: e24b3c31     	sub	r3, r11, #12544
+   27c70: e243300c     	sub	r3, r3, #12
+   27c74: e243300c     	sub	r3, r3, #12
+   27c78: e1a00003     	mov	r0, r3
+   27c7c: ebff7f7c     	bl	0x7a74 <gcstask_dosystem@plt> @ imm = #-0x20210
+   27c80: e24b3c31     	sub	r3, r11, #12544
+   27c84: e243300c     	sub	r3, r3, #12
+   27c88: e243300c     	sub	r3, r3, #12
+   27c8c: e59f25d0     	ldr	r2, [pc, #0x5d0]        @ 0x28264 <setBridgeDhcpFireall+0x804>
+   27c90: e08f2002     	add	r2, pc, r2  ; PIC literal "ebtables -N DHCP_FORWARD 2>/dev/null" @0x3e3f0
+   27c94: e1a0c003     	mov	r12, r3
+   27c98: e1a0e002     	mov	lr, r2
+   27c9c: e8be000f     	ldm	lr!, {r0, r1, r2, r3}
+   27ca0: e8ac000f     	stm	r12!, {r0, r1, r2, r3}
+   27ca4: e8be000f     	ldm	lr!, {r0, r1, r2, r3}
+   27ca8: e8ac000f     	stm	r12!, {r0, r1, r2, r3}
+   27cac: e89e0003     	ldm	lr, {r0, r1}
+   27cb0: e58c0000     	str	r0, [r12]
+   27cb4: e28cc004     	add	r12, r12, #4
+   27cb8: e5cc1000     	strb	r1, [r12]
+   27cbc: e24b3c31     	sub	r3, r11, #12544
+   27cc0: e243300c     	sub	r3, r3, #12
+   27cc4: e243300c     	sub	r3, r3, #12
+   27cc8: e1a00003     	mov	r0, r3
+   27ccc: ebff7f68     	bl	0x7a74 <gcstask_dosystem@plt> @ imm = #-0x20260
+   27cd0: e24b3c31     	sub	r3, r11, #12544
+   27cd4: e243300c     	sub	r3, r3, #12
+   27cd8: e243300c     	sub	r3, r3, #12
+   27cdc: e59f2584     	ldr	r2, [pc, #0x584]        @ 0x28268 <setBridgeDhcpFireall+0x808>
+   27ce0: e08f2002     	add	r2, pc, r2  ; PIC literal "ebtables -A DHCP_FORWARD -j DROP 2>/dev/null" @0x3e418
+   27ce4: e1a0c003     	mov	r12, r3
+   27ce8: e1a0e002     	mov	lr, r2
+   27cec: e8be000f     	ldm	lr!, {r0, r1, r2, r3}
+   27cf0: e8ac000f     	stm	r12!, {r0, r1, r2, r3}
+   27cf4: e8be000f     	ldm	lr!, {r0, r1, r2, r3}
+   27cf8: e8ac000f     	stm	r12!, {r0, r1, r2, r3}
+   27cfc: e89e000f     	ldm	lr, {r0, r1, r2, r3}
+   27d00: e8ac0007     	stm	r12!, {r0, r1, r2}
+   27d04: e5cc3000     	strb	r3, [r12]
+   27d08: e24b3c31     	sub	r3, r11, #12544
+   27d0c: e243300c     	sub	r3, r3, #12
+   27d10: e243300c     	sub	r3, r3, #12
+   27d14: e1a00003     	mov	r0, r3
+   27d18: ebff7f55     	bl	0x7a74 <gcstask_dosystem@plt> @ imm = #-0x202ac
+   27d1c: e24b3c31     	sub	r3, r11, #12544
+   27d20: e243300c     	sub	r3, r3, #12
+   27d24: e243300c     	sub	r3, r3, #12
+   27d28: e59f253c     	ldr	r2, [pc, #0x53c]        @ 0x2826c <setBridgeDhcpFireall+0x80c>
+   27d2c: e08f2002     	add	r2, pc, r2  ; PIC literal "ebtables -I FORWARD  -p IPv4 -d ff:ff:ff:ff:ff:ff -o pon0.0 --ip-proto 17 --ip-sport 68 --ip-dport 67 -j DHCP_FORWARD 2>/dev/null" @0x3e448
+   27d30: e1a01003     	mov	r1, r3
+   27d34: e3a03082     	mov	r3, #130
+   27d38: e1a00001     	mov	r0, r1
+   27d3c: e1a01002     	mov	r1, r2
+   27d40: e1a02003     	mov	r2, r3
+   27d44: ebff7d01     	bl	0x7150 <memcpy@plt>     @ imm = #-0x20bfc
+   27d48: e24b3c31     	sub	r3, r11, #12544
+   27d4c: e243300c     	sub	r3, r3, #12
+   27d50: e243300c     	sub	r3, r3, #12
+   27d54: e1a00003     	mov	r0, r3
+   27d58: ebff7f45     	bl	0x7a74 <gcstask_dosystem@plt> @ imm = #-0x202ec
+   27d5c: e24b3a03     	sub	r3, r11, #12288
+   27d60: e243300c     	sub	r3, r3, #12
+   27d64: e5933014     	ldr	r3, [r3, #0x14]
+   27d68: e3530000     	cmp	r3, #0
+   27d6c: 0a0000b5     	beq	0x28048 <setBridgeDhcpFireall+0x5e8> @ imm = #0x2d4
+   27d70: e24b3a03     	sub	r3, r11, #12288
+   27d74: e243300c     	sub	r3, r3, #12
+   27d78: e5933090     	ldr	r3, [r3, #0x90]
+   27d7c: e3530005     	cmp	r3, #5
+   27d80: 908ff103     	addls	pc, pc, r3, lsl #2
+   27d84: ea0000af     	b	0x28048 <setBridgeDhcpFireall+0x5e8> @ imm = #0x2bc
+   27d88: ea000004     	b	0x27da0 <setBridgeDhcpFireall+0x340> @ imm = #0x10
+   27d8c: ea000018     	b	0x27df4 <setBridgeDhcpFireall+0x394> @ imm = #0x60
+   27d90: ea000068     	b	0x27f38 <setBridgeDhcpFireall+0x4d8> @ imm = #0x1a0
+   27d94: ea000067     	b	0x27f38 <setBridgeDhcpFireall+0x4d8> @ imm = #0x19c
+   27d98: ea000066     	b	0x27f38 <setBridgeDhcpFireall+0x4d8> @ imm = #0x198
+   27d9c: ea000065     	b	0x27f38 <setBridgeDhcpFireall+0x4d8> @ imm = #0x194
+   27da0: e24b3c31     	sub	r3, r11, #12544
+   27da4: e243300c     	sub	r3, r3, #12
+   27da8: e243300c     	sub	r3, r3, #12
+   27dac: e59f24bc     	ldr	r2, [pc, #0x4bc]        @ 0x28270 <setBridgeDhcpFireall+0x810>
+   27db0: e08f2002     	add	r2, pc, r2  ; PIC literal "ebtables -A DHCP_FORWARD --vlan-untagged  -j DROP" @0x3e4cc
+   27db4: e1a0c003     	mov	r12, r3
+   27db8: e1a0e002     	mov	lr, r2
+   27dbc: e8be000f     	ldm	lr!, {r0, r1, r2, r3}
+   27dc0: e8ac000f     	stm	r12!, {r0, r1, r2, r3}
+   27dc4: e8be000f     	ldm	lr!, {r0, r1, r2, r3}
+   27dc8: e8ac000f     	stm	r12!, {r0, r1, r2, r3}
+   27dcc: e8be000f     	ldm	lr!, {r0, r1, r2, r3}
+   27dd0: e8ac000f     	stm	r12!, {r0, r1, r2, r3}
+   27dd4: e59e3000     	ldr	r3, [lr]
+   27dd8: e1cc30b0     	strh	r3, [r12]
+   27ddc: e24b3c31     	sub	r3, r11, #12544
+   27de0: e243300c     	sub	r3, r3, #12
+   27de4: e243300c     	sub	r3, r3, #12
+   27de8: e1a00003     	mov	r0, r3
+   27dec: ebff7f20     	bl	0x7a74 <gcstask_dosystem@plt> @ imm = #-0x20380
+   27df0: ea000094     	b	0x28048 <setBridgeDhcpFireall+0x5e8> @ imm = #0x250
+   27df4: e24b3a03     	sub	r3, r11, #12288
+   27df8: e243300c     	sub	r3, r3, #12
+   27dfc: e593309c     	ldr	r3, [r3, #0x9c]
+   27e00: e1a03a03     	lsl	r3, r3, #20
+   27e04: e1a03a23     	lsr	r3, r3, #20
+   27e08: e3530000     	cmp	r3, #0
+   27e0c: 0a000004     	beq	0x27e24 <setBridgeDhcpFireall+0x3c4> @ imm = #0x10
+   27e10: e24b3a03     	sub	r3, r11, #12288
+   27e14: e243300c     	sub	r3, r3, #12
+   27e18: e59330a0     	ldr	r3, [r3, #0xa0]
+   27e1c: e3530000     	cmp	r3, #0
+   27e20: 1a000014     	bne	0x27e78 <setBridgeDhcpFireall+0x418> @ imm = #0x50
+   27e24: e24b3c31     	sub	r3, r11, #12544
+   27e28: e243300c     	sub	r3, r3, #12
+   27e2c: e243300c     	sub	r3, r3, #12
+   27e30: e59f243c     	ldr	r2, [pc, #0x43c]        @ 0x28274 <setBridgeDhcpFireall+0x814>
+   27e34: e08f2002     	add	r2, pc, r2  ; PIC literal "ebtables -A DHCP_FORWARD --vlan-untagged  -j DROP" @0x3e4cc
+   27e38: e1a0c003     	mov	r12, r3
+   27e3c: e1a0e002     	mov	lr, r2
+   27e40: e8be000f     	ldm	lr!, {r0, r1, r2, r3}
+   27e44: e8ac000f     	stm	r12!, {r0, r1, r2, r3}
+   27e48: e8be000f     	ldm	lr!, {r0, r1, r2, r3}
+   27e4c: e8ac000f     	stm	r12!, {r0, r1, r2, r3}
+   27e50: e8be000f     	ldm	lr!, {r0, r1, r2, r3}
+   27e54: e8ac000f     	stm	r12!, {r0, r1, r2, r3}
+   27e58: e59e3000     	ldr	r3, [lr]
+   27e5c: e1cc30b0     	strh	r3, [r12]
+   27e60: e24b3c31     	sub	r3, r11, #12544
+   27e64: e243300c     	sub	r3, r3, #12
+   27e68: e243300c     	sub	r3, r3, #12
+   27e6c: e1a00003     	mov	r0, r3
+   27e70: ebff7eff     	bl	0x7a74 <gcstask_dosystem@plt> @ imm = #-0x20404
+   27e74: ea00002e     	b	0x27f34 <setBridgeDhcpFireall+0x4d4> @ imm = #0xb8
+   27e78: e24b3a03     	sub	r3, r11, #12288
+   27e7c: e243300c     	sub	r3, r3, #12
+   27e80: e593309c     	ldr	r3, [r3, #0x9c]
+   27e84: e1a03a03     	lsl	r3, r3, #20
+   27e88: e1a03a23     	lsr	r3, r3, #20
+   27e8c: e3530000     	cmp	r3, #0
+   27e90: 0a000027     	beq	0x27f34 <setBridgeDhcpFireall+0x4d4> @ imm = #0x9c
+   27e94: e24b3a03     	sub	r3, r11, #12288
+   27e98: e243300c     	sub	r3, r3, #12
+   27e9c: e593309c     	ldr	r3, [r3, #0x9c]
+   27ea0: e1a03a03     	lsl	r3, r3, #20
+   27ea4: e1a03a23     	lsr	r3, r3, #20
+   27ea8: e24b2c31     	sub	r2, r11, #12544
+   27eac: e242200c     	sub	r2, r2, #12
+   27eb0: e242200c     	sub	r2, r2, #12
+   27eb4: e1a00002     	mov	r0, r2
+   27eb8: e59f23b8     	ldr	r2, [pc, #0x3b8]        @ 0x28278 <setBridgeDhcpFireall+0x818>
+   27ebc: e08f2002     	add	r2, pc, r2  ; PIC literal "ebtables -A DHCP_FORWARD --vlan-id %d  -j DROP" @0x3e500
+   27ec0: e1a01002     	mov	r1, r2
+   27ec4: e1a02003     	mov	r2, r3
+   27ec8: ebff7eaa     	bl	0x7978 <sprintf@plt>    @ imm = #-0x20558
+   27ecc: e24b3c31     	sub	r3, r11, #12544
+   27ed0: e243300c     	sub	r3, r3, #12
+   27ed4: e243300c     	sub	r3, r3, #12
+   27ed8: e1a00003     	mov	r0, r3
+   27edc: ebff7ee4     	bl	0x7a74 <gcstask_dosystem@plt> @ imm = #-0x20470
+   27ee0: e24b3c31     	sub	r3, r11, #12544
+   27ee4: e243300c     	sub	r3, r3, #12
+   27ee8: e243300c     	sub	r3, r3, #12
+   27eec: e59f2388     	ldr	r2, [pc, #0x388]        @ 0x2827c <setBridgeDhcpFireall+0x81c>
+   27ef0: e08f2002     	add	r2, pc, r2  ; PIC literal "ebtables -A DHCP_FORWARD --vlan-untagged  -j DROP" @0x3e4cc
+   27ef4: e1a0c003     	mov	r12, r3
+   27ef8: e1a0e002     	mov	lr, r2
+   27efc: e8be000f     	ldm	lr!, {r0, r1, r2, r3}
+   27f00: e8ac000f     	stm	r12!, {r0, r1, r2, r3}
+   27f04: e8be000f     	ldm	lr!, {r0, r1, r2, r3}
+   27f08: e8ac000f     	stm	r12!, {r0, r1, r2, r3}
+   27f0c: e8be000f     	ldm	lr!, {r0, r1, r2, r3}
+   27f10: e8ac000f     	stm	r12!, {r0, r1, r2, r3}
+   27f14: e59e3000     	ldr	r3, [lr]
+   27f18: e1cc30b0     	strh	r3, [r12]
+   27f1c: e24b3c31     	sub	r3, r11, #12544
+   27f20: e243300c     	sub	r3, r3, #12
+   27f24: e243300c     	sub	r3, r3, #12
+   27f28: e1a00003     	mov	r0, r3
+   27f2c: ebff7ed0     	bl	0x7a74 <gcstask_dosystem@plt> @ imm = #-0x204c0
+   27f30: ea000044     	b	0x28048 <setBridgeDhcpFireall+0x5e8> @ imm = #0x110
+   27f34: ea000043     	b	0x28048 <setBridgeDhcpFireall+0x5e8> @ imm = #0x10c
+   27f38: e24b3a03     	sub	r3, r11, #12288
+   27f3c: e243300c     	sub	r3, r3, #12
+   27f40: e593309c     	ldr	r3, [r3, #0x9c]
+   27f44: e1a03a03     	lsl	r3, r3, #20
+   27f48: e1a03a23     	lsr	r3, r3, #20
+   27f4c: e3530000     	cmp	r3, #0
+   27f50: 1a000014     	bne	0x27fa8 <setBridgeDhcpFireall+0x548> @ imm = #0x50
+   27f54: e24b3c31     	sub	r3, r11, #12544
+   27f58: e243300c     	sub	r3, r3, #12
+   27f5c: e243300c     	sub	r3, r3, #12
+   27f60: e59f2318     	ldr	r2, [pc, #0x318]        @ 0x28280 <setBridgeDhcpFireall+0x820>
+   27f64: e08f2002     	add	r2, pc, r2  ; PIC literal "ebtables -A DHCP_FORWARD --vlan-untagged  -j DROP" @0x3e4cc
+   27f68: e1a0c003     	mov	r12, r3
+   27f6c: e1a0e002     	mov	lr, r2
+   27f70: e8be000f     	ldm	lr!, {r0, r1, r2, r3}
+   27f74: e8ac000f     	stm	r12!, {r0, r1, r2, r3}
+   27f78: e8be000f     	ldm	lr!, {r0, r1, r2, r3}
+   27f7c: e8ac000f     	stm	r12!, {r0, r1, r2, r3}
+   27f80: e8be000f     	ldm	lr!, {r0, r1, r2, r3}
+   27f84: e8ac000f     	stm	r12!, {r0, r1, r2, r3}
+   27f88: e59e3000     	ldr	r3, [lr]
+   27f8c: e1cc30b0     	strh	r3, [r12]
+   27f90: e24b3c31     	sub	r3, r11, #12544
+   27f94: e243300c     	sub	r3, r3, #12
+   27f98: e243300c     	sub	r3, r3, #12
+   27f9c: e1a00003     	mov	r0, r3
+   27fa0: ebff7eb3     	bl	0x7a74 <gcstask_dosystem@plt> @ imm = #-0x20534
+   27fa4: ea000026     	b	0x28044 <setBridgeDhcpFireall+0x5e4> @ imm = #0x98
+   27fa8: e24b3a03     	sub	r3, r11, #12288
+   27fac: e243300c     	sub	r3, r3, #12
+   27fb0: e593309c     	ldr	r3, [r3, #0x9c]
+   27fb4: e1a03a03     	lsl	r3, r3, #20
+   27fb8: e1a03a23     	lsr	r3, r3, #20
+   27fbc: e24b2c31     	sub	r2, r11, #12544
+   27fc0: e242200c     	sub	r2, r2, #12
+   27fc4: e242200c     	sub	r2, r2, #12
+   27fc8: e1a00002     	mov	r0, r2
+   27fcc: e59f22b0     	ldr	r2, [pc, #0x2b0]        @ 0x28284 <setBridgeDhcpFireall+0x824>
+   27fd0: e08f2002     	add	r2, pc, r2  ; PIC literal "ebtables -A DHCP_FORWARD --vlan-id %d  -j DROP" @0x3e500
+   27fd4: e1a01002     	mov	r1, r2
+   27fd8: e1a02003     	mov	r2, r3
+   27fdc: ebff7e65     	bl	0x7978 <sprintf@plt>    @ imm = #-0x2066c
+   27fe0: e24b3c31     	sub	r3, r11, #12544
+   27fe4: e243300c     	sub	r3, r3, #12
+   27fe8: e243300c     	sub	r3, r3, #12
+   27fec: e1a00003     	mov	r0, r3
+   27ff0: ebff7e9f     	bl	0x7a74 <gcstask_dosystem@plt> @ imm = #-0x20584
+   27ff4: e24b3c31     	sub	r3, r11, #12544
+   27ff8: e243300c     	sub	r3, r3, #12
+   27ffc: e243300c     	sub	r3, r3, #12
+   28000: e59f2280     	ldr	r2, [pc, #0x280]        @ 0x28288 <setBridgeDhcpFireall+0x828>
+   28004: e08f2002     	add	r2, pc, r2  ; PIC literal "ebtables -A DHCP_FORWARD --vlan-untagged  -j DROP" @0x3e4cc
+   28008: e1a0c003     	mov	r12, r3
+   2800c: e1a0e002     	mov	lr, r2
+   28010: e8be000f     	ldm	lr!, {r0, r1, r2, r3}
+   28014: e8ac000f     	stm	r12!, {r0, r1, r2, r3}
+   28018: e8be000f     	ldm	lr!, {r0, r1, r2, r3}
+   2801c: e8ac000f     	stm	r12!, {r0, r1, r2, r3}
+   28020: e8be000f     	ldm	lr!, {r0, r1, r2, r3}
+   28024: e8ac000f     	stm	r12!, {r0, r1, r2, r3}
+   28028: e59e3000     	ldr	r3, [lr]
+   2802c: e1cc30b0     	strh	r3, [r12]
+   28030: e24b3c31     	sub	r3, r11, #12544
+   28034: e243300c     	sub	r3, r3, #12
+   28038: e243300c     	sub	r3, r3, #12
+   2803c: e1a00003     	mov	r0, r3
+   28040: ebff7e8b     	bl	0x7a74 <gcstask_dosystem@plt> @ imm = #-0x205d4
+   28044: e1a00000     	mov	r0, r0
+   28048: e24b3c31     	sub	r3, r11, #12544
+   2804c: e243300c     	sub	r3, r3, #12
+   28050: e243300c     	sub	r3, r3, #12
+   28054: e59f2230     	ldr	r2, [pc, #0x230]        @ 0x2828c <setBridgeDhcpFireall+0x82c>
+   28058: e08f2002     	add	r2, pc, r2  ; PIC literal "ebtables -D DHCP_FORWARD -j DROP 2>/dev/null" @0x3e530
+   2805c: e1a0c003     	mov	r12, r3
+   28060: e1a0e002     	mov	lr, r2
+   28064: e8be000f     	ldm	lr!, {r0, r1, r2, r3}
+   28068: e8ac000f     	stm	r12!, {r0, r1, r2, r3}
+   2806c: e8be000f     	ldm	lr!, {r0, r1, r2, r3}
+   28070: e8ac000f     	stm	r12!, {r0, r1, r2, r3}
+   28074: e89e000f     	ldm	lr, {r0, r1, r2, r3}
+   28078: e8ac0007     	stm	r12!, {r0, r1, r2}
+   2807c: e5cc3000     	strb	r3, [r12]
+   28080: e24b3c31     	sub	r3, r11, #12544
+   28084: e243300c     	sub	r3, r3, #12
+   28088: e243300c     	sub	r3, r3, #12
+   2808c: e1a00003     	mov	r0, r3
+   28090: ebff7e77     	bl	0x7a74 <gcstask_dosystem@plt> @ imm = #-0x20624
+   28094: ea000057     	b	0x281f8 <setBridgeDhcpFireall+0x798> @ imm = #0x15c
+   28098: e24b3c31     	sub	r3, r11, #12544
+   2809c: e243300c     	sub	r3, r3, #12
+   280a0: e243300c     	sub	r3, r3, #12
+   280a4: e59f21e4     	ldr	r2, [pc, #0x1e4]        @ 0x28290 <setBridgeDhcpFireall+0x830>
+   280a8: e08f2002     	add	r2, pc, r2  ; PIC literal "ebtables -D FORWARD -p IPv4 -d ff:ff:ff:ff:ff:ff -o pon0.0 --ip-proto 17 --ip-sport 68 --ip-dport 67 -j DHCP_FORWARD 2>/dev/null" @0x3e31c
+   280ac: e1a01003     	mov	r1, r3
+   280b0: e3a03081     	mov	r3, #129
+   280b4: e1a00001     	mov	r0, r1
+   280b8: e1a01002     	mov	r1, r2
+   280bc: e1a02003     	mov	r2, r3
+   280c0: ebff7c22     	bl	0x7150 <memcpy@plt>     @ imm = #-0x20f78
+   280c4: e24b3c31     	sub	r3, r11, #12544
+   280c8: e243300c     	sub	r3, r3, #12
+   280cc: e243300c     	sub	r3, r3, #12
+   280d0: e1a00003     	mov	r0, r3
+   280d4: ebff7e66     	bl	0x7a74 <gcstask_dosystem@plt> @ imm = #-0x20668
+   280d8: e24b3c31     	sub	r3, r11, #12544
+   280dc: e243300c     	sub	r3, r3, #12
+   280e0: e243300c     	sub	r3, r3, #12
+   280e4: e59f21a8     	ldr	r2, [pc, #0x1a8]        @ 0x28294 <setBridgeDhcpFireall+0x834>
+   280e8: e08f2002     	add	r2, pc, r2  ; PIC literal "ebtables -F DHCP_FORWARD 2>/dev/null" @0x3e3a0
+   280ec: e1a0c003     	mov	r12, r3
+   280f0: e1a0e002     	mov	lr, r2
+   280f4: e8be000f     	ldm	lr!, {r0, r1, r2, r3}
+   280f8: e8ac000f     	stm	r12!, {r0, r1, r2, r3}
+   280fc: e8be000f     	ldm	lr!, {r0, r1, r2, r3}
+   28100: e8ac000f     	stm	r12!, {r0, r1, r2, r3}
+   28104: e89e0003     	ldm	lr, {r0, r1}
+   28108: e58c0000     	str	r0, [r12]
+   2810c: e28cc004     	add	r12, r12, #4
+   28110: e5cc1000     	strb	r1, [r12]
+   28114: e24b3c31     	sub	r3, r11, #12544
+   28118: e243300c     	sub	r3, r3, #12
+   2811c: e243300c     	sub	r3, r3, #12
+   28120: e1a00003     	mov	r0, r3
+   28124: ebff7e52     	bl	0x7a74 <gcstask_dosystem@plt> @ imm = #-0x206b8
+   28128: e24b3c31     	sub	r3, r11, #12544
+   2812c: e243300c     	sub	r3, r3, #12
+   28130: e243300c     	sub	r3, r3, #12
+   28134: e59f215c     	ldr	r2, [pc, #0x15c]        @ 0x28298 <setBridgeDhcpFireall+0x838>
+   28138: e08f2002     	add	r2, pc, r2  ; PIC literal "ebtables -X DHCP_FORWARD 2>/dev/null" @0x3e3c8
+   2813c: e1a0c003     	mov	r12, r3
+   28140: e1a0e002     	mov	lr, r2
+   28144: e8be000f     	ldm	lr!, {r0, r1, r2, r3}
+   28148: e8ac000f     	stm	r12!, {r0, r1, r2, r3}
+   2814c: e8be000f     	ldm	lr!, {r0, r1, r2, r3}
+   28150: e8ac000f     	stm	r12!, {r0, r1, r2, r3}
+   28154: e89e0003     	ldm	lr, {r0, r1}
+   28158: e58c0000     	str	r0, [r12]
+   2815c: e28cc004     	add	r12, r12, #4
+   28160: e5cc1000     	strb	r1, [r12]
+   28164: e24b3c31     	sub	r3, r11, #12544
+   28168: e243300c     	sub	r3, r3, #12
+   2816c: e243300c     	sub	r3, r3, #12
+   28170: e1a00003     	mov	r0, r3
+   28174: ebff7e3e     	bl	0x7a74 <gcstask_dosystem@plt> @ imm = #-0x20708
+   28178: e24b3c31     	sub	r3, r11, #12544
+   2817c: e243300c     	sub	r3, r3, #12
+   28180: e243300c     	sub	r3, r3, #12
+   28184: e59f2110     	ldr	r2, [pc, #0x110]        @ 0x2829c <setBridgeDhcpFireall+0x83c>
+   28188: e08f2002     	add	r2, pc, r2  ; PIC literal "ebtables -D INPUT  --vlan-untagged -p IPv4 -d ff:ff:ff:ff:ff:ff -i pon0.0 --ip-proto 17 --ip-sport 68 --ip-dport 67 -j DROP 2>/dev/null" @0x3e20c
+   2818c: e1a01003     	mov	r1, r3
+   28190: e3a03088     	mov	r3, #136
+   28194: e1a00001     	mov	r0, r1
+   28198: e1a01002     	mov	r1, r2
+   2819c: e1a02003     	mov	r2, r3
+   281a0: ebff7bea     	bl	0x7150 <memcpy@plt>     @ imm = #-0x21058
+   281a4: e24b3c31     	sub	r3, r11, #12544
+   281a8: e243300c     	sub	r3, r3, #12
+   281ac: e243300c     	sub	r3, r3, #12
+   281b0: e1a00003     	mov	r0, r3
+   281b4: ebff7e2e     	bl	0x7a74 <gcstask_dosystem@plt> @ imm = #-0x20748
+   281b8: e24b3c31     	sub	r3, r11, #12544
+   281bc: e243300c     	sub	r3, r3, #12
+   281c0: e243300c     	sub	r3, r3, #12
+   281c4: e59f20d4     	ldr	r2, [pc, #0xd4]         @ 0x282a0 <setBridgeDhcpFireall+0x840>
+   281c8: e08f2002     	add	r2, pc, r2  ; PIC literal "ebtables -D FORWARD  -p IPv4 -d ff:ff:ff:ff:ff:ff -o pon0.0 --ip-proto 17 --ip-sport 68 --ip-dport 67 -j DROP 2>/dev/null" @0x3e560
+   281cc: e1a01003     	mov	r1, r3
+   281d0: e3a0307a     	mov	r3, #122
+   281d4: e1a00001     	mov	r0, r1
+   281d8: e1a01002     	mov	r1, r2
+   281dc: e1a02003     	mov	r2, r3
+   281e0: ebff7bda     	bl	0x7150 <memcpy@plt>     @ imm = #-0x21098
+   281e4: e24b3c31     	sub	r3, r11, #12544
+   281e8: e243300c     	sub	r3, r3, #12
+   281ec: e243300c     	sub	r3, r3, #12
+   281f0: e1a00003     	mov	r0, r3
+   281f4: ebff7e1e     	bl	0x7a74 <gcstask_dosystem@plt> @ imm = #-0x20788
+   281f8: e24b3c31     	sub	r3, r11, #12544
+   281fc: e243300c     	sub	r3, r3, #12
+   28200: e243300c     	sub	r3, r3, #12
+   28204: e59f2098     	ldr	r2, [pc, #0x98]         @ 0x282a4 <setBridgeDhcpFireall+0x844>
+   28208: e08f2002     	add	r2, pc, r2  ; PIC literal "ebtables -D FORWARD  -p IPv4 -d ff:ff:ff:ff:ff:ff -o pon0.0 --ip-proto 17 --ip-sport 68 --ip-dport 67 -j DROP 2>/dev/null" @0x3e560
+   2820c: e1a01003     	mov	r1, r3
+   28210: e3a0307a     	mov	r3, #122
+   28214: e1a00001     	mov	r0, r1
+   28218: e1a01002     	mov	r1, r2
+   2821c: e1a02003     	mov	r2, r3
+   28220: ebff7bca     	bl	0x7150 <memcpy@plt>     @ imm = #-0x210d8
+   28224: e24b3c31     	sub	r3, r11, #12544
+   28228: e243300c     	sub	r3, r3, #12
+   2822c: e243300c     	sub	r3, r3, #12
+   28230: e1a00003     	mov	r0, r3
+   28234: ebff7e0e     	bl	0x7a74 <gcstask_dosystem@plt> @ imm = #-0x207c8
+   28238: e3a03000     	mov	r3, #0
+   2823c: e1a00003     	mov	r0, r3
+   28240: e24bd00c     	sub	sp, r11, #12
+   28244: e8bd8830     	pop	{r4, r5, r11, pc}
+   28248: 00016748     	andeq	r6, r1, r8, asr #14
+   2824c: 00016738     	andeq	r6, r1, r8, lsr r7
+   28250: 000166d4     	ldrdeq	r6, r7, [r1], -r4
+   28254: 0001671c     	andeq	r6, r1, r12, lsl r7
+   28258: 00016764     	andeq	r6, r1, r4, ror #14
+   2825c: 000167a8     	andeq	r6, r1, r8, lsr #15
+   28260: 00016780     	andeq	r6, r1, r0, lsl #15
+   28264: 00016758     	andeq	r6, r1, r8, asr r7
+   28268: 00016730     	andeq	r6, r1, r0, lsr r7
+   2826c: 00016714     	andeq	r6, r1, r4, lsl r7
+   28270: 00016714     	andeq	r6, r1, r4, lsl r7
+   28274: 00016690     	<unknown>
+   28278: 0001663c     	andeq	r6, r1, r12, lsr r6
+   2827c: 000165d4     	ldrdeq	r6, r7, [r1], -r4
+   28280: 00016560     	andeq	r6, r1, r0, ror #10
+   28284: 00016528     	andeq	r6, r1, r8, lsr #10
+   28288: 000164c0     	andeq	r6, r1, r0, asr #9
+   2828c: 000164d0     	ldrdeq	r6, r7, [r1], -r0
+   28290: 0001626c     	andeq	r6, r1, r12, ror #4
+   28294: 000162b0     	strheq	r6, [r1], -r0
+   28298: 00016288     	andeq	r6, r1, r8, lsl #5
+   2829c: 0001607c     	andeq	r6, r1, r12, ror r0
+   282a0: 00016390     	<unknown>
+   282a4: 00016350     	andeq	r6, r1, r0, asr r3
+   282a8: e52db004     	str	r11, [sp, #-0x4]!
+   282ac: e28db000     	add	r11, sp, #0
+   282b0: e24dd014     	sub	sp, sp, #20
+   282b4: e50b0010     	str	r0, [r11, #-0x10]
+   282b8: e50b1014     	str	r1, [r11, #-0x14]
+   282bc: e3a03000     	mov	r3, #0
+   282c0: e50b3008     	str	r3, [r11, #-0x8]
+   282c4: e3a03000     	mov	r3, #0
+   282c8: e50b300c     	str	r3, [r11, #-0xc]
+   282cc: e51b3010     	ldr	r3, [r11, #-0x10]
+   282d0: e50b3008     	str	r3, [r11, #-0x8]
+   282d4: e51b3014     	ldr	r3, [r11, #-0x14]
+   282d8: e50b300c     	str	r3, [r11, #-0xc]
+   282dc: e24bd000     	sub	sp, r11, #0
+   282e0: e49db004     	ldr	r11, [sp], #4
+   282e4: e12fff1e     	bx	lr
+
+000282e8 <gcsTask_CreateVlanRuleFile>:
+   282e8: e92d4800     	push	{r11, lr}
+   282ec: e28db004     	add	r11, sp, #4
+   282f0: e24dde16     	sub	sp, sp, #352
+   282f4: e50b0130     	str	r0, [r11, #-0x130]
+   282f8: e3a03000     	mov	r3, #0
+   282fc: e50b3018     	str	r3, [r11, #-0x18]
+   28300: e3a03000     	mov	r3, #0
+   28304: e50b301c     	str	r3, [r11, #-0x1c]
+   28308: e3a03000     	mov	r3, #0
+   2830c: e50b3020     	str	r3, [r11, #-0x20]
+   28310: e3a03000     	mov	r3, #0
+   28314: e50b3024     	str	r3, [r11, #-0x24]
+   28318: e3a03000     	mov	r3, #0
+   2831c: e50b3028     	str	r3, [r11, #-0x28]
+   28320: e24b3f4b     	sub	r3, r11, #300
+   28324: e3a02c01     	mov	r2, #256
+   28328: e1a00003     	mov	r0, r3
+   2832c: e3a01000     	mov	r1, #0
+   28330: ebff7d3f     	bl	0x7834 <memset@plt>     @ imm = #-0x20b04
+   28334: e3a03000     	mov	r3, #0
+   28338: e50b302c     	str	r3, [r11, #-0x2c]
+   2833c: e59f3568     	ldr	r3, [pc, #0x568]        @ 0x288ac <gcsTask_CreateVlanRuleFile+0x5c4>
+   28340: e08f3003     	add	r3, pc, r3  ; PIC literal "/var/tmp/sfu_vlan" @0x3e5dc
+   28344: e1a00003     	mov	r0, r3
+   28348: e59f3560     	ldr	r3, [pc, #0x560]        @ 0x288b0 <gcsTask_CreateVlanRuleFile+0x5c8>
+   2834c: e08f3003     	add	r3, pc, r3
+   28350: e1a01003     	mov	r1, r3
+   28354: ebff7d30     	bl	0x781c <fopen@plt>      @ imm = #-0x20b40
+   28358: e50b002c     	str	r0, [r11, #-0x2c]
+   2835c: e51b302c     	ldr	r3, [r11, #-0x2c]
+   28360: e3530000     	cmp	r3, #0
+   28364: 1a000001     	bne	0x28370 <gcsTask_CreateVlanRuleFile+0x88> @ imm = #0x4
+   28368: e3e03000     	mvn	r3, #0
+   2836c: ea00014b     	b	0x288a0 <gcsTask_CreateVlanRuleFile+0x5b8> @ imm = #0x52c
+   28370: e59f353c     	ldr	r3, [pc, #0x53c]        @ 0x288b4 <gcsTask_CreateVlanRuleFile+0x5cc>
+   28374: e08f3003     	add	r3, pc, r3  ; PIC literal "phyPort  F-O-TPID  F-O-Pbit  F-O-Vid  F-I-TPID  F-I-Pbit  F-I-Vid  T-O-TPID  T-O-Pbit  T-O-Vid  T-I-TPID  T-I-Pbit  T-I-Vid\n" @0x3e5f4
+   28378: e1a00003     	mov	r0, r3
+   2837c: e3a01001     	mov	r1, #1
+   28380: e3a0207c     	mov	r2, #124
+   28384: e51b302c     	ldr	r3, [r11, #-0x2c]
+   28388: ebff7dc5     	bl	0x7aa4 <fwrite@plt>     @ imm = #-0x208ec
+   2838c: e3a03001     	mov	r3, #1
+   28390: e50b3008     	str	r3, [r11, #-0x8]
+   28394: ea00013c     	b	0x2888c <gcsTask_CreateVlanRuleFile+0x5a4> @ imm = #0x4f0
+   28398: e3a03001     	mov	r3, #1
+   2839c: e50b300c     	str	r3, [r11, #-0xc]
+   283a0: ea000133     	b	0x28874 <gcsTask_CreateVlanRuleFile+0x58c> @ imm = #0x4cc
+   283a4: e24b3f4b     	sub	r3, r11, #300
+   283a8: e1a00003     	mov	r0, r3
+   283ac: e59f3504     	ldr	r3, [pc, #0x504]        @ 0x288b8 <gcsTask_CreateVlanRuleFile+0x5d0>
+   283b0: e08f3003     	add	r3, pc, r3  ; PIC literal "InternetGatewayDevice.LANDevice.%d.LANEthernetInterfaceConfig.%d" @0x3e674
+   283b4: e1a01003     	mov	r1, r3
+   283b8: e51b2008     	ldr	r2, [r11, #-0x8]
+   283bc: e51b300c     	ldr	r3, [r11, #-0xc]
+   283c0: ebff7d6c     	bl	0x7978 <sprintf@plt>    @ imm = #-0x20a50
+   283c4: e24b3f4b     	sub	r3, r11, #300
+   283c8: e51b0130     	ldr	r0, [r11, #-0x130]
+   283cc: e1a01003     	mov	r1, r3
+   283d0: e3a02001     	mov	r2, #1
+   283d4: ebff7d1f     	bl	0x7858 <gcsXml_GetObjectByName@plt> @ imm = #-0x20b84
+   283d8: e50b0018     	str	r0, [r11, #-0x18]
+   283dc: e51b3018     	ldr	r3, [r11, #-0x18]
+   283e0: e3530000     	cmp	r3, #0
+   283e4: 0a00011f     	beq	0x28868 <gcsTask_CreateVlanRuleFile+0x580> @ imm = #0x47c
+   283e8: e51b3018     	ldr	r3, [r11, #-0x18]
+   283ec: e50b3020     	str	r3, [r11, #-0x20]
+   283f0: e51b3020     	ldr	r3, [r11, #-0x20]
+   283f4: e2833020     	add	r3, r3, #32
+   283f8: e1a00003     	mov	r0, r3
+   283fc: e59f34b8     	ldr	r3, [pc, #0x4b8]        @ 0x288bc <gcsTask_CreateVlanRuleFile+0x5d4>
+   28400: e08f3003     	add	r3, pc, r3  ; PIC literal "transparent" @0x3e6b8
+   28404: e1a01003     	mov	r1, r3
+   28408: ebff7c01     	bl	0x7414 <gcs_strcmp@plt> @ imm = #-0x20ffc
+   2840c: e1a03000     	mov	r3, r0
+   28410: e3530000     	cmp	r3, #0
+   28414: 1a00005a     	bne	0x28584 <gcsTask_CreateVlanRuleFile+0x29c> @ imm = #0x168
+   28418: e51b3008     	ldr	r3, [r11, #-0x8]
+   2841c: e2432001     	sub	r2, r3, #1
+   28420: e3e03001     	mvn	r3, #1
+   28424: e58d3000     	str	r3, [sp]
+   28428: e3e03001     	mvn	r3, #1
+   2842c: e58d3004     	str	r3, [sp, #0x4]
+   28430: e3e03001     	mvn	r3, #1
+   28434: e58d3008     	str	r3, [sp, #0x8]
+   28438: e3e03001     	mvn	r3, #1
+   2843c: e58d300c     	str	r3, [sp, #0xc]
+   28440: e3e03001     	mvn	r3, #1
+   28444: e58d3010     	str	r3, [sp, #0x10]
+   28448: e3e03001     	mvn	r3, #1
+   2844c: e58d3014     	str	r3, [sp, #0x14]
+   28450: e3e03001     	mvn	r3, #1
+   28454: e58d3018     	str	r3, [sp, #0x18]
+   28458: e3e03001     	mvn	r3, #1
+   2845c: e58d301c     	str	r3, [sp, #0x1c]
+   28460: e3e03001     	mvn	r3, #1
+   28464: e58d3020     	str	r3, [sp, #0x20]
+   28468: e3e03001     	mvn	r3, #1
+   2846c: e58d3024     	str	r3, [sp, #0x24]
+   28470: e3e03001     	mvn	r3, #1
+   28474: e58d3028     	str	r3, [sp, #0x28]
+   28478: e51b002c     	ldr	r0, [r11, #-0x2c]
+   2847c: e59f343c     	ldr	r3, [pc, #0x43c]        @ 0x288c0 <gcsTask_CreateVlanRuleFile+0x5d8>
+   28480: e08f3003     	add	r3, pc, r3  ; PIC literal "%3d  %8d  %8d  %8d  %8d  %8d  %8d  %8d  %8d  %8d  %8d  %8d  %8d\n" @0x3e6c4
+   28484: e1a01003     	mov	r1, r3
+   28488: e3e03001     	mvn	r3, #1
+   2848c: ebff7c0a     	bl	0x74bc <fprintf@plt>    @ imm = #-0x20fd8
+   28490: e51b3008     	ldr	r3, [r11, #-0x8]
+   28494: e2432001     	sub	r2, r3, #1
+   28498: e3e03001     	mvn	r3, #1
+   2849c: e58d3000     	str	r3, [sp]
+   284a0: e3e03001     	mvn	r3, #1
+   284a4: e58d3004     	str	r3, [sp, #0x4]
+   284a8: e3e03000     	mvn	r3, #0
+   284ac: e58d3008     	str	r3, [sp, #0x8]
+   284b0: e3e03000     	mvn	r3, #0
+   284b4: e58d300c     	str	r3, [sp, #0xc]
+   284b8: e3e03000     	mvn	r3, #0
+   284bc: e58d3010     	str	r3, [sp, #0x10]
+   284c0: e3e03001     	mvn	r3, #1
+   284c4: e58d3014     	str	r3, [sp, #0x14]
+   284c8: e3e03001     	mvn	r3, #1
+   284cc: e58d3018     	str	r3, [sp, #0x18]
+   284d0: e3e03001     	mvn	r3, #1
+   284d4: e58d301c     	str	r3, [sp, #0x1c]
+   284d8: e3e03000     	mvn	r3, #0
+   284dc: e58d3020     	str	r3, [sp, #0x20]
+   284e0: e3e03000     	mvn	r3, #0
+   284e4: e58d3024     	str	r3, [sp, #0x24]
+   284e8: e3e03000     	mvn	r3, #0
+   284ec: e58d3028     	str	r3, [sp, #0x28]
+   284f0: e51b002c     	ldr	r0, [r11, #-0x2c]
+   284f4: e59f33c8     	ldr	r3, [pc, #0x3c8]        @ 0x288c4 <gcsTask_CreateVlanRuleFile+0x5dc>
+   284f8: e08f3003     	add	r3, pc, r3  ; PIC literal "%3d  %8d  %8d  %8d  %8d  %8d  %8d  %8d  %8d  %8d  %8d  %8d  %8d\n" @0x3e6c4
+   284fc: e1a01003     	mov	r1, r3
+   28500: e3e03001     	mvn	r3, #1
+   28504: ebff7bec     	bl	0x74bc <fprintf@plt>    @ imm = #-0x21050
+   28508: e51b3008     	ldr	r3, [r11, #-0x8]
+   2850c: e2432001     	sub	r2, r3, #1
+   28510: e3e03000     	mvn	r3, #0
+   28514: e58d3000     	str	r3, [sp]
+   28518: e3e03000     	mvn	r3, #0
+   2851c: e58d3004     	str	r3, [sp, #0x4]
+   28520: e3e03000     	mvn	r3, #0
+   28524: e58d3008     	str	r3, [sp, #0x8]
+   28528: e3e03000     	mvn	r3, #0
+   2852c: e58d300c     	str	r3, [sp, #0xc]
+   28530: e3e03000     	mvn	r3, #0
+   28534: e58d3010     	str	r3, [sp, #0x10]
+   28538: e3e03000     	mvn	r3, #0
+   2853c: e58d3014     	str	r3, [sp, #0x14]
+   28540: e3e03000     	mvn	r3, #0
+   28544: e58d3018     	str	r3, [sp, #0x18]
+   28548: e3e03000     	mvn	r3, #0
+   2854c: e58d301c     	str	r3, [sp, #0x1c]
+   28550: e3e03000     	mvn	r3, #0
+   28554: e58d3020     	str	r3, [sp, #0x20]
+   28558: e3e03000     	mvn	r3, #0
+   2855c: e58d3024     	str	r3, [sp, #0x24]
+   28560: e3e03000     	mvn	r3, #0
+   28564: e58d3028     	str	r3, [sp, #0x28]
+   28568: e51b002c     	ldr	r0, [r11, #-0x2c]
+   2856c: e59f3354     	ldr	r3, [pc, #0x354]        @ 0x288c8 <gcsTask_CreateVlanRuleFile+0x5e0>
+   28570: e08f3003     	add	r3, pc, r3  ; PIC literal "%3d  %8d  %8d  %8d  %8d  %8d  %8d  %8d  %8d  %8d  %8d  %8d  %8d\n" @0x3e6c4
+   28574: e1a01003     	mov	r1, r3
+   28578: e3e03000     	mvn	r3, #0
+   2857c: ebff7bce     	bl	0x74bc <fprintf@plt>    @ imm = #-0x210c8
+   28580: ea000023     	b	0x28614 <gcsTask_CreateVlanRuleFile+0x32c> @ imm = #0x8c
+   28584: e51b3020     	ldr	r3, [r11, #-0x20]
+   28588: e1d330bc     	ldrh	r3, [r3, #12]
+   2858c: e3530000     	cmp	r3, #0
+   28590: 0a00001f     	beq	0x28614 <gcsTask_CreateVlanRuleFile+0x32c> @ imm = #0x7c
+   28594: e51b3008     	ldr	r3, [r11, #-0x8]
+   28598: e2432001     	sub	r2, r3, #1
+   2859c: e51b3020     	ldr	r3, [r11, #-0x20]
+   285a0: e1d330bc     	ldrh	r3, [r3, #12]
+   285a4: e1a01003     	mov	r1, r3
+   285a8: e3e03001     	mvn	r3, #1
+   285ac: e58d3000     	str	r3, [sp]
+   285b0: e3e03001     	mvn	r3, #1
+   285b4: e58d3004     	str	r3, [sp, #0x4]
+   285b8: e3e03001     	mvn	r3, #1
+   285bc: e58d3008     	str	r3, [sp, #0x8]
+   285c0: e3e03001     	mvn	r3, #1
+   285c4: e58d300c     	str	r3, [sp, #0xc]
+   285c8: e3e03001     	mvn	r3, #1
+   285cc: e58d3010     	str	r3, [sp, #0x10]
+   285d0: e3e03001     	mvn	r3, #1
+   285d4: e58d3014     	str	r3, [sp, #0x14]
+   285d8: e3e03001     	mvn	r3, #1
+   285dc: e58d3018     	str	r3, [sp, #0x18]
+   285e0: e3e03001     	mvn	r3, #1
+   285e4: e58d301c     	str	r3, [sp, #0x1c]
+   285e8: e3e03000     	mvn	r3, #0
+   285ec: e58d3020     	str	r3, [sp, #0x20]
+   285f0: e3e03000     	mvn	r3, #0
+   285f4: e58d3024     	str	r3, [sp, #0x24]
+   285f8: e58d1028     	str	r1, [sp, #0x28]
+   285fc: e51b002c     	ldr	r0, [r11, #-0x2c]
+   28600: e59f32c4     	ldr	r3, [pc, #0x2c4]        @ 0x288cc <gcsTask_CreateVlanRuleFile+0x5e4>
+   28604: e08f3003     	add	r3, pc, r3  ; PIC literal "%3d  %8d  %8d  %8d  %8d  %8d  %8d  %8d  %8d  %8d  %8d  %8d  %8d\n" @0x3e6c4
+   28608: e1a01003     	mov	r1, r3
+   2860c: e3e03001     	mvn	r3, #1
+   28610: ebff7ba9     	bl	0x74bc <fprintf@plt>    @ imm = #-0x2115c
+   28614: e51b3020     	ldr	r3, [r11, #-0x20]
+   28618: e2833020     	add	r3, r3, #32
+   2861c: e1a00003     	mov	r0, r3
+   28620: e59f32a8     	ldr	r3, [pc, #0x2a8]        @ 0x288d0 <gcsTask_CreateVlanRuleFile+0x5e8>
+   28624: e08f3003     	add	r3, pc, r3  ; PIC literal "translation" @0x3e708
+   28628: e1a01003     	mov	r1, r3
+   2862c: ebff7b78     	bl	0x7414 <gcs_strcmp@plt> @ imm = #-0x21220
+   28630: e1a03000     	mov	r3, r0
+   28634: e3530000     	cmp	r3, #0
+   28638: 1a000040     	bne	0x28740 <gcsTask_CreateVlanRuleFile+0x458> @ imm = #0x100
+   2863c: e3a03001     	mov	r3, #1
+   28640: e50b3010     	str	r3, [r11, #-0x10]
+   28644: ea000039     	b	0x28730 <gcsTask_CreateVlanRuleFile+0x448> @ imm = #0xe4
+   28648: e24b2f4b     	sub	r2, r11, #300
+   2864c: e51b3010     	ldr	r3, [r11, #-0x10]
+   28650: e58d3000     	str	r3, [sp]
+   28654: e1a00002     	mov	r0, r2
+   28658: e59f3274     	ldr	r3, [pc, #0x274]        @ 0x288d4 <gcsTask_CreateVlanRuleFile+0x5ec>
+   2865c: e08f3003     	add	r3, pc, r3  ; PIC literal "InternetGatewayDevice.LANDevice.%d.LANEthernetInterfaceConfig.%d.X_GC_VLAN_Translation.%d" @0x3e714
+   28660: e1a01003     	mov	r1, r3
+   28664: e51b2008     	ldr	r2, [r11, #-0x8]
+   28668: e51b300c     	ldr	r3, [r11, #-0xc]
+   2866c: ebff7cc1     	bl	0x7978 <sprintf@plt>    @ imm = #-0x20cfc
+   28670: e24b3f4b     	sub	r3, r11, #300
+   28674: e51b0130     	ldr	r0, [r11, #-0x130]
+   28678: e1a01003     	mov	r1, r3
+   2867c: e3a02001     	mov	r2, #1
+   28680: ebff7c74     	bl	0x7858 <gcsXml_GetObjectByName@plt> @ imm = #-0x20e30
+   28684: e50b001c     	str	r0, [r11, #-0x1c]
+   28688: e51b301c     	ldr	r3, [r11, #-0x1c]
+   2868c: e3530000     	cmp	r3, #0
+   28690: 0a000023     	beq	0x28724 <gcsTask_CreateVlanRuleFile+0x43c> @ imm = #0x8c
+   28694: e51b301c     	ldr	r3, [r11, #-0x1c]
+   28698: e50b3024     	str	r3, [r11, #-0x24]
+   2869c: e51b3008     	ldr	r3, [r11, #-0x8]
+   286a0: e2432001     	sub	r2, r3, #1
+   286a4: e51b3024     	ldr	r3, [r11, #-0x24]
+   286a8: e1d330b0     	ldrh	r3, [r3]
+   286ac: e1a00003     	mov	r0, r3
+   286b0: e51b3024     	ldr	r3, [r11, #-0x24]
+   286b4: e1d330b2     	ldrh	r3, [r3, #2]
+   286b8: e1a01003     	mov	r1, r3
+   286bc: e3e03001     	mvn	r3, #1
+   286c0: e58d3000     	str	r3, [sp]
+   286c4: e3e03001     	mvn	r3, #1
+   286c8: e58d3004     	str	r3, [sp, #0x4]
+   286cc: e3e03000     	mvn	r3, #0
+   286d0: e58d3008     	str	r3, [sp, #0x8]
+   286d4: e3e03000     	mvn	r3, #0
+   286d8: e58d300c     	str	r3, [sp, #0xc]
+   286dc: e58d0010     	str	r0, [sp, #0x10]
+   286e0: e3e03001     	mvn	r3, #1
+   286e4: e58d3014     	str	r3, [sp, #0x14]
+   286e8: e3e03001     	mvn	r3, #1
+   286ec: e58d3018     	str	r3, [sp, #0x18]
+   286f0: e3e03001     	mvn	r3, #1
+   286f4: e58d301c     	str	r3, [sp, #0x1c]
+   286f8: e3e03000     	mvn	r3, #0
+   286fc: e58d3020     	str	r3, [sp, #0x20]
+   28700: e3e03000     	mvn	r3, #0
+   28704: e58d3024     	str	r3, [sp, #0x24]
+   28708: e58d1028     	str	r1, [sp, #0x28]
+   2870c: e51b002c     	ldr	r0, [r11, #-0x2c]
+   28710: e59f31c0     	ldr	r3, [pc, #0x1c0]        @ 0x288d8 <gcsTask_CreateVlanRuleFile+0x5f0>
+   28714: e08f3003     	add	r3, pc, r3  ; PIC literal "%3d  %8d  %8d  %8d  %8d  %8d  %8d  %8d  %8d  %8d  %8d  %8d  %8d\n" @0x3e6c4
+   28718: e1a01003     	mov	r1, r3
+   2871c: e3e03001     	mvn	r3, #1
+   28720: ebff7b65     	bl	0x74bc <fprintf@plt>    @ imm = #-0x2126c
+   28724: e51b3010     	ldr	r3, [r11, #-0x10]
+   28728: e2833001     	add	r3, r3, #1
+   2872c: e50b3010     	str	r3, [r11, #-0x10]
+   28730: e51b3010     	ldr	r3, [r11, #-0x10]
+   28734: e3530010     	cmp	r3, #16
+   28738: daffffc2     	ble	0x28648 <gcsTask_CreateVlanRuleFile+0x360> @ imm = #-0xf8
+   2873c: ea000049     	b	0x28868 <gcsTask_CreateVlanRuleFile+0x580> @ imm = #0x124
+   28740: e51b3020     	ldr	r3, [r11, #-0x20]
+   28744: e2833020     	add	r3, r3, #32
+   28748: e1a00003     	mov	r0, r3
+   2874c: e59f3188     	ldr	r3, [pc, #0x188]        @ 0x288dc <gcsTask_CreateVlanRuleFile+0x5f4>
+   28750: e08f3003     	add	r3, pc, r3  ; PIC literal "trunk" @0x3e770
+   28754: e1a01003     	mov	r1, r3
+   28758: ebff7b2d     	bl	0x7414 <gcs_strcmp@plt> @ imm = #-0x2134c
+   2875c: e1a03000     	mov	r3, r0
+   28760: e3530000     	cmp	r3, #0
+   28764: 1a00003f     	bne	0x28868 <gcsTask_CreateVlanRuleFile+0x580> @ imm = #0xfc
+   28768: e3a03001     	mov	r3, #1
+   2876c: e50b3014     	str	r3, [r11, #-0x14]
+   28770: ea000039     	b	0x2885c <gcsTask_CreateVlanRuleFile+0x574> @ imm = #0xe4
+   28774: e24b2f4b     	sub	r2, r11, #300
+   28778: e51b3014     	ldr	r3, [r11, #-0x14]
+   2877c: e58d3000     	str	r3, [sp]
+   28780: e1a00002     	mov	r0, r2
+   28784: e59f3154     	ldr	r3, [pc, #0x154]        @ 0x288e0 <gcsTask_CreateVlanRuleFile+0x5f8>
+   28788: e08f3003     	add	r3, pc, r3  ; PIC literal "InternetGatewayDevice.LANDevice.%d.LANEthernetInterfaceConfig.%d.X_GC_VLAN_Trunk.%d" @0x3e778
+   2878c: e1a01003     	mov	r1, r3
+   28790: e51b2008     	ldr	r2, [r11, #-0x8]
+   28794: e51b300c     	ldr	r3, [r11, #-0xc]
+   28798: ebff7c76     	bl	0x7978 <sprintf@plt>    @ imm = #-0x20e28
+   2879c: e24b3f4b     	sub	r3, r11, #300
+   287a0: e51b0130     	ldr	r0, [r11, #-0x130]
+   287a4: e1a01003     	mov	r1, r3
+   287a8: e3a02001     	mov	r2, #1
+   287ac: ebff7c29     	bl	0x7858 <gcsXml_GetObjectByName@plt> @ imm = #-0x20f5c
+   287b0: e50b001c     	str	r0, [r11, #-0x1c]
+   287b4: e51b301c     	ldr	r3, [r11, #-0x1c]
+   287b8: e3530000     	cmp	r3, #0
+   287bc: 0a000023     	beq	0x28850 <gcsTask_CreateVlanRuleFile+0x568> @ imm = #0x8c
+   287c0: e51b301c     	ldr	r3, [r11, #-0x1c]
+   287c4: e50b3028     	str	r3, [r11, #-0x28]
+   287c8: e51b3008     	ldr	r3, [r11, #-0x8]
+   287cc: e2432001     	sub	r2, r3, #1
+   287d0: e51b3028     	ldr	r3, [r11, #-0x28]
+   287d4: e1d330b0     	ldrh	r3, [r3]
+   287d8: e1a00003     	mov	r0, r3
+   287dc: e51b3028     	ldr	r3, [r11, #-0x28]
+   287e0: e1d330b0     	ldrh	r3, [r3]
+   287e4: e1a01003     	mov	r1, r3
+   287e8: e3e03001     	mvn	r3, #1
+   287ec: e58d3000     	str	r3, [sp]
+   287f0: e3e03001     	mvn	r3, #1
+   287f4: e58d3004     	str	r3, [sp, #0x4]
+   287f8: e3e03000     	mvn	r3, #0
+   287fc: e58d3008     	str	r3, [sp, #0x8]
+   28800: e3e03000     	mvn	r3, #0
+   28804: e58d300c     	str	r3, [sp, #0xc]
+   28808: e58d0010     	str	r0, [sp, #0x10]
+   2880c: e3e03001     	mvn	r3, #1
+   28810: e58d3014     	str	r3, [sp, #0x14]
+   28814: e3e03001     	mvn	r3, #1
+   28818: e58d3018     	str	r3, [sp, #0x18]
+   2881c: e3e03001     	mvn	r3, #1
+   28820: e58d301c     	str	r3, [sp, #0x1c]
+   28824: e3e03000     	mvn	r3, #0
+   28828: e58d3020     	str	r3, [sp, #0x20]
+   2882c: e3e03000     	mvn	r3, #0
+   28830: e58d3024     	str	r3, [sp, #0x24]
+   28834: e58d1028     	str	r1, [sp, #0x28]
+   28838: e51b002c     	ldr	r0, [r11, #-0x2c]
+   2883c: e59f30a0     	ldr	r3, [pc, #0xa0]         @ 0x288e4 <gcsTask_CreateVlanRuleFile+0x5fc>
+   28840: e08f3003     	add	r3, pc, r3  ; PIC literal "%3d  %8d  %8d  %8d  %8d  %8d  %8d  %8d  %8d  %8d  %8d  %8d  %8d\n" @0x3e6c4
+   28844: e1a01003     	mov	r1, r3
+   28848: e3e03001     	mvn	r3, #1
+   2884c: ebff7b1a     	bl	0x74bc <fprintf@plt>    @ imm = #-0x21398
+   28850: e51b3014     	ldr	r3, [r11, #-0x14]
+   28854: e2833001     	add	r3, r3, #1
+   28858: e50b3014     	str	r3, [r11, #-0x14]
+   2885c: e51b3014     	ldr	r3, [r11, #-0x14]
+   28860: e3530010     	cmp	r3, #16
+   28864: daffffc2     	ble	0x28774 <gcsTask_CreateVlanRuleFile+0x48c> @ imm = #-0xf8
+   28868: e51b300c     	ldr	r3, [r11, #-0xc]
+   2886c: e2833001     	add	r3, r3, #1
+   28870: e50b300c     	str	r3, [r11, #-0xc]
+   28874: e51b300c     	ldr	r3, [r11, #-0xc]
+   28878: e3530001     	cmp	r3, #1
+   2887c: dafffec8     	ble	0x283a4 <gcsTask_CreateVlanRuleFile+0xbc> @ imm = #-0x4e0
+   28880: e51b3008     	ldr	r3, [r11, #-0x8]
+   28884: e2833001     	add	r3, r3, #1
+   28888: e50b3008     	str	r3, [r11, #-0x8]
+   2888c: e51b3008     	ldr	r3, [r11, #-0x8]
+   28890: e3530004     	cmp	r3, #4
+   28894: dafffebf     	ble	0x28398 <gcsTask_CreateVlanRuleFile+0xb0> @ imm = #-0x504
+   28898: e51b002c     	ldr	r0, [r11, #-0x2c]
+   2889c: ebff7bf9     	bl	0x7888 <fclose@plt>     @ imm = #-0x2101c
+   288a0: e1a00003     	mov	r0, r3
+   288a4: e24bd004     	sub	sp, r11, #4
+   288a8: e8bd8800     	pop	{r11, pc}
+   288ac: 00016294     	<unknown>
+   288b0: 0001629c     	<unknown>
+   288b4: 00016278     	andeq	r6, r1, r8, ror r2
+   288b8: 000162bc     	strheq	r6, [r1], -r12
+   288bc: 000162b0     	strheq	r6, [r1], -r0
+   288c0: 0001623c     	andeq	r6, r1, r12, lsr r2
+   288c4: 000161c4     	andeq	r6, r1, r4, asr #3
+   288c8: 0001614c     	andeq	r6, r1, r12, asr #2
+   288cc: 000160b8     	strheq	r6, [r1], -r8
+   288d0: 000160dc     	ldrdeq	r6, r7, [r1], -r12
+   288d4: 000160b0     	strheq	r6, [r1], -r0
+   288d8: 00015fa8     	andeq	r5, r1, r8, lsr #31
+   288dc: 00016018     	andeq	r6, r1, r8, lsl r0
+   288e0: 00015fe8     	andeq	r5, r1, r8, ror #31
+   288e4: 00015e7c     	andeq	r5, r1, r12, ror lr

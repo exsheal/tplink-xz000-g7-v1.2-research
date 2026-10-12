@@ -1,0 +1,353 @@
+{
+  "download_kernel": {
+    "file": "kernel.config",
+    "sha256": "23e97985b6f1a1d88269320d06cd5608634bd566f15b4149f58a6b2030062fec",
+    "exact_current_equal": true,
+    "different_options": {}
+  },
+  "device_2025_kernel": {
+    "file": "images/kernel2.config",
+    "sha256": "23e97985b6f1a1d88269320d06cd5608634bd566f15b4149f58a6b2030062fec",
+    "exact_current_equal": true,
+    "different_options": {}
+  },
+  "gpl_model_config.kernel": {
+    "file": "GPL_XZ000-G7/XZ000-G7/platform/build/model/XZ000-G7/UN/config.kernel",
+    "sha256": "23e97985b6f1a1d88269320d06cd5608634bd566f15b4149f58a6b2030062fec",
+    "exact_current_equal": true,
+    "different_options": {}
+  },
+  "gpl_model_kernel.config": {
+    "file": "GPL_XZ000-G7/XZ000-G7/platform/build/model/XZ000-G7/UN/kernel.config",
+    "sha256": "8545f3b2e6a4f92d3be77f4be4cc54ffb164231aeeef3dd614f65eca042e8a38",
+    "exact_current_equal": false,
+    "different_options": {
+      "CONFIG_DEBUG_BUGVERBOSE": {
+        "source": "y",
+        "current": "n"
+      },
+      "CONFIG_DEBUG_FS": {
+        "source": "y",
+        "current": "n"
+      },
+      "CONFIG_DEBUG_INFO": {
+        "source": "y",
+        "current": "n"
+      },
+      "CONFIG_DEBUG_INFO_REDUCED": {
+        "source": "n",
+        "current": null
+      },
+      "CONFIG_DYNAMIC_DEBUG": {
+        "source": "n",
+        "current": null
+      },
+      "CONFIG_GCOV_KERNEL": {
+        "source": "n",
+        "current": null
+      },
+      "CONFIG_INET6_TUNNEL": {
+        "source": "y",
+        "current": "n"
+      },
+      "CONFIG_INET6_XFRM_MODE_TRANSPORT": {
+        "source": "y",
+        "current": "n"
+      },
+      "CONFIG_INET_DCCP_DIAG": {
+        "source": "y",
+        "current": null
+      },
+      "CONFIG_INET_TUNNEL": {
+        "source": "y",
+        "current": "n"
+      },
+      "CONFIG_IPV6_MROUTE": {
+        "source": "y",
+        "current": "n"
+      },
+      "CONFIG_IPV6_MROUTE_MULTIPLE_TABLES": {
+        "source": "n",
+        "current": null
+      },
+      "CONFIG_IPV6_NDISC_NODETYPE": {
+        "source": "y",
+        "current": null
+      },
+      "CONFIG_IPV6_PIMSM_V2": {
+        "source": "n",
+        "current": null
+      },
+      "CONFIG_IPV6_SIT": {
+        "source": "y",
+        "current": "n"
+      },
+      "CONFIG_IPV6_SIT_6RD": {
+        "source": "y",
+        "current": null
+      },
+      "CONFIG_IPV6_TUNNEL": {
+        "source": "y",
+        "current": "n"
+      },
+      "CONFIG_IP_DCCP": {
+        "source": "y",
+        "current": "n"
+      },
+      "CONFIG_IP_DCCP_CCID2_DEBUG": {
+        "source": "n",
+        "current": null
+      },
+      "CONFIG_IP_DCCP_CCID3": {
+        "source": "y",
+        "current": null
+      },
+      "CONFIG_IP_DCCP_CCID3_DEBUG": {
+        "source": "n",
+        "current": null
+      },
+      "CONFIG_IP_DCCP_DEBUG": {
+        "source": "n",
+        "current": null
+      },
+      "CONFIG_IP_DCCP_TFRC_LIB": {
+        "source": "y",
+        "current": null
+      },
+      "CONFIG_IRQ_DOMAIN_DEBUG": {
+        "source": "n",
+        "current": null
+      },
+      "CONFIG_JFFS2_CMODE_FAVOURLZO": {
+        "source": "n",
+        "current": null
+      },
+      "CONFIG_JFFS2_CMODE_NONE": {
+        "source": "n",
+        "current": null
+      },
+      "CONFIG_JFFS2_CMODE_PRIORITY": {
+        "source": "n",
+        "current": null
+      },
+      "CONFIG_JFFS2_CMODE_SIZE": {
+        "source": "y",
+        "current": null
+      },
+      "CONFIG_JFFS2_COMPRESSION_OPTIONS": {
+        "source": "y",
+        "current": null
+      },
+      "CONFIG_JFFS2_FS": {
+        "source": "y",
+        "current": "n"
+      },
+      "CONFIG_JFFS2_FS_DEBUG": {
+        "source": "0",
+        "current": null
+      },
+      "CONFIG_JFFS2_FS_WBUF_VERIFY": {
+        "source": "n",
+        "current": null
+      },
+      "CONFIG_JFFS2_FS_WRITEBUFFER": {
+        "source": "y",
+        "current": null
+      },
+      "CONFIG_JFFS2_FS_XATTR": {
+        "source": "n",
+        "current": null
+      },
+      "CONFIG_JFFS2_LZO": {
+        "source": "n",
+        "current": null
+      },
+      "CONFIG_JFFS2_RTIME": {
+        "source": "y",
+        "current": null
+      },
+      "CONFIG_JFFS2_RUBIN": {
+        "source": "n",
+        "current": null
+      },
+      "CONFIG_JFFS2_SUMMARY": {
+        "source": "n",
+        "current": null
+      },
+      "CONFIG_JFFS2_ZLIB": {
+        "source": "y",
+        "current": null
+      },
+      "CONFIG_KERNEL_LZMA": {
+        "source": "y",
+        "current": "n"
+      },
+      "CONFIG_KERNEL_XZ": {
+        "source": "n",
+        "current": "y"
+      },
+      "CONFIG_LKDTM": {
+        "source": "n",
+        "current": null
+      },
+      "CONFIG_MACVLAN": {
+        "source": "y",
+        "current": "n"
+      },
+      "CONFIG_MACVTAP": {
+        "source": "n",
+        "current": null
+      },
+      "CONFIG_NET_IPIP": {
+        "source": "y",
+        "current": "n"
+      },
+      "CONFIG_NET_IP_TUNNEL": {
+        "source": "y",
+        "current": "n"
+      },
+      "CONFIG_NF_CONNTRACK_FTP": {
+        "source": "y",
+        "current": "n"
+      },
+      "CONFIG_NF_CONNTRACK_H323": {
+        "source": "y",
+        "current": "n"
+      },
+      "CONFIG_NF_CONNTRACK_PPTP": {
+        "source": "y",
+        "current": "n"
+      },
+      "CONFIG_NF_CONNTRACK_SANE": {
+        "source": "y",
+        "current": "n"
+      },
+      "CONFIG_NF_CONNTRACK_SIP": {
+        "source": "y",
+        "current": "n"
+      },
+      "CONFIG_NF_CONNTRACK_TFTP": {
+        "source": "y",
+        "current": "n"
+      },
+      "CONFIG_NF_CT_PROTO_DCCP": {
+        "source": "y",
+        "current": "n"
+      },
+      "CONFIG_NF_CT_PROTO_ESP": {
+        "source": "y",
+        "current": "n"
+      },
+      "CONFIG_NF_CT_PROTO_GRE": {
+        "source": "y",
+        "current": null
+      },
+      "CONFIG_NF_CT_PROTO_SCTP": {
+        "source": "y",
+        "current": "n"
+      },
+      "CONFIG_NF_CT_PROTO_UDPLITE": {
+        "source": "y",
+        "current": "n"
+      },
+      "CONFIG_NF_NAT_FTP": {
+        "source": "y",
+        "current": "n"
+      },
+      "CONFIG_NF_NAT_H323": {
+        "source": "y",
+        "current": "n"
+      },
+      "CONFIG_NF_NAT_PPTP": {
+        "source": "y",
+        "current": "n"
+      },
+      "CONFIG_NF_NAT_PROTO_DCCP": {
+        "source": "y",
+        "current": null
+      },
+      "CONFIG_NF_NAT_PROTO_GRE": {
+        "source": "y",
+        "current": null
+      },
+      "CONFIG_NF_NAT_PROTO_SCTP": {
+        "source": "y",
+        "current": null
+      },
+      "CONFIG_NF_NAT_PROTO_UDPLITE": {
+        "source": "y",
+        "current": null
+      },
+      "CONFIG_NF_NAT_SIP": {
+        "source": "y",
+        "current": "n"
+      },
+      "CONFIG_NF_NAT_TFTP": {
+        "source": "y",
+        "current": "n"
+      },
+      "CONFIG_PPP": {
+        "source": "y",
+        "current": "n"
+      },
+      "CONFIG_PPPOE": {
+        "source": "y",
+        "current": null
+      },
+      "CONFIG_PPP_ASYNC": {
+        "source": "n",
+        "current": null
+      },
+      "CONFIG_PPP_BSDCOMP": {
+        "source": "y",
+        "current": null
+      },
+      "CONFIG_PPP_DEFLATE": {
+        "source": "n",
+        "current": null
+      },
+      "CONFIG_PPP_FILTER": {
+        "source": "n",
+        "current": null
+      },
+      "CONFIG_PPP_MPPE": {
+        "source": "y",
+        "current": null
+      },
+      "CONFIG_PPP_MULTILINK": {
+        "source": "y",
+        "current": null
+      },
+      "CONFIG_PPP_SYNC_TTY": {
+        "source": "y",
+        "current": null
+      },
+      "CONFIG_SLHC": {
+        "source": "y",
+        "current": null
+      },
+      "CONFIG_TUN": {
+        "source": "y",
+        "current": "n"
+      },
+      "CONFIG_VETH": {
+        "source": "y",
+        "current": "n"
+      },
+      "CONFIG_ZLIB_DEFLATE": {
+        "source": "y",
+        "current": null
+      },
+      "CONFIG_ZLIB_INFLATE": {
+        "source": "y",
+        "current": null
+      }
+    }
+  },
+  "gpl_build_kernel_dotconfig": {
+    "file": "GPL_XZ000-G7/XZ000-G7/sdk/gc1601a/linux/linux-3.16/.config",
+    "missing": true,
+    "exact_current_equal": false,
+    "different_options": {}
+  }
+}

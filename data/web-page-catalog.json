@@ -1,0 +1,534 @@
+[
+  {
+    "path": "web/frame/bot.htm",
+    "bytes": 2790,
+    "data_model_oids": [
+      "DEV2_DEV_INFO"
+    ],
+    "action_oids": [],
+    "cgi_paths": [],
+    "flags": [
+      "INCLUDE_AGINET_APP_V2"
+    ]
+  },
+  {
+    "path": "web/frame/login.htm",
+    "bytes": 39524,
+    "data_model_oids": [],
+    "action_oids": [],
+    "cgi_paths": [
+      "/cgi/getBusy",
+      "/cgi/getParm",
+      "/cgi/login?UserName=",
+      "/cgi/setPwd?pwd="
+    ],
+    "flags": [
+      "INCLUDE_AGINET_APP_V2",
+      "INCLUDE_AUTH_PASSWORD",
+      "INCLUDE_CLS_L1_IMDA_LOGIN_WAIT",
+      "INCLUDE_FORBID_LOGIN_TIME",
+      "INCLUDE_LOGIN_USERNAME",
+      "INCLUDE_MIN_PASSWD_LEN",
+      "INCLUDE_NO_CONSECUTIVE_SAME_CHAR",
+      "INCLUDE_USER_RESTRICTION"
+    ]
+  },
+  {
+    "path": "web/frame/loginUsername.htm",
+    "bytes": 16771,
+    "data_model_oids": [],
+    "action_oids": [],
+    "cgi_paths": [],
+    "flags": []
+  },
+  {
+    "path": "web/frame/menu.htm",
+    "bytes": 21209,
+    "data_model_oids": [
+      "DEV2_LOCAL",
+      "DEV2_PAGE_ACCESS_PERMISSION"
+    ],
+    "action_oids": [],
+    "cgi_paths": [
+      "./frame/menu.cgi"
+    ],
+    "flags": [
+      "INCLUDE_ADSLWAN",
+      "INCLUDE_APP_IQOS",
+      "INCLUDE_CLOUD",
+      "INCLUDE_DIGITMAP",
+      "INCLUDE_EASYMESH",
+      "INCLUDE_ETHERNET_WAN",
+      "INCLUDE_FIREWALL_DDOS",
+      "INCLUDE_GPON_SFU",
+      "INCLUDE_HW_QOS",
+      "INCLUDE_IPSEC",
+      "INCLUDE_IPTV",
+      "INCLUDE_LED_SCHEDULE",
+      "INCLUDE_LTEWAN",
+      "INCLUDE_MAIL",
+      "INCLUDE_MULTIMODE",
+      "INCLUDE_ONEMESH",
+      "INCLUDE_OPENVPN_SERVER",
+      "INCLUDE_PARENTCONTROL_V2",
+      "INCLUDE_PON_BCM",
+      "INCLUDE_PON_GPON",
+      "INCLUDE_PON_MTK",
+      "INCLUDE_PON_XPON",
+      "INCLUDE_PPTPVPN_SERVER",
+      "INCLUDE_REBOOT_SCHEDULE",
+      "INCLUDE_RIP",
+      "INCLUDE_SPEC_TX6610",
+      "INCLUDE_SPEC_XZ000G7",
+      "INCLUDE_SPEC_XZ000G7V1_2",
+      "INCLUDE_SYSMODE",
+      "INCLUDE_USB_OVER_IP",
+      "INCLUDE_USB_VOICEMAIL",
+      "INCLUDE_USER_RESTRICTION",
+      "INCLUDE_USSD",
+      "INCLUDE_VOICEAPP",
+      "INCLUDE_VOIP",
+      "INCLUDE_VOLTE",
+      "INCLUDE_VPN",
+      "INCLUDE_WIFI_GSSID",
+      "INCLUDE_WIFI_MSSID",
+      "INCLUDE_WIFI_SCHEDULE"
+    ]
+  },
+  {
+    "path": "web/frame/setPwd.htm",
+    "bytes": 22651,
+    "data_model_oids": [],
+    "action_oids": [],
+    "cgi_paths": [
+      "/cgi/setPwd?pwd="
+    ],
+    "flags": []
+  },
+  {
+    "path": "web/frame/top.htm",
+    "bytes": 13550,
+    "data_model_oids": [
+      "DEV2_CURRENT_USER",
+      "DEV2_PAGE_ACCESS_PERMISSION",
+      "DEV2_X_TP_CUSTOM_CFG"
+    ],
+    "action_oids": [
+      "ACT_REBOOT"
+    ],
+    "cgi_paths": [
+      "./frame/menu.htm",
+      "/cgi/logout"
+    ],
+    "flags": [
+      "INCLUDE_CLOUD",
+      "INCLUDE_EASYMESH",
+      "INCLUDE_GPON_SFU",
+      "INCLUDE_LANGUAGE_AR_AR",
+      "INCLUDE_LANGUAGE_DE_DE",
+      "INCLUDE_LANGUAGE_EL_GR",
+      "INCLUDE_LANGUAGE_EN_US",
+      "INCLUDE_LANGUAGE_ES_ES",
+      "INCLUDE_LANGUAGE_ES_LA",
+      "INCLUDE_LANGUAGE_FR_FR",
+      "INCLUDE_LANGUAGE_IT_IT",
+      "INCLUDE_LANGUAGE_PL_PL",
+      "INCLUDE_LANGUAGE_PT_BR",
+      "INCLUDE_LANGUAGE_RO_RO",
+      "INCLUDE_LANGUAGE_RU_RU",
+      "INCLUDE_LANGUAGE_TR_TH",
+      "INCLUDE_LANGUAGE_TR_TR",
+      "INCLUDE_MULTIMODE",
+      "INCLUDE_REBOOT_WAIT_TIME",
+      "INCLUDE_USER_RESTRICTION"
+    ]
+  },
+  {
+    "path": "web/index.htm",
+    "bytes": 8389,
+    "data_model_oids": [],
+    "action_oids": [
+      "ACT_SET"
+    ],
+    "cgi_paths": [
+      "./frame/bot.htm",
+      "./frame/menu.htm",
+      "./frame/top.htm",
+      "/cgi/logout"
+    ],
+    "flags": [
+      "INCLUDE_CLOUD",
+      "INCLUDE_LTEWAN",
+      "INCLUDE_USER_RESTRICTION",
+      "INCLUDE_VOIP"
+    ]
+  },
+  {
+    "path": "web/main/backNRestore.htm",
+    "bytes": 5042,
+    "data_model_oids": [
+      "DEV2_CURRENT_USER",
+      "DEV2_DEV_INFO",
+      "DEV2_SYS_CFG"
+    ],
+    "action_oids": [
+      "ACT_FACTORY_RESET",
+      "ACT_OP_FACTORY_RESET",
+      "ACT_OP_FACTORY_RESET_DEEP",
+      "ACT_REBOOT",
+      "ACT_RESET"
+    ],
+    "cgi_paths": [
+      "/cgi/bnr",
+      "/cgi/confup"
+    ],
+    "flags": [
+      "INCLUDE_CLOUD",
+      "INCLUDE_DIGITAL_SIGNATURE",
+      "INCLUDE_OPTION66",
+      "INCLUDE_PON_GPON",
+      "INCLUDE_REBOOT_WAIT_TIME",
+      "INCLUDE_USER_RESTRICTION"
+    ]
+  },
+  {
+    "path": "web/main/dhcp.htm",
+    "bytes": 37868,
+    "data_model_oids": [
+      "DEV2_ADT_LAN",
+      "DEV2_ARP_BIND_ENTRY",
+      "DEV2_DHCPV4_POOL_STATICADDR",
+      "DEV2_DHCPV4_SERVER_POOL",
+      "DEV2_HOST_ENTRY"
+    ],
+    "action_oids": [
+      "ACT_GL",
+      "ACT_GS",
+      "ACT_SET"
+    ],
+    "cgi_paths": [],
+    "flags": [
+      "INCLUDE_DUALLAN",
+      "INCLUDE_SPEC_TX6610",
+      "INCLUDE_SPEC_XZ000G7",
+      "INCLUDE_SPEC_XZ000G7V1_2",
+      "INCLUDE_USER_RESTRICTION"
+    ]
+  },
+  {
+    "path": "web/main/dhcpEdit.htm",
+    "bytes": 21687,
+    "data_model_oids": [
+      "DEV2_ADT_LAN",
+      "DEV2_ADT_WAN",
+      "DEV2_PAGE_ACCESS_PERMISSION"
+    ],
+    "action_oids": [],
+    "cgi_paths": [],
+    "flags": [
+      "INCLUDE_DHCPV4_POOL_MAX_ADDRESS",
+      "INCLUDE_DHCPV4_POOL_MIN_ADDRESS",
+      "INCLUDE_REBOOT_WAIT_TIME",
+      "INCLUDE_SPEC_TX6610",
+      "INCLUDE_SPEC_XZ000G7",
+      "INCLUDE_SPEC_XZ000G7V1_2",
+      "INCLUDE_TPLINK_LOGIN_DOMAIN",
+      "INCLUDE_USER_RESTRICTION"
+    ]
+  },
+  {
+    "path": "web/main/dhcpServer.htm",
+    "bytes": 2138,
+    "data_model_oids": [],
+    "action_oids": [],
+    "cgi_paths": [],
+    "flags": []
+  },
+  {
+    "path": "web/main/dhcpStaticEdit.htm",
+    "bytes": 6987,
+    "data_model_oids": [
+      "DEV2_DHCPV4_POOL_STATICADDR",
+      "DEV2_HOST_ENTRY"
+    ],
+    "action_oids": [],
+    "cgi_paths": [],
+    "flags": [
+      "INCLUDE_USER_RESTRICTION"
+    ]
+  },
+  {
+    "path": "web/main/div.htm",
+    "bytes": 21665,
+    "data_model_oids": [
+      "DEV2_ADT_WAN",
+      "DEV2_ROUTER_V4FWD",
+      "DEV2_ROUTER_V6FWD",
+      "DEV2_X_TP_DEFAULTGATEWAY"
+    ],
+    "action_oids": [],
+    "cgi_paths": [
+      "/cgi/info"
+    ],
+    "flags": [
+      "INCLUDE_CUSTOM_CONNNAME",
+      "INCLUDE_CUSTOM_CONNNAME_UNIQ",
+      "INCLUDE_DEFAULT_GATEWAY",
+      "INCLUDE_IPV6",
+      "INCLUDE_MULTI_WAN_WITH_SAME_VID",
+      "INCLUDE_PON_GPON",
+      "INCLUDE_SYSMODE",
+      "INCLUDE_USER_RESTRICTION",
+      "INCLUDE_VDSLWAN",
+      "INCLUDE_VOIP",
+      "INCLUDE_WAN_PORT_BINDING",
+      "INCLUDE_WAN_VLAN"
+    ]
+  },
+  {
+    "path": "web/main/fwUpInfoBlock.htm",
+    "bytes": 12248,
+    "data_model_oids": [],
+    "action_oids": [
+      "ACT_DR",
+      "ACT_RL",
+      "ACT_UN_H",
+      "ACT_UN_M"
+    ],
+    "cgi_paths": [
+      "/cgi/wanBlock?action="
+    ],
+    "flags": []
+  },
+  {
+    "path": "web/main/gponcfg.htm",
+    "bytes": 5945,
+    "data_model_oids": [
+      "DEV2_GPON_AUTH",
+      "DEV2_OPTC_GPON_CFG"
+    ],
+    "action_oids": [
+      "ACT_OP_OMCI_RESTART"
+    ],
+    "cgi_paths": [],
+    "flags": [
+      "INCLUDE_PON_XPON",
+      "INCLUDE_USER_RESTRICTION"
+    ]
+  },
+  {
+    "path": "web/main/gponctc.htm",
+    "bytes": 1169,
+    "data_model_oids": [
+      "DEV2_GPON_AUTH_CTC"
+    ],
+    "action_oids": [
+      "ACT_OMCI_RESTART"
+    ],
+    "cgi_paths": [],
+    "flags": []
+  },
+  {
+    "path": "web/main/manageCtrl.htm",
+    "bytes": 121511,
+    "data_model_oids": [
+      "DEV2_ACL_CFG",
+      "DEV2_ADT_LAN",
+      "DEV2_ADT_WAN",
+      "DEV2_CURRENT_USER",
+      "DEV2_DHCPV4_SERVER_POOL",
+      "DEV2_DMZ_HOST_CFG",
+      "DEV2_DYN_DNS_CFG",
+      "DEV2_HTTP_CFG",
+      "DEV2_NOIP_DNS_CFG",
+      "DEV2_PAGE_ACCESS_PERMISSION",
+      "DEV2_PAGE_OPERATIONMODE",
+      "DEV2_PORTMAPPING",
+      "DEV2_PORTTRIGGERING",
+      "DEV2_PPP",
+      "DEV2_ROUTER_V4FWD",
+      "DEV2_ROUTER_V6FWD",
+      "DEV2_SSH_CFG",
+      "DEV2_TELNET_CFG",
+      "DEV2_UPNP_CFG",
+      "DEV2_UPNP_PORTMAPPING",
+      "DEV2_USERDEFINE_DDNS_CFG",
+      "DEV2_USER_CFG",
+      "DEV2_X_TP_ISPRESTORE"
+    ],
+    "action_oids": [
+      "ACT_FACTORY_RESET",
+      "ACT_OPTION66_RESET",
+      "ACT_REBOOT"
+    ],
+    "cgi_paths": [
+      "/cgi/auth",
+      "/cgi/https?downCACert",
+      "/cgi/info",
+      "/cgi/logout"
+    ],
+    "flags": [
+      "INCLUDE_ACL",
+      "INCLUDE_CHGINIT_PWD",
+      "INCLUDE_CLOUD",
+      "INCLUDE_CLOUD_V2",
+      "INCLUDE_DDNS_USERDEFINE",
+      "INCLUDE_DHCP_OPTION60",
+      "INCLUDE_DYNDNS",
+      "INCLUDE_HTTP_SSL",
+      "INCLUDE_IPV6",
+      "INCLUDE_MIN_PASSWD_LEN",
+      "INCLUDE_MULTIMODE",
+      "INCLUDE_NOIPDNS",
+      "INCLUDE_NO_CONSECUTIVE_SAME_CHAR",
+      "INCLUDE_NO_WAN",
+      "INCLUDE_OPTION66",
+      "INCLUDE_PADT_PRECEDE",
+      "INCLUDE_PORT_MIRROR",
+      "INCLUDE_REBOOT_WAIT_TIME",
+      "INCLUDE_REDIRECT_HTTP_TO_HTTPS",
+      "INCLUDE_REDIRECT_REMOTE_HTTP_TO_HTTPS",
+      "INCLUDE_REMOTE_TELNET",
+      "INCLUDE_RE_MODE",
+      "INCLUDE_SMART_DHCP",
+      "INCLUDE_SSH_ACCESS",
+      "INCLUDE_TPLINK_LOGIN_DOMAIN",
+      "INCLUDE_TRWISP",
+      "INCLUDE_TTNET_WEB_HTTP_RESTRICTION",
+      "INCLUDE_USER_RESTRICTION",
+      "INCLUDE_WEB_AGILECONFIG",
+      "INCLUDE_WEB_TELNET",
+      "INCLUDE_WEB_TELNET_FOR_USER"
+    ]
+  },
+  {
+    "path": "web/main/restart.htm",
+    "bytes": 747,
+    "data_model_oids": [],
+    "action_oids": [
+      "ACT_OP_REBOOT"
+    ],
+    "cgi_paths": [],
+    "flags": [
+      "INCLUDE_REBOOT_WAIT_TIME"
+    ]
+  },
+  {
+    "path": "web/main/sfuVlanCfg.htm",
+    "bytes": 2579,
+    "data_model_oids": [
+      "DEV2_GPON_SFU_VLAN"
+    ],
+    "action_oids": [
+      "ACT_OP_OMCI_RESTART"
+    ],
+    "cgi_paths": [],
+    "flags": [
+      "INCLUDE_USER_RESTRICTION"
+    ]
+  },
+  {
+    "path": "web/main/softup.htm",
+    "bytes": 33496,
+    "data_model_oids": [
+      "DEV2_CELL_INTF",
+      "DEV2_DEV_INFO",
+      "DEV2_DIAG_TOOL",
+      "DEV2_SYS_CFG",
+      "DEV2_WIFI_APDEV",
+      "DEV2_WIFI_APDEV_COMPONENT",
+      "DEV2_WIFI_RADIO",
+      "DEV2_XTP_LTE",
+      "DEV2_X_TP_UPGRADE"
+    ],
+    "action_oids": [
+      "ACT_DIAG_DNSDIAG",
+      "ACT_OP_UPDATE_MAPINFO",
+      "ACT_REBOOT"
+    ],
+    "cgi_paths": [
+      "/cgi/localAgentSoftup",
+      "/cgi/localMeshUpgrade",
+      "/cgi/localMeshsoftburn",
+      "/cgi/softburn",
+      "/cgi/softup"
+    ],
+    "flags": [
+      "INCLUDE_AUTO_UPGRADE_MODE",
+      "INCLUDE_CLOUD",
+      "INCLUDE_CLOUD_V1",
+      "INCLUDE_EASYMESH",
+      "INCLUDE_EASYMESH_MULTI_UPGRADE",
+      "INCLUDE_FWUPGRADE_WAIT_TIME",
+      "INCLUDE_LTEWAN",
+      "INCLUDE_REBOOT_WAIT_TIME",
+      "INCLUDE_SPEC_TX6610",
+      "INCLUDE_SPEC_XZ000G7",
+      "INCLUDE_SPEC_XZ000G7V1_2",
+      "INCLUDE_USER_RESTRICTION",
+      "INCLUDE_WIFI"
+    ]
+  },
+  {
+    "path": "web/main/status.htm",
+    "bytes": 53353,
+    "data_model_oids": [
+      "DEV2_ADT_LAN",
+      "DEV2_ADT_WAN",
+      "DEV2_ADT_WIFI_COMMON",
+      "DEV2_DEV_INFO",
+      "DEV2_GPON_AUTH",
+      "DEV2_GPON_INTF_OMCI_STATS",
+      "DEV2_GPON_INTF_STATS",
+      "DEV2_MEM_STATUS",
+      "DEV2_OPTC_GPON_CFG",
+      "DEV2_PROC_STATUS",
+      "DEV2_ROUTER_V4FWD",
+      "DEV2_ROUTER_V6FWD"
+    ],
+    "action_oids": [],
+    "cgi_paths": [],
+    "flags": [
+      "INCLUDE_CPU_MEMORY_DISPLAY",
+      "INCLUDE_CUSTOM_CONNNAME",
+      "INCLUDE_IPV6",
+      "INCLUDE_NO_WAN",
+      "INCLUDE_PON_XPON",
+      "INCLUDE_SPEC_TX6610",
+      "INCLUDE_TRWISP",
+      "INCLUDE_USB_3G_DONGLE",
+      "INCLUDE_WIFI",
+      "INCLUDE_WIFI_DUALBAND",
+      "INCLUDE_WIFI_GSSID",
+      "INCLUDE_WIFI_MSSID"
+    ]
+  },
+  {
+    "path": "web/main/wanBasic.htm",
+    "bytes": 41688,
+    "data_model_oids": [
+      "DEV2_ADT_LAN",
+      "DEV2_ADT_WAN",
+      "DEV2_GPON_AUTH",
+      "DEV2_OPTC_GPON_CFG",
+      "DEV2_ROUTER_V4FWD"
+    ],
+    "action_oids": [
+      "ACT_OMCI_RESTART"
+    ],
+    "cgi_paths": [],
+    "flags": [
+      "INCLUDE_ADSLWAN",
+      "INCLUDE_ETHERNET_WAN",
+      "INCLUDE_L2TP",
+      "INCLUDE_MULTI_PRIO",
+      "INCLUDE_NO_WAN",
+      "INCLUDE_PON_XPON",
+      "INCLUDE_PPTP",
+      "INCLUDE_SYSMODE",
+      "INCLUDE_USER_RESTRICTION",
+      "INCLUDE_VDSLWAN",
+      "INCLUDE_WAN_VLAN"
+    ]
+  }
+]

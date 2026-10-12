@@ -1,0 +1,427 @@
+[
+  {
+    "path": "bin/ash",
+    "target": "busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "bin/awk",
+    "target": "busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "bin/cat",
+    "target": "busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "bin/catv",
+    "target": "busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "bin/chmod",
+    "target": "busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "bin/cp",
+    "target": "busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "bin/date",
+    "target": "busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "bin/df",
+    "target": "busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "bin/dnsdomainname",
+    "target": "busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "bin/egrep",
+    "target": "busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "bin/expr",
+    "target": "busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "bin/fgrep",
+    "target": "busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "bin/find",
+    "target": "busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "bin/free",
+    "target": "busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "bin/grep",
+    "target": "busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "bin/hostname",
+    "target": "busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "bin/kill",
+    "target": "busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "bin/killall",
+    "target": "busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "bin/ln",
+    "target": "busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "bin/login",
+    "target": "busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "bin/ls",
+    "target": "busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "bin/mkdir",
+    "target": "busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "bin/mknod",
+    "target": "busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "bin/mount",
+    "target": "busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "bin/mv",
+    "target": "busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "bin/netstat",
+    "target": "busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "bin/passwd",
+    "target": "busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "bin/pgrep",
+    "target": "busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "bin/ping",
+    "target": "busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "bin/ping6",
+    "target": "busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "bin/ps",
+    "target": "busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "bin/rm",
+    "target": "busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "bin/rmdir",
+    "target": "busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "bin/sed",
+    "target": "busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "bin/sh",
+    "target": "busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "bin/sleep",
+    "target": "busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "bin/sync",
+    "target": "busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "bin/taskset",
+    "target": "busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "bin/tftp",
+    "target": "busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "bin/top",
+    "target": "busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "bin/touch",
+    "target": "busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "bin/umount",
+    "target": "busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "bin/wc",
+    "target": "busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "bin/wget",
+    "target": "busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "bin/xargs",
+    "target": "busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "etc/TZ",
+    "target": "/var/tmp/TZ",
+    "resolved_to": null
+  },
+  {
+    "path": "etc/functions.sh",
+    "target": "../lib/functions.sh",
+    "resolved_to": "lib/functions.sh"
+  },
+  {
+    "path": "etc/localtime",
+    "target": "/var/tmp/localtime",
+    "resolved_to": null
+  },
+  {
+    "path": "etc/passwd",
+    "target": "/var/passwd",
+    "resolved_to": null
+  },
+  {
+    "path": "etc/resolv.conf",
+    "target": "/var/tmp/resolv.conf",
+    "resolved_to": null
+  },
+  {
+    "path": "lib/ld-uClibc.so.0",
+    "target": "ld-uClibc.so.1",
+    "resolved_to": "lib/ld-uClibc-1.0.31.so"
+  },
+  {
+    "path": "lib/ld-uClibc.so.1",
+    "target": "ld-uClibc-1.0.31.so",
+    "resolved_to": "lib/ld-uClibc-1.0.31.so"
+  },
+  {
+    "path": "lib/libc.so.0",
+    "target": "libuClibc-1.0.31.so",
+    "resolved_to": "lib/libuClibc-1.0.31.so"
+  },
+  {
+    "path": "lib/libc.so.1",
+    "target": "libuClibc-1.0.31.so",
+    "resolved_to": "lib/libuClibc-1.0.31.so"
+  },
+  {
+    "path": "lib/libcrypto.so",
+    "target": "libcrypto.so.1.1",
+    "resolved_to": null
+  },
+  {
+    "path": "lib/libebtc.so",
+    "target": "libebtc.so.0.0.0",
+    "resolved_to": "lib/libebtc.so.0.0.0"
+  },
+  {
+    "path": "lib/libebtc.so.0",
+    "target": "libebtc.so.0.0.0",
+    "resolved_to": "lib/libebtc.so.0.0.0"
+  },
+  {
+    "path": "linuxrc",
+    "target": "bin/busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "run",
+    "target": "tmp/run",
+    "resolved_to": null
+  },
+  {
+    "path": "sbin/arp",
+    "target": "../bin/busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "sbin/devmem",
+    "target": "../bin/busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "sbin/ebtables",
+    "target": "ebtables-legacy",
+    "resolved_to": "sbin/ebtables-legacy"
+  },
+  {
+    "path": "sbin/getty",
+    "target": "../bin/busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "sbin/halt",
+    "target": "../bin/busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "sbin/ifconfig",
+    "target": "../bin/busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "sbin/ifdown",
+    "target": "../bin/busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "sbin/ifup",
+    "target": "../bin/busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "sbin/init",
+    "target": "../bin/busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "sbin/insmod",
+    "target": "../bin/busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "sbin/ip6tables",
+    "target": "xtables-legacy-multi",
+    "resolved_to": "sbin/xtables-legacy-multi"
+  },
+  {
+    "path": "sbin/iptables",
+    "target": "xtables-legacy-multi",
+    "resolved_to": "sbin/xtables-legacy-multi"
+  },
+  {
+    "path": "sbin/lsmod",
+    "target": "../bin/busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "sbin/poweroff",
+    "target": "../bin/busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "sbin/reboot",
+    "target": "../bin/busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "sbin/rmmod",
+    "target": "../bin/busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "sbin/route",
+    "target": "../bin/busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "sbin/swapoff",
+    "target": "../bin/busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "sbin/swapon",
+    "target": "../bin/busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "sbin/telnetd",
+    "target": "../bin/busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "sbin/udhcpc",
+    "target": "../bin/busybox",
+    "resolved_to": "bin/busybox"
+  },
+  {
+    "path": "tmp",
+    "target": "/var/tmp",
+    "resolved_to": null
+  },
+  {
+    "path": "usr/lib/libstdc++.so",
+    "target": "../../arm-galachip-linux-uclibcgnueabi/sysroot/lib/libstdc++.so",
+    "resolved_to": null
+  },
+  {
+    "path": "usr/lib/libstdc++.so.6",
+    "target": "../../arm-galachip-linux-uclibcgnueabi/sysroot/lib/libstdc++.so.6",
+    "resolved_to": null
+  },
+  {
+    "path": "usr/lib/libstdc++.so.6.0.20",
+    "target": "../../arm-galachip-linux-uclibcgnueabi/sysroot/lib/libstdc++.so.6.0.20",
+    "resolved_to": null
+  },
+  {
+    "path": "usr/lib/libstdc++.so.6.0.20-gdb.py",
+    "target": "../../arm-galachip-linux-uclibcgnueabi/sysroot/lib/libstdc++.so.6.0.20-gdb.py",
+    "resolved_to": null
+  }
+]

@@ -1,0 +1,1359 @@
+000747bc <rsl_getDev2OptcGponCfgObj>:
+   747bc: e3510000     	cmp	r1, #0
+   747c0: 13500000     	cmpne	r0, #0
+   747c4: e92d4010     	push	{r4, lr}
+   747c8: 1a000008     	bne	0x747f0 <rsl_getDev2OptcGponCfgObj+0x34> @ imm = #0x20
+   747cc: e59f30b4     	ldr	r3, [pc, #0xb4]         @ 0x74888 <rsl_getDev2OptcGponCfgObj+0xcc>
+   747d0: e59f00b4     	ldr	r0, [pc, #0xb4]         @ 0x7488c <rsl_getDev2OptcGponCfgObj+0xd0>
+   747d4: e59f10b4     	ldr	r1, [pc, #0xb4]         @ 0x74890 <rsl_getDev2OptcGponCfgObj+0xd4>
+   747d8: e08f3003     	add	r3, pc, r3  ; PIC literal "rsl_getDev2OptcGponCfgObj" @0xa9e8c
+   747dc: e08f0000     	add	r0, pc, r0  ; PIC literal "(pNumStack != ((void *)0)) && (pNewObj != ((void *)0))" @0xabe33
+   747e0: e08f1001     	add	r1, pc, r1  ; PIC literal "./src/rsl_optical.c" @0xb816e
+   747e4: e59f20a8     	ldr	r2, [pc, #0xa8]         @ 0x74894 <rsl_getDev2OptcGponCfgObj+0xd8>
+   747e8: e2833017     	add	r3, r3, #23
+   747ec: ebfe91b8     	bl	0x18ed4 <__assert@plt>  @ imm = #-0x5b920
+   747f0: e1a04001     	mov	r4, r1
+   747f4: ebfe9831     	bl	0x1a8c0 <oal_gpon_getWanGponIntfCfg@plt> @ imm = #-0x59f3c
+   747f8: e3500000     	cmp	r0, #0
+   747fc: 0a000007     	beq	0x74820 <rsl_getDev2OptcGponCfgObj+0x64> @ imm = #0x1c
+   74800: e59f1090     	ldr	r1, [pc, #0x90]         @ 0x74898 <rsl_getDev2OptcGponCfgObj+0xdc>
+   74804: e59f3090     	ldr	r3, [pc, #0x90]         @ 0x7489c <rsl_getDev2OptcGponCfgObj+0xe0>
+   74808: e08f1001     	add	r1, pc, r1  ; PIC literal "rsl_getDev2OptcGponCfgObj" @0xa9ea6
+   7480c: e3a00008     	mov	r0, #8
+   74810: e2811031     	add	r1, r1, #49
+   74814: e59f2084     	ldr	r2, [pc, #0x84]         @ 0x748a0 <rsl_getDev2OptcGponCfgObj+0xe4>
+   74818: e08f3003     	add	r3, pc, r3  ; PIC literal "oal_gpon_getWanGponIntfCfg failed \n" @0xb8182
+   7481c: ea000016     	b	0x7487c <rsl_getDev2OptcGponCfgObj+0xc0> @ imm = #0x58
+   74820: e1a00004     	mov	r0, r4
+   74824: ebfe9339     	bl	0x19510 <oal_gpon_getOpticalStats@plt> @ imm = #-0x5b31c
+   74828: e3500000     	cmp	r0, #0
+   7482c: 0a000007     	beq	0x74850 <rsl_getDev2OptcGponCfgObj+0x94> @ imm = #0x1c
+   74830: e59f106c     	ldr	r1, [pc, #0x6c]         @ 0x748a4 <rsl_getDev2OptcGponCfgObj+0xe8>
+   74834: e59f306c     	ldr	r3, [pc, #0x6c]         @ 0x748a8 <rsl_getDev2OptcGponCfgObj+0xec>
+   74838: e08f1001     	add	r1, pc, r1  ; PIC literal "rsl_getDev2OptcGponCfgObj" @0xa9ea6
+   7483c: e3a00008     	mov	r0, #8
+   74840: e2811031     	add	r1, r1, #49
+   74844: e3a02f77     	mov	r2, #476
+   74848: e08f3003     	add	r3, pc, r3  ; PIC literal "oal_gpon_getOpticalStats failed \n" @0xb81a6
+   7484c: ea00000a     	b	0x7487c <rsl_getDev2OptcGponCfgObj+0xc0> @ imm = #0x28
+   74850: e1a00004     	mov	r0, r4
+   74854: ebfe9204     	bl	0x1906c <oal_xpon_getEponRegState@plt> @ imm = #-0x5b7f0
+   74858: e3500000     	cmp	r0, #0
+   7485c: 08bd8010     	popeq	{r4, pc}
+   74860: e59f1044     	ldr	r1, [pc, #0x44]         @ 0x748ac <rsl_getDev2OptcGponCfgObj+0xf0>
+   74864: e59f3044     	ldr	r3, [pc, #0x44]         @ 0x748b0 <rsl_getDev2OptcGponCfgObj+0xf4>
+   74868: e59f2044     	ldr	r2, [pc, #0x44]         @ 0x748b4 <rsl_getDev2OptcGponCfgObj+0xf8>
+   7486c: e08f1001     	add	r1, pc, r1  ; PIC literal "rsl_getDev2OptcGponCfgObj" @0xa9ea6
+   74870: e3a00008     	mov	r0, #8
+   74874: e2811031     	add	r1, r1, #49
+   74878: e08f3003     	add	r3, pc, r3  ; PIC literal "oal_xpon_getEponRegState failed \n" @0xb81c8
+   7487c: ebfe956f     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0x5aa44
+   74880: e3a00001     	mov	r0, #1
+   74884: e8bd8010     	pop	{r4, pc}
+   74888: 00035695     	<unknown>
+   7488c: 0003764f     	andeq	r7, r3, pc, asr #12
+   74890: 00043986     	andeq	r3, r4, r6, lsl #19
+   74894: 000001d2     	ldrdeq	r0, r1, [r0], -r2
+   74898: 00035665     	andeq	r5, r3, r5, ror #12
+   7489c: 00043962     	andeq	r3, r4, r2, ror #18
+   748a0: 000001d6     	ldrdeq	r0, r1, [r0], -r6
+   748a4: 00035635     	andeq	r5, r3, r5, lsr r6
+   748a8: 00043956     	andeq	r3, r4, r6, asr r9
+   748ac: 00035601     	andeq	r5, r3, r1, lsl #12
+   748b0: 00043948     	andeq	r3, r4, r8, asr #18
+   748b4: 000001e3     	andeq	r0, r0, r3, ror #3
+
+00075088 <rsl_setDev2GponAuthObj>:
+   75088: e3510000     	cmp	r1, #0
+   7508c: 13500000     	cmpne	r0, #0
+   75090: e92d40f7     	push	{r0, r1, r2, r4, r5, r6, r7, lr}
+   75094: e1a04001     	mov	r4, r1
+   75098: 1a000008     	bne	0x750c0 <rsl_setDev2GponAuthObj+0x38> @ imm = #0x20
+   7509c: e59f328c     	ldr	r3, [pc, #0x28c]        @ 0x75330 <rsl_setDev2GponAuthObj+0x2a8>
+   750a0: e59f028c     	ldr	r0, [pc, #0x28c]        @ 0x75334 <rsl_setDev2GponAuthObj+0x2ac>
+   750a4: e59f128c     	ldr	r1, [pc, #0x28c]        @ 0x75338 <rsl_setDev2GponAuthObj+0x2b0>
+   750a8: e08f3003     	add	r3, pc, r3  ; PIC literal "rsl_setDev2GponAuthObj" @0xa9fe9
+   750ac: e08f0000     	add	r0, pc, r0  ; PIC literal "(pNumStack != ((void *)0)) && (pNewObj != ((void *)0))" @0xabe33
+   750b0: e08f1001     	add	r1, pc, r1  ; PIC literal "./src/rsl_optical.c" @0xb816e
+   750b4: e3a02fce     	mov	r2, #824
+   750b8: e2833f5d     	add	r3, r3, #372
+   750bc: ebfe8f84     	bl	0x18ed4 <__assert@plt>  @ imm = #-0x5c1f0
+   750c0: e2816002     	add	r6, r1, #2
+   750c4: e1a00006     	mov	r0, r6
+   750c8: e2821002     	add	r1, r2, #2
+   750cc: e1a05002     	mov	r5, r2
+   750d0: ebfe94c8     	bl	0x1a3f8 <strcmp@plt>    @ imm = #-0x5ace0
+   750d4: e3500000     	cmp	r0, #0
+   750d8: 1a00000e     	bne	0x75118 <rsl_setDev2GponAuthObj+0x90> @ imm = #0x38
+   750dc: e2840020     	add	r0, r4, #32
+   750e0: e2851020     	add	r1, r5, #32
+   750e4: ebfe94c3     	bl	0x1a3f8 <strcmp@plt>    @ imm = #-0x5acf4
+   750e8: e3500000     	cmp	r0, #0
+   750ec: 1a000009     	bne	0x75118 <rsl_setDev2GponAuthObj+0x90> @ imm = #0x24
+   750f0: e5942018     	ldr	r2, [r4, #0x18]
+   750f4: e5953018     	ldr	r3, [r5, #0x18]
+   750f8: e1520003     	cmp	r2, r3
+   750fc: 1a000005     	bne	0x75118 <rsl_setDev2GponAuthObj+0x90> @ imm = #0x14
+   75100: e5942038     	ldr	r2, [r4, #0x38]
+   75104: e5953038     	ldr	r3, [r5, #0x38]
+   75108: e1520003     	cmp	r2, r3
+   7510c: 1a000001     	bne	0x75118 <rsl_setDev2GponAuthObj+0x90> @ imm = #0x4
+   75110: e3a00000     	mov	r0, #0
+   75114: ea000083     	b	0x75328 <rsl_setDev2GponAuthObj+0x2a0> @ imm = #0x20c
+   75118: e1a00006     	mov	r0, r6
+   7511c: ebfe910d     	bl	0x19558 <strlen@plt>    @ imm = #-0x5bbcc
+   75120: e3500014     	cmp	r0, #20
+   75124: da000008     	ble	0x7514c <rsl_setDev2GponAuthObj+0xc4> @ imm = #0x20
+   75128: e59f120c     	ldr	r1, [pc, #0x20c]        @ 0x7533c <rsl_setDev2GponAuthObj+0x2b4>
+   7512c: e59f320c     	ldr	r3, [pc, #0x20c]        @ 0x75340 <rsl_setDev2GponAuthObj+0x2b8>
+   75130: e08f1001     	add	r1, pc, r1  ; PIC literal "rsl_setDev2GponAuthObj" @0xaa000
+   75134: e2811f62     	add	r1, r1, #392
+   75138: e3a00008     	mov	r0, #8
+   7513c: e2811003     	add	r1, r1, #3
+   75140: e3a02fd5     	mov	r2, #852
+   75144: e08f3003     	add	r3, pc, r3  ; PIC literal "gponSn is too LONG\n" @0xb83c4
+   75148: ea000074     	b	0x75320 <rsl_setDev2GponAuthObj+0x298> @ imm = #0x1d0
+   7514c: e3500000     	cmp	r0, #0
+   75150: 1a000008     	bne	0x75178 <rsl_setDev2GponAuthObj+0xf0> @ imm = #0x20
+   75154: e59f11e8     	ldr	r1, [pc, #0x1e8]        @ 0x75344 <rsl_setDev2GponAuthObj+0x2bc>
+   75158: e59f31e8     	ldr	r3, [pc, #0x1e8]        @ 0x75348 <rsl_setDev2GponAuthObj+0x2c0>
+   7515c: e08f1001     	add	r1, pc, r1  ; PIC literal "rsl_setDev2GponAuthObj" @0xaa000
+   75160: e2811f62     	add	r1, r1, #392
+   75164: e3a00008     	mov	r0, #8
+   75168: e2811003     	add	r1, r1, #3
+   7516c: e59f21d8     	ldr	r2, [pc, #0x1d8]        @ 0x7534c <rsl_setDev2GponAuthObj+0x2c4>
+   75170: e08f3003     	add	r3, pc, r3  ; PIC literal "gponSn is NULL\n" @0xb83d8
+   75174: ea000069     	b	0x75320 <rsl_setDev2GponAuthObj+0x298> @ imm = #0x1a4
+   75178: e2847020     	add	r7, r4, #32
+   7517c: e1a00007     	mov	r0, r7
+   75180: ebfe90f4     	bl	0x19558 <strlen@plt>    @ imm = #-0x5bc30
+   75184: e3500015     	cmp	r0, #21
+   75188: e1a05000     	mov	r5, r0
+   7518c: da000008     	ble	0x751b4 <rsl_setDev2GponAuthObj+0x12c> @ imm = #0x20
+   75190: e59f11b8     	ldr	r1, [pc, #0x1b8]        @ 0x75350 <rsl_setDev2GponAuthObj+0x2c8>
+   75194: e59f31b8     	ldr	r3, [pc, #0x1b8]        @ 0x75354 <rsl_setDev2GponAuthObj+0x2cc>
+   75198: e08f1001     	add	r1, pc, r1  ; PIC literal "rsl_setDev2GponAuthObj" @0xaa000
+   7519c: e2811f62     	add	r1, r1, #392
+   751a0: e3a00008     	mov	r0, #8
+   751a4: e2811003     	add	r1, r1, #3
+   751a8: e59f21a8     	ldr	r2, [pc, #0x1a8]        @ 0x75358 <rsl_setDev2GponAuthObj+0x2d0>
+   751ac: e08f3003     	add	r3, pc, r3  ; PIC literal "gponPwd is too LONG\n" @0xb83e8
+   751b0: ea00005a     	b	0x75320 <rsl_setDev2GponAuthObj+0x298> @ imm = #0x168
+   751b4: e3500000     	cmp	r0, #0
+   751b8: 1a000008     	bne	0x751e0 <rsl_setDev2GponAuthObj+0x158> @ imm = #0x20
+   751bc: e59f1198     	ldr	r1, [pc, #0x198]        @ 0x7535c <rsl_setDev2GponAuthObj+0x2d4>
+   751c0: e59f3198     	ldr	r3, [pc, #0x198]        @ 0x75360 <rsl_setDev2GponAuthObj+0x2d8>
+   751c4: e08f1001     	add	r1, pc, r1  ; PIC literal "rsl_setDev2GponAuthObj" @0xaa000
+   751c8: e2811f62     	add	r1, r1, #392
+   751cc: e3a00008     	mov	r0, #8
+   751d0: e2811003     	add	r1, r1, #3
+   751d4: e3a02fda     	mov	r2, #872
+   751d8: e08f3003     	add	r3, pc, r3  ; PIC literal "gponPwd is NULL\n" @0xb83fd
+   751dc: ebfe9317     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0x5b3a4
+   751e0: e2850020     	add	r0, r5, #32
+   751e4: e3a01000     	mov	r1, #0
+   751e8: e2652015     	rsb	r2, r5, #21
+   751ec: e0840000     	add	r0, r4, r0
+   751f0: ebfe8f3d     	bl	0x18eec <memset@plt>    @ imm = #-0x5c30c
+   751f4: e1a00006     	mov	r0, r6
+   751f8: ebfe9403     	bl	0x1a20c <util_netChkStrSn@plt> @ imm = #-0x5aff4
+   751fc: e3500000     	cmp	r0, #0
+   75200: 1a000008     	bne	0x75228 <rsl_setDev2GponAuthObj+0x1a0> @ imm = #0x20
+   75204: e59f1158     	ldr	r1, [pc, #0x158]        @ 0x75364 <rsl_setDev2GponAuthObj+0x2dc>
+   75208: e59f3158     	ldr	r3, [pc, #0x158]        @ 0x75368 <rsl_setDev2GponAuthObj+0x2e0>
+   7520c: e08f1001     	add	r1, pc, r1  ; PIC literal "rsl_setDev2GponAuthObj" @0xaa000
+   75210: e2811f62     	add	r1, r1, #392
+   75214: e3a00008     	mov	r0, #8
+   75218: e2811003     	add	r1, r1, #3
+   7521c: e3a02e37     	mov	r2, #880
+   75220: e08f3003     	add	r3, pc, r3  ; PIC literal "SN is invalid\n" @0xb840e
+   75224: ea00003d     	b	0x75320 <rsl_setDev2GponAuthObj+0x298> @ imm = #0xf4
+   75228: e59f513c     	ldr	r5, [pc, #0x13c]        @ 0x7536c <rsl_setDev2GponAuthObj+0x2e4>
+   7522c: e59f313c     	ldr	r3, [pc, #0x13c]        @ 0x75370 <rsl_setDev2GponAuthObj+0x2e8>
+   75230: e08f5005     	add	r5, pc, r5  ; PIC literal "rsl_setDev2GponAuthObj" @0xaa000
+   75234: e2855f62     	add	r5, r5, #392
+   75238: e2855003     	add	r5, r5, #3
+   7523c: e3a00008     	mov	r0, #8
+   75240: e1a01005     	mov	r1, r5
+   75244: e3a02fdd     	mov	r2, #884
+   75248: e08f3003     	add	r3, pc, r3  ; PIC literal "new pwd:<%s>" @0xb841d
+   7524c: e58d7000     	str	r7, [sp]
+   75250: ebfe92fa     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0x5b418
+   75254: e1a00006     	mov	r0, r6
+   75258: e1a01007     	mov	r1, r7
+   7525c: e5942038     	ldr	r2, [r4, #0x38]
+   75260: e5943018     	ldr	r3, [r4, #0x18]
+   75264: ebfe91a8     	bl	0x1990c <oal_gpon_setGponParameter@plt> @ imm = #-0x5b960
+   75268: e3500000     	cmp	r0, #0
+   7526c: 0a000005     	beq	0x75288 <rsl_setDev2GponAuthObj+0x200> @ imm = #0x14
+   75270: e59f30fc     	ldr	r3, [pc, #0xfc]         @ 0x75374 <rsl_setDev2GponAuthObj+0x2ec>
+   75274: e3a00008     	mov	r0, #8
+   75278: e1a01005     	mov	r1, r5
+   7527c: e59f20f4     	ldr	r2, [pc, #0xf4]         @ 0x75378 <rsl_setDev2GponAuthObj+0x2f0>
+   75280: e08f3003     	add	r3, pc, r3  ; PIC literal "Setting link parameters failed \n" @0xb842a
+   75284: ea000025     	b	0x75320 <rsl_setDev2GponAuthObj+0x298> @ imm = #0x94
+   75288: e59f30ec     	ldr	r3, [pc, #0xec]         @ 0x7537c <rsl_setDev2GponAuthObj+0x2f4>
+   7528c: e3a00009     	mov	r0, #9
+   75290: e1a01005     	mov	r1, r5
+   75294: e3a02fdf     	mov	r2, #892
+   75298: e08f3003     	add	r3, pc, r3  ; PIC literal "INCLUDE_KEEP_AUTHINFO" @0xb844b
+   7529c: ebfe92e7     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0x5b464
+   752a0: e1a00006     	mov	r0, r6
+   752a4: e5941018     	ldr	r1, [r4, #0x18]
+   752a8: ebfe8fb7     	bl	0x1918c <oal_sys_writeGponAuthFlashSn@plt> @ imm = #-0x5c124
+   752ac: e3500000     	cmp	r0, #0
+   752b0: 0a000005     	beq	0x752cc <rsl_setDev2GponAuthObj+0x244> @ imm = #0x14
+   752b4: e59f30c4     	ldr	r3, [pc, #0xc4]         @ 0x75380 <rsl_setDev2GponAuthObj+0x2f8>
+   752b8: e3a00008     	mov	r0, #8
+   752bc: e1a01005     	mov	r1, r5
+   752c0: e3a02d0e     	mov	r2, #896
+   752c4: e08f3003     	add	r3, pc, r3  ; PIC literal "Write sn to flash error!\n" @0xb8461
+   752c8: ea000009     	b	0x752f4 <rsl_setDev2GponAuthObj+0x26c> @ imm = #0x24
+   752cc: e1a00007     	mov	r0, r7
+   752d0: e5941038     	ldr	r1, [r4, #0x38]
+   752d4: ebfe90c3     	bl	0x195e8 <oal_sys_writeGponAuthFlashPwd@plt> @ imm = #-0x5bcf4
+   752d8: e3500000     	cmp	r0, #0
+   752dc: 0a000007     	beq	0x75300 <rsl_setDev2GponAuthObj+0x278> @ imm = #0x1c
+   752e0: e59f309c     	ldr	r3, [pc, #0x9c]         @ 0x75384 <rsl_setDev2GponAuthObj+0x2fc>
+   752e4: e59f209c     	ldr	r2, [pc, #0x9c]         @ 0x75388 <rsl_setDev2GponAuthObj+0x300>
+   752e8: e3a00008     	mov	r0, #8
+   752ec: e1a01005     	mov	r1, r5
+   752f0: e08f3003     	add	r3, pc, r3  ; PIC literal "Write pwd to flash error!\n" @0xb847b
+   752f4: ebfe92d1     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0x5b4bc
+   752f8: e59f008c     	ldr	r0, [pc, #0x8c]         @ 0x7538c <rsl_setDev2GponAuthObj+0x304>
+   752fc: ea000009     	b	0x75328 <rsl_setDev2GponAuthObj+0x2a0> @ imm = #0x24
+   75300: ebfe912a     	bl	0x197b0 <oal_gpon_restartOmci@plt> @ imm = #-0x5bb58
+   75304: e3500000     	cmp	r0, #0
+   75308: 0affff80     	beq	0x75110 <rsl_setDev2GponAuthObj+0x88> @ imm = #-0x200
+   7530c: e59f307c     	ldr	r3, [pc, #0x7c]         @ 0x75390 <rsl_setDev2GponAuthObj+0x308>
+   75310: e3a00008     	mov	r0, #8
+   75314: e1a01005     	mov	r1, r5
+   75318: e3a02fe3     	mov	r2, #908
+   7531c: e08f3003     	add	r3, pc, r3  ; PIC literal "oal_gponOmciRestart failed\n" @0xb8496
+   75320: ebfe92c6     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0x5b4e8
+   75324: e3a00001     	mov	r0, #1
+   75328: e28dd00c     	add	sp, sp, #12
+   7532c: e8bd80f0     	pop	{r4, r5, r6, r7, pc}
+   75330: 00034dc5     	andeq	r4, r3, r5, asr #27
+   75334: 00036d7f     	andeq	r6, r3, pc, ror sp
+   75338: 000430b6     	strheq	r3, [r4], -r6
+   7533c: 00034d3d     	andeq	r4, r3, sp, lsr sp
+   75340: 00043278     	andeq	r3, r4, r8, ror r2
+   75344: 00034d11     	andeq	r4, r3, r1, lsl sp
+   75348: 00043260     	andeq	r3, r4, r0, ror #4
+   7534c: 00000359     	andeq	r0, r0, r9, asr r3
+   75350: 00034cd5     	ldrdeq	r4, r5, [r3], -r5
+   75354: 00043234     	andeq	r3, r4, r4, lsr r2
+   75358: 00000363     	andeq	r0, r0, r3, ror #6
+   7535c: 00034ca9     	andeq	r4, r3, r9, lsr #25
+   75360: 0004321d     	andeq	r3, r4, sp, lsl r2
+   75364: 00034c61     	andeq	r4, r3, r1, ror #24
+   75368: 000431e6     	andeq	r3, r4, r6, ror #3
+   7536c: 00034c3d     	andeq	r4, r3, sp, lsr r12
+   75370: 000431cd     	andeq	r3, r4, sp, asr #3
+   75374: 000431a2     	andeq	r3, r4, r2, lsr #3
+   75378: 00000377     	andeq	r0, r0, r7, ror r3
+   7537c: 000431ab     	andeq	r3, r4, r11, lsr #3
+   75380: 00043195     	<unknown>
+   75384: 00043183     	andeq	r3, r4, r3, lsl #3
+   75388: 00000386     	andeq	r0, r0, r6, lsl #7
+   7538c: 0000232a     	andeq	r2, r0, r10, lsr #6
+   75390: 00043172     	andeq	r3, r4, r2, ror r1
+
+00075394 <rsl_initDev2GponAuthObj>:
+   75394: e3510000     	cmp	r1, #0
+   75398: 13500000     	cmpne	r0, #0
+   7539c: e92d43f0     	push	{r4, r5, r6, r7, r8, r9, lr}
+   753a0: e1a09000     	mov	r9, r0
+   753a4: e24dd02c     	sub	sp, sp, #44
+   753a8: e1a04001     	mov	r4, r1
+   753ac: 03a06001     	moveq	r6, #1
+   753b0: 13a06000     	movne	r6, #0
+   753b4: 1a000009     	bne	0x753e0 <rsl_initDev2GponAuthObj+0x4c> @ imm = #0x24
+   753b8: e59f31b8     	ldr	r3, [pc, #0x1b8]        @ 0x75578 <rsl_initDev2GponAuthObj+0x1e4>
+   753bc: e59f01b8     	ldr	r0, [pc, #0x1b8]        @ 0x7557c <rsl_initDev2GponAuthObj+0x1e8>
+   753c0: e59f11b8     	ldr	r1, [pc, #0x1b8]        @ 0x75580 <rsl_initDev2GponAuthObj+0x1ec>
+   753c4: e08f3003     	add	r3, pc, r3
+   753c8: e2833e1a     	add	r3, r3, #416
+   753cc: e08f0000     	add	r0, pc, r0  ; PIC literal "(pNumStack != ((void *)0)) && (pNewObj != ((void *)0))" @0xabe33
+   753d0: e08f1001     	add	r1, pc, r1  ; PIC literal "./src/rsl_optical.c" @0xb816e
+   753d4: e59f21a8     	ldr	r2, [pc, #0x1a8]        @ 0x75584 <rsl_initDev2GponAuthObj+0x1f0>
+   753d8: e2833002     	add	r3, r3, #2
+   753dc: ebfe8ebc     	bl	0x18ed4 <__assert@plt>  @ imm = #-0x5c510
+   753e0: e28d5014     	add	r5, sp, #20
+   753e4: e1a01006     	mov	r1, r6
+   753e8: e3a02014     	mov	r2, #20
+   753ec: e28d7028     	add	r7, sp, #40
+   753f0: e1a00005     	mov	r0, r5
+   753f4: ebfe8ebc     	bl	0x18eec <memset@plt>    @ imm = #-0x5c510
+   753f8: e5276018     	str	r6, [r7, #-0x18]!
+   753fc: e2846020     	add	r6, r4, #32
+   75400: e58d6000     	str	r6, [sp]
+   75404: e594301c     	ldr	r3, [r4, #0x1c]
+   75408: e59f1178     	ldr	r1, [pc, #0x178]        @ 0x75588 <rsl_initDev2GponAuthObj+0x1f4>
+   7540c: e2848002     	add	r8, r4, #2
+   75410: e98d0108     	stmib	sp, {r3, r8}
+   75414: e59f3170     	ldr	r3, [pc, #0x170]        @ 0x7558c <rsl_initDev2GponAuthObj+0x1f8>
+   75418: e08f1001     	add	r1, pc, r1
+   7541c: e2811f6e     	add	r1, r1, #440
+   75420: e59f2168     	ldr	r2, [pc, #0x168]        @ 0x75590 <rsl_initDev2GponAuthObj+0x1fc>
+   75424: e08f3003     	add	r3, pc, r3  ; PIC literal "pNewObj:gponPwd=%s, oltMode=%d, gponSn=%s" @0xb84b2
+   75428: e3a00009     	mov	r0, #9
+   7542c: e2811002     	add	r1, r1, #2
+   75430: ebfe9282     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0x5b5f8
+   75434: e1a01007     	mov	r1, r7
+   75438: e1a00005     	mov	r0, r5
+   7543c: ebfe8df6     	bl	0x18c1c <oal_sys_readGponAuthFlashSn@plt> @ imm = #-0x5c828
+   75440: e1a00005     	mov	r0, r5
+   75444: ebfe9370     	bl	0x1a20c <util_netChkStrSn@plt> @ imm = #-0x5b240
+   75448: e3500000     	cmp	r0, #0
+   7544c: 1a000015     	bne	0x754a8 <rsl_initDev2GponAuthObj+0x114> @ imm = #0x54
+   75450: e1a00005     	mov	r0, r5
+   75454: e1a01007     	mov	r1, r7
+   75458: ebfe9578     	bl	0x1aa40 <oal_sys_readGponSnFlash@plt> @ imm = #-0x5aa20
+   7545c: e3500000     	cmp	r0, #0
+   75460: 0a00000c     	beq	0x75498 <rsl_initDev2GponAuthObj+0x104> @ imm = #0x30
+   75464: e59f1128     	ldr	r1, [pc, #0x128]        @ 0x75594 <rsl_initDev2GponAuthObj+0x200>
+   75468: e59f3128     	ldr	r3, [pc, #0x128]        @ 0x75598 <rsl_initDev2GponAuthObj+0x204>
+   7546c: e08f1001     	add	r1, pc, r1  ; PIC literal "rsl_initDev2GponAuthObj" @0xaa02f
+   75470: e2811f6e     	add	r1, r1, #440
+   75474: e3a00009     	mov	r0, #9
+   75478: e2811002     	add	r1, r1, #2
+   7547c: e59f2118     	ldr	r2, [pc, #0x118]        @ 0x7559c <rsl_initDev2GponAuthObj+0x208>
+   75480: e08f3003     	add	r3, pc, r3  ; PIC literal "oal_gpon_autogenSn \n" @0xb84dc
+   75484: ebfe926d     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0x5b64c
+   75488: e1a00005     	mov	r0, r5
+   7548c: e1a01007     	mov	r1, r7
+   75490: ebfe8dc9     	bl	0x18bbc <oal_gpon_autogenSn@plt> @ imm = #-0x5c8dc
+   75494: ea000003     	b	0x754a8 <rsl_initDev2GponAuthObj+0x114> @ imm = #0xc
+   75498: e1a00005     	mov	r0, r5
+   7549c: ebfe935a     	bl	0x1a20c <util_netChkStrSn@plt> @ imm = #-0x5b298
+   754a0: e3500000     	cmp	r0, #0
+   754a4: 0affffee     	beq	0x75464 <rsl_initDev2GponAuthObj+0xd0> @ imm = #-0x48
+   754a8: e1a01005     	mov	r1, r5
+   754ac: e3a02014     	mov	r2, #20
+   754b0: e1a00008     	mov	r0, r8
+   754b4: ebfe950d     	bl	0x1a8f0 <memcpy@plt>    @ imm = #-0x5abcc
+   754b8: e59d3010     	ldr	r3, [sp, #0x10]
+   754bc: e1a00006     	mov	r0, r6
+   754c0: e5843018     	str	r3, [r4, #0x18]
+   754c4: e2841038     	add	r1, r4, #56
+   754c8: ebfe8cd1     	bl	0x18814 <oal_sys_readGponAuthFlashPwd@plt> @ imm = #-0x5ccbc
+   754cc: e3500000     	cmp	r0, #0
+   754d0: 0a000003     	beq	0x754e4 <rsl_initDev2GponAuthObj+0x150> @ imm = #0xc
+   754d4: e1a00006     	mov	r0, r6
+   754d8: e3a01000     	mov	r1, #0
+   754dc: e3a02015     	mov	r2, #21
+   754e0: ebfe8e81     	bl	0x18eec <memset@plt>    @ imm = #-0x5c5fc
+   754e4: e59f00b4     	ldr	r0, [pc, #0xb4]         @ 0x755a0 <rsl_initDev2GponAuthObj+0x20c>
+   754e8: e1a01009     	mov	r1, r9
+   754ec: e1a02004     	mov	r2, r4
+   754f0: ebfe91b0     	bl	0x19bb8 <dm_setObj@plt> @ imm = #-0x5b940
+   754f4: e3500000     	cmp	r0, #0
+   754f8: 0a00000b     	beq	0x7552c <rsl_initDev2GponAuthObj+0x198> @ imm = #0x2c
+   754fc: e59f10a0     	ldr	r1, [pc, #0xa0]         @ 0x755a4 <rsl_initDev2GponAuthObj+0x210>
+   75500: e59f30a0     	ldr	r3, [pc, #0xa0]         @ 0x755a8 <rsl_initDev2GponAuthObj+0x214>
+   75504: e08f1001     	add	r1, pc, r1  ; PIC literal "rsl_initDev2GponAuthObj" @0xaa02f
+   75508: e2811f6e     	add	r1, r1, #440
+   7550c: e3a00008     	mov	r0, #8
+   75510: e58d6000     	str	r6, [sp]
+   75514: e2811002     	add	r1, r1, #2
+   75518: e59f208c     	ldr	r2, [pc, #0x8c]         @ 0x755ac <rsl_initDev2GponAuthObj+0x218>
+   7551c: e08f3003     	add	r3, pc, r3  ; PIC literal "Set pwd %s to dm error\n" @0xb84f1
+   75520: ebfe9246     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0x5b6e8
+   75524: e59f0084     	ldr	r0, [pc, #0x84]         @ 0x755b0 <rsl_initDev2GponAuthObj+0x21c>
+   75528: ea000010     	b	0x75570 <rsl_initDev2GponAuthObj+0x1dc> @ imm = #0x40
+   7552c: e1a00008     	mov	r0, r8
+   75530: e1a01006     	mov	r1, r6
+   75534: e5942038     	ldr	r2, [r4, #0x38]
+   75538: e5943018     	ldr	r3, [r4, #0x18]
+   7553c: ebfe90f2     	bl	0x1990c <oal_gpon_setGponParameter@plt> @ imm = #-0x5bc38
+   75540: e3500000     	cmp	r0, #0
+   75544: 0a000009     	beq	0x75570 <rsl_initDev2GponAuthObj+0x1dc> @ imm = #0x24
+   75548: e59f1064     	ldr	r1, [pc, #0x64]         @ 0x755b4 <rsl_initDev2GponAuthObj+0x220>
+   7554c: e59f3064     	ldr	r3, [pc, #0x64]         @ 0x755b8 <rsl_initDev2GponAuthObj+0x224>
+   75550: e08f1001     	add	r1, pc, r1  ; PIC literal "rsl_initDev2GponAuthObj" @0xaa02f
+   75554: e2811f6e     	add	r1, r1, #440
+   75558: e3a00008     	mov	r0, #8
+   7555c: e2811002     	add	r1, r1, #2
+   75560: e59f2054     	ldr	r2, [pc, #0x54]         @ 0x755bc <rsl_initDev2GponAuthObj+0x228>
+   75564: e08f3003     	add	r3, pc, r3  ; PIC literal "Setting link parameters failed\n" @0xb8509
+   75568: ebfe9234     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0x5b730
+   7556c: e3a00001     	mov	r0, #1
+   75570: e28dd02c     	add	sp, sp, #44
+   75574: e8bd83f0     	pop	{r4, r5, r6, r7, r8, r9, pc}
+   75578: 00034aa9     	andeq	r4, r3, r9, lsr #21
+   7557c: 00036a5f     	andeq	r6, r3, pc, asr r10
+   75580: 00042d96     	<unknown>
+   75584: 000003a7     	andeq	r0, r0, r7, lsr #7
+   75588: 00034a55     	andeq	r4, r3, r5, asr r10
+   7558c: 00043086     	andeq	r3, r4, r6, lsl #1
+   75590: 000003ab     	andeq	r0, r0, r11, lsr #7
+   75594: 00034a01     	andeq	r4, r3, r1, lsl #20
+   75598: 00043054     	andeq	r3, r4, r4, asr r0
+   7559c: 000003cd     	andeq	r0, r0, sp, asr #7
+   755a0: 0000019d     	<unknown>
+   755a4: 00034969     	andeq	r4, r3, r9, ror #18
+   755a8: 00042fcd     	andeq	r2, r4, sp, asr #31
+   755ac: 000003fd     	strdeq	r0, r1, [r0], -sp
+   755b0: 0000232a     	andeq	r2, r0, r10, lsr #6
+   755b4: 0003491d     	andeq	r4, r3, sp, lsl r9
+   755b8: 00042f9d     	<unknown>
+   755bc: 00000413     	andeq	r0, r0, r3, lsl r4
+
+000755c8 <rsl_setDev2GponAuthCtcObj>:
+   755c8: e3510000     	cmp	r1, #0
+   755cc: 13500000     	cmpne	r0, #0
+   755d0: e92d41f0     	push	{r4, r5, r6, r7, r8, lr}
+   755d4: e1a04000     	mov	r4, r0
+   755d8: e24dd038     	sub	sp, sp, #56
+   755dc: 1a000009     	bne	0x75608 <rsl_setDev2GponAuthCtcObj+0x40> @ imm = #0x24
+   755e0: e59f3164     	ldr	r3, [pc, #0x164]        @ 0x7574c <rsl_setDev2GponAuthCtcObj+0x184>
+   755e4: e59f0164     	ldr	r0, [pc, #0x164]        @ 0x75750 <rsl_setDev2GponAuthCtcObj+0x188>
+   755e8: e59f1164     	ldr	r1, [pc, #0x164]        @ 0x75754 <rsl_setDev2GponAuthCtcObj+0x18c>
+   755ec: e08f3003     	add	r3, pc, r3
+   755f0: e2833e1d     	add	r3, r3, #464
+   755f4: e08f0000     	add	r0, pc, r0  ; PIC literal "(pNumStack != ((void *)0)) && (pNewObj != ((void *)0))" @0xabe33
+   755f8: e08f1001     	add	r1, pc, r1  ; PIC literal "./src/rsl_optical.c" @0xb816e
+   755fc: e59f2154     	ldr	r2, [pc, #0x154]        @ 0x75758 <rsl_setDev2GponAuthCtcObj+0x190>
+   75600: e2833002     	add	r3, r3, #2
+   75604: ebfe8e32     	bl	0x18ed4 <__assert@plt>  @ imm = #-0x5c738
+   75608: e59f714c     	ldr	r7, [pc, #0x14c]        @ 0x7575c <rsl_setDev2GponAuthCtcObj+0x194>
+   7560c: e59f314c     	ldr	r3, [pc, #0x14c]        @ 0x75760 <rsl_setDev2GponAuthCtcObj+0x198>
+   75610: e08f7007     	add	r7, pc, r7  ; PIC literal "rsl_setDev2GponAuthCtcObj" @0xaa061
+   75614: e281600f     	add	r6, r1, #15
+   75618: e2815002     	add	r5, r1, #2
+   7561c: e2877f7b     	add	r7, r7, #492
+   75620: e3a00008     	mov	r0, #8
+   75624: e1a01007     	mov	r1, r7
+   75628: e59f2134     	ldr	r2, [pc, #0x134]        @ 0x75764 <rsl_setDev2GponAuthCtcObj+0x19c>
+   7562c: e08f3003     	add	r3, pc, r3  ; PIC literal "RSL loid<%s>  pwd<%s>\n" @0xb8529
+   75630: e58d6000     	str	r6, [sp]
+   75634: e58d5004     	str	r5, [sp, #0x4]
+   75638: e28d800c     	add	r8, sp, #12
+   7563c: ebfe91ff     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0x5b804
+   75640: e1a01004     	mov	r1, r4
+   75644: e59f011c     	ldr	r0, [pc, #0x11c]        @ 0x75768 <rsl_setDev2GponAuthCtcObj+0x1a0>
+   75648: e3a0202a     	mov	r2, #42
+   7564c: e1a03008     	mov	r3, r8
+   75650: ebfe91a3     	bl	0x19ce4 <rsl_getObj@plt> @ imm = #-0x5b974
+   75654: e2504000     	subs	r4, r0, #0
+   75658: 0a000005     	beq	0x75674 <rsl_setDev2GponAuthCtcObj+0xac> @ imm = #0x14
+   7565c: e1a00007     	mov	r0, r7
+   75660: e59f1104     	ldr	r1, [pc, #0x104]        @ 0x7576c <rsl_setDev2GponAuthCtcObj+0x1a4>
+   75664: e1a02004     	mov	r2, r4
+   75668: ebfe907d     	bl	0x19864 <cdbg_perror@plt> @ imm = #-0x5be0c
+   7566c: e1a00004     	mov	r0, r4
+   75670: ea000033     	b	0x75744 <rsl_setDev2GponAuthCtcObj+0x17c> @ imm = #0xcc
+   75674: e1a00006     	mov	r0, r6
+   75678: e288100f     	add	r1, r8, #15
+   7567c: ebfe935d     	bl	0x1a3f8 <strcmp@plt>    @ imm = #-0x5b28c
+   75680: e3500000     	cmp	r0, #0
+   75684: 1a000004     	bne	0x7569c <rsl_setDev2GponAuthCtcObj+0xd4> @ imm = #0x10
+   75688: e1a00005     	mov	r0, r5
+   7568c: e2881002     	add	r1, r8, #2
+   75690: ebfe9358     	bl	0x1a3f8 <strcmp@plt>    @ imm = #-0x5b2a0
+   75694: e3500000     	cmp	r0, #0
+   75698: 0a00001d     	beq	0x75714 <rsl_setDev2GponAuthCtcObj+0x14c> @ imm = #0x74
+   7569c: e1a00006     	mov	r0, r6
+   756a0: e1a01005     	mov	r1, r5
+   756a4: ebfe921e     	bl	0x19f24 <oal_gpon_set_remote_auth_ctc@plt> @ imm = #-0x5b788
+   756a8: e3500000     	cmp	r0, #0
+   756ac: 0a000007     	beq	0x756d0 <rsl_setDev2GponAuthCtcObj+0x108> @ imm = #0x1c
+   756b0: e59f10b8     	ldr	r1, [pc, #0xb8]         @ 0x75770 <rsl_setDev2GponAuthCtcObj+0x1a8>
+   756b4: e59f30b8     	ldr	r3, [pc, #0xb8]         @ 0x75774 <rsl_setDev2GponAuthCtcObj+0x1ac>
+   756b8: e08f1001     	add	r1, pc, r1  ; PIC literal "rsl_setDev2GponAuthCtcObj" @0xaa061
+   756bc: e3a00008     	mov	r0, #8
+   756c0: e2811f7b     	add	r1, r1, #492
+   756c4: e59f20ac     	ldr	r2, [pc, #0xac]         @ 0x75778 <rsl_setDev2GponAuthCtcObj+0x1b0>
+   756c8: e08f3003     	add	r3, pc, r3  ; PIC literal "Setting CTC auth info failed \n" @0xb8540
+   756cc: ea00001a     	b	0x7573c <rsl_setDev2GponAuthCtcObj+0x174> @ imm = #0x68
+   756d0: e1a00006     	mov	r0, r6
+   756d4: e1a01005     	mov	r1, r5
+   756d8: e3a02019     	mov	r2, #25
+   756dc: e3a0300d     	mov	r3, #13
+   756e0: ebfe91e5     	bl	0x19e7c <oal_sys_writeLoidFlash@plt> @ imm = #-0x5b86c
+   756e4: e3500000     	cmp	r0, #0
+   756e8: 0a000009     	beq	0x75714 <rsl_setDev2GponAuthCtcObj+0x14c> @ imm = #0x24
+   756ec: e59f1088     	ldr	r1, [pc, #0x88]         @ 0x7577c <rsl_setDev2GponAuthCtcObj+0x1b4>
+   756f0: e59f3088     	ldr	r3, [pc, #0x88]         @ 0x75780 <rsl_setDev2GponAuthCtcObj+0x1b8>
+   756f4: e08f1001     	add	r1, pc, r1  ; PIC literal "rsl_setDev2GponAuthCtcObj" @0xaa061
+   756f8: e3a00008     	mov	r0, #8
+   756fc: e2811f7b     	add	r1, r1, #492
+   75700: e59f207c     	ldr	r2, [pc, #0x7c]         @ 0x75784 <rsl_setDev2GponAuthCtcObj+0x1bc>
+   75704: e08f3003     	add	r3, pc, r3  ; PIC literal "Write loid to flash error!\n" @0xb855f
+   75708: ebfe91cc     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0x5b8d0
+   7570c: e59f0074     	ldr	r0, [pc, #0x74]         @ 0x75788 <rsl_setDev2GponAuthCtcObj+0x1c0>
+   75710: ea00000b     	b	0x75744 <rsl_setDev2GponAuthCtcObj+0x17c> @ imm = #0x2c
+   75714: ebfe9025     	bl	0x197b0 <oal_gpon_restartOmci@plt> @ imm = #-0x5bf6c
+   75718: e3500000     	cmp	r0, #0
+   7571c: 0a000008     	beq	0x75744 <rsl_setDev2GponAuthCtcObj+0x17c> @ imm = #0x20
+   75720: e59f1064     	ldr	r1, [pc, #0x64]         @ 0x7578c <rsl_setDev2GponAuthCtcObj+0x1c4>
+   75724: e59f3064     	ldr	r3, [pc, #0x64]         @ 0x75790 <rsl_setDev2GponAuthCtcObj+0x1c8>
+   75728: e59f2064     	ldr	r2, [pc, #0x64]         @ 0x75794 <rsl_setDev2GponAuthCtcObj+0x1cc>
+   7572c: e08f1001     	add	r1, pc, r1  ; PIC literal "rsl_setDev2GponAuthCtcObj" @0xaa061
+   75730: e3a00008     	mov	r0, #8
+   75734: e2811f7b     	add	r1, r1, #492
+   75738: e08f3003     	add	r3, pc, r3  ; PIC literal "oal_gponOmciRestart failed\n" @0xb8496
+   7573c: ebfe91bf     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0x5b904
+   75740: e3a00001     	mov	r0, #1
+   75744: e28dd038     	add	sp, sp, #56
+   75748: e8bd81f0     	pop	{r4, r5, r6, r7, r8, pc}
+   7574c: 00034881     	andeq	r4, r3, r1, lsl #17
+   75750: 00036837     	andeq	r6, r3, r7, lsr r8
+   75754: 00042b6e     	andeq	r2, r4, lr, ror #22
+   75758: 00000458     	andeq	r0, r0, r8, asr r4
+   7575c: 0003485d     	andeq	r4, r3, sp, asr r8
+   75760: 00042ef5     	strdeq	r2, r3, [r4], -r5
+   75764: 0000045a     	andeq	r0, r0, r10, asr r4
+   75768: 0000019e     	<unknown>
+   7576c: 00000462     	andeq	r0, r0, r2, ror #8
+   75770: 000347b5     	strheq	r4, [r3], -r5
+   75774: 00042e70     	andeq	r2, r4, r0, ror lr
+   75778: 0000046b     	andeq	r0, r0, r11, ror #8
+   7577c: 00034779     	andeq	r4, r3, r9, ror r7
+   75780: 00042e53     	andeq	r2, r4, r3, asr lr
+   75784: 00000472     	andeq	r0, r0, r2, ror r4
+   75788: 0000232a     	andeq	r2, r0, r10, lsr #6
+   7578c: 00034741     	andeq	r4, r3, r1, asr #14
+   75790: 00042d56     	andeq	r2, r4, r6, asr sp
+   75794: 00000479     	andeq	r0, r0, r9, ror r4
+
+00076268 <rsl_getDev2GponSfuVlanObj>:
+   76268: e3a00ffa     	mov	r0, #1000
+   7626c: e12fff1e     	bx	lr
+
+00076270 <rsl_setDev2GponSfuVlanObj>:
+   76270: e3a00000     	mov	r0, #0
+   76274: e12fff1e     	bx	lr
+
+000a12f4 <oal_gpon_getRegStatus>:
+   a12f4: e92d4070     	push	{r4, r5, r6, lr}
+   a12f8: e24dd018     	sub	sp, sp, #24
+   a12fc: e28d5004     	add	r5, sp, #4
+   a1300: e3a01000     	mov	r1, #0
+   a1304: e3a02014     	mov	r2, #20
+   a1308: e1a06000     	mov	r6, r0
+   a130c: e1a00005     	mov	r0, r5
+   a1310: ebfddef5     	bl	0x18eec <memset@plt>    @ imm = #-0x8842c
+   a1314: e59f00a4     	ldr	r0, [pc, #0xa4]         @ 0xa13c0 <oal_gpon_getRegStatus+0xcc>
+   a1318: e59f10a4     	ldr	r1, [pc, #0xa4]         @ 0xa13c4 <oal_gpon_getRegStatus+0xd0>
+   a131c: e08f0000     	add	r0, pc, r0  ; PIC literal "gccli gpon state" @0xd15e3
+   a1320: e08f1001     	add	r1, pc, r1
+   a1324: ebfde1e1     	bl	0x19ab0 <popen@plt>     @ imm = #-0x8787c
+   a1328: e2504000     	subs	r4, r0, #0
+   a132c: 1a000006     	bne	0xa134c <oal_gpon_getRegStatus+0x58> @ imm = #0x18
+   a1330: e59f1090     	ldr	r1, [pc, #0x90]         @ 0xa13c8 <oal_gpon_getRegStatus+0xd4>
+   a1334: e59f3090     	ldr	r3, [pc, #0x90]         @ 0xa13cc <oal_gpon_getRegStatus+0xd8>
+   a1338: e3a00008     	mov	r0, #8
+   a133c: e08f1001     	add	r1, pc, r1  ; PIC literal "oal_gpon_getRegStatus" @0xc8b6e
+   a1340: e3a02085     	mov	r2, #133
+   a1344: e08f3003     	add	r3, pc, r3  ; PIC literal "Can not open gpon status temp file!\n" @0xd15f4
+   a1348: ea000010     	b	0xa1390 <oal_gpon_getRegStatus+0x9c> @ imm = #0x40
+   a134c: e3a01014     	mov	r1, #20
+   a1350: e1a02004     	mov	r2, r4
+   a1354: e1a00005     	mov	r0, r5
+   a1358: ebfde201     	bl	0x19b64 <fgets@plt>     @ imm = #-0x877fc
+   a135c: e3a0104f     	mov	r1, #79
+   a1360: e1a00005     	mov	r0, r5
+   a1364: ebfddf7f     	bl	0x19168 <strchr@plt>    @ imm = #-0x88204
+   a1368: e2501000     	subs	r1, r0, #0
+   a136c: 1a00000a     	bne	0xa139c <oal_gpon_getRegStatus+0xa8> @ imm = #0x28
+   a1370: e1a00004     	mov	r0, r4
+   a1374: ebfddf1e     	bl	0x18ff4 <pclose@plt>    @ imm = #-0x88388
+   a1378: e59f1050     	ldr	r1, [pc, #0x50]         @ 0xa13d0 <oal_gpon_getRegStatus+0xdc>
+   a137c: e59f3050     	ldr	r3, [pc, #0x50]         @ 0xa13d4 <oal_gpon_getRegStatus+0xe0>
+   a1380: e3a00008     	mov	r0, #8
+   a1384: e08f1001     	add	r1, pc, r1  ; PIC literal "oal_gpon_getRegStatus" @0xc8b6e
+   a1388: e3a0208d     	mov	r2, #141
+   a138c: e08f3003     	add	r3, pc, r3  ; PIC literal "Can not find 'O?' format in gpon status temp file!\n" @0xd1619
+   a1390: ebfde2aa     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0x87558
+   a1394: e3a00001     	mov	r0, #1
+   a1398: ea000006     	b	0xa13b8 <oal_gpon_getRegStatus+0xc4> @ imm = #0x18
+   a139c: e2811001     	add	r1, r1, #1
+   a13a0: e3a02001     	mov	r2, #1
+   a13a4: e1a00006     	mov	r0, r6
+   a13a8: ebfde481     	bl	0x1a5b4 <strncpy@plt>   @ imm = #-0x86dfc
+   a13ac: e1a00004     	mov	r0, r4
+   a13b0: ebfddf0f     	bl	0x18ff4 <pclose@plt>    @ imm = #-0x883c4
+   a13b4: e3a00000     	mov	r0, #0
+   a13b8: e28dd018     	add	sp, sp, #24
+   a13bc: e8bd8070     	pop	{r4, r5, r6, pc}
+   a13c0: 000302bf     	strheq	r0, [r3], -pc
+   a13c4: 00013c13     	andeq	r3, r1, r3, lsl r12
+   a13c8: 0002782a     	andeq	r7, r2, r10, lsr #16
+   a13cc: 000302a8     	andeq	r0, r3, r8, lsr #5
+   a13d0: 000277e2     	andeq	r7, r2, r2, ror #15
+   a13d4: 00030285     	andeq	r0, r3, r5, lsl #5
+
+000a13d8 <oal_gpon_getOnuId>:
+   a13d8: e92d40f0     	push	{r4, r5, r6, r7, lr}
+   a13dc: e59f6118     	ldr	r6, [pc, #0x118]        @ 0xa14fc <oal_gpon_getOnuId+0x124>
+   a13e0: e24dd0fc     	sub	sp, sp, #252
+   a13e4: e28d4008     	add	r4, sp, #8
+   a13e8: e3a01000     	mov	r1, #0
+   a13ec: e3a020f0     	mov	r2, #240
+   a13f0: e1a07000     	mov	r7, r0
+   a13f4: e1a00004     	mov	r0, r4
+   a13f8: ebfddebb     	bl	0x18eec <memset@plt>    @ imm = #-0x88514
+   a13fc: e59f10fc     	ldr	r1, [pc, #0xfc]         @ 0xa1500 <oal_gpon_getOnuId+0x128>
+   a1400: e08f6006     	add	r6, pc, r6
+   a1404: e1a00006     	mov	r0, r6
+   a1408: e08f1001     	add	r1, pc, r1
+   a140c: ebfde078     	bl	0x195f4 <fopen@plt>     @ imm = #-0x87e20
+   a1410: e2505000     	subs	r5, r0, #0
+   a1414: 1a000009     	bne	0xa1440 <oal_gpon_getOnuId+0x68> @ imm = #0x24
+   a1418: e59f10e4     	ldr	r1, [pc, #0xe4]         @ 0xa1504 <oal_gpon_getOnuId+0x12c>
+   a141c: e59f30e4     	ldr	r3, [pc, #0xe4]         @ 0xa1508 <oal_gpon_getOnuId+0x130>
+   a1420: e08f1001     	add	r1, pc, r1  ; PIC literal "oal_gpon_getOnuId" @0xc8b84
+   a1424: e3a00008     	mov	r0, #8
+   a1428: e2811016     	add	r1, r1, #22
+   a142c: e3a020b2     	mov	r2, #178
+   a1430: e08f3003     	add	r3, pc, r3  ; PIC literal "Open dbg_dumpgem temp file error!\n" @0xd1682
+   a1434: ebfde281     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0x875fc
+   a1438: e3a00001     	mov	r0, #1
+   a143c: ea00002c     	b	0xa14f4 <oal_gpon_getOnuId+0x11c> @ imm = #0xb0
+   a1440: e1a00006     	mov	r0, r6
+   a1444: ebfde061     	bl	0x195d0 <unlink@plt>    @ imm = #-0x87e7c
+   a1448: e59f60bc     	ldr	r6, [pc, #0xbc]         @ 0xa150c <oal_gpon_getOnuId+0x134>
+   a144c: e08f6006     	add	r6, pc, r6  ; PIC literal "gem 0" @0xd16a5
+   a1450: e1a00004     	mov	r0, r4
+   a1454: e3a010f0     	mov	r1, #240
+   a1458: e1a02005     	mov	r2, r5
+   a145c: ebfde1c0     	bl	0x19b64 <fgets@plt>     @ imm = #-0x87900
+   a1460: e3500000     	cmp	r0, #0
+   a1464: 0a000019     	beq	0xa14d0 <oal_gpon_getOnuId+0xf8> @ imm = #0x64
+   a1468: e1a00004     	mov	r0, r4
+   a146c: e1a01006     	mov	r1, r6
+   a1470: ebfde27e     	bl	0x19e70 <strstr@plt>    @ imm = #-0x87608
+   a1474: e3500000     	cmp	r0, #0
+   a1478: 0afffff4     	beq	0xa1450 <oal_gpon_getOnuId+0x78> @ imm = #-0x30
+   a147c: e59f108c     	ldr	r1, [pc, #0x8c]         @ 0xa1510 <oal_gpon_getOnuId+0x138>
+   a1480: e1a00004     	mov	r0, r4
+   a1484: e08f1001     	add	r1, pc, r1  ; PIC literal "portid=" @0xd16ab
+   a1488: ebfde278     	bl	0x19e70 <strstr@plt>    @ imm = #-0x87620
+   a148c: e59f1080     	ldr	r1, [pc, #0x80]         @ 0xa1514 <oal_gpon_getOnuId+0x13c>
+   a1490: e08f1001     	add	r1, pc, r1
+   a1494: e2800007     	add	r0, r0, #7
+   a1498: ebfde448     	bl	0x1a5c0 <strtok@plt>    @ imm = #-0x86ee0
+   a149c: e1a06000     	mov	r6, r0
+   a14a0: ebfde458     	bl	0x1a608 <atoi@plt>      @ imm = #-0x86ea0
+   a14a4: e59f106c     	ldr	r1, [pc, #0x6c]         @ 0xa1518 <oal_gpon_getOnuId+0x140>
+   a14a8: e59f306c     	ldr	r3, [pc, #0x6c]         @ 0xa151c <oal_gpon_getOnuId+0x144>
+   a14ac: e08f1001     	add	r1, pc, r1  ; PIC literal "oal_gpon_getOnuId" @0xc8b84
+   a14b0: e58d6000     	str	r6, [sp]
+   a14b4: e2811016     	add	r1, r1, #22
+   a14b8: e3a020be     	mov	r2, #190
+   a14bc: e08f3003     	add	r3, pc, r3  ; PIC literal "Get ONU-ID from SDK debug command: %s\n" @0xd16b3
+   a14c0: e1a04000     	mov	r4, r0
+   a14c4: e3a00009     	mov	r0, #9
+   a14c8: ebfde25c     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0x87690
+   a14cc: ea000000     	b	0xa14d4 <oal_gpon_getOnuId+0xfc> @ imm = #0x0
+   a14d0: e3a040ff     	mov	r4, #255
+   a14d4: e59f1044     	ldr	r1, [pc, #0x44]         @ 0xa1520 <oal_gpon_getOnuId+0x148>
+   a14d8: e1a02004     	mov	r2, r4
+   a14dc: e08f1001     	add	r1, pc, r1
+   a14e0: e1a00007     	mov	r0, r7
+   a14e4: ebfde49e     	bl	0x1a764 <sprintf@plt>   @ imm = #-0x86d88
+   a14e8: e1a00005     	mov	r0, r5
+   a14ec: ebfde235     	bl	0x19dc8 <fclose@plt>    @ imm = #-0x8772c
+   a14f0: e3a00000     	mov	r0, #0
+   a14f4: e28dd0fc     	add	sp, sp, #252
+   a14f8: e8bd80f0     	pop	{r4, r5, r6, r7, pc}
+   a14fc: 00030245     	andeq	r0, r3, r5, asr #4
+   a1500: 00013b2b     	andeq	r3, r1, r11, lsr #22
+   a1504: 00027746     	andeq	r7, r2, r6, asr #14
+   a1508: 0003024a     	andeq	r0, r3, r10, asr #4
+   a150c: 00030251     	andeq	r0, r3, r1, asr r2
+   a1510: 0003021f     	andeq	r0, r3, pc, lsl r2
+   a1514: 00013c37     	andeq	r3, r1, r7, lsr r12
+   a1518: 000276ba     	strheq	r7, [r2], -r10
+   a151c: 000301ef     	andeq	r0, r3, pc, ror #3
+   a1520: 0002ccee     	andeq	r12, r2, lr, ror #25
+
+000a1524 <oal_gpon_getFecStatus>:
+   a1524: e92d4ff0     	push	{r4, r5, r6, r7, r8, r9, r10, r11, lr}
+   a1528: e24dd01c     	sub	sp, sp, #28
+   a152c: e28d7004     	add	r7, sp, #4
+   a1530: e3a02014     	mov	r2, #20
+   a1534: e1a0a000     	mov	r10, r0
+   a1538: e1a09001     	mov	r9, r1
+   a153c: e1a00007     	mov	r0, r7
+   a1540: e3a01000     	mov	r1, #0
+   a1544: ebfdde68     	bl	0x18eec <memset@plt>    @ imm = #-0x88660
+   a1548: e59f00d4     	ldr	r0, [pc, #0xd4]         @ 0xa1624 <oal_gpon_getFecStatus+0x100>
+   a154c: e59f10d4     	ldr	r1, [pc, #0xd4]         @ 0xa1628 <oal_gpon_getFecStatus+0x104>
+   a1550: e3a03000     	mov	r3, #0
+   a1554: e08f0000     	add	r0, pc, r0  ; PIC literal "gccli gpon status" @0xd16da
+   a1558: e08f1001     	add	r1, pc, r1
+   a155c: e1cd30b0     	strh	r3, [sp]
+   a1560: ebfde152     	bl	0x19ab0 <popen@plt>     @ imm = #-0x87ab8
+   a1564: e2506000     	subs	r6, r0, #0
+   a1568: 1a000008     	bne	0xa1590 <oal_gpon_getFecStatus+0x6c> @ imm = #0x20
+   a156c: e59f10b8     	ldr	r1, [pc, #0xb8]         @ 0xa162c <oal_gpon_getFecStatus+0x108>
+   a1570: e59f30b8     	ldr	r3, [pc, #0xb8]         @ 0xa1630 <oal_gpon_getFecStatus+0x10c>
+   a1574: e08f1001     	add	r1, pc, r1  ; PIC literal "oal_gpon_getFecStatus" @0xc8b96
+   a1578: e3a00008     	mov	r0, #8
+   a157c: e2811028     	add	r1, r1, #40
+   a1580: e3a020df     	mov	r2, #223
+   a1584: e08f3003     	add	r3, pc, r3  ; PIC literal "Can not open gpon status temp file!\n" @0xd15f4
+   a1588: ebfde22c     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0x87750
+   a158c: ea000021     	b	0xa1618 <oal_gpon_getFecStatus+0xf4> @ imm = #0x84
+   a1590: e59fb09c     	ldr	r11, [pc, #0x9c]        @ 0xa1634 <oal_gpon_getFecStatus+0x110>
+   a1594: e3e04000     	mvn	r4, #0
+   a1598: e08fb00b     	add	r11, pc, r11  ; PIC literal "fec = " @0xd16ec
+   a159c: e1a0800d     	mov	r8, sp
+   a15a0: e1a00007     	mov	r0, r7
+   a15a4: e3a01014     	mov	r1, #20
+   a15a8: e1a02006     	mov	r2, r6
+   a15ac: ebfde16c     	bl	0x19b64 <fgets@plt>     @ imm = #-0x87a50
+   a15b0: e2505000     	subs	r5, r0, #0
+   a15b4: 0a00000c     	beq	0xa15ec <oal_gpon_getFecStatus+0xc8> @ imm = #0x30
+   a15b8: e1a0100b     	mov	r1, r11
+   a15bc: e1a00007     	mov	r0, r7
+   a15c0: ebfde22a     	bl	0x19e70 <strstr@plt>    @ imm = #-0x87758
+   a15c4: e2501000     	subs	r1, r0, #0
+   a15c8: 0afffff4     	beq	0xa15a0 <oal_gpon_getFecStatus+0x7c> @ imm = #-0x30
+   a15cc: e2811006     	add	r1, r1, #6
+   a15d0: e3a02001     	mov	r2, #1
+   a15d4: e1a00008     	mov	r0, r8
+   a15d8: ebfde3f5     	bl	0x1a5b4 <strncpy@plt>   @ imm = #-0x8702c
+   a15dc: e1a00008     	mov	r0, r8
+   a15e0: ebfde408     	bl	0x1a608 <atoi@plt>      @ imm = #-0x86fe0
+   a15e4: e1a04000     	mov	r4, r0
+   a15e8: eaffffec     	b	0xa15a0 <oal_gpon_getFecStatus+0x7c> @ imm = #-0x50
+   a15ec: e3540001     	cmp	r4, #1
+   a15f0: 8a000006     	bhi	0xa1610 <oal_gpon_getFecStatus+0xec> @ imm = #0x18
+   a15f4: e20440ff     	and	r4, r4, #255
+   a15f8: e5ca4000     	strb	r4, [r10]
+   a15fc: e1a00006     	mov	r0, r6
+   a1600: e5c94000     	strb	r4, [r9]
+   a1604: ebfdde7a     	bl	0x18ff4 <pclose@plt>    @ imm = #-0x88618
+   a1608: e1a00005     	mov	r0, r5
+   a160c: ea000002     	b	0xa161c <oal_gpon_getFecStatus+0xf8> @ imm = #0x8
+   a1610: e1a00006     	mov	r0, r6
+   a1614: ebfdde76     	bl	0x18ff4 <pclose@plt>    @ imm = #-0x88628
+   a1618: e3a00001     	mov	r0, #1
+   a161c: e28dd01c     	add	sp, sp, #28
+   a1620: e8bd8ff0     	pop	{r4, r5, r6, r7, r8, r9, r10, r11, pc}
+   a1624: 0003017e     	andeq	r0, r3, lr, ror r1
+   a1628: 000139db     	ldrdeq	r3, r4, [r1], -r11
+   a162c: 000275f2     	strdeq	r7, r8, [r2], -r2
+   a1630: 00030068     	andeq	r0, r3, r8, rrx
+   a1634: 0003014c     	andeq	r0, r3, r12, asr #2
+
+000a1638 <oal_gpon_getOpticalStats>:
+   a1638: e92d4ff0     	push	{r4, r5, r6, r7, r8, r9, r10, r11, lr}
+   a163c: e24dd04c     	sub	sp, sp, #76
+   a1640: e28d4014     	add	r4, sp, #20
+   a1644: e3a01000     	mov	r1, #0
+   a1648: e3a02032     	mov	r2, #50
+   a164c: e1a05000     	mov	r5, r0
+   a1650: e1a00004     	mov	r0, r4
+   a1654: ebfdde24     	bl	0x18eec <memset@plt>    @ imm = #-0x88770
+   a1658: e59f0244     	ldr	r0, [pc, #0x244]        @ 0xa18a4 <oal_gpon_getOpticalStats+0x26c>
+   a165c: e59f1244     	ldr	r1, [pc, #0x244]        @ 0xa18a8 <oal_gpon_getOpticalStats+0x270>
+   a1660: e08f0000     	add	r0, pc, r0  ; PIC literal "gccli bob opt" @0xd16f3
+   a1664: e08f1001     	add	r1, pc, r1
+   a1668: ebfde110     	bl	0x19ab0 <popen@plt>     @ imm = #-0x87bc0
+   a166c: e250a000     	subs	r10, r0, #0
+   a1670: 1a000009     	bne	0xa169c <oal_gpon_getOpticalStats+0x64> @ imm = #0x24
+   a1674: e59f1230     	ldr	r1, [pc, #0x230]        @ 0xa18ac <oal_gpon_getOpticalStats+0x274>
+   a1678: e59f3230     	ldr	r3, [pc, #0x230]        @ 0xa18b0 <oal_gpon_getOpticalStats+0x278>
+   a167c: e08f1001     	add	r1, pc, r1  ; PIC literal "oal_gpon_getOpticalStats" @0xc8bac
+   a1680: e3a00008     	mov	r0, #8
+   a1684: e281103e     	add	r1, r1, #62
+   a1688: e59f2224     	ldr	r2, [pc, #0x224]        @ 0xa18b4 <oal_gpon_getOpticalStats+0x27c>
+   a168c: e08f3003     	add	r3, pc, r3  ; PIC literal "Can not open gpon optical stats file!\n" @0xd1701
+   a1690: ebfde1ea     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0x87858
+   a1694: e3a00001     	mov	r0, #1
+   a1698: ea00007f     	b	0xa189c <oal_gpon_getOpticalStats+0x264> @ imm = #0x1fc
+   a169c: e59f8214     	ldr	r8, [pc, #0x214]        @ 0xa18b8 <oal_gpon_getOpticalStats+0x280>
+   a16a0: e59f9214     	ldr	r9, [pc, #0x214]        @ 0xa18bc <oal_gpon_getOpticalStats+0x284>
+   a16a4: e59f6214     	ldr	r6, [pc, #0x214]        @ 0xa18c0 <oal_gpon_getOpticalStats+0x288>
+   a16a8: e59fb214     	ldr	r11, [pc, #0x214]       @ 0xa18c4 <oal_gpon_getOpticalStats+0x28c>
+   a16ac: e08f8008     	add	r8, pc, r8  ; PIC literal "oal_gpon_getOpticalStats" @0xc8bac
+   a16b0: e08f9009     	add	r9, pc, r9  ; PIC literal "oal_gpon_getOpticalStats" @0xc8bac
+   a16b4: e08f6006     	add	r6, pc, r6
+   a16b8: e08fb00b     	add	r11, pc, r11  ; PIC literal "TxPwr" @0xd1728
+   a16bc: e288803e     	add	r8, r8, #62
+   a16c0: e289903e     	add	r9, r9, #62
+   a16c4: e1a00004     	mov	r0, r4
+   a16c8: e3a01032     	mov	r1, #50
+   a16cc: e1a0200a     	mov	r2, r10
+   a16d0: ebfde123     	bl	0x19b64 <fgets@plt>     @ imm = #-0x87b74
+   a16d4: e2507000     	subs	r7, r0, #0
+   a16d8: 0a00006c     	beq	0xa1890 <oal_gpon_getOpticalStats+0x258> @ imm = #0x1b0
+   a16dc: e1a01006     	mov	r1, r6
+   a16e0: e1a00004     	mov	r0, r4
+   a16e4: ebfde3b5     	bl	0x1a5c0 <strtok@plt>    @ imm = #-0x8712c
+   a16e8: e1a00004     	mov	r0, r4
+   a16ec: e1a0100b     	mov	r1, r11
+   a16f0: ebfde1de     	bl	0x19e70 <strstr@plt>    @ imm = #-0x87888
+   a16f4: e2503000     	subs	r3, r0, #0
+   a16f8: 0a00000d     	beq	0xa1734 <oal_gpon_getOpticalStats+0xfc> @ imm = #0x34
+   a16fc: e1a01006     	mov	r1, r6
+   a1700: e3a00000     	mov	r0, #0
+   a1704: ebfde3ad     	bl	0x1a5c0 <strtok@plt>    @ imm = #-0x8714c
+   a1708: ebfde3be     	bl	0x1a608 <atoi@plt>      @ imm = #-0x87108
+   a170c: e59f11b4     	ldr	r1, [pc, #0x1b4]        @ 0xa18c8 <oal_gpon_getOpticalStats+0x290>
+   a1710: e59f31b4     	ldr	r3, [pc, #0x1b4]        @ 0xa18cc <oal_gpon_getOpticalStats+0x294>
+   a1714: e08f1001     	add	r1, pc, r1  ; PIC literal "oal_gpon_getOpticalStats" @0xc8bac
+   a1718: e281103e     	add	r1, r1, #62
+   a171c: e3a02f46     	mov	r2, #280
+   a1720: e08f3003     	add	r3, pc, r3  ; PIC literal "TxPwr is %d \n" @0xd172e
+   a1724: e585004c     	str	r0, [r5, #0x4c]
+   a1728: e58d0000     	str	r0, [sp]
+   a172c: e3a00009     	mov	r0, #9
+   a1730: ea000054     	b	0xa1888 <oal_gpon_getOpticalStats+0x250> @ imm = #0x150
+   a1734: e59f1194     	ldr	r1, [pc, #0x194]        @ 0xa18d0 <oal_gpon_getOpticalStats+0x298>
+   a1738: e1a00004     	mov	r0, r4
+   a173c: e08f1001     	add	r1, pc, r1  ; PIC literal "RxPwr" @0xd173c
+   a1740: e58d300c     	str	r3, [sp, #0xc]
+   a1744: ebfde1c9     	bl	0x19e70 <strstr@plt>    @ imm = #-0x878dc
+   a1748: e2507000     	subs	r7, r0, #0
+   a174c: 0a00000e     	beq	0xa178c <oal_gpon_getOpticalStats+0x154> @ imm = #0x38
+   a1750: e59d300c     	ldr	r3, [sp, #0xc]
+   a1754: e1a01006     	mov	r1, r6
+   a1758: e1a00003     	mov	r0, r3
+   a175c: ebfde397     	bl	0x1a5c0 <strtok@plt>    @ imm = #-0x871a4
+   a1760: ebfde3a8     	bl	0x1a608 <atoi@plt>      @ imm = #-0x87160
+   a1764: e59f1168     	ldr	r1, [pc, #0x168]        @ 0xa18d4 <oal_gpon_getOpticalStats+0x29c>
+   a1768: e59f3168     	ldr	r3, [pc, #0x168]        @ 0xa18d8 <oal_gpon_getOpticalStats+0x2a0>
+   a176c: e08f1001     	add	r1, pc, r1  ; PIC literal "oal_gpon_getOpticalStats" @0xc8bac
+   a1770: e281103e     	add	r1, r1, #62
+   a1774: e59f2160     	ldr	r2, [pc, #0x160]        @ 0xa18dc <oal_gpon_getOpticalStats+0x2a4>
+   a1778: e08f3003     	add	r3, pc, r3  ; PIC literal "TxPwr is %d \n" @0xd172e
+   a177c: e5850050     	str	r0, [r5, #0x50]
+   a1780: e58d0000     	str	r0, [sp]
+   a1784: e3a00009     	mov	r0, #9
+   a1788: ea00003e     	b	0xa1888 <oal_gpon_getOpticalStats+0x250> @ imm = #0xf8
+   a178c: e59f114c     	ldr	r1, [pc, #0x14c]        @ 0xa18e0 <oal_gpon_getOpticalStats+0x2a8>
+   a1790: e1a00004     	mov	r0, r4
+   a1794: e08f1001     	add	r1, pc, r1  ; PIC literal "Temp" @0xd1742
+   a1798: ebfde1b4     	bl	0x19e70 <strstr@plt>    @ imm = #-0x87930
+   a179c: e2503000     	subs	r3, r0, #0
+   a17a0: 0a00000d     	beq	0xa17dc <oal_gpon_getOpticalStats+0x1a4> @ imm = #0x34
+   a17a4: e1a01006     	mov	r1, r6
+   a17a8: e1a00007     	mov	r0, r7
+   a17ac: ebfde383     	bl	0x1a5c0 <strtok@plt>    @ imm = #-0x871f4
+   a17b0: ebfde394     	bl	0x1a608 <atoi@plt>      @ imm = #-0x871b0
+   a17b4: e59f1128     	ldr	r1, [pc, #0x128]        @ 0xa18e4 <oal_gpon_getOpticalStats+0x2ac>
+   a17b8: e59f3128     	ldr	r3, [pc, #0x128]        @ 0xa18e8 <oal_gpon_getOpticalStats+0x2b0>
+   a17bc: e08f1001     	add	r1, pc, r1  ; PIC literal "oal_gpon_getOpticalStats" @0xc8bac
+   a17c0: e281103e     	add	r1, r1, #62
+   a17c4: e59f2120     	ldr	r2, [pc, #0x120]        @ 0xa18ec <oal_gpon_getOpticalStats+0x2b4>
+   a17c8: e08f3003     	add	r3, pc, r3  ; PIC literal "transceiverTemperature is %d \n" @0xd1747
+   a17cc: e5850040     	str	r0, [r5, #0x40]
+   a17d0: e58d0000     	str	r0, [sp]
+   a17d4: e3a00009     	mov	r0, #9
+   a17d8: ea00002a     	b	0xa1888 <oal_gpon_getOpticalStats+0x250> @ imm = #0xa8
+   a17dc: e59f110c     	ldr	r1, [pc, #0x10c]        @ 0xa18f0 <oal_gpon_getOpticalStats+0x2b8>
+   a17e0: e1a00004     	mov	r0, r4
+   a17e4: e08f1001     	add	r1, pc, r1  ; PIC literal "Vcc" @0xd1766
+   a17e8: e58d300c     	str	r3, [sp, #0xc]
+   a17ec: ebfde19f     	bl	0x19e70 <strstr@plt>    @ imm = #-0x87984
+   a17f0: e2507000     	subs	r7, r0, #0
+   a17f4: 0a000012     	beq	0xa1844 <oal_gpon_getOpticalStats+0x20c> @ imm = #0x48
+   a17f8: e59d300c     	ldr	r3, [sp, #0xc]
+   a17fc: e1a01006     	mov	r1, r6
+   a1800: e1a00003     	mov	r0, r3
+   a1804: ebfde36d     	bl	0x1a5c0 <strtok@plt>    @ imm = #-0x8724c
+   a1808: ebfde37e     	bl	0x1a608 <atoi@plt>      @ imm = #-0x87208
+   a180c: e2503000     	subs	r3, r0, #0
+   a1810: 05853044     	streq	r3, [r5, #0x44]
+   a1814: 0a000002     	beq	0xa1824 <oal_gpon_getOpticalStats+0x1ec> @ imm = #0x8
+   a1818: e3a0100a     	mov	r1, #10
+   a181c: eb0003ef     	bl	0xa27e0 <oal_pon_initVlanTag+0x100> @ imm = #0xfbc
+   a1820: e5850044     	str	r0, [r5, #0x44]
+   a1824: e5953044     	ldr	r3, [r5, #0x44]
+   a1828: e3a00009     	mov	r0, #9
+   a182c: e58d3000     	str	r3, [sp]
+   a1830: e59f30bc     	ldr	r3, [pc, #0xbc]         @ 0xa18f4 <oal_gpon_getOpticalStats+0x2bc>
+   a1834: e1a01009     	mov	r1, r9
+   a1838: e59f20b8     	ldr	r2, [pc, #0xb8]         @ 0xa18f8 <oal_gpon_getOpticalStats+0x2c0>
+   a183c: e08f3003     	add	r3, pc, r3  ; PIC literal "supplyVottage is %d \n" @0xd176a
+   a1840: ea000010     	b	0xa1888 <oal_gpon_getOpticalStats+0x250> @ imm = #0x40
+   a1844: e59f10b0     	ldr	r1, [pc, #0xb0]         @ 0xa18fc <oal_gpon_getOpticalStats+0x2c4>
+   a1848: e1a00004     	mov	r0, r4
+   a184c: e08f1001     	add	r1, pc, r1  ; PIC literal "Bias" @0xd1780
+   a1850: ebfde186     	bl	0x19e70 <strstr@plt>    @ imm = #-0x879e8
+   a1854: e3500000     	cmp	r0, #0
+   a1858: 0affff99     	beq	0xa16c4 <oal_gpon_getOpticalStats+0x8c> @ imm = #-0x19c
+   a185c: e1a01006     	mov	r1, r6
+   a1860: e1a00007     	mov	r0, r7
+   a1864: ebfde355     	bl	0x1a5c0 <strtok@plt>    @ imm = #-0x872ac
+   a1868: ebfde366     	bl	0x1a608 <atoi@plt>      @ imm = #-0x87268
+   a186c: e59f308c     	ldr	r3, [pc, #0x8c]         @ 0xa1900 <oal_gpon_getOpticalStats+0x2c8>
+   a1870: e59f208c     	ldr	r2, [pc, #0x8c]         @ 0xa1904 <oal_gpon_getOpticalStats+0x2cc>
+   a1874: e1a01008     	mov	r1, r8
+   a1878: e08f3003     	add	r3, pc, r3  ; PIC literal "biasCurrent is %d \n" @0xd1785
+   a187c: e5850048     	str	r0, [r5, #0x48]
+   a1880: e58d0000     	str	r0, [sp]
+   a1884: e3a00009     	mov	r0, #9
+   a1888: ebfde16c     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0x87a50
+   a188c: eaffff8c     	b	0xa16c4 <oal_gpon_getOpticalStats+0x8c> @ imm = #-0x1d0
+   a1890: e1a0000a     	mov	r0, r10
+   a1894: ebfdddd6     	bl	0x18ff4 <pclose@plt>    @ imm = #-0x888a8
+   a1898: e1a00007     	mov	r0, r7
+   a189c: e28dd04c     	add	sp, sp, #76
+   a18a0: e8bd8ff0     	pop	{r4, r5, r6, r7, r8, r9, r10, r11, pc}
+   a18a4: 0003008b     	andeq	r0, r3, r11, lsl #1
+   a18a8: 000138cf     	andeq	r3, r1, pc, asr #17
+   a18ac: 000274ea     	andeq	r7, r2, r10, ror #9
+   a18b0: 0003006d     	andeq	r0, r3, sp, rrx
+   a18b4: 0000010e     	andeq	r0, r0, lr, lsl #2
+   a18b8: 000274ba     	strheq	r7, [r2], -r10
+   a18bc: 000274b6     	strheq	r7, [r2], -r6
+   a18c0: 00013a13     	andeq	r3, r1, r3, lsl r10
+   a18c4: 00030068     	andeq	r0, r3, r8, rrx
+   a18c8: 00027452     	andeq	r7, r2, r2, asr r4
+   a18cc: 00030006     	andeq	r0, r3, r6
+   a18d0: 0002fff8     	<unknown>
+   a18d4: 000273fa     	strdeq	r7, r8, [r2], -r10
+   a18d8: 0002ffae     	andeq	pc, r2, lr, lsr #31
+   a18dc: 0000011e     	andeq	r0, r0, lr, lsl r1
+   a18e0: 0002ffa6     	andeq	pc, r2, r6, lsr #31
+   a18e4: 000273aa     	andeq	r7, r2, r10, lsr #7
+   a18e8: 0002ff77     	andeq	pc, r2, r7, ror pc
+   a18ec: 00000125     	andeq	r0, r0, r5, lsr #2
+   a18f0: 0002ff7a     	andeq	pc, r2, r10, ror pc
+   a18f4: 0002ff26     	andeq	pc, r2, r6, lsr #30
+   a18f8: 00000133     	andeq	r0, r0, r3, lsr r1
+   a18fc: 0002ff2c     	andeq	pc, r2, r12, lsr #30
+   a1900: 0002ff05     	andeq	pc, r2, r5, lsl #30
+   a1904: 00000139     	andeq	r0, r0, r9, lsr r1
+
+000a1a50 <oal_gpon_restartOmci>:
+   a1a50: e59f0020     	ldr	r0, [pc, #0x20]         @ 0xa1a78 <oal_gpon_restartOmci+0x28>
+   a1a54: e59f1020     	ldr	r1, [pc, #0x20]         @ 0xa1a7c <oal_gpon_restartOmci+0x2c>
+   a1a58: e08f0000     	add	r0, pc, r0  ; PIC literal "oal_gpon_restartOmci" @0xc8bec
+   a1a5c: e92d4008     	push	{r3, lr}
+   a1a60: e59f2018     	ldr	r2, [pc, #0x18]         @ 0xa1a80 <oal_gpon_restartOmci+0x30>
+   a1a64: e08f1001     	add	r1, pc, r1  ; PIC literal "gcsUtil -e %d string \"\"" @0xd17d7
+   a1a68: e280007e     	add	r0, r0, #126
+   a1a6c: ebfddfa0     	bl	0x198f4 <util_execSystem@plt> @ imm = #-0x88180
+   a1a70: e3a00000     	mov	r0, #0
+   a1a74: e8bd8008     	pop	{r3, pc}
+   a1a78: 0002710e     	andeq	r7, r2, lr, lsl #2
+   a1a7c: 0002fd6b     	andeq	pc, r2, r11, ror #26
+   a1a80: 000002c3     	andeq	r0, r0, r3, asr #5
+
+000a1fa0 <oal_gpon_getWanGponIntfCfg>:
+   a1fa0: e92d40f0     	push	{r4, r5, r6, r7, lr}
+   a1fa4: e24dd024     	sub	sp, sp, #36
+   a1fa8: e3a04000     	mov	r4, #0
+   a1fac: e28d600c     	add	r6, sp, #12
+   a1fb0: e1a07000     	mov	r7, r0
+   a1fb4: e1a05001     	mov	r5, r1
+   a1fb8: e1a00006     	mov	r0, r6
+   a1fbc: e1a01004     	mov	r1, r4
+   a1fc0: e3a02012     	mov	r2, #18
+   a1fc4: e58d4004     	str	r4, [sp, #0x4]
+   a1fc8: e58d4008     	str	r4, [sp, #0x8]
+   a1fcc: ebfddbc6     	bl	0x18eec <memset@plt>    @ imm = #-0x890e8
+   a1fd0: e1550004     	cmp	r5, r4
+   a1fd4: 11570004     	cmpne	r7, r4
+   a1fd8: e5cd4002     	strb	r4, [sp, #0x2]
+   a1fdc: e5cd4003     	strb	r4, [sp, #0x3]
+   a1fe0: 1a000007     	bne	0xa2004 <oal_gpon_getWanGponIntfCfg+0x64> @ imm = #0x1c
+   a1fe4: e59f00f0     	ldr	r0, [pc, #0xf0]         @ 0xa20dc <oal_gpon_getWanGponIntfCfg+0x13c>
+   a1fe8: e59f10f0     	ldr	r1, [pc, #0xf0]         @ 0xa20e0 <oal_gpon_getWanGponIntfCfg+0x140>
+   a1fec: e59f30f0     	ldr	r3, [pc, #0xf0]         @ 0xa20e4 <oal_gpon_getWanGponIntfCfg+0x144>
+   a1ff0: e08f0000     	add	r0, pc, r0  ; PIC literal "(pNumStack != ((void *)0)) && (pNewObj != ((void *)0))" @0xabe33
+   a1ff4: e08f1001     	add	r1, pc, r1  ; PIC literal "./src/oal_gpon_gc.c" @0xd18be
+   a1ff8: e3a0205d     	mov	r2, #93
+   a1ffc: e08f3003     	add	r3, pc, r3  ; PIC literal "oal_gpon_getWanGponIntfCfg" @0xc8c61
+   a2000: ebfddbb3     	bl	0x18ed4 <__assert@plt>  @ imm = #-0x89134
+   a2004: e28d7004     	add	r7, sp, #4
+   a2008: e1a00007     	mov	r0, r7
+   a200c: ebfde249     	bl	0x1a938 <oal_gpon_getRegStatus@plt> @ imm = #-0x876dc
+   a2010: e2504000     	subs	r4, r0, #0
+   a2014: 0a000007     	beq	0xa2038 <oal_gpon_getWanGponIntfCfg+0x98> @ imm = #0x1c
+   a2018: e59f10c8     	ldr	r1, [pc, #0xc8]         @ 0xa20e8 <oal_gpon_getWanGponIntfCfg+0x148>
+   a201c: e59f30c8     	ldr	r3, [pc, #0xc8]         @ 0xa20ec <oal_gpon_getWanGponIntfCfg+0x14c>
+   a2020: e08f1001     	add	r1, pc, r1  ; PIC literal "oal_gpon_getWanGponIntfCfg" @0xc8c7c
+   a2024: e3a00008     	mov	r0, #8
+   a2028: e281101b     	add	r1, r1, #27
+   a202c: e3a02067     	mov	r2, #103
+   a2030: e08f3003     	add	r3, pc, r3  ; PIC literal "Get register status fail!\n" @0xd18d2
+   a2034: ea00001f     	b	0xa20b8 <oal_gpon_getWanGponIntfCfg+0x118> @ imm = #0x7c
+   a2038: e1a01007     	mov	r1, r7
+   a203c: e3a0200f     	mov	r2, #15
+   a2040: e2850010     	add	r0, r5, #16
+   a2044: ebfddc20     	bl	0x190cc <cstr_strncpy@plt> @ imm = #-0x88f80
+   a2048: e1a00006     	mov	r0, r6
+   a204c: ebfde281     	bl	0x1aa58 <oal_gpon_getOnuId@plt> @ imm = #-0x875fc
+   a2050: e2504000     	subs	r4, r0, #0
+   a2054: 0a000007     	beq	0xa2078 <oal_gpon_getWanGponIntfCfg+0xd8> @ imm = #0x1c
+   a2058: e59f1090     	ldr	r1, [pc, #0x90]         @ 0xa20f0 <oal_gpon_getWanGponIntfCfg+0x150>
+   a205c: e59f3090     	ldr	r3, [pc, #0x90]         @ 0xa20f4 <oal_gpon_getWanGponIntfCfg+0x154>
+   a2060: e08f1001     	add	r1, pc, r1  ; PIC literal "oal_gpon_getWanGponIntfCfg" @0xc8c7c
+   a2064: e3a00008     	mov	r0, #8
+   a2068: e281101b     	add	r1, r1, #27
+   a206c: e3a0206f     	mov	r2, #111
+   a2070: e08f3003     	add	r3, pc, r3  ; PIC literal "Get ONU ID fail!\n" @0xd18ed
+   a2074: ea00000f     	b	0xa20b8 <oal_gpon_getWanGponIntfCfg+0x118> @ imm = #0x3c
+   a2078: e1a01006     	mov	r1, r6
+   a207c: e3a02012     	mov	r2, #18
+   a2080: e285002a     	add	r0, r5, #42
+   a2084: ebfddc10     	bl	0x190cc <cstr_strncpy@plt> @ imm = #-0x88fc0
+   a2088: e28d0002     	add	r0, sp, #2
+   a208c: e28d1003     	add	r1, sp, #3
+   a2090: ebfddcf4     	bl	0x19468 <oal_gpon_getFecStatus@plt> @ imm = #-0x88c30
+   a2094: e2504000     	subs	r4, r0, #0
+   a2098: 0a000008     	beq	0xa20c0 <oal_gpon_getWanGponIntfCfg+0x120> @ imm = #0x20
+   a209c: e59f1054     	ldr	r1, [pc, #0x54]         @ 0xa20f8 <oal_gpon_getWanGponIntfCfg+0x158>
+   a20a0: e59f3054     	ldr	r3, [pc, #0x54]         @ 0xa20fc <oal_gpon_getWanGponIntfCfg+0x15c>
+   a20a4: e08f1001     	add	r1, pc, r1  ; PIC literal "oal_gpon_getWanGponIntfCfg" @0xc8c7c
+   a20a8: e3a00008     	mov	r0, #8
+   a20ac: e281101b     	add	r1, r1, #27
+   a20b0: e3a02079     	mov	r2, #121
+   a20b4: e08f3003     	add	r3, pc, r3  ; PIC literal "Get FEC status fail!\n" @0xd18ff
+   a20b8: ebfddf60     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0x88280
+   a20bc: ea000003     	b	0xa20d0 <oal_gpon_getWanGponIntfCfg+0x130> @ imm = #0xc
+   a20c0: e5dd3002     	ldrb	r3, [sp, #0x2]
+   a20c4: e5c53018     	strb	r3, [r5, #0x18]
+   a20c8: e5dd3003     	ldrb	r3, [sp, #0x3]
+   a20cc: e5c53019     	strb	r3, [r5, #0x19]
+   a20d0: e1a00004     	mov	r0, r4
+   a20d4: e28dd024     	add	sp, sp, #36
+   a20d8: e8bd80f0     	pop	{r4, r5, r6, r7, pc}
+   a20dc: 00009e3b     	andeq	r9, r0, r11, lsr lr
+   a20e0: 0002f8c2     	andeq	pc, r2, r2, asr #17
+   a20e4: 00026c5d     	andeq	r6, r2, sp, asr r12
+   a20e8: 00026c39     	andeq	r6, r2, r9, lsr r12
+   a20ec: 0002f89a     	<unknown>
+   a20f0: 00026bf9     	strdeq	r6, r7, [r2], -r9
+   a20f4: 0002f875     	andeq	pc, r2, r5, ror r8
+   a20f8: 00026bb5     	strheq	r6, [r2], -r5
+   a20fc: 0002f843     	andeq	pc, r2, r3, asr #16
+
+000a2100 <oal_gpon_setWanGponIntfCfg>:
+   a2100: e3a00000     	mov	r0, #0
+   a2104: e12fff1e     	bx	lr
+
+000a2108 <oal_gpon_getWanGponIntfStats>:
+   a2108: e92d4ff0     	push	{r4, r5, r6, r7, r8, r9, r10, r11, lr}
+   a210c: e24dd04c     	sub	sp, sp, #76
+   a2110: e28d4014     	add	r4, sp, #20
+   a2114: e3a01000     	mov	r1, #0
+   a2118: e3a02032     	mov	r2, #50
+   a211c: e1a07000     	mov	r7, r0
+   a2120: e28d5004     	add	r5, sp, #4
+   a2124: e1a00004     	mov	r0, r4
+   a2128: ebfddb6f     	bl	0x18eec <memset@plt>    @ imm = #-0x89244
+   a212c: e3a01000     	mov	r1, #0
+   a2130: e3a0200f     	mov	r2, #15
+   a2134: e1a00005     	mov	r0, r5
+   a2138: ebfddb6b     	bl	0x18eec <memset@plt>    @ imm = #-0x89254
+   a213c: e59f01c8     	ldr	r0, [pc, #0x1c8]        @ 0xa230c <oal_gpon_getWanGponIntfStats+0x204>
+   a2140: e59f11c8     	ldr	r1, [pc, #0x1c8]        @ 0xa2310 <oal_gpon_getWanGponIntfStats+0x208>
+   a2144: e08f0000     	add	r0, pc, r0  ; PIC literal "gccli gpon stats" @0xd1915
+   a2148: e08f1001     	add	r1, pc, r1
+   a214c: ebfdde57     	bl	0x19ab0 <popen@plt>     @ imm = #-0x886a4
+   a2150: e2508000     	subs	r8, r0, #0
+   a2154: 1a000009     	bne	0xa2180 <oal_gpon_getWanGponIntfStats+0x78> @ imm = #0x24
+   a2158: e59f11b4     	ldr	r1, [pc, #0x1b4]        @ 0xa2314 <oal_gpon_getWanGponIntfStats+0x20c>
+   a215c: e59f31b4     	ldr	r3, [pc, #0x1b4]        @ 0xa2318 <oal_gpon_getWanGponIntfStats+0x210>
+   a2160: e08f1001     	add	r1, pc, r1  ; PIC literal "oal_gpon_getWanGponIntfStats" @0xc8c97
+   a2164: e3a00008     	mov	r0, #8
+   a2168: e2811036     	add	r1, r1, #54
+   a216c: e3a020a1     	mov	r2, #161
+   a2170: e08f3003     	add	r3, pc, r3  ; PIC literal "Can't find gpon_stats temp file\n" @0xd1926
+   a2174: ebfddf31     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0x8833c
+   a2178: e3a00001     	mov	r0, #1
+   a217c: ea000060     	b	0xa2304 <oal_gpon_getWanGponIntfStats+0x1fc> @ imm = #0x180
+   a2180: e59f9194     	ldr	r9, [pc, #0x194]        @ 0xa231c <oal_gpon_getWanGponIntfStats+0x214>
+   a2184: e59fa194     	ldr	r10, [pc, #0x194]       @ 0xa2320 <oal_gpon_getWanGponIntfStats+0x218>
+   a2188: e08f9009     	add	r9, pc, r9  ; PIC literal "usOcts " @0xd1947
+   a218c: e08fa00a     	add	r10, pc, r10
+   a2190: e59fb18c     	ldr	r11, [pc, #0x18c]       @ 0xa2324 <oal_gpon_getWanGponIntfStats+0x21c>
+   a2194: e08fb00b     	add	r11, pc, r11  ; PIC literal "dsOcts " @0xd194f
+   a2198: e1a00004     	mov	r0, r4
+   a219c: e3a01032     	mov	r1, #50
+   a21a0: e1a02008     	mov	r2, r8
+   a21a4: ebfdde6e     	bl	0x19b64 <fgets@plt>     @ imm = #-0x88648
+   a21a8: e2506000     	subs	r6, r0, #0
+   a21ac: 0a000051     	beq	0xa22f8 <oal_gpon_getWanGponIntfStats+0x1f0> @ imm = #0x144
+   a21b0: e3a01000     	mov	r1, #0
+   a21b4: e3a0200f     	mov	r2, #15
+   a21b8: e1a00005     	mov	r0, r5
+   a21bc: ebfddb4a     	bl	0x18eec <memset@plt>    @ imm = #-0x892d8
+   a21c0: e1a00004     	mov	r0, r4
+   a21c4: e1a01009     	mov	r1, r9
+   a21c8: ebfddf28     	bl	0x19e70 <strstr@plt>    @ imm = #-0x88360
+   a21cc: e3500000     	cmp	r0, #0
+   a21d0: 0a00000c     	beq	0xa2208 <oal_gpon_getWanGponIntfStats+0x100> @ imm = #0x30
+   a21d4: e1a0100a     	mov	r1, r10
+   a21d8: e1a00004     	mov	r0, r4
+   a21dc: ebfddf23     	bl	0x19e70 <strstr@plt>    @ imm = #-0x88374
+   a21e0: e2806002     	add	r6, r0, #2
+   a21e4: e1a00006     	mov	r0, r6
+   a21e8: ebfddcda     	bl	0x19558 <strlen@plt>    @ imm = #-0x88c98
+   a21ec: e1a01006     	mov	r1, r6
+   a21f0: e2402001     	sub	r2, r0, #1
+   a21f4: e1a00005     	mov	r0, r5
+   a21f8: ebfde0ed     	bl	0x1a5b4 <strncpy@plt>   @ imm = #-0x87c4c
+   a21fc: e1a00005     	mov	r0, r5
+   a2200: ebfde100     	bl	0x1a608 <atoi@plt>      @ imm = #-0x87c00
+   a2204: e5870004     	str	r0, [r7, #0x4]
+   a2208: e1a00004     	mov	r0, r4
+   a220c: e1a0100b     	mov	r1, r11
+   a2210: ebfddf16     	bl	0x19e70 <strstr@plt>    @ imm = #-0x883a8
+   a2214: e3500000     	cmp	r0, #0
+   a2218: 0a00000d     	beq	0xa2254 <oal_gpon_getWanGponIntfStats+0x14c> @ imm = #0x34
+   a221c: e59f1104     	ldr	r1, [pc, #0x104]        @ 0xa2328 <oal_gpon_getWanGponIntfStats+0x220>
+   a2220: e1a00004     	mov	r0, r4
+   a2224: e08f1001     	add	r1, pc, r1
+   a2228: ebfddf10     	bl	0x19e70 <strstr@plt>    @ imm = #-0x883c0
+   a222c: e2806002     	add	r6, r0, #2
+   a2230: e1a00006     	mov	r0, r6
+   a2234: ebfddcc7     	bl	0x19558 <strlen@plt>    @ imm = #-0x88ce4
+   a2238: e1a01006     	mov	r1, r6
+   a223c: e2402001     	sub	r2, r0, #1
+   a2240: e1a00005     	mov	r0, r5
+   a2244: ebfde0da     	bl	0x1a5b4 <strncpy@plt>   @ imm = #-0x87c98
+   a2248: e1a00005     	mov	r0, r5
+   a224c: ebfde0ed     	bl	0x1a608 <atoi@plt>      @ imm = #-0x87c4c
+   a2250: e5870008     	str	r0, [r7, #0x8]
+   a2254: e59f10d0     	ldr	r1, [pc, #0xd0]         @ 0xa232c <oal_gpon_getWanGponIntfStats+0x224>
+   a2258: e1a00004     	mov	r0, r4
+   a225c: e08f1001     	add	r1, pc, r1  ; PIC literal "usPkts " @0xd1957
+   a2260: ebfddf02     	bl	0x19e70 <strstr@plt>    @ imm = #-0x883f8
+   a2264: e3500000     	cmp	r0, #0
+   a2268: 0a00000d     	beq	0xa22a4 <oal_gpon_getWanGponIntfStats+0x19c> @ imm = #0x34
+   a226c: e59f10bc     	ldr	r1, [pc, #0xbc]         @ 0xa2330 <oal_gpon_getWanGponIntfStats+0x228>
+   a2270: e1a00004     	mov	r0, r4
+   a2274: e08f1001     	add	r1, pc, r1
+   a2278: ebfddefc     	bl	0x19e70 <strstr@plt>    @ imm = #-0x88410
+   a227c: e2806002     	add	r6, r0, #2
+   a2280: e1a00006     	mov	r0, r6
+   a2284: ebfddcb3     	bl	0x19558 <strlen@plt>    @ imm = #-0x88d34
+   a2288: e1a01006     	mov	r1, r6
+   a228c: e2402001     	sub	r2, r0, #1
+   a2290: e1a00005     	mov	r0, r5
+   a2294: ebfde0c6     	bl	0x1a5b4 <strncpy@plt>   @ imm = #-0x87ce8
+   a2298: e1a00005     	mov	r0, r5
+   a229c: ebfde0d9     	bl	0x1a608 <atoi@plt>      @ imm = #-0x87c9c
+   a22a0: e587000c     	str	r0, [r7, #0xc]
+   a22a4: e59f1088     	ldr	r1, [pc, #0x88]         @ 0xa2334 <oal_gpon_getWanGponIntfStats+0x22c>
+   a22a8: e1a00004     	mov	r0, r4
+   a22ac: e08f1001     	add	r1, pc, r1  ; PIC literal "dsPkts " @0xd195f
+   a22b0: ebfddeee     	bl	0x19e70 <strstr@plt>    @ imm = #-0x88448
+   a22b4: e3500000     	cmp	r0, #0
+   a22b8: 0affffb6     	beq	0xa2198 <oal_gpon_getWanGponIntfStats+0x90> @ imm = #-0x128
+   a22bc: e59f1074     	ldr	r1, [pc, #0x74]         @ 0xa2338 <oal_gpon_getWanGponIntfStats+0x230>
+   a22c0: e1a00004     	mov	r0, r4
+   a22c4: e08f1001     	add	r1, pc, r1
+   a22c8: ebfddee8     	bl	0x19e70 <strstr@plt>    @ imm = #-0x88460
+   a22cc: e2806002     	add	r6, r0, #2
+   a22d0: e1a00006     	mov	r0, r6
+   a22d4: ebfddc9f     	bl	0x19558 <strlen@plt>    @ imm = #-0x88d84
+   a22d8: e1a01006     	mov	r1, r6
+   a22dc: e2402001     	sub	r2, r0, #1
+   a22e0: e1a00005     	mov	r0, r5
+   a22e4: ebfde0b2     	bl	0x1a5b4 <strncpy@plt>   @ imm = #-0x87d38
+   a22e8: e1a00005     	mov	r0, r5
+   a22ec: ebfde0c5     	bl	0x1a608 <atoi@plt>      @ imm = #-0x87cec
+   a22f0: e5870010     	str	r0, [r7, #0x10]
+   a22f4: eaffffa5     	b	0xa2190 <oal_gpon_getWanGponIntfStats+0x88> @ imm = #-0x16c
+   a22f8: e1a00008     	mov	r0, r8
+   a22fc: ebfddb3c     	bl	0x18ff4 <pclose@plt>    @ imm = #-0x89310
+   a2300: e1a00006     	mov	r0, r6
+   a2304: e28dd04c     	add	sp, sp, #76
+   a2308: e8bd8ff0     	pop	{r4, r5, r6, r7, r8, r9, r10, r11, pc}
+   a230c: 0002f7c9     	andeq	pc, r2, r9, asr #15
+   a2310: 00012deb     	andeq	r2, r1, r11, ror #27
+   a2314: 00026af9     	strdeq	r6, r7, [r2], -r9
+   a2318: 0002f7ae     	andeq	pc, r2, lr, lsr #15
+   a231c: 0002f7b7     	strheq	pc, [r2], -r7
+   a2320: 0002f55c     	andeq	pc, r2, r12, asr r5
+   a2324: 0002f7b3     	strheq	pc, [r2], -r3
+   a2328: 0002f4c4     	andeq	pc, r2, r4, asr #9
+   a232c: 0002f6f3     	<unknown>
+   a2330: 0002f474     	andeq	pc, r2, r4, ror r4
+   a2334: 0002f6ab     	andeq	pc, r2, r11, lsr #13
+   a2338: 0002f424     	andeq	pc, r2, r4, lsr #8
+
+000a233c <oal_gpon_getWanGponIntfOmciStats>:
+   a233c: e92d4ff0     	push	{r4, r5, r6, r7, r8, r9, r10, r11, lr}
+   a2340: e24dd05c     	sub	sp, sp, #92
+   a2344: e28d6024     	add	r6, sp, #36
+   a2348: e3a01000     	mov	r1, #0
+   a234c: e3a02032     	mov	r2, #50
+   a2350: e1a07000     	mov	r7, r0
+   a2354: e28d5014     	add	r5, sp, #20
+   a2358: e1a00006     	mov	r0, r6
+   a235c: ebfddae2     	bl	0x18eec <memset@plt>    @ imm = #-0x89478
+   a2360: e28d800c     	add	r8, sp, #12
+   a2364: e3a01000     	mov	r1, #0
+   a2368: e3a0200f     	mov	r2, #15
+   a236c: e1a00005     	mov	r0, r5
+   a2370: ebfddadd     	bl	0x18eec <memset@plt>    @ imm = #-0x8948c
+   a2374: e3a03000     	mov	r3, #0
+   a2378: e1a00008     	mov	r0, r8
+   a237c: e58d300c     	str	r3, [sp, #0xc]
+   a2380: e58d3010     	str	r3, [sp, #0x10]
+   a2384: ebfde087     	bl	0x1a5a8 <oal_xpon_getPonMode@plt> @ imm = #-0x87de4
+   a2388: e2504000     	subs	r4, r0, #0
+   a238c: 0a000007     	beq	0xa23b0 <oal_gpon_getWanGponIntfOmciStats+0x74> @ imm = #0x1c
+   a2390: e59f121c     	ldr	r1, [pc, #0x21c]        @ 0xa25b4 <oal_gpon_getWanGponIntfOmciStats+0x278>
+   a2394: e59f321c     	ldr	r3, [pc, #0x21c]        @ 0xa25b8 <oal_gpon_getWanGponIntfOmciStats+0x27c>
+   a2398: e08f1001     	add	r1, pc, r1  ; PIC literal "oal_gpon_getWanGponIntfOmciStats" @0xc8cb4
+   a239c: e3a00008     	mov	r0, #8
+   a23a0: e2811053     	add	r1, r1, #83
+   a23a4: e3a020d8     	mov	r2, #216
+   a23a8: e08f3003     	add	r3, pc, r3  ; PIC literal "cannot get current working mode\n" @0xd1967
+   a23ac: ea00000c     	b	0xa23e4 <oal_gpon_getWanGponIntfOmciStats+0xa8> @ imm = #0x30
+   a23b0: e59f1204     	ldr	r1, [pc, #0x204]        @ 0xa25bc <oal_gpon_getWanGponIntfOmciStats+0x280>
+   a23b4: e1a00008     	mov	r0, r8
+   a23b8: e08f1001     	add	r1, pc, r1  ; PIC literal "EPON" @0xd1831
+   a23bc: ebfde00d     	bl	0x1a3f8 <strcmp@plt>    @ imm = #-0x87fcc
+   a23c0: e2504000     	subs	r4, r0, #0
+   a23c4: 1a000008     	bne	0xa23ec <oal_gpon_getWanGponIntfOmciStats+0xb0> @ imm = #0x20
+   a23c8: e59f11f0     	ldr	r1, [pc, #0x1f0]        @ 0xa25c0 <oal_gpon_getWanGponIntfOmciStats+0x284>
+   a23cc: e59f31f0     	ldr	r3, [pc, #0x1f0]        @ 0xa25c4 <oal_gpon_getWanGponIntfOmciStats+0x288>
+   a23d0: e08f1001     	add	r1, pc, r1  ; PIC literal "oal_gpon_getWanGponIntfOmciStats" @0xc8cb4
+   a23d4: e3a00008     	mov	r0, #8
+   a23d8: e2811053     	add	r1, r1, #83
+   a23dc: e3a020de     	mov	r2, #222
+   a23e0: e08f3003     	add	r3, pc, r3  ; PIC literal "working mode is EPON,dont need to get omci stats\n" @0xd1988
+   a23e4: ebfdde95     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0x885ac
+   a23e8: ea00006e     	b	0xa25a8 <oal_gpon_getWanGponIntfOmciStats+0x26c> @ imm = #0x1b8
+   a23ec: e59f01d4     	ldr	r0, [pc, #0x1d4]        @ 0xa25c8 <oal_gpon_getWanGponIntfOmciStats+0x28c>
+   a23f0: e59f11d4     	ldr	r1, [pc, #0x1d4]        @ 0xa25cc <oal_gpon_getWanGponIntfOmciStats+0x290>
+   a23f4: e08f0000     	add	r0, pc, r0  ; PIC literal "oal_gpon_getWanGponIntfOmciStats" @0xc8cb4
+   a23f8: e2800053     	add	r0, r0, #83
+   a23fc: e08f1001     	add	r1, pc, r1  ; PIC literal "gc_omcicli stats dump" @0xd19ba
+   a2400: ebfddd3b     	bl	0x198f4 <util_execSystem@plt> @ imm = #-0x88b14
+   a2404: e59f91c4     	ldr	r9, [pc, #0x1c4]        @ 0xa25d0 <oal_gpon_getWanGponIntfOmciStats+0x294>
+   a2408: e3a0801e     	mov	r8, #30
+   a240c: e08f9009     	add	r9, pc, r9  ; PIC literal "/var/tmp/gpon_omci_stats" @0xd19f6
+   a2410: e1a00009     	mov	r0, r9
+   a2414: e3a01004     	mov	r1, #4
+   a2418: ebfddb79     	bl	0x19204 <access@plt>    @ imm = #-0x8921c
+   a241c: e3700001     	cmn	r0, #1
+   a2420: 1a00000d     	bne	0xa245c <oal_gpon_getWanGponIntfOmciStats+0x120> @ imm = #0x34
+   a2424: e3a00064     	mov	r0, #100
+   a2428: ebfde0d6     	bl	0x1a788 <usleep@plt>    @ imm = #-0x87ca8
+   a242c: e3580000     	cmp	r8, #0
+   a2430: 1a000007     	bne	0xa2454 <oal_gpon_getWanGponIntfOmciStats+0x118> @ imm = #0x1c
+   a2434: e59f1198     	ldr	r1, [pc, #0x198]        @ 0xa25d4 <oal_gpon_getWanGponIntfOmciStats+0x298>
+   a2438: e59f3198     	ldr	r3, [pc, #0x198]        @ 0xa25d8 <oal_gpon_getWanGponIntfOmciStats+0x29c>
+   a243c: e08f1001     	add	r1, pc, r1  ; PIC literal "oal_gpon_getWanGponIntfOmciStats" @0xc8cb4
+   a2440: e3a00008     	mov	r0, #8
+   a2444: e2811053     	add	r1, r1, #83
+   a2448: e3a020e9     	mov	r2, #233
+   a244c: e08f3003     	add	r3, pc, r3  ; PIC literal "Can't find gpon_omci_stats temp file\n" @0xd19d0
+   a2450: ea000016     	b	0xa24b0 <oal_gpon_getWanGponIntfOmciStats+0x174> @ imm = #0x58
+   a2454: e2488001     	sub	r8, r8, #1
+   a2458: eaffffec     	b	0xa2410 <oal_gpon_getWanGponIntfOmciStats+0xd4> @ imm = #-0x50
+   a245c: e59f4178     	ldr	r4, [pc, #0x178]        @ 0xa25dc <oal_gpon_getWanGponIntfOmciStats+0x2a0>
+   a2460: e59f3178     	ldr	r3, [pc, #0x178]        @ 0xa25e0 <oal_gpon_getWanGponIntfOmciStats+0x2a4>
+   a2464: e08f4004     	add	r4, pc, r4  ; PIC literal "oal_gpon_getWanGponIntfOmciStats" @0xc8cb4
+   a2468: e2844053     	add	r4, r4, #83
+   a246c: e58d8000     	str	r8, [sp]
+   a2470: e3a00009     	mov	r0, #9
+   a2474: e1a01004     	mov	r1, r4
+   a2478: e3a020ef     	mov	r2, #239
+   a247c: e08f3003     	add	r3, pc, r3  ; PIC literal "Wait for gc_omci finished: timeout = %d\n" @0xd1a0f
+   a2480: ebfdde6e     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0x88648
+   a2484: e59f1158     	ldr	r1, [pc, #0x158]        @ 0xa25e4 <oal_gpon_getWanGponIntfOmciStats+0x2a8>
+   a2488: e1a00009     	mov	r0, r9
+   a248c: e08f1001     	add	r1, pc, r1
+   a2490: ebfddc57     	bl	0x195f4 <fopen@plt>     @ imm = #-0x88ea4
+   a2494: e2508000     	subs	r8, r0, #0
+   a2498: 1a000007     	bne	0xa24bc <oal_gpon_getWanGponIntfOmciStats+0x180> @ imm = #0x1c
+   a249c: e59f3144     	ldr	r3, [pc, #0x144]        @ 0xa25e8 <oal_gpon_getWanGponIntfOmciStats+0x2ac>
+   a24a0: e3a00008     	mov	r0, #8
+   a24a4: e1a01004     	mov	r1, r4
+   a24a8: e3a020f2     	mov	r2, #242
+   a24ac: e08f3003     	add	r3, pc, r3  ; PIC literal "Can't find gpon_omci_stats temp file\n" @0xd19d0
+   a24b0: ebfdde62     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0x88678
+   a24b4: e3a00001     	mov	r0, #1
+   a24b8: ea00003b     	b	0xa25ac <oal_gpon_getWanGponIntfOmciStats+0x270> @ imm = #0xec
+   a24bc: e1a00009     	mov	r0, r9
+   a24c0: ebfddc42     	bl	0x195d0 <unlink@plt>    @ imm = #-0x88ef8
+   a24c4: e59f9120     	ldr	r9, [pc, #0x120]        @ 0xa25ec <oal_gpon_getWanGponIntfOmciStats+0x2b0>
+   a24c8: e59fb120     	ldr	r11, [pc, #0x120]       @ 0xa25f0 <oal_gpon_getWanGponIntfOmciStats+0x2b4>
+   a24cc: e08f9009     	add	r9, pc, r9
+   a24d0: e08fb00b     	add	r11, pc, r11  ; PIC literal "RxCount:" @0xd1a38
+   a24d4: e59fa118     	ldr	r10, [pc, #0x118]       @ 0xa25f4 <oal_gpon_getWanGponIntfOmciStats+0x2b8>
+   a24d8: e08fa00a     	add	r10, pc, r10  ; PIC literal "TxCount:" @0xd1a41
+   a24dc: e1a00006     	mov	r0, r6
+   a24e0: e3a01032     	mov	r1, #50
+   a24e4: e1a02008     	mov	r2, r8
+   a24e8: ebfddd9d     	bl	0x19b64 <fgets@plt>     @ imm = #-0x8898c
+   a24ec: e2504000     	subs	r4, r0, #0
+   a24f0: 0a00002a     	beq	0xa25a0 <oal_gpon_getWanGponIntfOmciStats+0x264> @ imm = #0xa8
+   a24f4: e1a01009     	mov	r1, r9
+   a24f8: e1a00006     	mov	r0, r6
+   a24fc: ebfde02f     	bl	0x1a5c0 <strtok@plt>    @ imm = #-0x87f44
+   a2500: e3a01000     	mov	r1, #0
+   a2504: e3a0200f     	mov	r2, #15
+   a2508: e1a00005     	mov	r0, r5
+   a250c: ebfdda76     	bl	0x18eec <memset@plt>    @ imm = #-0x89628
+   a2510: e1a00006     	mov	r0, r6
+   a2514: e1a0100b     	mov	r1, r11
+   a2518: ebfdde54     	bl	0x19e70 <strstr@plt>    @ imm = #-0x886b0
+   a251c: e3500000     	cmp	r0, #0
+   a2520: 0a00000b     	beq	0xa2554 <oal_gpon_getWanGponIntfOmciStats+0x218> @ imm = #0x2c
+   a2524: e1a01009     	mov	r1, r9
+   a2528: e3a00000     	mov	r0, #0
+   a252c: ebfde023     	bl	0x1a5c0 <strtok@plt>    @ imm = #-0x87f74
+   a2530: e1a04000     	mov	r4, r0
+   a2534: ebfddc07     	bl	0x19558 <strlen@plt>    @ imm = #-0x88fe4
+   a2538: e1a01004     	mov	r1, r4
+   a253c: e2402001     	sub	r2, r0, #1
+   a2540: e1a00005     	mov	r0, r5
+   a2544: ebfde01a     	bl	0x1a5b4 <strncpy@plt>   @ imm = #-0x87f98
+   a2548: e1a00005     	mov	r0, r5
+   a254c: ebfde02d     	bl	0x1a608 <atoi@plt>      @ imm = #-0x87f4c
+   a2550: e5870008     	str	r0, [r7, #0x8]
+   a2554: e1a00006     	mov	r0, r6
+   a2558: e1a0100a     	mov	r1, r10
+   a255c: ebfdde43     	bl	0x19e70 <strstr@plt>    @ imm = #-0x886f4
+   a2560: e3500000     	cmp	r0, #0
+   a2564: 0affffdc     	beq	0xa24dc <oal_gpon_getWanGponIntfOmciStats+0x1a0> @ imm = #-0x90
+   a2568: e59f1088     	ldr	r1, [pc, #0x88]         @ 0xa25f8 <oal_gpon_getWanGponIntfOmciStats+0x2bc>
+   a256c: e3a00000     	mov	r0, #0
+   a2570: e08f1001     	add	r1, pc, r1
+   a2574: ebfde011     	bl	0x1a5c0 <strtok@plt>    @ imm = #-0x87fbc
+   a2578: e1a04000     	mov	r4, r0
+   a257c: ebfddbf5     	bl	0x19558 <strlen@plt>    @ imm = #-0x8902c
+   a2580: e1a01004     	mov	r1, r4
+   a2584: e2402001     	sub	r2, r0, #1
+   a2588: e1a00005     	mov	r0, r5
+   a258c: ebfde008     	bl	0x1a5b4 <strncpy@plt>   @ imm = #-0x87fe0
+   a2590: e1a00005     	mov	r0, r5
+   a2594: ebfde01b     	bl	0x1a608 <atoi@plt>      @ imm = #-0x87f94
+   a2598: e5870004     	str	r0, [r7, #0x4]
+   a259c: eaffffcc     	b	0xa24d4 <oal_gpon_getWanGponIntfOmciStats+0x198> @ imm = #-0xd0
+   a25a0: e1a00008     	mov	r0, r8
+   a25a4: ebfdde07     	bl	0x19dc8 <fclose@plt>    @ imm = #-0x887e4
+   a25a8: e1a00004     	mov	r0, r4
+   a25ac: e28dd05c     	add	sp, sp, #92
+   a25b0: e8bd8ff0     	pop	{r4, r5, r6, r7, r8, r9, r10, r11, pc}
+   a25b4: 000268c1     	andeq	r6, r2, r1, asr #17
+   a25b8: 0002f5b7     	strheq	pc, [r2], -r7
+   a25bc: 0002f471     	andeq	pc, r2, r1, ror r4
+   a25c0: 00026889     	andeq	r6, r2, r9, lsl #17
+   a25c4: 0002f5a0     	andeq	pc, r2, r0, lsr #11
+   a25c8: 00026865     	andeq	r6, r2, r5, ror #16
+   a25cc: 0002f5b6     	strheq	pc, [r2], -r6
+   a25d0: 0002f5e2     	andeq	pc, r2, r2, ror #11
+   a25d4: 0002681d     	andeq	r6, r2, sp, lsl r8
+   a25d8: 0002f57c     	andeq	pc, r2, r12, ror r5
+   a25dc: 000267f5     	strdeq	r6, r7, [r2], -r5
+   a25e0: 0002f58b     	andeq	pc, r2, r11, lsl #11
+   a25e4: 00012aa7     	andeq	r2, r1, r7, lsr #21
+   a25e8: 0002f51c     	andeq	pc, r2, r12, lsl r5
+   a25ec: 00012bfb     	strdeq	r2, r3, [r1], -r11
+   a25f0: 0002f560     	andeq	pc, r2, r0, ror #10
+   a25f4: 0002f561     	andeq	pc, r2, r1, ror #10
+   a25f8: 00012b57     	andeq	r2, r1, r7, asr r11
+
+000a2634 <oal_gpon_setGponParameter>:
+   a2634: e3a00000     	mov	r0, #0
+   a2638: e12fff1e     	bx	lr

@@ -1,0 +1,1126 @@
+0001eac4 <rdp_verifyFirmware>:
+   1eac4: e92d4038     	push	{r3, r4, r5, lr}
+   1eac8: e59f4048     	ldr	r4, [pc, #0x48]         @ 0x1eb18 <rdp_verifyFirmware+0x54>
+   1eacc: e59f3048     	ldr	r3, [pc, #0x48]         @ 0x1eb1c <rdp_verifyFirmware+0x58>
+   1ead0: e08f4004     	add	r4, pc, r4  ; PIC literal "rdp_action" @0xa350e
+   1ead4: e1a05000     	mov	r5, r0
+   1ead8: e2841075     	add	r1, r4, #117
+   1eadc: e3a00008     	mov	r0, #8
+   1eae0: e59f2038     	ldr	r2, [pc, #0x38]         @ 0x1eb20 <rdp_verifyFirmware+0x5c>
+   1eae4: e08f3003     	add	r3, pc, r3  ; PIC literal "to be modified" @0xa3d47
+   1eae8: ebffecd4     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0x4cb0
+   1eaec: e3550000     	cmp	r5, #0
+   1eaf0: 1a000006     	bne	0x1eb10 <rdp_verifyFirmware+0x4c> @ imm = #0x18
+   1eaf4: e59f0028     	ldr	r0, [pc, #0x28]         @ 0x1eb24 <rdp_verifyFirmware+0x60>
+   1eaf8: e59f1028     	ldr	r1, [pc, #0x28]         @ 0x1eb28 <rdp_verifyFirmware+0x64>
+   1eafc: e08f0000     	add	r0, pc, r0  ; PIC literal "pFirmwareAddr != ((void *)0)" @0xa3d56
+   1eb00: e08f1001     	add	r1, pc, r1  ; PIC literal "./src/rdp_act.c" @0xa3d1f
+   1eb04: e59f2020     	ldr	r2, [pc, #0x20]         @ 0x1eb2c <rdp_verifyFirmware+0x68>
+   1eb08: e2843088     	add	r3, r4, #136
+   1eb0c: ebffe8f0     	bl	0x18ed4 <__assert@plt>  @ imm = #-0x5c40
+   1eb10: e3a00000     	mov	r0, #0
+   1eb14: e8bd8038     	pop	{r3, r4, r5, pc}
+   1eb18: 00084a36     	andeq	r4, r8, r6, lsr r10
+   1eb1c: 0008525b     	andeq	r5, r8, r11, asr r2
+   1eb20: 0000061b     	andeq	r0, r0, r11, lsl r6
+   1eb24: 00085252     	andeq	r5, r8, r2, asr r2
+   1eb28: 00085217     	andeq	r5, r8, r7, lsl r2
+   1eb2c: 0000061c     	andeq	r0, r0, r12, lsl r6
+
+0001eb30 <rdp_updateFirmware>:
+   1eb30: e92d41f3     	push	{r0, r1, r4, r5, r6, r7, r8, lr}
+   1eb34: e2517000     	subs	r7, r1, #0
+   1eb38: 1a000008     	bne	0x1eb60 <rdp_updateFirmware+0x30> @ imm = #0x20
+   1eb3c: e59f309c     	ldr	r3, [pc, #0x9c]         @ 0x1ebe0 <rdp_updateFirmware+0xb0>
+   1eb40: e59f009c     	ldr	r0, [pc, #0x9c]         @ 0x1ebe4 <rdp_updateFirmware+0xb4>
+   1eb44: e59f109c     	ldr	r1, [pc, #0x9c]         @ 0x1ebe8 <rdp_updateFirmware+0xb8>
+   1eb48: e08f3003     	add	r3, pc, r3  ; PIC literal "rdp_updateFirmware" @0xa35a9
+   1eb4c: e08f0000     	add	r0, pc, r0  ; PIC literal "pFirmwareAddr != ((void *)0)" @0xa3d56
+   1eb50: e08f1001     	add	r1, pc, r1  ; PIC literal "./src/rdp_act.c" @0xa3d1f
+   1eb54: e59f2090     	ldr	r2, [pc, #0x90]         @ 0x1ebec <rdp_updateFirmware+0xbc>
+   1eb58: e283309b     	add	r3, r3, #155
+   1eb5c: ebffe8dc     	bl	0x18ed4 <__assert@plt>  @ imm = #-0x5c90
+   1eb60: e59f5088     	ldr	r5, [pc, #0x88]         @ 0x1ebf0 <rdp_updateFirmware+0xc0>
+   1eb64: e1a08000     	mov	r8, r0
+   1eb68: e08f5005     	add	r5, pc, r5  ; PIC literal "rdp_updateFirmware" @0xa35bc
+   1eb6c: e28550ae     	add	r5, r5, #174
+   1eb70: e1a00005     	mov	r0, r5
+   1eb74: e3e01000     	mvn	r1, #0
+   1eb78: e1a06002     	mov	r6, r2
+   1eb7c: ebffe8f5     	bl	0x18f58 <dm_acquireLock@plt> @ imm = #-0x5c2c
+   1eb80: e2504000     	subs	r4, r0, #0
+   1eb84: 0a000007     	beq	0x1eba8 <rdp_updateFirmware+0x78> @ imm = #0x1c
+   1eb88: e59f3064     	ldr	r3, [pc, #0x64]         @ 0x1ebf4 <rdp_updateFirmware+0xc4>
+   1eb8c: e58d4000     	str	r4, [sp]
+   1eb90: e3a00008     	mov	r0, #8
+   1eb94: e1a01005     	mov	r1, r5
+   1eb98: e59f2058     	ldr	r2, [pc, #0x58]         @ 0x1ebf8 <rdp_updateFirmware+0xc8>
+   1eb9c: e08f3003     	add	r3, pc, r3  ; PIC literal "Can't get lock, return %d.\n" @0xa37dc
+   1eba0: ebffeca6     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0x4d68
+   1eba4: ea00000a     	b	0x1ebd4 <rdp_updateFirmware+0xa4> @ imm = #0x28
+   1eba8: e1a00008     	mov	r0, r8
+   1ebac: e1a01007     	mov	r1, r7
+   1ebb0: e1a02006     	mov	r2, r6
+   1ebb4: ebffed1f     	bl	0x1a038 <rsl_sys_updateFirmware@plt> @ imm = #-0x4b84
+   1ebb8: e2504000     	subs	r4, r0, #0
+   1ebbc: 0a000003     	beq	0x1ebd0 <rdp_updateFirmware+0xa0> @ imm = #0xc
+   1ebc0: e1a00005     	mov	r0, r5
+   1ebc4: e59f1030     	ldr	r1, [pc, #0x30]         @ 0x1ebfc <rdp_updateFirmware+0xcc>
+   1ebc8: e1a02004     	mov	r2, r4
+   1ebcc: ebffeb24     	bl	0x19864 <cdbg_perror@plt> @ imm = #-0x5370
+   1ebd0: ebffea8d     	bl	0x1960c <dm_unLock@plt> @ imm = #-0x55cc
+   1ebd4: e1a00004     	mov	r0, r4
+   1ebd8: e28dd008     	add	sp, sp, #8
+   1ebdc: e8bd81f0     	pop	{r4, r5, r6, r7, r8, pc}
+   1ebe0: 000849be     	strheq	r4, [r8], -lr
+   1ebe4: 00085202     	andeq	r5, r8, r2, lsl #4
+   1ebe8: 000851c7     	andeq	r5, r8, r7, asr #3
+   1ebec: 00000671     	andeq	r0, r0, r1, ror r6
+   1ebf0: 0008499e     	<unknown>
+   1ebf4: 00084c38     	andeq	r4, r8, r8, lsr r12
+   1ebf8: 00000673     	andeq	r0, r0, r3, ror r6
+   1ebfc: 00000691     	<unknown>
+
+0001ec00 <rdp_updateFirmwareByOmci>:
+   1ec00: e92d41f3     	push	{r0, r1, r4, r5, r6, r7, r8, lr}
+   1ec04: e2517000     	subs	r7, r1, #0
+   1ec08: 1a000008     	bne	0x1ec30 <rdp_updateFirmwareByOmci+0x30> @ imm = #0x20
+   1ec0c: e59f309c     	ldr	r3, [pc, #0x9c]         @ 0x1ecb0 <rdp_updateFirmwareByOmci+0xb0>
+   1ec10: e59f009c     	ldr	r0, [pc, #0x9c]         @ 0x1ecb4 <rdp_updateFirmwareByOmci+0xb4>
+   1ec14: e59f109c     	ldr	r1, [pc, #0x9c]         @ 0x1ecb8 <rdp_updateFirmwareByOmci+0xb8>
+   1ec18: e08f3003     	add	r3, pc, r3  ; PIC literal "rdp_updateFirmwareByOmci" @0xa35cf
+   1ec1c: e08f0000     	add	r0, pc, r0  ; PIC literal "pFirmwareAddr != ((void *)0)" @0xa3d56
+   1ec20: e08f1001     	add	r1, pc, r1  ; PIC literal "./src/rdp_act.c" @0xa3d1f
+   1ec24: e59f2090     	ldr	r2, [pc, #0x90]         @ 0x1ecbc <rdp_updateFirmwareByOmci+0xbc>
+   1ec28: e28330c1     	add	r3, r3, #193
+   1ec2c: ebffe8a8     	bl	0x18ed4 <__assert@plt>  @ imm = #-0x5d60
+   1ec30: e59f5088     	ldr	r5, [pc, #0x88]         @ 0x1ecc0 <rdp_updateFirmwareByOmci+0xc0>
+   1ec34: e1a08000     	mov	r8, r0
+   1ec38: e08f5005     	add	r5, pc, r5  ; PIC literal "rdp_updateFirmwareByOmci" @0xa35e8
+   1ec3c: e28550da     	add	r5, r5, #218
+   1ec40: e1a00005     	mov	r0, r5
+   1ec44: e3e01000     	mvn	r1, #0
+   1ec48: e1a06002     	mov	r6, r2
+   1ec4c: ebffe8c1     	bl	0x18f58 <dm_acquireLock@plt> @ imm = #-0x5cfc
+   1ec50: e2504000     	subs	r4, r0, #0
+   1ec54: 0a000007     	beq	0x1ec78 <rdp_updateFirmwareByOmci+0x78> @ imm = #0x1c
+   1ec58: e59f3064     	ldr	r3, [pc, #0x64]         @ 0x1ecc4 <rdp_updateFirmwareByOmci+0xc4>
+   1ec5c: e58d4000     	str	r4, [sp]
+   1ec60: e3a00008     	mov	r0, #8
+   1ec64: e1a01005     	mov	r1, r5
+   1ec68: e59f2058     	ldr	r2, [pc, #0x58]         @ 0x1ecc8 <rdp_updateFirmwareByOmci+0xc8>
+   1ec6c: e08f3003     	add	r3, pc, r3  ; PIC literal "Can't get lock, return %d.\n" @0xa37dc
+   1ec70: ebffec72     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0x4e38
+   1ec74: ea00000a     	b	0x1eca4 <rdp_updateFirmwareByOmci+0xa4> @ imm = #0x28
+   1ec78: e1a00008     	mov	r0, r8
+   1ec7c: e1a01007     	mov	r1, r7
+   1ec80: e1a02006     	mov	r2, r6
+   1ec84: ebffe832     	bl	0x18d54 <rsl_sys_updateFirmwareByOmci@plt> @ imm = #-0x5f38
+   1ec88: e2504000     	subs	r4, r0, #0
+   1ec8c: 0a000003     	beq	0x1eca0 <rdp_updateFirmwareByOmci+0xa0> @ imm = #0xc
+   1ec90: e1a00005     	mov	r0, r5
+   1ec94: e59f1030     	ldr	r1, [pc, #0x30]         @ 0x1eccc <rdp_updateFirmwareByOmci+0xcc>
+   1ec98: e1a02004     	mov	r2, r4
+   1ec9c: ebffeaf0     	bl	0x19864 <cdbg_perror@plt> @ imm = #-0x5440
+   1eca0: ebffea59     	bl	0x1960c <dm_unLock@plt> @ imm = #-0x569c
+   1eca4: e1a00004     	mov	r0, r4
+   1eca8: e28dd008     	add	sp, sp, #8
+   1ecac: e8bd81f0     	pop	{r4, r5, r6, r7, r8, pc}
+   1ecb0: 000848ee     	andeq	r4, r8, lr, ror #17
+   1ecb4: 00085132     	andeq	r5, r8, r2, lsr r1
+   1ecb8: 000850f7     	strdeq	r5, r6, [r8], -r7
+   1ecbc: 000006c7     	andeq	r0, r0, r7, asr #13
+   1ecc0: 000848ce     	andeq	r4, r8, lr, asr #17
+   1ecc4: 00084b68     	andeq	r4, r8, r8, ror #22
+   1ecc8: 000006c9     	andeq	r0, r0, r9, asr #13
+   1eccc: 000006d1     	ldrdeq	r0, r1, [r0], -r1
+
+00028514 <rsl_sys_updateFirmware>:
+   28514: e92d4ff0     	push	{r4, r5, r6, r7, r8, r9, r10, r11, lr}
+   28518: e24dde5e     	sub	sp, sp, #1504
+   2851c: e24dd004     	sub	sp, sp, #4
+   28520: e3a08010     	mov	r8, #16
+   28524: e28da02c     	add	r10, sp, #44
+   28528: e58d0014     	str	r0, [sp, #0x14]
+   2852c: e1a07001     	mov	r7, r1
+   28530: e1a05002     	mov	r5, r2
+   28534: e3a01000     	mov	r1, #0
+   28538: e1a02008     	mov	r2, r8
+   2853c: e1a0000a     	mov	r0, r10
+   28540: e28d903c     	add	r9, sp, #60
+   28544: ebffc268     	bl	0x18eec <memset@plt>    @ imm = #-0xf660
+   28548: e3a01000     	mov	r1, #0
+   2854c: e1a02008     	mov	r2, r8
+   28550: e1a00009     	mov	r0, r9
+   28554: ebffc264     	bl	0x18eec <memset@plt>    @ imm = #-0xf670
+   28558: ebffc347     	bl	0x1927c <oal_sys_getTagOffset@plt> @ imm = #-0xf2e4
+   2855c: e3570000     	cmp	r7, #0
+   28560: 1a000009     	bne	0x2858c <rsl_sys_updateFirmware+0x78> @ imm = #0x24
+   28564: e59f33d8     	ldr	r3, [pc, #0x3d8]        @ 0x28944 <rsl_sys_updateFirmware+0x430>
+   28568: e59f03d8     	ldr	r0, [pc, #0x3d8]        @ 0x28948 <rsl_sys_updateFirmware+0x434>
+   2856c: e59f13d8     	ldr	r1, [pc, #0x3d8]        @ 0x2894c <rsl_sys_updateFirmware+0x438>
+   28570: e08f3003     	add	r3, pc, r3
+   28574: e2833e1a     	add	r3, r3, #416
+   28578: e08f0000     	add	r0, pc, r0  ; PIC literal "pFirmwareAddr != ((void *)0)" @0xa3d56
+   2857c: e08f1001     	add	r1, pc, r1  ; PIC literal "./src/rsl_sys.c" @0xabdc7
+   28580: e59f23c8     	ldr	r2, [pc, #0x3c8]        @ 0x28950 <rsl_sys_updateFirmware+0x43c>
+   28584: e2833002     	add	r3, r3, #2
+   28588: ebffc251     	bl	0x18ed4 <__assert@plt>  @ imm = #-0xf6bc
+   2858c: e28d401c     	add	r4, sp, #28
+   28590: e3a01000     	mov	r1, #0
+   28594: e3a0200e     	mov	r2, #14
+   28598: e1a0b000     	mov	r11, r0
+   2859c: e1a00004     	mov	r0, r4
+   285a0: ebffc251     	bl	0x18eec <memset@plt>    @ imm = #-0xf6bc
+   285a4: e1a01004     	mov	r1, r4
+   285a8: e3a00002     	mov	r0, #2
+   285ac: e59f23a0     	ldr	r2, [pc, #0x3a0]        @ 0x28954 <rsl_sys_updateFirmware+0x440>
+   285b0: e28d304c     	add	r3, sp, #76
+   285b4: ebffc5ca     	bl	0x19ce4 <rsl_getObj@plt> @ imm = #-0xe8d8
+   285b8: e2504000     	subs	r4, r0, #0
+   285bc: 0a000007     	beq	0x285e0 <rsl_sys_updateFirmware+0xcc> @ imm = #0x1c
+   285c0: e59f0390     	ldr	r0, [pc, #0x390]        @ 0x28958 <rsl_sys_updateFirmware+0x444>
+   285c4: e59f1390     	ldr	r1, [pc, #0x390]        @ 0x2895c <rsl_sys_updateFirmware+0x448>
+   285c8: e08f0000     	add	r0, pc, r0  ; PIC literal "rsl_sys_updateFirmware" @0xa4949
+   285cc: e2800f6e     	add	r0, r0, #440
+   285d0: e2800001     	add	r0, r0, #1
+   285d4: e1a02004     	mov	r2, r4
+   285d8: ebffc4a1     	bl	0x19864 <cdbg_perror@plt> @ imm = #-0xed7c
+   285dc: ea0000d4     	b	0x28934 <rsl_sys_updateFirmware+0x420> @ imm = #0x350
+   285e0: e3a03c02     	mov	r3, #512
+   285e4: e58d3000     	str	r3, [sp]
+   285e8: e797300b     	ldr	r3, [r7, r11]
+   285ec: e59f436c     	ldr	r4, [pc, #0x36c]        @ 0x28960 <rsl_sys_updateFirmware+0x44c>
+   285f0: e58d3004     	str	r3, [sp, #0x4]
+   285f4: e08f4004     	add	r4, pc, r4  ; PIC literal "rsl_sys_updateFirmware" @0xa4949
+   285f8: e59f3364     	ldr	r3, [pc, #0x364]        @ 0x28964 <rsl_sys_updateFirmware+0x450>
+   285fc: e2844f6e     	add	r4, r4, #440
+   28600: e2844001     	add	r4, r4, #1
+   28604: e3a00008     	mov	r0, #8
+   28608: e1a01004     	mov	r1, r4
+   2860c: e59f2354     	ldr	r2, [pc, #0x354]        @ 0x28968 <rsl_sys_updateFirmware+0x454>
+   28610: e08f3003     	add	r3, pc, r3  ; PIC literal "***The sizeof IMAGE_TAG:%d and 1st member tagVersion=%d\n" @0xac1de
+   28614: ebffc609     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0xe7dc
+   28618: e3550803     	cmp	r5, #196608
+   2861c: e087600b     	add	r6, r7, r11
+   28620: 2a00000a     	bhs	0x28650 <rsl_sys_updateFirmware+0x13c> @ imm = #0x28
+   28624: e59f1340     	ldr	r1, [pc, #0x340]        @ 0x2896c <rsl_sys_updateFirmware+0x458>
+   28628: e59f3340     	ldr	r3, [pc, #0x340]        @ 0x28970 <rsl_sys_updateFirmware+0x45c>
+   2862c: e08f1001     	add	r1, pc, r1  ; PIC literal "rsl_sys_updateFirmware" @0xa4949
+   28630: e2811f6e     	add	r1, r1, #440
+   28634: e58d5000     	str	r5, [sp]
+   28638: e3a00008     	mov	r0, #8
+   2863c: e2811001     	add	r1, r1, #1
+   28640: e59f232c     	ldr	r2, [pc, #0x32c]        @ 0x28974 <rsl_sys_updateFirmware+0x460>
+   28644: e08f3003     	add	r3, pc, r3  ; PIC literal "The file's length is bad: %d\n" @0xac217
+   28648: ebffc5fc     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0xe810
+   2864c: ea000005     	b	0x28668 <rsl_sys_updateFirmware+0x154> @ imm = #0x14
+   28650: ebffc744     	bl	0x1a368 <cmem_getUpdateFirmwareSize@plt> @ imm = #-0xe2f0
+   28654: e1550000     	cmp	r5, r0
+   28658: 8afffff1     	bhi	0x28624 <rsl_sys_updateFirmware+0x110> @ imm = #-0x3c
+   2865c: ebffc741     	bl	0x1a368 <cmem_getUpdateFirmwareSize@plt> @ imm = #-0xe2fc
+   28660: e1550000     	cmp	r5, r0
+   28664: 9a000001     	bls	0x28670 <rsl_sys_updateFirmware+0x15c> @ imm = #0x4
+   28668: e59f4308     	ldr	r4, [pc, #0x308]        @ 0x28978 <rsl_sys_updateFirmware+0x464>
+   2866c: ea0000b0     	b	0x28934 <rsl_sys_updateFirmware+0x420> @ imm = #0x2c0
+   28670: e3a03014     	mov	r3, #20
+   28674: e98d0108     	stmib	sp, {r3, r8}
+   28678: e59f32fc     	ldr	r3, [pc, #0x2fc]        @ 0x2897c <rsl_sys_updateFirmware+0x468>
+   2867c: e3a00008     	mov	r0, #8
+   28680: e08f3003     	add	r3, pc, r3  ; PIC literal "***MD5 Related: fileMd5Checksum=%p, sizeof pImageTag->imageValidToken=%x, MD5_DIGEST_LEN=%d\n" @0xac3ef
+   28684: e1a01004     	mov	r1, r4
+   28688: e3a02d3a     	mov	r2, #3712
+   2868c: e286b040     	add	r11, r6, #64
+   28690: e58d5000     	str	r5, [sp]
+   28694: ebffc5e9     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0xe85c
+   28698: e1a0100b     	mov	r1, r11
+   2869c: e1a02008     	mov	r2, r8
+   286a0: e1a00009     	mov	r0, r9
+   286a4: ebffc891     	bl	0x1a8f0 <memcpy@plt>    @ imm = #-0xddbc
+   286a8: e1a0000a     	mov	r0, r10
+   286ac: ebfff960     	bl	0x26c34 <util_showFuncQueue+0xac> @ imm = #-0x1a80
+   286b0: e1a0100a     	mov	r1, r10
+   286b4: e1a02008     	mov	r2, r8
+   286b8: e1a0000b     	mov	r0, r11
+   286bc: ebffc88b     	bl	0x1a8f0 <memcpy@plt>    @ imm = #-0xddd4
+   286c0: e1a00009     	mov	r0, r9
+   286c4: e1a01007     	mov	r1, r7
+   286c8: e1a02005     	mov	r2, r5
+   286cc: ebffc911     	bl	0x1ab18 <cen_md5VerifyDigest@plt> @ imm = #-0xdbbc
+   286d0: e3500000     	cmp	r0, #0
+   286d4: 1a000007     	bne	0x286f8 <rsl_sys_updateFirmware+0x1e4> @ imm = #0x1c
+   286d8: e59f32a0     	ldr	r3, [pc, #0x2a0]        @ 0x28980 <rsl_sys_updateFirmware+0x46c>
+   286dc: e58d5000     	str	r5, [sp]
+   286e0: e3a00008     	mov	r0, #8
+   286e4: e1a01004     	mov	r1, r4
+   286e8: e59f2294     	ldr	r2, [pc, #0x294]        @ 0x28984 <rsl_sys_updateFirmware+0x470>
+   286ec: e08f3003     	add	r3, pc, r3  ; PIC literal "Image md5 checksum is not correct, len is %x!\n" @0xac235
+   286f0: ebffc5d2     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0xe8b8
+   286f4: ea000027     	b	0x28798 <rsl_sys_updateFirmware+0x284> @ imm = #0x9c
+   286f8: e1a01009     	mov	r1, r9
+   286fc: e1a02008     	mov	r2, r8
+   28700: e1a0000b     	mov	r0, r11
+   28704: ebffc879     	bl	0x1a8f0 <memcpy@plt>    @ imm = #-0xde1c
+   28708: e59f3278     	ldr	r3, [pc, #0x278]        @ 0x28988 <rsl_sys_updateFirmware+0x474>
+   2870c: e3a00008     	mov	r0, #8
+   28710: e08f3003     	add	r3, pc, r3  ; PIC literal "**************SKIP MD5 Check" @0xac264
+   28714: e1a01004     	mov	r1, r4
+   28718: e59f226c     	ldr	r2, [pc, #0x26c]        @ 0x2898c <rsl_sys_updateFirmware+0x478>
+   2871c: ebffc5c7     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0xe8e4
+   28720: e5dd3531     	ldrb	r3, [sp, #0x531]
+   28724: e3530000     	cmp	r3, #0
+   28728: 0a000004     	beq	0x28740 <rsl_sys_updateFirmware+0x22c> @ imm = #0x10
+   2872c: e5964038     	ldr	r4, [r6, #0x38]
+   28730: ebffc406     	bl	0x19750 <rsl_dev_getProductVer@plt> @ imm = #-0xefe8
+   28734: e1540000     	cmp	r4, r0
+   28738: 1a000004     	bne	0x28750 <rsl_sys_updateFirmware+0x23c> @ imm = #0x10
+   2873c: ea000017     	b	0x287a0 <rsl_sys_updateFirmware+0x28c> @ imm = #0x5c
+   28740: e5964034     	ldr	r4, [r6, #0x34]
+   28744: ebffc71c     	bl	0x1a3bc <rsl_dev_getProductId@plt> @ imm = #-0xe390
+   28748: e1540000     	cmp	r4, r0
+   2874c: 0afffff6     	beq	0x2872c <rsl_sys_updateFirmware+0x218> @ imm = #-0x28
+   28750: e5967034     	ldr	r7, [r6, #0x34]
+   28754: ebffc718     	bl	0x1a3bc <rsl_dev_getProductId@plt> @ imm = #-0xe3a0
+   28758: e5964038     	ldr	r4, [r6, #0x38]
+   2875c: e1a05000     	mov	r5, r0
+   28760: ebffc3fa     	bl	0x19750 <rsl_dev_getProductVer@plt> @ imm = #-0xf018
+   28764: e59f1224     	ldr	r1, [pc, #0x224]        @ 0x28990 <rsl_sys_updateFirmware+0x47c>
+   28768: e59f3224     	ldr	r3, [pc, #0x224]        @ 0x28994 <rsl_sys_updateFirmware+0x480>
+   2876c: e08f1001     	add	r1, pc, r1
+   28770: e2811f6e     	add	r1, r1, #440
+   28774: e58d7000     	str	r7, [sp]
+   28778: e58d5004     	str	r5, [sp, #0x4]
+   2877c: e58d4008     	str	r4, [sp, #0x8]
+   28780: e2811001     	add	r1, r1, #1
+   28784: e59f220c     	ldr	r2, [pc, #0x20c]        @ 0x28998 <rsl_sys_updateFirmware+0x484>
+   28788: e08f3003     	add	r3, pc, r3  ; PIC literal "Firmware version check failed. ID(0x%08x:0x%08x), VER(0x%08x:0x%08x)\n" @0xac281
+   2878c: e58d000c     	str	r0, [sp, #0xc]
+   28790: e3a00008     	mov	r0, #8
+   28794: ebffc5a9     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0xe95c
+   28798: e59f41fc     	ldr	r4, [pc, #0x1fc]        @ 0x2899c <rsl_sys_updateFirmware+0x488>
+   2879c: ea000064     	b	0x28934 <rsl_sys_updateFirmware+0x420> @ imm = #0x190
+   287a0: e59f11f8     	ldr	r1, [pc, #0x1f8]        @ 0x289a0 <rsl_sys_updateFirmware+0x48c>
+   287a4: e59f31f8     	ldr	r3, [pc, #0x1f8]        @ 0x289a4 <rsl_sys_updateFirmware+0x490>
+   287a8: e08f1001     	add	r1, pc, r1  ; PIC literal "rsl_sys_updateFirmware" @0xa4949
+   287ac: e2811f6e     	add	r1, r1, #440
+   287b0: e08f3003     	add	r3, pc, r3  ; PIC literal "**************PASS Product ID Check" @0xac2c7
+   287b4: e3a00008     	mov	r0, #8
+   287b8: e2811001     	add	r1, r1, #1
+   287bc: e59f21e4     	ldr	r2, [pc, #0x1e4]        @ 0x289a8 <rsl_sys_updateFirmware+0x494>
+   287c0: ebffc59e     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0xe988
+   287c4: ebffc65a     	bl	0x1a134 <rsl_dev_getSpecialVer@plt> @ imm = #-0xe698
+   287c8: e5968094     	ldr	r8, [r6, #0x94]
+   287cc: e1a03820     	lsr	r3, r0, #16
+   287d0: e1a03803     	lsl	r3, r3, #16
+   287d4: e3530000     	cmp	r3, #0
+   287d8: 0a000004     	beq	0x287f0 <rsl_sys_updateFirmware+0x2dc> @ imm = #0x10
+   287dc: e0203008     	eor	r3, r0, r8
+   287e0: e1a03823     	lsr	r3, r3, #16
+   287e4: e1a03803     	lsl	r3, r3, #16
+   287e8: e3530000     	cmp	r3, #0
+   287ec: 1a00001b     	bne	0x28860 <rsl_sys_updateFirmware+0x34c> @ imm = #0x6c
+   287f0: e200300f     	and	r3, r0, #15
+   287f4: e208200f     	and	r2, r8, #15
+   287f8: e1530002     	cmp	r3, r2
+   287fc: 8a000017     	bhi	0x28860 <rsl_sys_updateFirmware+0x34c> @ imm = #0x5c
+   28800: e59f41a4     	ldr	r4, [pc, #0x1a4]        @ 0x289ac <rsl_sys_updateFirmware+0x498>
+   28804: e59f31a4     	ldr	r3, [pc, #0x1a4]        @ 0x289b0 <rsl_sys_updateFirmware+0x49c>
+   28808: e08f4004     	add	r4, pc, r4  ; PIC literal "rsl_sys_updateFirmware" @0xa4949
+   2880c: e2844f6e     	add	r4, r4, #440
+   28810: e2844001     	add	r4, r4, #1
+   28814: e08f3003     	add	r3, pc, r3  ; PIC literal "Firmware special version check check OK((new:0x%08lx,current0x%08x))!\n" @0xac2eb
+   28818: e58d0004     	str	r0, [sp, #0x4]
+   2881c: e1a01004     	mov	r1, r4
+   28820: e3a00008     	mov	r0, #8
+   28824: e59f2188     	ldr	r2, [pc, #0x188]        @ 0x289b4 <rsl_sys_updateFirmware+0x4a0>
+   28828: e58d8000     	str	r8, [sp]
+   2882c: ebffc583     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0xe9f4
+   28830: ebffc534     	bl	0x19d08 <rsl_dev_getAddHver@plt> @ imm = #-0xeb30
+   28834: e596303c     	ldr	r3, [r6, #0x3c]
+   28838: e1530000     	cmp	r3, r0
+   2883c: 2a000014     	bhs	0x28894 <rsl_sys_updateFirmware+0x380> @ imm = #0x50
+   28840: e59f3170     	ldr	r3, [pc, #0x170]        @ 0x289b8 <rsl_sys_updateFirmware+0x4a4>
+   28844: e1a01004     	mov	r1, r4
+   28848: e3a00008     	mov	r0, #8
+   2884c: e59f2168     	ldr	r2, [pc, #0x168]        @ 0x289bc <rsl_sys_updateFirmware+0x4a8>
+   28850: e08f3003     	add	r3, pc, r3  ; PIC literal "Firmware Additional HardwareVersion check failed\n" @0xac375
+   28854: ebffc579     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0xea1c
+   28858: e59f4160     	ldr	r4, [pc, #0x160]        @ 0x289c0 <rsl_sys_updateFirmware+0x4ac>
+   2885c: ea000034     	b	0x28934 <rsl_sys_updateFirmware+0x420> @ imm = #0xd0
+   28860: ebffc633     	bl	0x1a134 <rsl_dev_getSpecialVer@plt> @ imm = #-0xe734
+   28864: e59f1158     	ldr	r1, [pc, #0x158]        @ 0x289c4 <rsl_sys_updateFirmware+0x4b0>
+   28868: e59f3158     	ldr	r3, [pc, #0x158]        @ 0x289c8 <rsl_sys_updateFirmware+0x4b4>
+   2886c: e08f1001     	add	r1, pc, r1  ; PIC literal "rsl_sys_updateFirmware" @0xa4949
+   28870: e2811f6e     	add	r1, r1, #440
+   28874: e58d8000     	str	r8, [sp]
+   28878: e2811001     	add	r1, r1, #1
+   2887c: e59f2148     	ldr	r2, [pc, #0x148]        @ 0x289cc <rsl_sys_updateFirmware+0x4b8>
+   28880: e08f3003     	add	r3, pc, r3  ; PIC literal "Firmware special version check failed(new:0x%08lx,current:0x%08x)\n" @0xac332
+   28884: e58d0004     	str	r0, [sp, #0x4]
+   28888: e3a00008     	mov	r0, #8
+   2888c: ebffc56b     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0xea54
+   28890: eaffffc0     	b	0x28798 <rsl_sys_updateFirmware+0x284> @ imm = #-0x100
+   28894: e1a00007     	mov	r0, r7
+   28898: e1a01005     	mov	r1, r5
+   2889c: ebffc891     	bl	0x1aae8 <dm_preHook@plt> @ imm = #-0xddbc
+   288a0: e3500000     	cmp	r0, #0
+   288a4: 0a000005     	beq	0x288c0 <rsl_sys_updateFirmware+0x3ac> @ imm = #0x14
+   288a8: e59f3120     	ldr	r3, [pc, #0x120]        @ 0x289d0 <rsl_sys_updateFirmware+0x4bc>
+   288ac: e3a00008     	mov	r0, #8
+   288b0: e1a01004     	mov	r1, r4
+   288b4: e59f2118     	ldr	r2, [pc, #0x118]        @ 0x289d4 <rsl_sys_updateFirmware+0x4c0>
+   288b8: e08f3003     	add	r3, pc, r3  ; PIC literal "do dm_postHook faied" @0xac3a7
+   288bc: ebffc55f     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0xea84
+   288c0: e59d0014     	ldr	r0, [sp, #0x14]
+   288c4: e1a01007     	mov	r1, r7
+   288c8: e1a02005     	mov	r2, r5
+   288cc: ebffc19e     	bl	0x18f4c <oal_sys_writeImage@plt> @ imm = #-0xf988
+   288d0: e2504000     	subs	r4, r0, #0
+   288d4: 1a00000c     	bne	0x2890c <rsl_sys_updateFirmware+0x3f8> @ imm = #0x30
+   288d8: e59f10f8     	ldr	r1, [pc, #0xf8]         @ 0x289d8 <rsl_sys_updateFirmware+0x4c4>
+   288dc: e59f30f8     	ldr	r3, [pc, #0xf8]         @ 0x289dc <rsl_sys_updateFirmware+0x4c8>
+   288e0: e08f1001     	add	r1, pc, r1  ; PIC literal "rsl_sys_updateFirmware" @0xa4949
+   288e4: e2811f6e     	add	r1, r1, #440
+   288e8: e3a00009     	mov	r0, #9
+   288ec: e2811001     	add	r1, r1, #1
+   288f0: e59f20e8     	ldr	r2, [pc, #0xe8]         @ 0x289e0 <rsl_sys_updateFirmware+0x4cc>
+   288f4: e08f3003     	add	r3, pc, r3  ; PIC literal "Firmware update succesful\n" @0xac3bc
+   288f8: ebffc550     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0xeac0
+   288fc: e3a0100f     	mov	r1, #15
+   28900: e3a00001     	mov	r0, #1
+   28904: ebffc4ed     	bl	0x19cc0 <kill@plt>      @ imm = #-0xec4c
+   28908: ea000009     	b	0x28934 <rsl_sys_updateFirmware+0x420> @ imm = #0x24
+   2890c: e59f10d0     	ldr	r1, [pc, #0xd0]         @ 0x289e4 <rsl_sys_updateFirmware+0x4d0>
+   28910: e59f30d0     	ldr	r3, [pc, #0xd0]         @ 0x289e8 <rsl_sys_updateFirmware+0x4d4>
+   28914: e08f1001     	add	r1, pc, r1  ; PIC literal "rsl_sys_updateFirmware" @0xa4949
+   28918: e2811f6e     	add	r1, r1, #440
+   2891c: e3a00008     	mov	r0, #8
+   28920: e2811001     	add	r1, r1, #1
+   28924: e59f20c0     	ldr	r2, [pc, #0xc0]         @ 0x289ec <rsl_sys_updateFirmware+0x4d8>
+   28928: e08f3003     	add	r3, pc, r3  ; PIC literal "Update firmware error!\n" @0xac3d7
+   2892c: ebffc543     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0xeaf4
+   28930: e3a04001     	mov	r4, #1
+   28934: e1a00004     	mov	r0, r4
+   28938: e28dde5e     	add	sp, sp, #1504
+   2893c: e28dd004     	add	sp, sp, #4
+   28940: e8bd8ff0     	pop	{r4, r5, r6, r7, r8, r9, r10, r11, pc}
+   28944: 0007c218     	andeq	r12, r7, r8, lsl r2
+   28948: 0007b7d6     	ldrdeq	r11, r12, [r7], -r6
+   2894c: 00083843     	andeq	r3, r8, r3, asr #16
+   28950: 00000e63     	andeq	r0, r0, r3, ror #28
+   28954: 00000594     	<unknown>
+   28958: 0007c1c0     	andeq	r12, r7, r0, asr #3
+   2895c: 00000e6d     	andeq	r0, r0, sp, ror #28
+   28960: 0007c194     	<unknown>
+   28964: 00083bc6     	andeq	r3, r8, r6, asr #23
+   28968: 00000e72     	andeq	r0, r0, r2, ror lr
+   2896c: 0007c15c     	andeq	r12, r7, r12, asr r1
+   28970: 00083bcb     	andeq	r3, r8, r11, asr #23
+   28974: 00000e75     	andeq	r0, r0, r5, ror lr
+   28978: 00001196     	<unknown>
+   2897c: 00083d67     	andeq	r3, r8, r7, ror #26
+   28980: 00083b41     	andeq	r3, r8, r1, asr #22
+   28984: 00000e95     	<unknown>
+   28988: 00083b4c     	andeq	r3, r8, r12, asr #22
+   2898c: 00000e9c     	<unknown>
+   28990: 0007c01c     	andeq	r12, r7, r12, lsl r0
+   28994: 00083af1     	strdeq	r3, r4, [r8], -r1
+   28998: 00000eb8     	strheq	r0, [r0], -r8
+   2899c: 00001197     	<unknown>
+   289a0: 0007bfe0     	andeq	r11, r7, r0, ror #31
+   289a4: 00083b0f     	andeq	r3, r8, pc, lsl #22
+   289a8: 00000ebc     	strheq	r0, [r0], -r12
+   289ac: 0007bf80     	andeq	r11, r7, r0, lsl #31
+   289b0: 00083acf     	andeq	r3, r8, pc, asr #21
+   289b4: 00000ec5     	andeq	r0, r0, r5, asr #29
+   289b8: 00083b1d     	andeq	r3, r8, sp, lsl r11
+   289bc: 00000ed5     	ldrdeq	r0, r1, [r0], -r5
+   289c0: 0000119a     	<unknown>
+   289c4: 0007bf1c     	andeq	r11, r7, r12, lsl pc
+   289c8: 00083aaa     	andeq	r3, r8, r10, lsr #21
+   289cc: 00000eca     	andeq	r0, r0, r10, asr #29
+   289d0: 00083ae7     	andeq	r3, r8, r7, ror #21
+   289d4: 00000eeb     	andeq	r0, r0, r11, ror #29
+   289d8: 0007bea8     	andeq	r11, r7, r8, lsr #29
+   289dc: 00083ac0     	andeq	r3, r8, r0, asr #21
+   289e0: 00000f2a     	andeq	r0, r0, r10, lsr #30
+   289e4: 0007be74     	andeq	r11, r7, r4, ror lr
+   289e8: 00083aa7     	andeq	r3, r8, r7, lsr #21
+   289ec: 00000f31     	andeq	r0, r0, r1, lsr pc
+
+000289f0 <rsl_sys_updateFirmwareByOmci>:
+   289f0: e92d4ff0     	push	{r4, r5, r6, r7, r8, r9, r10, r11, lr}
+   289f4: e24dde5d     	sub	sp, sp, #1488
+   289f8: e24dd00c     	sub	sp, sp, #12
+   289fc: e28d9024     	add	r9, sp, #36
+   28a00: e1a07001     	mov	r7, r1
+   28a04: e1a0a000     	mov	r10, r0
+   28a08: e3a01000     	mov	r1, #0
+   28a0c: e1a05002     	mov	r5, r2
+   28a10: e1a00009     	mov	r0, r9
+   28a14: e3a02010     	mov	r2, #16
+   28a18: e28d8034     	add	r8, sp, #52
+   28a1c: ebffc132     	bl	0x18eec <memset@plt>    @ imm = #-0xfb38
+   28a20: e3a01000     	mov	r1, #0
+   28a24: e3a02010     	mov	r2, #16
+   28a28: e1a00008     	mov	r0, r8
+   28a2c: ebffc12e     	bl	0x18eec <memset@plt>    @ imm = #-0xfb48
+   28a30: ebffc211     	bl	0x1927c <oal_sys_getTagOffset@plt> @ imm = #-0xf7bc
+   28a34: e3570000     	cmp	r7, #0
+   28a38: 1a000008     	bne	0x28a60 <rsl_sys_updateFirmwareByOmci+0x70> @ imm = #0x20
+   28a3c: e59f3370     	ldr	r3, [pc, #0x370]        @ 0x28db4 <rsl_sys_updateFirmwareByOmci+0x3c4>
+   28a40: e59f0370     	ldr	r0, [pc, #0x370]        @ 0x28db8 <rsl_sys_updateFirmwareByOmci+0x3c8>
+   28a44: e59f1370     	ldr	r1, [pc, #0x370]        @ 0x28dbc <rsl_sys_updateFirmwareByOmci+0x3cc>
+   28a48: e08f3003     	add	r3, pc, r3  ; PIC literal "rsl_sys_updateFirmwareByOmci" @0xa4960
+   28a4c: e08f0000     	add	r0, pc, r0  ; PIC literal "pFirmwareAddr != ((void *)0)" @0xa3d56
+   28a50: e08f1001     	add	r1, pc, r1  ; PIC literal "./src/rsl_sys.c" @0xabdc7
+   28a54: e59f2364     	ldr	r2, [pc, #0x364]        @ 0x28dc0 <rsl_sys_updateFirmwareByOmci+0x3d0>
+   28a58: e2833e1d     	add	r3, r3, #464
+   28a5c: ebffc11c     	bl	0x18ed4 <__assert@plt>  @ imm = #-0xfb90
+   28a60: e28d6014     	add	r6, sp, #20
+   28a64: e3a01000     	mov	r1, #0
+   28a68: e3a0200e     	mov	r2, #14
+   28a6c: e1a0b000     	mov	r11, r0
+   28a70: e1a00006     	mov	r0, r6
+   28a74: ebffc11c     	bl	0x18eec <memset@plt>    @ imm = #-0xfb90
+   28a78: e3a00002     	mov	r0, #2
+   28a7c: e1a01006     	mov	r1, r6
+   28a80: e59f233c     	ldr	r2, [pc, #0x33c]        @ 0x28dc4 <rsl_sys_updateFirmwareByOmci+0x3d4>
+   28a84: e28d3044     	add	r3, sp, #68
+   28a88: ebffc495     	bl	0x19ce4 <rsl_getObj@plt> @ imm = #-0xedac
+   28a8c: e2504000     	subs	r4, r0, #0
+   28a90: 0a000007     	beq	0x28ab4 <rsl_sys_updateFirmwareByOmci+0xc4> @ imm = #0x1c
+   28a94: e59f032c     	ldr	r0, [pc, #0x32c]        @ 0x28dc8 <rsl_sys_updateFirmwareByOmci+0x3d8>
+   28a98: e59f132c     	ldr	r1, [pc, #0x32c]        @ 0x28dcc <rsl_sys_updateFirmwareByOmci+0x3dc>
+   28a9c: e08f0000     	add	r0, pc, r0  ; PIC literal "rsl_sys_updateFirmwareByOmci" @0xa497d
+   28aa0: e2800f7b     	add	r0, r0, #492
+   28aa4: e2800001     	add	r0, r0, #1
+   28aa8: e1a02004     	mov	r2, r4
+   28aac: ebffc36c     	bl	0x19864 <cdbg_perror@plt> @ imm = #-0xf250
+   28ab0: ea0000bb     	b	0x28da4 <rsl_sys_updateFirmwareByOmci+0x3b4> @ imm = #0x2ec
+   28ab4: e3550803     	cmp	r5, #196608
+   28ab8: 2a00000a     	bhs	0x28ae8 <rsl_sys_updateFirmwareByOmci+0xf8> @ imm = #0x28
+   28abc: e59f130c     	ldr	r1, [pc, #0x30c]        @ 0x28dd0 <rsl_sys_updateFirmwareByOmci+0x3e0>
+   28ac0: e59f330c     	ldr	r3, [pc, #0x30c]        @ 0x28dd4 <rsl_sys_updateFirmwareByOmci+0x3e4>
+   28ac4: e08f1001     	add	r1, pc, r1  ; PIC literal "rsl_sys_updateFirmwareByOmci" @0xa497d
+   28ac8: e2811f7b     	add	r1, r1, #492
+   28acc: e58d5000     	str	r5, [sp]
+   28ad0: e3a00008     	mov	r0, #8
+   28ad4: e2811001     	add	r1, r1, #1
+   28ad8: e59f22f8     	ldr	r2, [pc, #0x2f8]        @ 0x28dd8 <rsl_sys_updateFirmwareByOmci+0x3e8>
+   28adc: e08f3003     	add	r3, pc, r3  ; PIC literal "The file's length is bad: %d\n" @0xac217
+   28ae0: ebffc4d6     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0xeca8
+   28ae4: ea000005     	b	0x28b00 <rsl_sys_updateFirmwareByOmci+0x110> @ imm = #0x14
+   28ae8: ebffc61e     	bl	0x1a368 <cmem_getUpdateFirmwareSize@plt> @ imm = #-0xe788
+   28aec: e1550000     	cmp	r5, r0
+   28af0: 8afffff1     	bhi	0x28abc <rsl_sys_updateFirmwareByOmci+0xcc> @ imm = #-0x3c
+   28af4: ebffc61b     	bl	0x1a368 <cmem_getUpdateFirmwareSize@plt> @ imm = #-0xe794
+   28af8: e1550000     	cmp	r5, r0
+   28afc: 9a000001     	bls	0x28b08 <rsl_sys_updateFirmwareByOmci+0x118> @ imm = #0x4
+   28b00: e59f42d4     	ldr	r4, [pc, #0x2d4]        @ 0x28ddc <rsl_sys_updateFirmwareByOmci+0x3ec>
+   28b04: ea0000a6     	b	0x28da4 <rsl_sys_updateFirmwareByOmci+0x3b4> @ imm = #0x298
+   28b08: e59f62d0     	ldr	r6, [pc, #0x2d0]        @ 0x28de0 <rsl_sys_updateFirmwareByOmci+0x3f0>
+   28b0c: e59f32d0     	ldr	r3, [pc, #0x2d0]        @ 0x28de4 <rsl_sys_updateFirmwareByOmci+0x3f4>
+   28b10: e08f6006     	add	r6, pc, r6  ; PIC literal "rsl_sys_updateFirmwareByOmci" @0xa497d
+   28b14: e2866f7b     	add	r6, r6, #492
+   28b18: e2866001     	add	r6, r6, #1
+   28b1c: e087400b     	add	r4, r7, r11
+   28b20: e08f3003     	add	r3, pc, r3  ; PIC literal "Ready to Check image MD5..." @0xac44c
+   28b24: e3a00008     	mov	r0, #8
+   28b28: e1a01006     	mov	r1, r6
+   28b2c: e59f22b4     	ldr	r2, [pc, #0x2b4]        @ 0x28de8 <rsl_sys_updateFirmwareByOmci+0x3f8>
+   28b30: ebffc4c2     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0xecf8
+   28b34: e284b040     	add	r11, r4, #64
+   28b38: e1a0100b     	mov	r1, r11
+   28b3c: e3a02010     	mov	r2, #16
+   28b40: e1a00008     	mov	r0, r8
+   28b44: ebffc769     	bl	0x1a8f0 <memcpy@plt>    @ imm = #-0xe25c
+   28b48: e59f329c     	ldr	r3, [pc, #0x29c]        @ 0x28dec <rsl_sys_updateFirmwareByOmci+0x3fc>
+   28b4c: e1a01006     	mov	r1, r6
+   28b50: e08f3003     	add	r3, pc, r3  ; PIC literal "Check image MD5 OK" @0xac468
+   28b54: e59f2294     	ldr	r2, [pc, #0x294]        @ 0x28df0 <rsl_sys_updateFirmwareByOmci+0x400>
+   28b58: e3a00008     	mov	r0, #8
+   28b5c: ebffc4b7     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0xed24
+   28b60: e1a00009     	mov	r0, r9
+   28b64: ebfff832     	bl	0x26c34 <util_showFuncQueue+0xac> @ imm = #-0x1f38
+   28b68: e1a01009     	mov	r1, r9
+   28b6c: e3a02010     	mov	r2, #16
+   28b70: e1a0000b     	mov	r0, r11
+   28b74: ebffc75d     	bl	0x1a8f0 <memcpy@plt>    @ imm = #-0xe28c
+   28b78: e1a00008     	mov	r0, r8
+   28b7c: e1a01007     	mov	r1, r7
+   28b80: e1a02005     	mov	r2, r5
+   28b84: ebffc7e3     	bl	0x1ab18 <cen_md5VerifyDigest@plt> @ imm = #-0xe074
+   28b88: e3500000     	cmp	r0, #0
+   28b8c: 1a000007     	bne	0x28bb0 <rsl_sys_updateFirmwareByOmci+0x1c0> @ imm = #0x1c
+   28b90: e59f325c     	ldr	r3, [pc, #0x25c]        @ 0x28df4 <rsl_sys_updateFirmwareByOmci+0x404>
+   28b94: e58d5000     	str	r5, [sp]
+   28b98: e3a00008     	mov	r0, #8
+   28b9c: e1a01006     	mov	r1, r6
+   28ba0: e59f2250     	ldr	r2, [pc, #0x250]        @ 0x28df8 <rsl_sys_updateFirmwareByOmci+0x408>
+   28ba4: e08f3003     	add	r3, pc, r3  ; PIC literal "Image md5 checksum is not correct, len is %x!\n" @0xac235
+   28ba8: ebffc4a4     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0xed70
+   28bac: ea000021     	b	0x28c38 <rsl_sys_updateFirmwareByOmci+0x248> @ imm = #0x84
+   28bb0: e1a0000b     	mov	r0, r11
+   28bb4: e1a01008     	mov	r1, r8
+   28bb8: e3a02010     	mov	r2, #16
+   28bbc: ebffc74b     	bl	0x1a8f0 <memcpy@plt>    @ imm = #-0xe2d4
+   28bc0: e5dd3529     	ldrb	r3, [sp, #0x529]
+   28bc4: e3530000     	cmp	r3, #0
+   28bc8: 0a000004     	beq	0x28be0 <rsl_sys_updateFirmwareByOmci+0x1f0> @ imm = #0x10
+   28bcc: e5946038     	ldr	r6, [r4, #0x38]
+   28bd0: ebffc2de     	bl	0x19750 <rsl_dev_getProductVer@plt> @ imm = #-0xf488
+   28bd4: e1560000     	cmp	r6, r0
+   28bd8: 1a000004     	bne	0x28bf0 <rsl_sys_updateFirmwareByOmci+0x200> @ imm = #0x10
+   28bdc: ea000017     	b	0x28c40 <rsl_sys_updateFirmwareByOmci+0x250> @ imm = #0x5c
+   28be0: e5946034     	ldr	r6, [r4, #0x34]
+   28be4: ebffc5f4     	bl	0x1a3bc <rsl_dev_getProductId@plt> @ imm = #-0xe830
+   28be8: e1560000     	cmp	r6, r0
+   28bec: 0afffff6     	beq	0x28bcc <rsl_sys_updateFirmwareByOmci+0x1dc> @ imm = #-0x28
+   28bf0: e5946034     	ldr	r6, [r4, #0x34]
+   28bf4: ebffc5f0     	bl	0x1a3bc <rsl_dev_getProductId@plt> @ imm = #-0xe840
+   28bf8: e5944038     	ldr	r4, [r4, #0x38]
+   28bfc: e1a05000     	mov	r5, r0
+   28c00: ebffc2d2     	bl	0x19750 <rsl_dev_getProductVer@plt> @ imm = #-0xf4b8
+   28c04: e59f11f0     	ldr	r1, [pc, #0x1f0]        @ 0x28dfc <rsl_sys_updateFirmwareByOmci+0x40c>
+   28c08: e59f31f0     	ldr	r3, [pc, #0x1f0]        @ 0x28e00 <rsl_sys_updateFirmwareByOmci+0x410>
+   28c0c: e08f1001     	add	r1, pc, r1
+   28c10: e2811f7b     	add	r1, r1, #492
+   28c14: e58d6000     	str	r6, [sp]
+   28c18: e58d5004     	str	r5, [sp, #0x4]
+   28c1c: e58d4008     	str	r4, [sp, #0x8]
+   28c20: e2811001     	add	r1, r1, #1
+   28c24: e59f21d8     	ldr	r2, [pc, #0x1d8]        @ 0x28e04 <rsl_sys_updateFirmwareByOmci+0x414>
+   28c28: e08f3003     	add	r3, pc, r3  ; PIC literal "Firmware version check failed. ID(0x%08x:0x%08x), VER(0x%08x:0x%08x)\n" @0xac281
+   28c2c: e58d000c     	str	r0, [sp, #0xc]
+   28c30: e3a00008     	mov	r0, #8
+   28c34: ebffc481     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0xedfc
+   28c38: e59f41c8     	ldr	r4, [pc, #0x1c8]        @ 0x28e08 <rsl_sys_updateFirmwareByOmci+0x418>
+   28c3c: ea000058     	b	0x28da4 <rsl_sys_updateFirmwareByOmci+0x3b4> @ imm = #0x160
+   28c40: ebffc53b     	bl	0x1a134 <rsl_dev_getSpecialVer@plt> @ imm = #-0xeb14
+   28c44: e5948094     	ldr	r8, [r4, #0x94]
+   28c48: e1a03820     	lsr	r3, r0, #16
+   28c4c: e1a03803     	lsl	r3, r3, #16
+   28c50: e3530000     	cmp	r3, #0
+   28c54: 0a000004     	beq	0x28c6c <rsl_sys_updateFirmwareByOmci+0x27c> @ imm = #0x10
+   28c58: e0203008     	eor	r3, r0, r8
+   28c5c: e1a03823     	lsr	r3, r3, #16
+   28c60: e1a03803     	lsl	r3, r3, #16
+   28c64: e3530000     	cmp	r3, #0
+   28c68: 1a00001b     	bne	0x28cdc <rsl_sys_updateFirmwareByOmci+0x2ec> @ imm = #0x6c
+   28c6c: e200300f     	and	r3, r0, #15
+   28c70: e208200f     	and	r2, r8, #15
+   28c74: e1530002     	cmp	r3, r2
+   28c78: 8a000017     	bhi	0x28cdc <rsl_sys_updateFirmwareByOmci+0x2ec> @ imm = #0x5c
+   28c7c: e59f6188     	ldr	r6, [pc, #0x188]        @ 0x28e0c <rsl_sys_updateFirmwareByOmci+0x41c>
+   28c80: e59f3188     	ldr	r3, [pc, #0x188]        @ 0x28e10 <rsl_sys_updateFirmwareByOmci+0x420>
+   28c84: e08f6006     	add	r6, pc, r6  ; PIC literal "rsl_sys_updateFirmwareByOmci" @0xa497d
+   28c88: e2866f7b     	add	r6, r6, #492
+   28c8c: e2866001     	add	r6, r6, #1
+   28c90: e08f3003     	add	r3, pc, r3  ; PIC literal "Firmware special version check check OK((new:0x%08lx,current0x%08x))!\n" @0xac2eb
+   28c94: e58d0004     	str	r0, [sp, #0x4]
+   28c98: e1a01006     	mov	r1, r6
+   28c9c: e3a00008     	mov	r0, #8
+   28ca0: e59f216c     	ldr	r2, [pc, #0x16c]        @ 0x28e14 <rsl_sys_updateFirmwareByOmci+0x424>
+   28ca4: e58d8000     	str	r8, [sp]
+   28ca8: ebffc464     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0xee70
+   28cac: ebffc415     	bl	0x19d08 <rsl_dev_getAddHver@plt> @ imm = #-0xefac
+   28cb0: e594303c     	ldr	r3, [r4, #0x3c]
+   28cb4: e1530000     	cmp	r3, r0
+   28cb8: 2a000014     	bhs	0x28d10 <rsl_sys_updateFirmwareByOmci+0x320> @ imm = #0x50
+   28cbc: e59f3154     	ldr	r3, [pc, #0x154]        @ 0x28e18 <rsl_sys_updateFirmwareByOmci+0x428>
+   28cc0: e3a00008     	mov	r0, #8
+   28cc4: e1a01006     	mov	r1, r6
+   28cc8: e59f214c     	ldr	r2, [pc, #0x14c]        @ 0x28e1c <rsl_sys_updateFirmwareByOmci+0x42c>
+   28ccc: e08f3003     	add	r3, pc, r3  ; PIC literal "Firmware Additional HardwareVersion check failed\n" @0xac375
+   28cd0: ebffc45a     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0xee98
+   28cd4: e59f4144     	ldr	r4, [pc, #0x144]        @ 0x28e20 <rsl_sys_updateFirmwareByOmci+0x430>
+   28cd8: ea000031     	b	0x28da4 <rsl_sys_updateFirmwareByOmci+0x3b4> @ imm = #0xc4
+   28cdc: ebffc514     	bl	0x1a134 <rsl_dev_getSpecialVer@plt> @ imm = #-0xebb0
+   28ce0: e59f113c     	ldr	r1, [pc, #0x13c]        @ 0x28e24 <rsl_sys_updateFirmwareByOmci+0x434>
+   28ce4: e59f313c     	ldr	r3, [pc, #0x13c]        @ 0x28e28 <rsl_sys_updateFirmwareByOmci+0x438>
+   28ce8: e08f1001     	add	r1, pc, r1  ; PIC literal "rsl_sys_updateFirmwareByOmci" @0xa497d
+   28cec: e2811f7b     	add	r1, r1, #492
+   28cf0: e58d8000     	str	r8, [sp]
+   28cf4: e2811001     	add	r1, r1, #1
+   28cf8: e59f212c     	ldr	r2, [pc, #0x12c]        @ 0x28e2c <rsl_sys_updateFirmwareByOmci+0x43c>
+   28cfc: e08f3003     	add	r3, pc, r3  ; PIC literal "Firmware special version check failed(new:0x%08lx,current:0x%08x)\n" @0xac332
+   28d00: e58d0004     	str	r0, [sp, #0x4]
+   28d04: e3a00008     	mov	r0, #8
+   28d08: ebffc44c     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0xeed0
+   28d0c: eaffffc9     	b	0x28c38 <rsl_sys_updateFirmwareByOmci+0x248> @ imm = #-0xdc
+   28d10: e1a00007     	mov	r0, r7
+   28d14: e1a01005     	mov	r1, r5
+   28d18: ebffc772     	bl	0x1aae8 <dm_preHook@plt> @ imm = #-0xe238
+   28d1c: e3500000     	cmp	r0, #0
+   28d20: 0a000005     	beq	0x28d3c <rsl_sys_updateFirmwareByOmci+0x34c> @ imm = #0x14
+   28d24: e59f3104     	ldr	r3, [pc, #0x104]        @ 0x28e30 <rsl_sys_updateFirmwareByOmci+0x440>
+   28d28: e3a00008     	mov	r0, #8
+   28d2c: e1a01006     	mov	r1, r6
+   28d30: e59f20fc     	ldr	r2, [pc, #0xfc]         @ 0x28e34 <rsl_sys_updateFirmwareByOmci+0x444>
+   28d34: e08f3003     	add	r3, pc, r3  ; PIC literal "do dm_postHook faied" @0xac3a7
+   28d38: ebffc440     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0xef00
+   28d3c: e1a0000a     	mov	r0, r10
+   28d40: e1a01007     	mov	r1, r7
+   28d44: e1a02005     	mov	r2, r5
+   28d48: ebffc445     	bl	0x19e64 <oal_sys_writeImageByOmci@plt> @ imm = #-0xeeec
+   28d4c: e2504000     	subs	r4, r0, #0
+   28d50: 1a000009     	bne	0x28d7c <rsl_sys_updateFirmwareByOmci+0x38c> @ imm = #0x24
+   28d54: e59f10dc     	ldr	r1, [pc, #0xdc]         @ 0x28e38 <rsl_sys_updateFirmwareByOmci+0x448>
+   28d58: e59f30dc     	ldr	r3, [pc, #0xdc]         @ 0x28e3c <rsl_sys_updateFirmwareByOmci+0x44c>
+   28d5c: e08f1001     	add	r1, pc, r1  ; PIC literal "rsl_sys_updateFirmwareByOmci" @0xa497d
+   28d60: e2811f7b     	add	r1, r1, #492
+   28d64: e3a00009     	mov	r0, #9
+   28d68: e2811001     	add	r1, r1, #1
+   28d6c: e59f20cc     	ldr	r2, [pc, #0xcc]         @ 0x28e40 <rsl_sys_updateFirmwareByOmci+0x450>
+   28d70: e08f3003     	add	r3, pc, r3  ; PIC literal "Firmware update succesful\n" @0xac3bc
+   28d74: ebffc431     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0xef3c
+   28d78: ea000009     	b	0x28da4 <rsl_sys_updateFirmwareByOmci+0x3b4> @ imm = #0x24
+   28d7c: e59f10c0     	ldr	r1, [pc, #0xc0]         @ 0x28e44 <rsl_sys_updateFirmwareByOmci+0x454>
+   28d80: e59f30c0     	ldr	r3, [pc, #0xc0]         @ 0x28e48 <rsl_sys_updateFirmwareByOmci+0x458>
+   28d84: e08f1001     	add	r1, pc, r1  ; PIC literal "rsl_sys_updateFirmwareByOmci" @0xa497d
+   28d88: e2811f7b     	add	r1, r1, #492
+   28d8c: e3a00008     	mov	r0, #8
+   28d90: e2811001     	add	r1, r1, #1
+   28d94: e59f20b0     	ldr	r2, [pc, #0xb0]         @ 0x28e4c <rsl_sys_updateFirmwareByOmci+0x45c>
+   28d98: e08f3003     	add	r3, pc, r3  ; PIC literal "Update firmware error!\n" @0xac3d7
+   28d9c: ebffc427     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0xef64
+   28da0: e3a04001     	mov	r4, #1
+   28da4: e1a00004     	mov	r0, r4
+   28da8: e28dde5d     	add	sp, sp, #1488
+   28dac: e28dd00c     	add	sp, sp, #12
+   28db0: e8bd8ff0     	pop	{r4, r5, r6, r7, r8, r9, r10, r11, pc}
+   28db4: 0007bd40     	andeq	r11, r7, r0, asr #26
+   28db8: 0007b302     	andeq	r11, r7, r2, lsl #6
+   28dbc: 0008336f     	andeq	r3, r8, pc, ror #6
+   28dc0: 00000f61     	andeq	r0, r0, r1, ror #30
+   28dc4: 00000594     	<unknown>
+   28dc8: 0007bcec     	andeq	r11, r7, r12, ror #25
+   28dcc: 00000f6b     	andeq	r0, r0, r11, ror #30
+   28dd0: 0007bcc4     	andeq	r11, r7, r4, asr #25
+   28dd4: 00083733     	andeq	r3, r8, r3, lsr r7
+   28dd8: 00000f72     	andeq	r0, r0, r2, ror pc
+   28ddc: 00001196     	<unknown>
+   28de0: 0007bc78     	andeq	r11, r7, r8, ror r12
+   28de4: 00083924     	andeq	r3, r8, r4, lsr #18
+   28de8: 00000f7d     	andeq	r0, r0, sp, ror pc
+   28dec: 00083910     	andeq	r3, r8, r0, lsl r9
+   28df0: 00000f7f     	andeq	r0, r0, pc, ror pc
+   28df4: 00083689     	andeq	r3, r8, r9, lsl #13
+   28df8: 00000f93     	<unknown>
+   28dfc: 0007bb7c     	andeq	r11, r7, r12, ror r11
+   28e00: 00083651     	andeq	r3, r8, r1, asr r6
+   28e04: 00000fb5     	strheq	r0, [r0], -r5
+   28e08: 00001197     	<unknown>
+   28e0c: 0007bb04     	andeq	r11, r7, r4, lsl #22
+   28e10: 00083653     	andeq	r3, r8, r3, asr r6
+   28e14: 00000fc1     	andeq	r0, r0, r1, asr #31
+   28e18: 000836a1     	andeq	r3, r8, r1, lsr #13
+   28e1c: 00000fd1     	ldrdeq	r0, r1, [r0], -r1
+   28e20: 0000119a     	<unknown>
+   28e24: 0007baa0     	andeq	r11, r7, r0, lsr #21
+   28e28: 0008362e     	andeq	r3, r8, lr, lsr #12
+   28e2c: 00000fc6     	andeq	r0, r0, r6, asr #31
+   28e30: 0008366b     	andeq	r3, r8, r11, ror #12
+   28e34: 00000fe7     	andeq	r0, r0, r7, ror #31
+   28e38: 0007ba2c     	andeq	r11, r7, r12, lsr #20
+   28e3c: 00083644     	andeq	r3, r8, r4, asr #12
+   28e40: 00001025     	andeq	r1, r0, r5, lsr #32
+   28e44: 0007ba04     	andeq	r11, r7, r4, lsl #20
+   28e48: 00083637     	andeq	r3, r8, r7, lsr r6
+   28e4c: 00001029     	andeq	r1, r0, r9, lsr #32
+
+00090300 <oal_sys_writeImageByOmci>:
+   90300: e92d47ff     	push	{r0, r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, lr}
+   90304: e5913088     	ldr	r3, [r1, #0x88]
+   90308: e1a04001     	mov	r4, r1
+   9030c: e3530802     	cmp	r3, #131072
+   90310: 9a000008     	bls	0x90338 <oal_sys_writeImageByOmci+0x38> @ imm = #0x20
+   90314: e59f12f4     	ldr	r1, [pc, #0x2f4]        @ 0x90610 <oal_sys_writeImageByOmci+0x310>
+   90318: e59f32f4     	ldr	r3, [pc, #0x2f4]        @ 0x90614 <oal_sys_writeImageByOmci+0x314>
+   9031c: e08f1001     	add	r1, pc, r1  ; PIC literal "oal_sys_writeImageByOmci" @0xc753c
+   90320: e2811e45     	add	r1, r1, #1104
+   90324: e3a00008     	mov	r0, #8
+   90328: e281100a     	add	r1, r1, #10
+   9032c: e59f22e4     	ldr	r2, [pc, #0x2e4]        @ 0x90618 <oal_sys_writeImageByOmci+0x318>
+   90330: e08f3003     	add	r3, pc, r3  ; PIC literal "Image bootloader too long\n" @0xca4c6
+   90334: ea00000a     	b	0x90364 <oal_sys_writeImageByOmci+0x64> @ imm = #0x28
+   90338: e5913078     	ldr	r3, [r1, #0x78]
+   9033c: e3530816     	cmp	r3, #1441792
+   90340: 9a00000a     	bls	0x90370 <oal_sys_writeImageByOmci+0x70> @ imm = #0x28
+   90344: e59f12d0     	ldr	r1, [pc, #0x2d0]        @ 0x9061c <oal_sys_writeImageByOmci+0x31c>
+   90348: e59f32d0     	ldr	r3, [pc, #0x2d0]        @ 0x90620 <oal_sys_writeImageByOmci+0x320>
+   9034c: e08f1001     	add	r1, pc, r1  ; PIC literal "oal_sys_writeImageByOmci" @0xc753c
+   90350: e59f22cc     	ldr	r2, [pc, #0x2cc]        @ 0x90624 <oal_sys_writeImageByOmci+0x324>
+   90354: e2811e45     	add	r1, r1, #1104
+   90358: e3a00008     	mov	r0, #8
+   9035c: e281100a     	add	r1, r1, #10
+   90360: e08f3003     	add	r3, pc, r3  ; PIC literal "Image kernel too long\n" @0xca4e1
+   90364: ebfe26b5     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0x7652c
+   90368: e59f02b8     	ldr	r0, [pc, #0x2b8]        @ 0x90628 <oal_sys_writeImageByOmci+0x328>
+   9036c: ea0000a5     	b	0x90608 <oal_sys_writeImageByOmci+0x308> @ imm = #0x294
+   90370: e5913080     	ldr	r3, [r1, #0x80]
+   90374: e3530863     	cmp	r3, #6488064
+   90378: 9a000008     	bls	0x903a0 <oal_sys_writeImageByOmci+0xa0> @ imm = #0x20
+   9037c: e59f12a8     	ldr	r1, [pc, #0x2a8]        @ 0x9062c <oal_sys_writeImageByOmci+0x32c>
+   90380: e59f32a8     	ldr	r3, [pc, #0x2a8]        @ 0x90630 <oal_sys_writeImageByOmci+0x330>
+   90384: e08f1001     	add	r1, pc, r1  ; PIC literal "oal_sys_writeImageByOmci" @0xc753c
+   90388: e2811e45     	add	r1, r1, #1104
+   9038c: e3a00008     	mov	r0, #8
+   90390: e281100a     	add	r1, r1, #10
+   90394: e59f2298     	ldr	r2, [pc, #0x298]        @ 0x90634 <oal_sys_writeImageByOmci+0x334>
+   90398: e08f3003     	add	r3, pc, r3  ; PIC literal "Image rootfs too long\n" @0xca4f8
+   9039c: eafffff0     	b	0x90364 <oal_sys_writeImageByOmci+0x64> @ imm = #-0x40
+   903a0: e59f0290     	ldr	r0, [pc, #0x290]        @ 0x90638 <oal_sys_writeImageByOmci+0x338>
+   903a4: e3a02000     	mov	r2, #0
+   903a8: e08f0000     	add	r0, pc, r0  ; PIC literal "smbd" @0xc9e5a
+   903ac: e28d500c     	add	r5, sp, #12
+   903b0: e58d5000     	str	r5, [sp]
+   903b4: e1a01000     	mov	r1, r0
+   903b8: e1a03002     	mov	r3, r2
+   903bc: ebfe21da     	bl	0x18b2c <oal_util_findProc@plt> @ imm = #-0x77898
+   903c0: e3500001     	cmp	r0, #1
+   903c4: 1a000006     	bne	0x903e4 <oal_sys_writeImageByOmci+0xe4> @ imm = #0x18
+   903c8: e59f026c     	ldr	r0, [pc, #0x26c]        @ 0x9063c <oal_sys_writeImageByOmci+0x33c>
+   903cc: e59f126c     	ldr	r1, [pc, #0x26c]        @ 0x90640 <oal_sys_writeImageByOmci+0x340>
+   903d0: e08f0000     	add	r0, pc, r0  ; PIC literal "oal_sys_writeImageByOmci" @0xc753c
+   903d4: e2800e45     	add	r0, r0, #1104
+   903d8: e280000a     	add	r0, r0, #10
+   903dc: e08f1001     	add	r1, pc, r1  ; PIC literal "killall -9 smbd" @0xc9e4f
+   903e0: ebfe2543     	bl	0x198f4 <util_execSystem@plt> @ imm = #-0x76af4
+   903e4: e59f0258     	ldr	r0, [pc, #0x258]        @ 0x90644 <oal_sys_writeImageByOmci+0x344>
+   903e8: e3a02000     	mov	r2, #0
+   903ec: e08f0000     	add	r0, pc, r0  ; PIC literal "vsftpd" @0xc9e6a
+   903f0: e58d5000     	str	r5, [sp]
+   903f4: e1a01000     	mov	r1, r0
+   903f8: e1a03002     	mov	r3, r2
+   903fc: ebfe21ca     	bl	0x18b2c <oal_util_findProc@plt> @ imm = #-0x778d8
+   90400: e3500001     	cmp	r0, #1
+   90404: 1a000006     	bne	0x90424 <oal_sys_writeImageByOmci+0x124> @ imm = #0x18
+   90408: e59f0238     	ldr	r0, [pc, #0x238]        @ 0x90648 <oal_sys_writeImageByOmci+0x348>
+   9040c: e59f1238     	ldr	r1, [pc, #0x238]        @ 0x9064c <oal_sys_writeImageByOmci+0x34c>
+   90410: e08f0000     	add	r0, pc, r0  ; PIC literal "oal_sys_writeImageByOmci" @0xc753c
+   90414: e2800e45     	add	r0, r0, #1104
+   90418: e280000a     	add	r0, r0, #10
+   9041c: e08f1001     	add	r1, pc, r1  ; PIC literal "killall -9 vsftpd" @0xc9e5f
+   90420: ebfe2533     	bl	0x198f4 <util_execSystem@plt> @ imm = #-0x76b34
+   90424: e59f5224     	ldr	r5, [pc, #0x224]        @ 0x90650 <oal_sys_writeImageByOmci+0x350>
+   90428: e59f1224     	ldr	r1, [pc, #0x224]        @ 0x90654 <oal_sys_writeImageByOmci+0x354>
+   9042c: e08f5005     	add	r5, pc, r5  ; PIC literal "oal_sys_writeImageByOmci" @0xc753c
+   90430: e2855e45     	add	r5, r5, #1104
+   90434: e285500a     	add	r5, r5, #10
+   90438: e08f1001     	add	r1, pc, r1  ; PIC literal "echo 2 > /proc/sys/vm/drop_caches" @0xc9e71
+   9043c: e1a00005     	mov	r0, r5
+   90440: ebfe252b     	bl	0x198f4 <util_execSystem@plt> @ imm = #-0x76b54
+   90444: e59f120c     	ldr	r1, [pc, #0x20c]        @ 0x90658 <oal_sys_writeImageByOmci+0x358>
+   90448: e1a00005     	mov	r0, r5
+   9044c: e08f1001     	add	r1, pc, r1  ; PIC literal "echo POWR 2 1 > /proc/tp_led" @0xc9e93
+   90450: ebfe2527     	bl	0x198f4 <util_execSystem@plt> @ imm = #-0x76b64
+   90454: e5942088     	ldr	r2, [r4, #0x88]
+   90458: e3520000     	cmp	r2, #0
+   9045c: 0a000012     	beq	0x904ac <oal_sys_writeImageByOmci+0x1ac> @ imm = #0x48
+   90460: e59f01f4     	ldr	r0, [pc, #0x1f4]        @ 0x9065c <oal_sys_writeImageByOmci+0x35c>
+   90464: e5941084     	ldr	r1, [r4, #0x84]
+   90468: e3a03000     	mov	r3, #0
+   9046c: e08f0000     	add	r0, pc, r0  ; PIC literal "Start to write bootloader from 0x%x len 0x%x to 0x%x\n" @0xca50f
+   90470: ebfe220d     	bl	0x18cac <printf@plt>    @ imm = #-0x777cc
+   90474: e5942084     	ldr	r2, [r4, #0x84]
+   90478: e3a00000     	mov	r0, #0
+   9047c: e1a01004     	mov	r1, r4
+   90480: e2822c02     	add	r2, r2, #512
+   90484: e5943088     	ldr	r3, [r4, #0x88]
+   90488: ebfff411     	bl	0x8d4d4 <oal_app_chkL4PortAvail+0x70c> @ imm = #-0x2fbc
+   9048c: e3500000     	cmp	r0, #0
+   90490: aa000005     	bge	0x904ac <oal_sys_writeImageByOmci+0x1ac> @ imm = #0x14
+   90494: e59f31c4     	ldr	r3, [pc, #0x1c4]        @ 0x90660 <oal_sys_writeImageByOmci+0x360>
+   90498: e3a00008     	mov	r0, #8
+   9049c: e1a01005     	mov	r1, r5
+   904a0: e3a02ef5     	mov	r2, #3920
+   904a4: e08f3003     	add	r3, pc, r3  ; PIC literal "Write bootloader to flash failed\n" @0xca545
+   904a8: ebfe2664     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0x76670
+   904ac: ebfe2594     	bl	0x19b04 <oal_sys_getBootIndex@plt> @ imm = #-0x769b0
+   904b0: e5945078     	ldr	r5, [r4, #0x78]
+   904b4: e3550000     	cmp	r5, #0
+   904b8: e1a08000     	mov	r8, r0
+   904bc: 0a000019     	beq	0x90528 <oal_sys_writeImageByOmci+0x228> @ imm = #0x64
+   904c0: e3500000     	cmp	r0, #0
+   904c4: e5946074     	ldr	r6, [r4, #0x74]
+   904c8: e59f0194     	ldr	r0, [pc, #0x194]        @ 0x90664 <oal_sys_writeImageByOmci+0x364>
+   904cc: 03a0783e     	moveq	r7, #4063232
+   904d0: 13a07802     	movne	r7, #131072
+   904d4: e1a01006     	mov	r1, r6
+   904d8: e1a02005     	mov	r2, r5
+   904dc: e1a03007     	mov	r3, r7
+   904e0: e08f0000     	add	r0, pc, r0  ; PIC literal "Start to write kernel from 0x%x len 0x%x to 0x%x\n" @0xca567
+   904e4: ebfe21f0     	bl	0x18cac <printf@plt>    @ imm = #-0x77840
+   904e8: e1a00007     	mov	r0, r7
+   904ec: e1a01004     	mov	r1, r4
+   904f0: e2862c02     	add	r2, r6, #512
+   904f4: e1a03005     	mov	r3, r5
+   904f8: ebfff3f5     	bl	0x8d4d4 <oal_app_chkL4PortAvail+0x70c> @ imm = #-0x302c
+   904fc: e3500000     	cmp	r0, #0
+   90500: aa000008     	bge	0x90528 <oal_sys_writeImageByOmci+0x228> @ imm = #0x20
+   90504: e59f115c     	ldr	r1, [pc, #0x15c]        @ 0x90668 <oal_sys_writeImageByOmci+0x368>
+   90508: e59f315c     	ldr	r3, [pc, #0x15c]        @ 0x9066c <oal_sys_writeImageByOmci+0x36c>
+   9050c: e08f1001     	add	r1, pc, r1  ; PIC literal "oal_sys_writeImageByOmci" @0xc753c
+   90510: e2811e45     	add	r1, r1, #1104
+   90514: e3a00008     	mov	r0, #8
+   90518: e281100a     	add	r1, r1, #10
+   9051c: e3a02ef7     	mov	r2, #3952
+   90520: e08f3003     	add	r3, pc, r3  ; PIC literal "Write kernel to flash failed\n" @0xca599
+   90524: ea000027     	b	0x905c8 <oal_sys_writeImageByOmci+0x2c8> @ imm = #0x9c
+   90528: e5943080     	ldr	r3, [r4, #0x80]
+   9052c: e3530000     	cmp	r3, #0
+   90530: 0a00002b     	beq	0x905e4 <oal_sys_writeImageByOmci+0x2e4> @ imm = #0xac
+   90534: e59fa134     	ldr	r10, [pc, #0x134]       @ 0x90670 <oal_sys_writeImageByOmci+0x370>
+   90538: e3580000     	cmp	r8, #0
+   9053c: 03a09715     	moveq	r9, #5505024
+   90540: 13a09706     	movne	r9, #1572864
+   90544: e3a06000     	mov	r6, #0
+   90548: e08fa00a     	add	r10, pc, r10  ; PIC literal "Start to write rootfs from 0x%x len 0x%x to 0x%x\n" @0xca5b7
+   9054c: ea000000     	b	0x90554 <oal_sys_writeImageByOmci+0x254> @ imm = #0x0
+   90550: e0866005     	add	r6, r6, r5
+   90554: e5942080     	ldr	r2, [r4, #0x80]
+   90558: e1560002     	cmp	r6, r2
+   9055c: 2a00001c     	bhs	0x905d4 <oal_sys_writeImageByOmci+0x2d4> @ imm = #0x70
+   90560: e594707c     	ldr	r7, [r4, #0x7c]
+   90564: e2863702     	add	r3, r6, #524288
+   90568: e1530002     	cmp	r3, r2
+   9056c: 80665002     	rsbhi	r5, r6, r2
+   90570: 93a05702     	movls	r5, #524288
+   90574: e0867007     	add	r7, r6, r7
+   90578: e1a01007     	mov	r1, r7
+   9057c: e1a02005     	mov	r2, r5
+   90580: e1a03009     	mov	r3, r9
+   90584: e1a0000a     	mov	r0, r10
+   90588: ebfe21c7     	bl	0x18cac <printf@plt>    @ imm = #-0x778e4
+   9058c: e0860009     	add	r0, r6, r9
+   90590: e1a01004     	mov	r1, r4
+   90594: e2872c02     	add	r2, r7, #512
+   90598: e1a03005     	mov	r3, r5
+   9059c: ebfff3cc     	bl	0x8d4d4 <oal_app_chkL4PortAvail+0x70c> @ imm = #-0x30d0
+   905a0: e3500000     	cmp	r0, #0
+   905a4: aaffffe9     	bge	0x90550 <oal_sys_writeImageByOmci+0x250> @ imm = #-0x5c
+   905a8: e59f10c4     	ldr	r1, [pc, #0xc4]         @ 0x90674 <oal_sys_writeImageByOmci+0x374>
+   905ac: e59f30c4     	ldr	r3, [pc, #0xc4]         @ 0x90678 <oal_sys_writeImageByOmci+0x378>
+   905b0: e08f1001     	add	r1, pc, r1  ; PIC literal "oal_sys_writeImageByOmci" @0xc753c
+   905b4: e59f20c0     	ldr	r2, [pc, #0xc0]         @ 0x9067c <oal_sys_writeImageByOmci+0x37c>
+   905b8: e2811e45     	add	r1, r1, #1104
+   905bc: e3a00008     	mov	r0, #8
+   905c0: e281100a     	add	r1, r1, #10
+   905c4: e08f3003     	add	r3, pc, r3  ; PIC literal "Write rootfs to flash failed\n" @0xca5e9
+   905c8: ebfe261c     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0x76790
+   905cc: e59f00ac     	ldr	r0, [pc, #0xac]         @ 0x90680 <oal_sys_writeImageByOmci+0x380>
+   905d0: ea00000c     	b	0x90608 <oal_sys_writeImageByOmci+0x308> @ imm = #0x30
+   905d4: e59f00a8     	ldr	r0, [pc, #0xa8]         @ 0x90684 <oal_sys_writeImageByOmci+0x384>
+   905d8: e1a01006     	mov	r1, r6
+   905dc: e08f0000     	add	r0, pc, r0  ; PIC literal "End write totalWritten 0x%x,rootfsLen 0x%lx\n" @0xca607
+   905e0: ebfe21b1     	bl	0x18cac <printf@plt>    @ imm = #-0x7793c
+   905e4: e3580000     	cmp	r8, #0
+   905e8: 059f1098     	ldreq	r1, [pc, #0x98]         @ 0x90688 <oal_sys_writeImageByOmci+0x388>
+   905ec: 008f1001     	addeq	r1, pc, r1
+   905f0: 159f1094     	ldrne	r1, [pc, #0x94]         @ 0x9068c <oal_sys_writeImageByOmci+0x38c>
+   905f4: 108f1001     	addne	r1, pc, r1
+   905f8: e59f0090     	ldr	r0, [pc, #0x90]         @ 0x90690 <oal_sys_writeImageByOmci+0x390>
+   905fc: e08f0000     	add	r0, pc, r0  ; PIC literal "Set image flag to %s\n" @0xca634
+   90600: ebfe21a9     	bl	0x18cac <printf@plt>    @ imm = #-0x7795c
+   90604: e3a00000     	mov	r0, #0
+   90608: e28dd010     	add	sp, sp, #16
+   9060c: e8bd87f0     	pop	{r4, r5, r6, r7, r8, r9, r10, pc}
+   90610: 00036dbe     	strheq	r6, [r3], -lr
+   90614: 0003a18e     	andeq	r10, r3, lr, lsl #3
+   90618: 00000f1c     	andeq	r0, r0, r12, lsl pc
+   9061c: 00036d8e     	andeq	r6, r3, lr, lsl #27
+   90620: 0003a179     	andeq	r10, r3, r9, ror r1
+   90624: 00000f22     	andeq	r0, r0, r2, lsr #30
+   90628: 00001196     	<unknown>
+   9062c: 00036d56     	andeq	r6, r3, r6, asr sp
+   90630: 0003a158     	andeq	r10, r3, r8, asr r1
+   90634: 00000f28     	andeq	r0, r0, r8, lsr #30
+   90638: 00039aaa     	andeq	r9, r3, r10, lsr #21
+   9063c: 00036d0a     	andeq	r6, r3, r10, lsl #26
+   90640: 00039a6b     	andeq	r9, r3, r11, ror #20
+   90644: 00039a76     	andeq	r9, r3, r6, ror r10
+   90648: 00036cca     	andeq	r6, r3, r10, asr #25
+   9064c: 00039a3b     	andeq	r9, r3, r11, lsr r10
+   90650: 00036cae     	andeq	r6, r3, lr, lsr #25
+   90654: 00039a31     	andeq	r9, r3, r1, lsr r10
+   90658: 00039a3f     	andeq	r9, r3, pc, lsr r10
+   9065c: 0003a09b     	<unknown>
+   90660: 0003a099     	<unknown>
+   90664: 0003a07f     	andeq	r10, r3, pc, ror r0
+   90668: 00036bce     	andeq	r6, r3, lr, asr #23
+   9066c: 0003a071     	andeq	r10, r3, r1, ror r0
+   90670: 0003a067     	andeq	r10, r3, r7, rrx
+   90674: 00036b2a     	andeq	r6, r3, r10, lsr #22
+   90678: 0003a01d     	andeq	r10, r3, sp, lsl r0
+   9067c: 00000f91     	<unknown>
+   90680: 0000232a     	andeq	r2, r0, r10, lsr #6
+   90684: 0003a023     	andeq	r10, r3, r3, lsr #32
+   90688: 00039ecc     	andeq	r9, r3, r12, asr #29
+   9068c: 00039ebd     	strheq	r9, [r3], -sp
+   90690: 0003a030     	andeq	r10, r3, r0, lsr r0
+
+000907a8 <oal_sys_writeImage>:
+   907a8: e92d41f0     	push	{r4, r5, r6, r7, r8, lr}
+   907ac: e59f5218     	ldr	r5, [pc, #0x218]        @ 0x909cc <oal_sys_writeImage+0x224>
+   907b0: e59f3218     	ldr	r3, [pc, #0x218]        @ 0x909d0 <oal_sys_writeImage+0x228>
+   907b4: e08f5005     	add	r5, pc, r5  ; PIC literal "oal_sys_writeImage" @0xc756a
+   907b8: e2855d12     	add	r5, r5, #1152
+   907bc: e2855008     	add	r5, r5, #8
+   907c0: e1a04001     	mov	r4, r1
+   907c4: e59f2208     	ldr	r2, [pc, #0x208]        @ 0x909d4 <oal_sys_writeImage+0x22c>
+   907c8: e3a00008     	mov	r0, #8
+   907cc: e1a01005     	mov	r1, r5
+   907d0: e08f3003     	add	r3, pc, r3  ; PIC literal "oal_sys_writeImage is call\n" @0xca66b
+   907d4: ebfe2599     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0x7699c
+   907d8: e5942088     	ldr	r2, [r4, #0x88]
+   907dc: e3520802     	cmp	r2, #131072
+   907e0: 9a000005     	bls	0x907fc <oal_sys_writeImage+0x54> @ imm = #0x14
+   907e4: e59f31ec     	ldr	r3, [pc, #0x1ec]        @ 0x909d8 <oal_sys_writeImage+0x230>
+   907e8: e3a00008     	mov	r0, #8
+   907ec: e1a01005     	mov	r1, r5
+   907f0: e59f21e4     	ldr	r2, [pc, #0x1e4]        @ 0x909dc <oal_sys_writeImage+0x234>
+   907f4: e08f3003     	add	r3, pc, r3  ; PIC literal "Image bootloader too long\n" @0xca4c6
+   907f8: ea000007     	b	0x9081c <oal_sys_writeImage+0x74> @ imm = #0x1c
+   907fc: e5943078     	ldr	r3, [r4, #0x78]
+   90800: e3530816     	cmp	r3, #1441792
+   90804: 9a000007     	bls	0x90828 <oal_sys_writeImage+0x80> @ imm = #0x1c
+   90808: e59f31d0     	ldr	r3, [pc, #0x1d0]        @ 0x909e0 <oal_sys_writeImage+0x238>
+   9080c: e59f21d0     	ldr	r2, [pc, #0x1d0]        @ 0x909e4 <oal_sys_writeImage+0x23c>
+   90810: e3a00008     	mov	r0, #8
+   90814: e1a01005     	mov	r1, r5
+   90818: e08f3003     	add	r3, pc, r3  ; PIC literal "Image kernel too long\n" @0xca4e1
+   9081c: ebfe2587     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0x769e4
+   90820: e59f01c0     	ldr	r0, [pc, #0x1c0]        @ 0x909e8 <oal_sys_writeImage+0x240>
+   90824: e8bd81f0     	pop	{r4, r5, r6, r7, r8, pc}
+   90828: e5943080     	ldr	r3, [r4, #0x80]
+   9082c: e3530863     	cmp	r3, #6488064
+   90830: 9a000005     	bls	0x9084c <oal_sys_writeImage+0xa4> @ imm = #0x14
+   90834: e59f31b0     	ldr	r3, [pc, #0x1b0]        @ 0x909ec <oal_sys_writeImage+0x244>
+   90838: e3a00008     	mov	r0, #8
+   9083c: e1a01005     	mov	r1, r5
+   90840: e59f21a8     	ldr	r2, [pc, #0x1a8]        @ 0x909f0 <oal_sys_writeImage+0x248>
+   90844: e08f3003     	add	r3, pc, r3  ; PIC literal "Image rootfs too long\n" @0xca4f8
+   90848: eafffff3     	b	0x9081c <oal_sys_writeImage+0x74> @ imm = #-0x34
+   9084c: e3520000     	cmp	r2, #0
+   90850: 0a000012     	beq	0x908a0 <oal_sys_writeImage+0xf8> @ imm = #0x48
+   90854: e59f0198     	ldr	r0, [pc, #0x198]        @ 0x909f4 <oal_sys_writeImage+0x24c>
+   90858: e5941084     	ldr	r1, [r4, #0x84]
+   9085c: e3a03000     	mov	r3, #0
+   90860: e08f0000     	add	r0, pc, r0  ; PIC literal "Start to write bootloader from 0x%x len 0x%x to 0x%x\n" @0xca50f
+   90864: ebfe2110     	bl	0x18cac <printf@plt>    @ imm = #-0x77bc0
+   90868: e5942084     	ldr	r2, [r4, #0x84]
+   9086c: e3a00000     	mov	r0, #0
+   90870: e1a01004     	mov	r1, r4
+   90874: e2822c02     	add	r2, r2, #512
+   90878: e5943088     	ldr	r3, [r4, #0x88]
+   9087c: ebfff314     	bl	0x8d4d4 <oal_app_chkL4PortAvail+0x70c> @ imm = #-0x33b0
+   90880: e3500000     	cmp	r0, #0
+   90884: aa000005     	bge	0x908a0 <oal_sys_writeImage+0xf8> @ imm = #0x14
+   90888: e59f3168     	ldr	r3, [pc, #0x168]        @ 0x909f8 <oal_sys_writeImage+0x250>
+   9088c: e3a00008     	mov	r0, #8
+   90890: e1a01005     	mov	r1, r5
+   90894: e59f2160     	ldr	r2, [pc, #0x160]        @ 0x909fc <oal_sys_writeImage+0x254>
+   90898: e08f3003     	add	r3, pc, r3  ; PIC literal "Write bootloader to flash failed\n" @0xca545
+   9089c: ebfe2567     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0x76a64
+   908a0: ebfe2497     	bl	0x19b04 <oal_sys_getBootIndex@plt> @ imm = #-0x76da4
+   908a4: e5946078     	ldr	r6, [r4, #0x78]
+   908a8: e3560000     	cmp	r6, #0
+   908ac: e1a05000     	mov	r5, r0
+   908b0: 0a000019     	beq	0x9091c <oal_sys_writeImage+0x174> @ imm = #0x64
+   908b4: e3500000     	cmp	r0, #0
+   908b8: e5947074     	ldr	r7, [r4, #0x74]
+   908bc: e59f013c     	ldr	r0, [pc, #0x13c]        @ 0x90a00 <oal_sys_writeImage+0x258>
+   908c0: 03a0883e     	moveq	r8, #4063232
+   908c4: 13a08802     	movne	r8, #131072
+   908c8: e1a01007     	mov	r1, r7
+   908cc: e1a02006     	mov	r2, r6
+   908d0: e1a03008     	mov	r3, r8
+   908d4: e08f0000     	add	r0, pc, r0  ; PIC literal "Start to write kernel from 0x%x len 0x%x to 0x%x\n" @0xca567
+   908d8: ebfe20f3     	bl	0x18cac <printf@plt>    @ imm = #-0x77c34
+   908dc: e1a00008     	mov	r0, r8
+   908e0: e1a01004     	mov	r1, r4
+   908e4: e2872c02     	add	r2, r7, #512
+   908e8: e1a03006     	mov	r3, r6
+   908ec: ebfff2f8     	bl	0x8d4d4 <oal_app_chkL4PortAvail+0x70c> @ imm = #-0x3420
+   908f0: e3500000     	cmp	r0, #0
+   908f4: aa000008     	bge	0x9091c <oal_sys_writeImage+0x174> @ imm = #0x20
+   908f8: e59f1104     	ldr	r1, [pc, #0x104]        @ 0x90a04 <oal_sys_writeImage+0x25c>
+   908fc: e59f3104     	ldr	r3, [pc, #0x104]        @ 0x90a08 <oal_sys_writeImage+0x260>
+   90900: e08f1001     	add	r1, pc, r1  ; PIC literal "otIndex" @0xc7562
+   90904: e3a00008     	mov	r0, #8
+   90908: e2811d12     	add	r1, r1, #1152
+   9090c: e0811000     	add	r1, r1, r0
+   90910: e59f20f4     	ldr	r2, [pc, #0xf4]         @ 0x90a0c <oal_sys_writeImage+0x264>
+   90914: e08f3003     	add	r3, pc, r3  ; PIC literal "Write kernel to flash failed\n" @0xca599
+   90918: ea00001b     	b	0x9098c <oal_sys_writeImage+0x1e4> @ imm = #0x6c
+   9091c: e5946080     	ldr	r6, [r4, #0x80]
+   90920: e3560000     	cmp	r6, #0
+   90924: 0a00001b     	beq	0x90998 <oal_sys_writeImage+0x1f0> @ imm = #0x6c
+   90928: e594707c     	ldr	r7, [r4, #0x7c]
+   9092c: e59f00dc     	ldr	r0, [pc, #0xdc]         @ 0x90a10 <oal_sys_writeImage+0x268>
+   90930: e3550000     	cmp	r5, #0
+   90934: 03a08715     	moveq	r8, #5505024
+   90938: 13a08706     	movne	r8, #1572864
+   9093c: e1a01007     	mov	r1, r7
+   90940: e1a02006     	mov	r2, r6
+   90944: e1a03008     	mov	r3, r8
+   90948: e08f0000     	add	r0, pc, r0  ; PIC literal "Start to write rootfs from 0x%x len 0x%x to 0x%x\n" @0xca5b7
+   9094c: ebfe20d6     	bl	0x18cac <printf@plt>    @ imm = #-0x77ca8
+   90950: e1a00008     	mov	r0, r8
+   90954: e1a01004     	mov	r1, r4
+   90958: e2872c02     	add	r2, r7, #512
+   9095c: e1a03006     	mov	r3, r6
+   90960: ebfff2db     	bl	0x8d4d4 <oal_app_chkL4PortAvail+0x70c> @ imm = #-0x3494
+   90964: e3500000     	cmp	r0, #0
+   90968: aa00000a     	bge	0x90998 <oal_sys_writeImage+0x1f0> @ imm = #0x28
+   9096c: e59f10a0     	ldr	r1, [pc, #0xa0]         @ 0x90a14 <oal_sys_writeImage+0x26c>
+   90970: e59f30a0     	ldr	r3, [pc, #0xa0]         @ 0x90a18 <oal_sys_writeImage+0x270>
+   90974: e08f1001     	add	r1, pc, r1  ; PIC literal "otIndex" @0xc7562
+   90978: e59f209c     	ldr	r2, [pc, #0x9c]         @ 0x90a1c <oal_sys_writeImage+0x274>
+   9097c: e3a00008     	mov	r0, #8
+   90980: e2811d12     	add	r1, r1, #1152
+   90984: e0811000     	add	r1, r1, r0
+   90988: e08f3003     	add	r3, pc, r3  ; PIC literal "Write rootfs to flash failed\n" @0xca5e9
+   9098c: ebfe252b     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0x76b54
+   90990: e59f0088     	ldr	r0, [pc, #0x88]         @ 0x90a20 <oal_sys_writeImage+0x278>
+   90994: e8bd81f0     	pop	{r4, r5, r6, r7, r8, pc}
+   90998: e3550000     	cmp	r5, #0
+   9099c: 059f1080     	ldreq	r1, [pc, #0x80]         @ 0x90a24 <oal_sys_writeImage+0x27c>
+   909a0: 008f1001     	addeq	r1, pc, r1
+   909a4: 159f107c     	ldrne	r1, [pc, #0x7c]         @ 0x90a28 <oal_sys_writeImage+0x280>
+   909a8: 108f1001     	addne	r1, pc, r1
+   909ac: e59f0078     	ldr	r0, [pc, #0x78]         @ 0x90a2c <oal_sys_writeImage+0x284>
+   909b0: e08f0000     	add	r0, pc, r0  ; PIC literal "Set image flag to %s\n" @0xca634
+   909b4: ebfe20bc     	bl	0x18cac <printf@plt>    @ imm = #-0x77d10
+   909b8: e16f0f15     	clz	r0, r5
+   909bc: e1a002a0     	lsr	r0, r0, #5
+   909c0: ebfe2617     	bl	0x1a224 <oal_sys_setBootIndex@plt> @ imm = #-0x767a4
+   909c4: e3a00000     	mov	r0, #0
+   909c8: e8bd81f0     	pop	{r4, r5, r6, r7, r8, pc}
+   909cc: 00036926     	andeq	r6, r3, r6, lsr #18
+   909d0: 00039e93     	<unknown>
+   909d4: 00000e7f     	andeq	r0, r0, pc, ror lr
+   909d8: 00039cca     	andeq	r9, r3, r10, asr #25
+   909dc: 00000e82     	andeq	r0, r0, r2, lsl #29
+   909e0: 00039cc1     	andeq	r9, r3, r1, asr #25
+   909e4: 00000e88     	andeq	r0, r0, r8, lsl #29
+   909e8: 00001196     	<unknown>
+   909ec: 00039cac     	andeq	r9, r3, r12, lsr #25
+   909f0: 00000e8e     	andeq	r0, r0, lr, lsl #29
+   909f4: 00039ca7     	andeq	r9, r3, r7, lsr #25
+   909f8: 00039ca5     	andeq	r9, r3, r5, lsr #25
+   909fc: 00000ebd     	strheq	r0, [r0], -sp
+   90a00: 00039c8b     	andeq	r9, r3, r11, lsl #25
+   90a04: 000367da     	ldrdeq	r6, r7, [r3], -r10
+   90a08: 00039c7d     	andeq	r9, r3, sp, ror r12
+   90a0c: 00000ee1     	andeq	r0, r0, r1, ror #29
+   90a10: 00039c67     	andeq	r9, r3, r7, ror #24
+   90a14: 00036766     	andeq	r6, r3, r6, ror #14
+   90a18: 00039c59     	andeq	r9, r3, r9, asr r12
+   90a1c: 00000ef9     	strdeq	r0, r1, [r0], -r9
+   90a20: 0000232a     	andeq	r2, r0, r10, lsr #6
+   90a24: 00039b18     	andeq	r9, r3, r8, lsl r11
+   90a28: 00039b09     	andeq	r9, r3, r9, lsl #22
+   90a2c: 00039c7c     	andeq	r9, r3, r12, ror r12

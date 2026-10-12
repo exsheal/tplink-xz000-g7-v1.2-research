@@ -1,0 +1,54 @@
+[
+  {
+    "path": "bin/busybox",
+    "bytes1": 284892,
+    "bytes2": 284892,
+    "sha256_1": "19d4a0603e3d40cddead1714de59a66f9c08940d89f818bdfc1ec989f927c22e",
+    "sha256_2": "f31978101134c533b02efb4a7f83b65cc67af63968655c89dc3dcfc3fa247020",
+    "different_elf_sections": [
+      ".rodata"
+    ]
+  },
+  {
+    "path": "etc/reduced_data_model.xml",
+    "bytes1": 261056,
+    "bytes2": 261056,
+    "sha256_1": "3147061f7d5731fc6d9fd9caa5e5fa4757123aa835d8f01ea417bebdd61a7bc8",
+    "sha256_2": "997597b3150c3c05099e0df10143f3f2c0a84a1af22c816ae834b3705ecc23b1"
+  },
+  {
+    "path": "lib/libcmm.so",
+    "bytes1": 877900,
+    "bytes2": 877900,
+    "sha256_1": "12431ea533cc04f614a93a229dcb48ed88bf0bc883e63bba07bdd276e0e29e74",
+    "sha256_2": "16092305f171f145ca95667927e86759c78f21c70f02e22076b6dbd99b77dd87",
+    "different_elf_sections": [
+      ".text",
+      ".data"
+    ]
+  },
+  {
+    "path": "lib/modules/3.16.0/extra/xpon_sdk.ko",
+    "bytes1": 665908,
+    "bytes2": 687700,
+    "sha256_1": "f5fa700e910d3ae05ea4d6512c269a8d349388a2d557924aee40008f8434b56d",
+    "sha256_2": "4c6bd89ddc039da136a658e550554f69c59562c3a4873b974da266d814c55ec2",
+    "different_elf_sections": [
+      ".text",
+      ".rodata",
+      ".data"
+    ]
+  },
+  {
+    "path": "usr/bin/gc_omcid",
+    "bytes1": 284184,
+    "bytes2": 284184,
+    "sha256_1": "360396b69368dae9033ced66bd1dcbfba1556c7b92a2676ff38495f1b3c4725f",
+    "sha256_2": "0577868404944ea404240e7cab069fb0d1b1068216e058da0c75d1b78bababb2",
+    "different_elf_sections": [
+      ".text",
+      ".rodata",
+      ".data"
+    ]
+  }
+]

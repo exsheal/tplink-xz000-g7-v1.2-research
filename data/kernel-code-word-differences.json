@@ -1,0 +1,891 @@
+[
+  {
+    "address": "0xc000a28c",
+    "old": "0xc02a50dc",
+    "new": "0xc02a50e0",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc000a2c0",
+    "old": "0xc02a50e8",
+    "new": "0xc02a50ec",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc000a634",
+    "old": "0xc02a5108",
+    "new": "0xc02a510c",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc000ac48",
+    "old": "0xc02a5198",
+    "new": "0xc02a519c",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc000ac74",
+    "old": "0xc02a5198",
+    "new": "0xc02a519c",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc000ad28",
+    "old": "0xc02a5230",
+    "new": "0xc02a5234",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc000aff8",
+    "old": "0xc02a5244",
+    "new": "0xc02a5248",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc000affc",
+    "old": "0xc02a5268",
+    "new": "0xc02a526c",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc000b328",
+    "old": "0xc02a528c",
+    "new": "0xc02a5290",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc000b7b4",
+    "old": "0xc02a5354",
+    "new": "0xc02a5358",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc000bde0",
+    "old": "0xc02a5354",
+    "new": "0xc02a5358",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc000c6bc",
+    "old": "0xc02a5370",
+    "new": "0xc02a5374",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc0012c3c",
+    "old": "0xc02a53e0",
+    "new": "0xc02a53e4",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc001345c",
+    "old": "0xc02a53e0",
+    "new": "0xc02a53e4",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc00134ac",
+    "old": "0xc02a5428",
+    "new": "0xc02a542c",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc00140f4",
+    "old": "0xc02a54c4",
+    "new": "0xc02a54c8",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc0014320",
+    "old": "0xc02a57ec",
+    "new": "0xc02a57f0",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc00152ec",
+    "old": "0xc02a5fcc",
+    "new": "0xc02a5fd0",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc0015300",
+    "old": "0xc02a621c",
+    "new": "0xc02a6220",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc0015354",
+    "old": "0xc02a57ec",
+    "new": "0xc02a57f0",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc0015368",
+    "old": "0xc02a54c4",
+    "new": "0xc02a54c8",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc001537c",
+    "old": "0xc02a5b2c",
+    "new": "0xc02a5b30",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc0015398",
+    "old": "0xc02a5d7c",
+    "new": "0xc02a5d80",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc0015afc",
+    "old": "0xc02a646c",
+    "new": "0xc02a6470",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc0015bb0",
+    "old": "0xc02a6482",
+    "new": "0xc02a6486",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc0015cb0",
+    "old": "0xc02a649b",
+    "new": "0xc02a649f",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc0015d38",
+    "old": "0xc02a64b4",
+    "new": "0xc02a64b8",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc001863c",
+    "old": "0xc02a6540",
+    "new": "0xc02a6544",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc001bf98",
+    "old": "0xc02a6618",
+    "new": "0xc02a661c",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc001c774",
+    "old": "0xc02a6640",
+    "new": "0xc02a6644",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc001c7a4",
+    "old": "0xc02a6640",
+    "new": "0xc02a6644",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc001e4b0",
+    "old": "0xc02a6738",
+    "new": "0xc02a673c",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc001e870",
+    "old": "0xc02a6738",
+    "new": "0xc02a673c",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc001f0b4",
+    "old": "0xc02a673b",
+    "new": "0xc02a673f",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc001f0b8",
+    "old": "0xc02a673e",
+    "new": "0xc02a6742",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc001fbfc",
+    "old": "0xc02a67f8",
+    "new": "0xc02a67fc",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc001fc10",
+    "old": "0xc02a6748",
+    "new": "0xc02a674c",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc0023024",
+    "old": "0xc02a8a2c",
+    "new": "0xc02a8a30",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc002a228",
+    "old": "0xc02a6590",
+    "new": "0xc02a6594",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc002dff8",
+    "old": "0xc02a658c",
+    "new": "0xc02a6590",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc002e5b8",
+    "old": "0xc02a658c",
+    "new": "0xc02a6590",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc0032160",
+    "old": "0xc02a8ac4",
+    "new": "0xc02a8ac8",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc0032164",
+    "old": "0xc02a6590",
+    "new": "0xc02a6594",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc00329b8",
+    "old": "0xc02a6590",
+    "new": "0xc02a6594",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc0034758",
+    "old": "0xc02a8ac8",
+    "new": "0xc02a8acc",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc00347a0",
+    "old": "0xc02a8ac8",
+    "new": "0xc02a8acc",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc003667c",
+    "old": "0xc02a6594",
+    "new": "0xc02a6598",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc0037314",
+    "old": "0xc02a8b08",
+    "new": "0xc02a8b0c",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc0037eac",
+    "old": "0xc02a8b18",
+    "new": "0xc02a8b1c",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc00384cc",
+    "old": "0xc02a8d94",
+    "new": "0xc02a8d98",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc0038cf0",
+    "old": "0xc02a8cd4",
+    "new": "0xc02a8cd8",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc0038cf4",
+    "old": "0xc02a8d14",
+    "new": "0xc02a8d18",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc0038e88",
+    "old": "0xc02a8d54",
+    "new": "0xc02a8d58",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc0038e8c",
+    "old": "0xc02a8cd4",
+    "new": "0xc02a8cd8",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc0038e90",
+    "old": "0xc02a8d14",
+    "new": "0xc02a8d18",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc0039494",
+    "old": "0xc02a8d54",
+    "new": "0xc02a8d58",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc0039498",
+    "old": "0xc02a8cd4",
+    "new": "0xc02a8cd8",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc003949c",
+    "old": "0xc02a8d14",
+    "new": "0xc02a8d18",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc0039fc8",
+    "old": "0xc02a8d94",
+    "new": "0xc02a8d98",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc0039fcc",
+    "old": "0xc02a8d14",
+    "new": "0xc02a8d18",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc003a544",
+    "old": "0xc02a658c",
+    "new": "0xc02a6590",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc003a680",
+    "old": "0xc02a6580",
+    "new": "0xc02a6584",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc003a9e0",
+    "old": "0xc02a8b18",
+    "new": "0xc02a8b1c",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc003aa9c",
+    "old": "0xc02a8c94",
+    "new": "0xc02a8c98",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc003abc0",
+    "old": "0xc02a8c94",
+    "new": "0xc02a8c98",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc003b4ac",
+    "old": "0xc02a8c64",
+    "new": "0xc02a8c68",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc003d410",
+    "old": "0xc02a8d14",
+    "new": "0xc02a8d18",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc003d510",
+    "old": "0xc02a8d14",
+    "new": "0xc02a8d18",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc003e5b0",
+    "old": "0xc02a8d54",
+    "new": "0xc02a8d58",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc003f4e0",
+    "old": "0xc02a8dd4",
+    "new": "0xc02a8dd8",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc003f6b8",
+    "old": "0xc02a8e58",
+    "new": "0xc02a8e5c",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc003fc3c",
+    "old": "0xc02a8e58",
+    "new": "0xc02a8e5c",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc0042cc8",
+    "old": "0xc02a8ee8",
+    "new": "0xc02a8eec",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc0042cf0",
+    "old": "0xc02a8ee8",
+    "new": "0xc02a8eec",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc0042d08",
+    "old": "0xc02a8ee8",
+    "new": "0xc02a8eec",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc0042df4",
+    "old": "0xc02a8ee8",
+    "new": "0xc02a8eec",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc004300c",
+    "old": "0xc02a8ee8",
+    "new": "0xc02a8eec",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc0043120",
+    "old": "0xc02a8ee8",
+    "new": "0xc02a8eec",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc0043224",
+    "old": "0xc02a8ee8",
+    "new": "0xc02a8eec",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc0043278",
+    "old": "0xc02a8ee8",
+    "new": "0xc02a8eec",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc0043498",
+    "old": "0xc02a8f6c",
+    "new": "0xc02a8f70",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc004349c",
+    "old": "0xc02a8ee8",
+    "new": "0xc02a8eec",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc004424c",
+    "old": "0xc02a8f8c",
+    "new": "0xc02a8f90",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc004556c",
+    "old": "0xc02a8f98",
+    "new": "0xc02a8f9c",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc004833c",
+    "old": "0xc02a907c",
+    "new": "0xc02a9080",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc004aeb0",
+    "old": "0xc02a90a8",
+    "new": "0xc02a90ac",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc004b1ec",
+    "old": "0xc02a90cc",
+    "new": "0xc02a90d0",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc004ccfc",
+    "old": "0xc02a6588",
+    "new": "0xc02a658c",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc0052ad4",
+    "old": "0xc02a923c",
+    "new": "0xc02a9240",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc0053930",
+    "old": "0xc02a92c0",
+    "new": "0xc02a92c4",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc00539a4",
+    "old": "0xc02a92f4",
+    "new": "0xc02a92f8",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc005489c",
+    "old": "0xc02a6594",
+    "new": "0xc02a6598",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc00551f8",
+    "old": "0xc02a6594",
+    "new": "0xc02a6598",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc005b7a8",
+    "old": "0xc02a9440",
+    "new": "0xc02a9444",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc005bd18",
+    "old": "0xc02a94c4",
+    "new": "0xc02a94c8",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc005d330",
+    "old": "0xc02a9500",
+    "new": "0xc02a9504",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc005d3d0",
+    "old": "0xc02a9544",
+    "new": "0xc02a9548",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc005d3e4",
+    "old": "0xc02a9520",
+    "new": "0xc02a9524",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc005ebd4",
+    "old": "0xc02a95d0",
+    "new": "0xc02a95d4",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc005ff14",
+    "old": "0xc02a95f8",
+    "new": "0xc02a95fc",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc0061398",
+    "old": "0xc02a9638",
+    "new": "0xc02a963c",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc0061fbc",
+    "old": "0xc02ac79c",
+    "new": "0xc02ac7a0",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc00635f0",
+    "old": "0xc02ac7af",
+    "new": "0xc02ac7b3",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc0064660",
+    "old": "0xc02ac7c3",
+    "new": "0xc02ac7c7",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc0064668",
+    "old": "0xc02ac7e0",
+    "new": "0xc02ac7e4",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc0064e4c",
+    "old": "0xc02ac7e0",
+    "new": "0xc02ac7e4",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc0064f8c",
+    "old": "0xc02ac7af",
+    "new": "0xc02ac7b3",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc006643c",
+    "old": "0xc02ac7f4",
+    "new": "0xc02ac7f8",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc0066c78",
+    "old": "0xc02ac868",
+    "new": "0xc02ac86c",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc006a5d0",
+    "old": "0xc02ac7f4",
+    "new": "0xc02ac7f8",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc007c190",
+    "old": "0xc02a6588",
+    "new": "0xc02a658c",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc009da4c",
+    "old": "0xc02a6588",
+    "new": "0xc02a658c",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc009f1e8",
+    "old": "0xc02a8a24",
+    "new": "0xc02a8a28",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc00e6e6c",
+    "old": "0xc02a5344",
+    "new": "0xc02a5348",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc00e7de4",
+    "old": "0xc02a6618",
+    "new": "0xc02a661c",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc00fd8b4",
+    "old": "0xc02a8a24",
+    "new": "0xc02a8a28",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc00fdc18",
+    "old": "0xc02a8a24",
+    "new": "0xc02a8a28",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc0135bd4",
+    "old": "0xc02a6594",
+    "new": "0xc02a6598",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc0160b34",
+    "old": "0xc02a6588",
+    "new": "0xc02a658c",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc0160b38",
+    "old": "0xc02a658c",
+    "new": "0xc02a6590",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc0162388",
+    "old": "0xc02a6594",
+    "new": "0xc02a6598",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc01623b4",
+    "old": "0xc02a6594",
+    "new": "0xc02a6598",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc01623e0",
+    "old": "0xc02a6594",
+    "new": "0xc02a6598",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc016240c",
+    "old": "0xc02a6594",
+    "new": "0xc02a6598",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc02a1a98",
+    "old": "0xc02a8cd4",
+    "new": "0xc02a8cd8",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc02a1a9c",
+    "old": "0xc02a8c94",
+    "new": "0xc02a8c98",
+    "delta": 4,
+    "pointer": true
+  },
+  {
+    "address": "0xc02a1aa0",
+    "old": "0xc02a8d94",
+    "new": "0xc02a8d98",
+    "delta": 4,
+    "pointer": true
+  }
+]

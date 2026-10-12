@@ -1,0 +1,131 @@
+{
+  "storage": "SPI-NOR",
+  "bytes": 8388608,
+  "erase_bytes": 65536,
+  "partitions": [
+    {
+      "name": "whole",
+      "mtd": 0,
+      "start": "0x0",
+      "end": "0x800000",
+      "bytes": 8388608
+    },
+    {
+      "name": "uboot",
+      "mtd": 1,
+      "start": "0x0",
+      "end": "0x20000",
+      "bytes": 131072
+    },
+    {
+      "name": "kernel1",
+      "mtd": 2,
+      "start": "0x20000",
+      "end": "0x180000",
+      "bytes": 1441792
+    },
+    {
+      "name": "rootfs1",
+      "mtd": 3,
+      "start": "0x180000",
+      "end": "0x3e0000",
+      "bytes": 2490368
+    },
+    {
+      "name": "kernel2",
+      "mtd": 4,
+      "start": "0x3e0000",
+      "end": "0x540000",
+      "bytes": 1441792
+    },
+    {
+      "name": "rootfs2",
+      "mtd": 5,
+      "start": "0x540000",
+      "end": "0x7a0000",
+      "bytes": 2490368
+    },
+    {
+      "name": "misc",
+      "mtd": 6,
+      "start": "0x7a0000",
+      "end": "0x7f0000",
+      "bytes": 327680
+    },
+    {
+      "name": "hwconfig",
+      "mtd": 7,
+      "start": "0x7f0000",
+      "end": "0x800000",
+      "bytes": 65536
+    }
+  ],
+  "identity_layout": [
+    {
+      "offset": "0x7e0000",
+      "bytes": 6,
+      "native_reader": "libcmm.so:oal_sys_readMacFlash@0x8eb84",
+      "contents": "withheld"
+    },
+    {
+      "offset": "0x7cb200",
+      "bytes": 22,
+      "native_reader": "libcmm.so:oal_sys_readGponAuthFlashSn@0x8fab8",
+      "contents": "withheld"
+    },
+    {
+      "offset": "0x7cb300",
+      "bytes": 23,
+      "native_reader": "libcmm.so:oal_sys_readGponAuthFlashPwd@0x8fd14",
+      "contents": "withheld"
+    },
+    {
+      "offset": "0x7cb100",
+      "bytes": 42,
+      "native_reader": "libcmm.so:oal_sys_readLoidFlash@0x8f5b8",
+      "contents": "withheld"
+    },
+    {
+      "offset": "0x7cf300",
+      "bytes": 41,
+      "native_reader": "libcmm.so:oal_sys_readDevIdFlash@0x8ea20",
+      "contents": "withheld"
+    },
+    {
+      "offset": "0x7cf500",
+      "bytes": 64,
+      "native_reader": "libcmm.so:oal_sys_readSnFlash@0x90090",
+      "contents": "withheld"
+    },
+    {
+      "offset": "0x7ce000",
+      "bytes": 352,
+      "native_reader": "libcmm.so:oal_sys_readSignFlash@0x8f21c",
+      "contents": "withheld"
+    },
+    {
+      "offset": "0x7d0000",
+      "bytes": 8,
+      "native_reader": "libcmm.so:oal_sys_getBootIndex@0x90264",
+      "contents": "withheld"
+    },
+    {
+      "offset": "0x7dffc0",
+      "bytes": 7,
+      "native_reader": null,
+      "contents": "withheld"
+    },
+    {
+      "offset": "0x7f0000",
+      "bytes": 4096,
+      "native_reader": "",
+      "contents": "withheld"
+    },
+    {
+      "offset": "0x7f1000",
+      "bytes": 4096,
+      "native_reader": "",
+      "contents": "withheld"
+    }
+  ]
+}

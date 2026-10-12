@@ -1,0 +1,1021 @@
+000089d0 <cen_rsaVerifySignByBase64EncodePublicKeyBlob>:
+    89d0: e92d4ff0     	push	{r4, r5, r6, r7, r8, r9, r10, r11, lr}
+    89d4: e3510c01     	cmp	r1, #256
+    89d8: e24ddf87     	sub	sp, sp, #540
+    89dc: e59d5240     	ldr	r5, [sp, #0x240]
+    89e0: e59d4244     	ldr	r4, [sp, #0x244]
+    89e4: 8a0000ce     	bhi	0x8d24 <cen_rsaVerifySignByBase64EncodePublicKeyBlob+0x354> @ imm = #0x338
+    89e8: e1a08003     	mov	r8, r3
+    89ec: e5d03000     	ldrb	r3, [r0]
+    89f0: e1a07002     	mov	r7, r2
+    89f4: e353002b     	cmp	r3, #43
+    89f8: 1a000002     	bne	0x8a08 <cen_rsaVerifySignByBase64EncodePublicKeyBlob+0x38> @ imm = #0x8
+    89fc: e5d03001     	ldrb	r3, [r0, #0x1]
+    8a00: e3530020     	cmp	r3, #32
+    8a04: 02800002     	addeq	r0, r0, #2
+    8a08: e5d03000     	ldrb	r3, [r0]
+    8a0c: e3530000     	cmp	r3, #0
+    8a10: 0a0000c3     	beq	0x8d24 <cen_rsaVerifySignByBase64EncodePublicKeyBlob+0x354> @ imm = #0x30c
+    8a14: e59f6320     	ldr	r6, [pc, #0x320]        @ 0x8d3c <cen_rsaVerifySignByBase64EncodePublicKeyBlob+0x36c>
+    8a18: e3c11003     	bic	r1, r1, #3
+    8a1c: e0801001     	add	r1, r0, r1
+    8a20: e3a02000     	mov	r2, #0
+    8a24: e28d3018     	add	r3, sp, #24
+    8a28: e08f6006     	add	r6, pc, r6
+    8a2c: e1500001     	cmp	r0, r1
+    8a30: 0a000024     	beq	0x8ac8 <cen_rsaVerifySignByBase64EncodePublicKeyBlob+0xf8> @ imm = #0x90
+    8a34: e5d0c000     	ldrb	r12, [r0]
+    8a38: e35c007f     	cmp	r12, #127
+    8a3c: 8a0000b8     	bhi	0x8d24 <cen_rsaVerifySignByBase64EncodePublicKeyBlob+0x354> @ imm = #0x2e0
+    8a40: e7d6e00c     	ldrb	lr, [r6, r12]
+    8a44: e5d0c001     	ldrb	r12, [r0, #0x1]
+    8a48: e35c007f     	cmp	r12, #127
+    8a4c: 8a0000b4     	bhi	0x8d24 <cen_rsaVerifySignByBase64EncodePublicKeyBlob+0x354> @ imm = #0x2d0
+    8a50: e1d090d2     	ldrsb	r9, [r0, #2]
+    8a54: e7d6c00c     	ldrb	r12, [r6, r12]
+    8a58: e3590000     	cmp	r9, #0
+    8a5c: e5d0a002     	ldrb	r10, [r0, #0x2]
+    8a60: ba0000af     	blt	0x8d24 <cen_rsaVerifySignByBase64EncodePublicKeyBlob+0x354> @ imm = #0x2bc
+    8a64: e1d0b0d3     	ldrsb	r11, [r0, #3]
+    8a68: e5d09003     	ldrb	r9, [r0, #0x3]
+    8a6c: e35b0000     	cmp	r11, #0
+    8a70: ba0000ab     	blt	0x8d24 <cen_rsaVerifySignByBase64EncodePublicKeyBlob+0x354> @ imm = #0x2ac
+    8a74: e1a0e10e     	lsl	lr, lr, #2
+    8a78: e35a003d     	cmp	r10, #61
+    8a7c: e18ee22c     	orr	lr, lr, r12, lsr #4
+    8a80: e5c3e000     	strb	lr, [r3]
+    8a84: e2800004     	add	r0, r0, #4
+    8a88: 02833001     	addeq	r3, r3, #1
+    8a8c: 02822001     	addeq	r2, r2, #1
+    8a90: 0affffe5     	beq	0x8a2c <cen_rsaVerifySignByBase64EncodePublicKeyBlob+0x5c> @ imm = #-0x6c
+    8a94: e7d6e00a     	ldrb	lr, [r6, r10]
+    8a98: e1a0c20c     	lsl	r12, r12, #4
+    8a9c: e359003d     	cmp	r9, #61
+    8aa0: e18cc12e     	orr	r12, r12, lr, lsr #2
+    8aa4: e5c3c001     	strb	r12, [r3, #0x1]
+    8aa8: 17d6c009     	ldrbne	r12, [r6, r9]
+    8aac: 02833002     	addeq	r3, r3, #2
+    8ab0: 118cc30e     	orrne	r12, r12, lr, lsl #6
+    8ab4: 15c3c002     	strbne	r12, [r3, #0x2]
+    8ab8: 02822002     	addeq	r2, r2, #2
+    8abc: 12822003     	addne	r2, r2, #3
+    8ac0: 12833003     	addne	r3, r3, #3
+    8ac4: eaffffd8     	b	0x8a2c <cen_rsaVerifySignByBase64EncodePublicKeyBlob+0x5c> @ imm = #-0xa0
+    8ac8: e3a01000     	mov	r1, #0
+    8acc: e1520001     	cmp	r2, r1
+    8ad0: e5c31000     	strb	r1, [r3]
+    8ad4: da000092     	ble	0x8d24 <cen_rsaVerifySignByBase64EncodePublicKeyBlob+0x354> @ imm = #0x248
+    8ad8: e3540c01     	cmp	r4, #256
+    8adc: 93a03000     	movls	r3, #0
+    8ae0: 83a03001     	movhi	r3, #1
+    8ae4: e1550001     	cmp	r5, r1
+    8ae8: 03833001     	orreq	r3, r3, #1
+    8aec: e1570001     	cmp	r7, r1
+    8af0: 03833001     	orreq	r3, r3, #1
+    8af4: e1530001     	cmp	r3, r1
+    8af8: 1a00008b     	bne	0x8d2c <cen_rsaVerifySignByBase64EncodePublicKeyBlob+0x35c> @ imm = #0x22c
+    8afc: e3a00024     	mov	r0, #36
+    8b00: ebffe588     	bl	0x2128 <RSA_safemalloc@plt> @ imm = #-0x69e0
+    8b04: e2506000     	subs	r6, r0, #0
+    8b08: 0a000087     	beq	0x8d2c <cen_rsaVerifySignByBase64EncodePublicKeyBlob+0x35c> @ imm = #0x21c
+    8b0c: e59f122c     	ldr	r1, [pc, #0x22c]        @ 0x8d40 <cen_rsaVerifySignByBase64EncodePublicKeyBlob+0x370>
+    8b10: e28d0020     	add	r0, sp, #32
+    8b14: e08f1001     	add	r1, pc, r1  ; PIC literal "RSA1" @0xd660
+    8b18: e3a02004     	mov	r2, #4
+    8b1c: ebffe5c9     	bl	0x2248 <memcmp@plt>     @ imm = #-0x68dc
+    8b20: e250a000     	subs	r10, r0, #0
+    8b24: 1a000031     	bne	0x8bf0 <cen_rsaVerifySignByBase64EncodePublicKeyBlob+0x220> @ imm = #0xc4
+    8b28: e5dd3026     	ldrb	r3, [sp, #0x26]
+    8b2c: e5ddb025     	ldrb	r11, [sp, #0x25]
+    8b30: e1a03803     	lsl	r3, r3, #16
+    8b34: e183340b     	orr	r3, r3, r11, lsl #8
+    8b38: e5ddb024     	ldrb	r11, [sp, #0x24]
+    8b3c: e5dd1027     	ldrb	r1, [sp, #0x27]
+    8b40: e183300b     	orr	r3, r3, r11
+    8b44: e183bc01     	orr	r11, r3, r1, lsl #24
+    8b48: e5dd302a     	ldrb	r3, [sp, #0x2a]
+    8b4c: e5dd0029     	ldrb	r0, [sp, #0x29]
+    8b50: e1a03803     	lsl	r3, r3, #16
+    8b54: e1833400     	orr	r3, r3, r0, lsl #8
+    8b58: e5dd0028     	ldrb	r0, [sp, #0x28]
+    8b5c: e28d9f46     	add	r9, sp, #280
+    8b60: e1833000     	orr	r3, r3, r0
+    8b64: e5dd002b     	ldrb	r0, [sp, #0x2b]
+    8b68: e1830c00     	orr	r0, r3, r0, lsl #24
+    8b6c: ebffe5a0     	bl	0x21f4 <RSA_bignum_from_long@plt> @ imm = #-0x6980
+    8b70: e1a0100a     	mov	r1, r10
+    8b74: e3a02c01     	mov	r2, #256
+    8b78: e586000c     	str	r0, [r6, #0xc]
+    8b7c: e1a00009     	mov	r0, r9
+    8b80: ebffe5c5     	bl	0x229c <memset@plt>     @ imm = #-0x68ec
+    8b84: e1a011ab     	lsr	r1, r11, #3
+    8b88: e1a0300a     	mov	r3, r10
+    8b8c: e28d0018     	add	r0, sp, #24
+    8b90: e1530001     	cmp	r3, r1
+    8b94: ba00000d     	blt	0x8bd0 <cen_rsaVerifySignByBase64EncodePublicKeyBlob+0x200> @ imm = #0x34
+    8b98: e1a00009     	mov	r0, r9
+    8b9c: ebffe5cd     	bl	0x22d8 <RSA_bignum_from_bytes@plt> @ imm = #-0x68cc
+    8ba0: e3a01000     	mov	r1, #0
+    8ba4: e1560001     	cmp	r6, r1
+    8ba8: e5861010     	str	r1, [r6, #0x10]
+    8bac: e5861020     	str	r1, [r6, #0x20]
+    8bb0: e5860008     	str	r0, [r6, #0x8]
+    8bb4: 0a00005c     	beq	0x8d2c <cen_rsaVerifySignByBase64EncodePublicKeyBlob+0x35c> @ imm = #0x170
+    8bb8: e3a02c01     	mov	r2, #256
+    8bbc: e1a00009     	mov	r0, r9
+    8bc0: ebffe5b5     	bl	0x229c <memset@plt>     @ imm = #-0x692c
+    8bc4: e0853004     	add	r3, r5, r4
+    8bc8: e1a02009     	mov	r2, r9
+    8bcc: ea00000a     	b	0x8bfc <cen_rsaVerifySignByBase64EncodePublicKeyBlob+0x22c> @ imm = #0x28
+    8bd0: e3530c01     	cmp	r3, #256
+    8bd4: 0affffef     	beq	0x8b98 <cen_rsaVerifySignByBase64EncodePublicKeyBlob+0x1c8> @ imm = #-0x44
+    8bd8: e0632001     	rsb	r2, r3, r1
+    8bdc: e0802002     	add	r2, r0, r2
+    8be0: e5d22013     	ldrb	r2, [r2, #0x13]
+    8be4: e7c92003     	strb	r2, [r9, r3]
+    8be8: e2833001     	add	r3, r3, #1
+    8bec: eaffffe7     	b	0x8b90 <cen_rsaVerifySignByBase64EncodePublicKeyBlob+0x1c0> @ imm = #-0x64
+    8bf0: e1a00006     	mov	r0, r6
+    8bf4: ebffe5bd     	bl	0x22f0 <RSA_safefree@plt> @ imm = #-0x690c
+    8bf8: ea00004b     	b	0x8d2c <cen_rsaVerifySignByBase64EncodePublicKeyBlob+0x35c> @ imm = #0x12c
+    8bfc: e1530005     	cmp	r3, r5
+    8c00: 15731001     	ldrbne	r1, [r3, #-0x1]!
+    8c04: 14c21001     	strbne	r1, [r2], #1
+    8c08: 1afffffb     	bne	0x8bfc <cen_rsaVerifySignByBase64EncodePublicKeyBlob+0x22c> @ imm = #-0x14
+    8c0c: e1a01004     	mov	r1, r4
+    8c10: e1a00009     	mov	r0, r9
+    8c14: ebffe5af     	bl	0x22d8 <RSA_bignum_from_bytes@plt> @ imm = #-0x6944
+    8c18: e5962008     	ldr	r2, [r6, #0x8]
+    8c1c: e596100c     	ldr	r1, [r6, #0xc]
+    8c20: e1a04000     	mov	r4, r0
+    8c24: ebffe4d9     	bl	0x1f90 <RSA_modpow@plt> @ imm = #-0x6c9c
+    8c28: e1a09000     	mov	r9, r0
+    8c2c: e1a00004     	mov	r0, r4
+    8c30: ebffe5a5     	bl	0x22cc <RSA_freebn@plt> @ imm = #-0x696c
+    8c34: e5960008     	ldr	r0, [r6, #0x8]
+    8c38: ebffe5a9     	bl	0x22e4 <RSA_bignum_bitcount@plt> @ imm = #-0x695c
+    8c3c: e2905007     	adds	r5, r0, #7
+    8c40: 4280500e     	addmi	r5, r0, #14
+    8c44: e1a051c5     	asr	r5, r5, #3
+    8c48: e2451001     	sub	r1, r5, #1
+    8c4c: e1a00009     	mov	r0, r9
+    8c50: ebffe57f     	bl	0x2254 <RSA_bignum_byte@plt> @ imm = #-0x6a04
+    8c54: e2451002     	sub	r1, r5, #2
+    8c58: e2455003     	sub	r5, r5, #3
+    8c5c: e1a04000     	mov	r4, r0
+    8c60: e1a00009     	mov	r0, r9
+    8c64: ebffe57a     	bl	0x2254 <RSA_bignum_byte@plt> @ imm = #-0x6a18
+    8c68: e3500001     	cmp	r0, #1
+    8c6c: 016f4f14     	clzeq	r4, r4
+    8c70: 13a04000     	movne	r4, #0
+    8c74: 01a042a4     	lsreq	r4, r4, #5
+    8c78: e3550023     	cmp	r5, #35
+    8c7c: da000006     	ble	0x8c9c <cen_rsaVerifySignByBase64EncodePublicKeyBlob+0x2cc> @ imm = #0x18
+    8c80: e1a01005     	mov	r1, r5
+    8c84: e1a00009     	mov	r0, r9
+    8c88: ebffe571     	bl	0x2254 <RSA_bignum_byte@plt> @ imm = #-0x6a3c
+    8c8c: e2455001     	sub	r5, r5, #1
+    8c90: e35000ff     	cmp	r0, #255
+    8c94: 13a04000     	movne	r4, #0
+    8c98: eafffff6     	b	0x8c78 <cen_rsaVerifySignByBase64EncodePublicKeyBlob+0x2a8> @ imm = #-0x28
+    8c9c: e59fa0a0     	ldr	r10, [pc, #0xa0]        @ 0x8d44 <cen_rsaVerifySignByBase64EncodePublicKeyBlob+0x374>
+    8ca0: e3a05000     	mov	r5, #0
+    8ca4: e08fa00a     	add	r10, pc, r10
+    8ca8: e2651023     	rsb	r1, r5, #35
+    8cac: e1a00009     	mov	r0, r9
+    8cb0: ebffe567     	bl	0x2254 <RSA_bignum_byte@plt> @ imm = #-0x6a64
+    8cb4: e28a3080     	add	r3, r10, #128
+    8cb8: e7d53003     	ldrb	r3, [r5, r3]
+    8cbc: e2855001     	add	r5, r5, #1
+    8cc0: e1500003     	cmp	r0, r3
+    8cc4: 13a04000     	movne	r4, #0
+    8cc8: e3550010     	cmp	r5, #16
+    8ccc: 1afffff5     	bne	0x8ca8 <cen_rsaVerifySignByBase64EncodePublicKeyBlob+0x2d8> @ imm = #-0x2c
+    8cd0: e28da004     	add	r10, sp, #4
+    8cd4: e1a00007     	mov	r0, r7
+    8cd8: e1a01008     	mov	r1, r8
+    8cdc: e1a0200a     	mov	r2, r10
+    8ce0: ebffe4bf     	bl	0x1fe4 <RSA_SHA_Simple@plt> @ imm = #-0x6d04
+    8ce4: e3a05000     	mov	r5, #0
+    8ce8: e2651013     	rsb	r1, r5, #19
+    8cec: e1a00009     	mov	r0, r9
+    8cf0: ebffe557     	bl	0x2254 <RSA_bignum_byte@plt> @ imm = #-0x6aa4
+    8cf4: e7da3005     	ldrb	r3, [r10, r5]
+    8cf8: e2855001     	add	r5, r5, #1
+    8cfc: e1500003     	cmp	r0, r3
+    8d00: 13a04000     	movne	r4, #0
+    8d04: e3550014     	cmp	r5, #20
+    8d08: 1afffff6     	bne	0x8ce8 <cen_rsaVerifySignByBase64EncodePublicKeyBlob+0x318> @ imm = #-0x28
+    8d0c: e1a00009     	mov	r0, r9
+    8d10: ebffe56d     	bl	0x22cc <RSA_freebn@plt> @ imm = #-0x6a4c
+    8d14: e1a00006     	mov	r0, r6
+    8d18: ebffe574     	bl	0x22f0 <RSA_safefree@plt> @ imm = #-0x6a30
+    8d1c: e1a00004     	mov	r0, r4
+    8d20: ea000003     	b	0x8d34 <cen_rsaVerifySignByBase64EncodePublicKeyBlob+0x364> @ imm = #0xc
+    8d24: e3a00000     	mov	r0, #0
+    8d28: ea000001     	b	0x8d34 <cen_rsaVerifySignByBase64EncodePublicKeyBlob+0x364> @ imm = #0x4
+    8d2c: e3a04000     	mov	r4, #0
+    8d30: eafffff9     	b	0x8d1c <cen_rsaVerifySignByBase64EncodePublicKeyBlob+0x34c> @ imm = #-0x1c
+    8d34: e28ddf87     	add	sp, sp, #540
+    8d38: e8bd8ff0     	pop	{r4, r5, r6, r7, r8, r9, r10, r11, pc}
+    8d3c: 00004ba0     	andeq	r4, r0, r0, lsr #23
+    8d40: 00004b44     	andeq	r4, r0, r4, asr #22
+    8d44: 00004924     	andeq	r4, r0, r4, lsr #18
+
+00008d84 <cen_rsaVerifySignature>:
+    8d84: e92d4ff0     	push	{r4, r5, r6, r7, r8, r9, r10, r11, lr}
+    8d88: e1814003     	orr	r4, r1, r3
+    8d8c: e2144001     	ands	r4, r4, #1
+    8d90: e24dd01c     	sub	sp, sp, #28
+    8d94: 1a000068     	bne	0x8f3c <cen_rsaVerifySignature+0x1b8> @ imm = #0x1a0
+    8d98: e1a060a1     	lsr	r6, r1, #1
+    8d9c: e1a0a000     	mov	r10, r0
+    8da0: e1a00006     	mov	r0, r6
+    8da4: e1a05003     	mov	r5, r3
+    8da8: e1a09002     	mov	r9, r2
+    8dac: ebffe4ad     	bl	0x2068 <malloc@plt>     @ imm = #-0x6d4c
+    8db0: e1a050a5     	lsr	r5, r5, #1
+    8db4: e1a08000     	mov	r8, r0
+    8db8: e1a00005     	mov	r0, r5
+    8dbc: ebffe4a9     	bl	0x2068 <malloc@plt>     @ imm = #-0x6d5c
+    8dc0: e1a07000     	mov	r7, r0
+    8dc4: e1540006     	cmp	r4, r6
+    8dc8: aa00000c     	bge	0x8e00 <cen_rsaVerifySignature+0x7c> @ imm = #0x30
+    8dcc: e7da0084     	ldrb	r0, [r10, r4, lsl #1]
+    8dd0: ebffe4e3     	bl	0x2164 <xtoi@plt>       @ imm = #-0x6c74
+    8dd4: e08a3084     	add	r3, r10, r4, lsl #1
+    8dd8: e1a0b000     	mov	r11, r0
+    8ddc: e5d30001     	ldrb	r0, [r3, #0x1]
+    8de0: ebffe4df     	bl	0x2164 <xtoi@plt>       @ imm = #-0x6c84
+    8de4: e3700001     	cmn	r0, #1
+    8de8: 137b0001     	cmnne	r11, #1
+    8dec: 0a000005     	beq	0x8e08 <cen_rsaVerifySignature+0x84> @ imm = #0x14
+    8df0: e080320b     	add	r3, r0, r11, lsl #4
+    8df4: e7c83004     	strb	r3, [r8, r4]
+    8df8: e2844001     	add	r4, r4, #1
+    8dfc: eafffff0     	b	0x8dc4 <cen_rsaVerifySignature+0x40> @ imm = #-0x40
+    8e00: e3a04000     	mov	r4, #0
+    8e04: ea000010     	b	0x8e4c <cen_rsaVerifySignature+0xc8> @ imm = #0x40
+    8e08: e1a00008     	mov	r0, r8
+    8e0c: ebffe57f     	bl	0x2410 <free@plt>  @ imm = #-0x6a04
+    8e10: e1a00007     	mov	r0, r7
+    8e14: ebffe57d     	bl	0x2410 <free@plt>  @ imm = #-0x6a0c
+    8e18: ea000047     	b	0x8f3c <cen_rsaVerifySignature+0x1b8> @ imm = #0x11c
+    8e1c: e7d90084     	ldrb	r0, [r9, r4, lsl #1]
+    8e20: ebffe4cf     	bl	0x2164 <xtoi@plt>       @ imm = #-0x6cc4
+    8e24: e0893084     	add	r3, r9, r4, lsl #1
+    8e28: e1a0a000     	mov	r10, r0
+    8e2c: e5d30001     	ldrb	r0, [r3, #0x1]
+    8e30: ebffe4cb     	bl	0x2164 <xtoi@plt>       @ imm = #-0x6cd4
+    8e34: e3700001     	cmn	r0, #1
+    8e38: 137a0001     	cmnne	r10, #1
+    8e3c: 0afffff1     	beq	0x8e08 <cen_rsaVerifySignature+0x84> @ imm = #-0x3c
+    8e40: e080320a     	add	r3, r0, r10, lsl #4
+    8e44: e7c73004     	strb	r3, [r7, r4]
+    8e48: e2844001     	add	r4, r4, #1
+    8e4c: e1540005     	cmp	r4, r5
+    8e50: bafffff1     	blt	0x8e1c <cen_rsaVerifySignature+0x98> @ imm = #-0x3c
+    8e54: e59d104c     	ldr	r1, [sp, #0x4c]
+    8e58: e59d0048     	ldr	r0, [sp, #0x48]
+    8e5c: ebffe51d     	bl	0x22d8 <RSA_bignum_from_bytes@plt> @ imm = #-0x6b8c
+    8e60: e1a01006     	mov	r1, r6
+    8e64: e28db004     	add	r11, sp, #4
+    8e68: e3a04013     	mov	r4, #19
+    8e6c: e1a09000     	mov	r9, r0
+    8e70: e1a00008     	mov	r0, r8
+    8e74: ebffe517     	bl	0x22d8 <RSA_bignum_from_bytes@plt> @ imm = #-0x6ba4
+    8e78: e1a01005     	mov	r1, r5
+    8e7c: e1a0a000     	mov	r10, r0
+    8e80: e1a00007     	mov	r0, r7
+    8e84: ebffe513     	bl	0x22d8 <RSA_bignum_from_bytes@plt> @ imm = #-0x6bb4
+    8e88: e1a0100a     	mov	r1, r10
+    8e8c: e1a06000     	mov	r6, r0
+    8e90: e1a02006     	mov	r2, r6
+    8e94: e1a00009     	mov	r0, r9
+    8e98: ebffe43c     	bl	0x1f90 <RSA_modpow@plt> @ imm = #-0x6f10
+    8e9c: e59d1044     	ldr	r1, [sp, #0x44]
+    8ea0: e1a0200b     	mov	r2, r11
+    8ea4: e1a05000     	mov	r5, r0
+    8ea8: e59d0040     	ldr	r0, [sp, #0x40]
+    8eac: ebffe44c     	bl	0x1fe4 <RSA_SHA_Simple@plt> @ imm = #-0x6ed0
+    8eb0: e1a00005     	mov	r0, r5
+    8eb4: e2641013     	rsb	r1, r4, #19
+    8eb8: ebffe4e5     	bl	0x2254 <RSA_bignum_byte@plt> @ imm = #-0x6c6c
+    8ebc: e7db3004     	ldrb	r3, [r11, r4]
+    8ec0: e1500003     	cmp	r0, r3
+    8ec4: 0a00000c     	beq	0x8efc <cen_rsaVerifySignature+0x178> @ imm = #0x30
+    8ec8: e1a00008     	mov	r0, r8
+    8ecc: ebffe54f     	bl	0x2410 <free@plt>  @ imm = #-0x6ac4
+    8ed0: e1a00007     	mov	r0, r7
+    8ed4: ebffe54d     	bl	0x2410 <free@plt>  @ imm = #-0x6acc
+    8ed8: e1a00009     	mov	r0, r9
+    8edc: ebffe4fa     	bl	0x22cc <RSA_freebn@plt> @ imm = #-0x6c18
+    8ee0: e1a0000a     	mov	r0, r10
+    8ee4: ebffe4f8     	bl	0x22cc <RSA_freebn@plt> @ imm = #-0x6c20
+    8ee8: e1a00006     	mov	r0, r6
+    8eec: ebffe4f6     	bl	0x22cc <RSA_freebn@plt> @ imm = #-0x6c28
+    8ef0: e1a00005     	mov	r0, r5
+    8ef4: ebffe4f4     	bl	0x22cc <RSA_freebn@plt> @ imm = #-0x6c30
+    8ef8: ea00000f     	b	0x8f3c <cen_rsaVerifySignature+0x1b8> @ imm = #0x3c
+    8efc: e2544001     	subs	r4, r4, #1
+    8f00: 2affffea     	bhs	0x8eb0 <cen_rsaVerifySignature+0x12c> @ imm = #-0x58
+    8f04: e1a00008     	mov	r0, r8
+    8f08: ebffe540     	bl	0x2410 <free@plt>  @ imm = #-0x6b00
+    8f0c: e1a00007     	mov	r0, r7
+    8f10: ebffe53e     	bl	0x2410 <free@plt>  @ imm = #-0x6b08
+    8f14: e1a00009     	mov	r0, r9
+    8f18: ebffe4eb     	bl	0x22cc <RSA_freebn@plt> @ imm = #-0x6c54
+    8f1c: e1a0000a     	mov	r0, r10
+    8f20: ebffe4e9     	bl	0x22cc <RSA_freebn@plt> @ imm = #-0x6c5c
+    8f24: e1a00006     	mov	r0, r6
+    8f28: ebffe4e7     	bl	0x22cc <RSA_freebn@plt> @ imm = #-0x6c64
+    8f2c: e1a00005     	mov	r0, r5
+    8f30: ebffe4e5     	bl	0x22cc <RSA_freebn@plt> @ imm = #-0x6c6c
+    8f34: e3a00001     	mov	r0, #1
+    8f38: ea000000     	b	0x8f40 <cen_rsaVerifySignature+0x1bc> @ imm = #0x0
+    8f3c: e3a00000     	mov	r0, #0
+    8f40: e28dd01c     	add	sp, sp, #28
+    8f44: e8bd8ff0     	pop	{r4, r5, r6, r7, r8, r9, r10, r11, pc}
+    8f48: e92d4ff0     	push	{r4, r5, r6, r7, r8, r9, r10, r11, lr}
+    8f4c: e59f4920     	ldr	r4, [pc, #0x920]        @ 0x9874 <cen_rsaVerifySignature+0xaf0>
+    8f50: e5913000     	ldr	r3, [r1]
+    8f54: e24dd034     	sub	sp, sp, #52
+    8f58: e58d3000     	str	r3, [sp]
+    8f5c: e0834004     	add	r4, r3, r4
+    8f60: e5903000     	ldr	r3, [r0]
+    8f64: e5906004     	ldr	r6, [r0, #0x4]
+    8f68: e0844003     	add	r4, r4, r3
+    8f6c: e590300c     	ldr	r3, [r0, #0xc]
+    8f70: e591901c     	ldr	r9, [r1, #0x1c]
+    8f74: e1c3e006     	bic	lr, r3, r6
+    8f78: e5903008     	ldr	r3, [r0, #0x8]
+    8f7c: e0033006     	and	r3, r3, r6
+    8f80: e18ee003     	orr	lr, lr, r3
+    8f84: e084400e     	add	r4, r4, lr
+    8f88: e086ece4     	add	lr, r6, r4, ror #25
+    8f8c: e5913004     	ldr	r3, [r1, #0x4]
+    8f90: e59f48e0     	ldr	r4, [pc, #0x8e0]        @ 0x9878 <cen_rsaVerifySignature+0xaf4>
+    8f94: e58d3004     	str	r3, [sp, #0x4]
+    8f98: e0834004     	add	r4, r3, r4
+    8f9c: e590300c     	ldr	r3, [r0, #0xc]
+    8fa0: e0844003     	add	r4, r4, r3
+    8fa4: e5903008     	ldr	r3, [r0, #0x8]
+    8fa8: e1c3c00e     	bic	r12, r3, lr
+    8fac: e00e3006     	and	r3, lr, r6
+    8fb0: e18cc003     	orr	r12, r12, r3
+    8fb4: e084400c     	add	r4, r4, r12
+    8fb8: e08eca64     	add	r12, lr, r4, ror #20
+    8fbc: e5913008     	ldr	r3, [r1, #0x8]
+    8fc0: e59f48b4     	ldr	r4, [pc, #0x8b4]        @ 0x987c <cen_rsaVerifySignature+0xaf8>
+    8fc4: e58d3008     	str	r3, [sp, #0x8]
+    8fc8: e0834004     	add	r4, r3, r4
+    8fcc: e5903008     	ldr	r3, [r0, #0x8]
+    8fd0: e1c6200c     	bic	r2, r6, r12
+    8fd4: e0844003     	add	r4, r4, r3
+    8fd8: e00c300e     	and	r3, r12, lr
+    8fdc: e1822003     	orr	r2, r2, r3
+    8fe0: e0844002     	add	r4, r4, r2
+    8fe4: e08c27e4     	add	r2, r12, r4, ror #15
+    8fe8: e591300c     	ldr	r3, [r1, #0xc]
+    8fec: e59f488c     	ldr	r4, [pc, #0x88c]        @ 0x9880 <cen_rsaVerifySignature+0xafc>
+    8ff0: e1ce5002     	bic	r5, lr, r2
+    8ff4: e58d300c     	str	r3, [sp, #0xc]
+    8ff8: e0834004     	add	r4, r3, r4
+    8ffc: e002300c     	and	r3, r2, r12
+    9000: e0844006     	add	r4, r4, r6
+    9004: e1853003     	orr	r3, r5, r3
+    9008: e0843003     	add	r3, r4, r3
+    900c: e5914010     	ldr	r4, [r1, #0x10]
+    9010: e0823563     	add	r3, r2, r3, ror #10
+    9014: e58d4010     	str	r4, [sp, #0x10]
+    9018: e59d5010     	ldr	r5, [sp, #0x10]
+    901c: e59f4860     	ldr	r4, [pc, #0x860]        @ 0x9884 <cen_rsaVerifySignature+0xb00>
+    9020: e0854004     	add	r4, r5, r4
+    9024: e084400e     	add	r4, r4, lr
+    9028: e1cc5003     	bic	r5, r12, r3
+    902c: e003e002     	and	lr, r3, r2
+    9030: e185e00e     	orr	lr, r5, lr
+    9034: e084e00e     	add	lr, r4, lr
+    9038: e5914014     	ldr	r4, [r1, #0x14]
+    903c: e083ecee     	add	lr, r3, lr, ror #25
+    9040: e58d4014     	str	r4, [sp, #0x14]
+    9044: e59d5014     	ldr	r5, [sp, #0x14]
+    9048: e59f4838     	ldr	r4, [pc, #0x838]        @ 0x9888 <cen_rsaVerifySignature+0xb04>
+    904c: e0854004     	add	r4, r5, r4
+    9050: e084400c     	add	r4, r4, r12
+    9054: e1c2500e     	bic	r5, r2, lr
+    9058: e00ec003     	and	r12, lr, r3
+    905c: e185c00c     	orr	r12, r5, r12
+    9060: e084c00c     	add	r12, r4, r12
+    9064: e5914018     	ldr	r4, [r1, #0x18]
+    9068: e08eca6c     	add	r12, lr, r12, ror #20
+    906c: e58d4018     	str	r4, [sp, #0x18]
+    9070: e59d5018     	ldr	r5, [sp, #0x18]
+    9074: e59f4810     	ldr	r4, [pc, #0x810]        @ 0x988c <cen_rsaVerifySignature+0xb08>
+    9078: e0854004     	add	r4, r5, r4
+    907c: e0844002     	add	r4, r4, r2
+    9080: e1c3500c     	bic	r5, r3, r12
+    9084: e00c200e     	and	r2, r12, lr
+    9088: e1852002     	orr	r2, r5, r2
+    908c: e59f57fc     	ldr	r5, [pc, #0x7fc]        @ 0x9890 <cen_rsaVerifySignature+0xb0c>
+    9090: e0842002     	add	r2, r4, r2
+    9094: e08c27e2     	add	r2, r12, r2, ror #15
+    9098: e0895005     	add	r5, r9, r5
+    909c: e1ce4002     	bic	r4, lr, r2
+    90a0: e0855003     	add	r5, r5, r3
+    90a4: e002300c     	and	r3, r2, r12
+    90a8: e1843003     	orr	r3, r4, r3
+    90ac: e0853003     	add	r3, r5, r3
+    90b0: e5914020     	ldr	r4, [r1, #0x20]
+    90b4: e59f57d8     	ldr	r5, [pc, #0x7d8]        @ 0x9894 <cen_rsaVerifySignature+0xb10>
+    90b8: e0823563     	add	r3, r2, r3, ror #10
+    90bc: e0845005     	add	r5, r4, r5
+    90c0: e58d401c     	str	r4, [sp, #0x1c]
+    90c4: e085500e     	add	r5, r5, lr
+    90c8: e1cc4003     	bic	r4, r12, r3
+    90cc: e003e002     	and	lr, r3, r2
+    90d0: e184e00e     	orr	lr, r4, lr
+    90d4: e085e00e     	add	lr, r5, lr
+    90d8: e5914024     	ldr	r4, [r1, #0x24]
+    90dc: e59f57b4     	ldr	r5, [pc, #0x7b4]        @ 0x9898 <cen_rsaVerifySignature+0xb14>
+    90e0: e083ecee     	add	lr, r3, lr, ror #25
+    90e4: e0845005     	add	r5, r4, r5
+    90e8: e58d4020     	str	r4, [sp, #0x20]
+    90ec: e085500c     	add	r5, r5, r12
+    90f0: e1c2400e     	bic	r4, r2, lr
+    90f4: e00ec003     	and	r12, lr, r3
+    90f8: e184c00c     	orr	r12, r4, r12
+    90fc: e5914028     	ldr	r4, [r1, #0x28]
+    9100: e085c00c     	add	r12, r5, r12
+    9104: e2445b29     	sub	r5, r4, #41984
+    9108: e08eca6c     	add	r12, lr, r12, ror #20
+    910c: e245504f     	sub	r5, r5, #79
+    9110: e58d4024     	str	r4, [sp, #0x24]
+    9114: e0855002     	add	r5, r5, r2
+    9118: e1c3400c     	bic	r4, r3, r12
+    911c: e00c200e     	and	r2, r12, lr
+    9120: e1842002     	orr	r2, r4, r2
+    9124: e591402c     	ldr	r4, [r1, #0x2c]
+    9128: e0852002     	add	r2, r5, r2
+    912c: e58d4028     	str	r4, [sp, #0x28]
+    9130: e59d5028     	ldr	r5, [sp, #0x28]
+    9134: e59f4760     	ldr	r4, [pc, #0x760]        @ 0x989c <cen_rsaVerifySignature+0xb18>
+    9138: e08c27e2     	add	r2, r12, r2, ror #15
+    913c: e0854004     	add	r4, r5, r4
+    9140: e0844003     	add	r4, r4, r3
+    9144: e1ce5002     	bic	r5, lr, r2
+    9148: e002300c     	and	r3, r2, r12
+    914c: e1853003     	orr	r3, r5, r3
+    9150: e5917030     	ldr	r7, [r1, #0x30]
+    9154: e0843003     	add	r3, r4, r3
+    9158: e59f4740     	ldr	r4, [pc, #0x740]        @ 0x98a0 <cen_rsaVerifySignature+0xb1c>
+    915c: e0823563     	add	r3, r2, r3, ror #10
+    9160: e0874004     	add	r4, r7, r4
+    9164: e1cc5003     	bic	r5, r12, r3
+    9168: e084400e     	add	r4, r4, lr
+    916c: e003e002     	and	lr, r3, r2
+    9170: e185e00e     	orr	lr, r5, lr
+    9174: e084e00e     	add	lr, r4, lr
+    9178: e5914034     	ldr	r4, [r1, #0x34]
+    917c: e083ecee     	add	lr, r3, lr, ror #25
+    9180: e58d402c     	str	r4, [sp, #0x2c]
+    9184: e59d502c     	ldr	r5, [sp, #0x2c]
+    9188: e59f4714     	ldr	r4, [pc, #0x714]        @ 0x98a4 <cen_rsaVerifySignature+0xb20>
+    918c: e5918038     	ldr	r8, [r1, #0x38]
+    9190: e0854004     	add	r4, r5, r4
+    9194: e084400c     	add	r4, r4, r12
+    9198: e1c2500e     	bic	r5, r2, lr
+    919c: e00ec003     	and	r12, lr, r3
+    91a0: e185c00c     	orr	r12, r5, r12
+    91a4: e084c00c     	add	r12, r4, r12
+    91a8: e59f46f8     	ldr	r4, [pc, #0x6f8]        @ 0x98a8 <cen_rsaVerifySignature+0xb24>
+    91ac: e08eca6c     	add	r12, lr, r12, ror #20
+    91b0: e1e0500c     	mvn	r5, r12
+    91b4: e0884004     	add	r4, r8, r4
+    91b8: e005a003     	and	r10, r5, r3
+    91bc: e0844002     	add	r4, r4, r2
+    91c0: e00c200e     	and	r2, r12, lr
+    91c4: e591103c     	ldr	r1, [r1, #0x3c]
+    91c8: e18a2002     	orr	r2, r10, r2
+    91cc: e59fa6d8     	ldr	r10, [pc, #0x6d8]       @ 0x98ac <cen_rsaVerifySignature+0xb28>
+    91d0: e0842002     	add	r2, r4, r2
+    91d4: e08c27e2     	add	r2, r12, r2, ror #15
+    91d8: e1e04002     	mvn	r4, r2
+    91dc: e081a00a     	add	r10, r1, r10
+    91e0: e004b00e     	and	r11, r4, lr
+    91e4: e08a3003     	add	r3, r10, r3
+    91e8: e002a00c     	and	r10, r2, r12
+    91ec: e18ba00a     	orr	r10, r11, r10
+    91f0: e083300a     	add	r3, r3, r10
+    91f4: e59db004     	ldr	r11, [sp, #0x4]
+    91f8: e59fa6b0     	ldr	r10, [pc, #0x6b0]       @ 0x98b0 <cen_rsaVerifySignature+0xb2c>
+    91fc: e0823563     	add	r3, r2, r3, ror #10
+    9200: e08ba00a     	add	r10, r11, r10
+    9204: e08ae00e     	add	lr, r10, lr
+    9208: e0055002     	and	r5, r5, r2
+    920c: e003a00c     	and	r10, r3, r12
+    9210: e18a5005     	orr	r5, r10, r5
+    9214: e08ee005     	add	lr, lr, r5
+    9218: e59da018     	ldr	r10, [sp, #0x18]
+    921c: e59f5690     	ldr	r5, [pc, #0x690]        @ 0x98b4 <cen_rsaVerifySignature+0xb30>
+    9220: e083edee     	add	lr, r3, lr, ror #27
+    9224: e08a5005     	add	r5, r10, r5
+    9228: e085c00c     	add	r12, r5, r12
+    922c: e0044003     	and	r4, r4, r3
+    9230: e00e5002     	and	r5, lr, r2
+    9234: e1854004     	orr	r4, r5, r4
+    9238: e08cc004     	add	r12, r12, r4
+    923c: e59d5028     	ldr	r5, [sp, #0x28]
+    9240: e59f4670     	ldr	r4, [pc, #0x670]        @ 0x98b8 <cen_rsaVerifySignature+0xb34>
+    9244: e08ecbec     	add	r12, lr, r12, ror #23
+    9248: e0854004     	add	r4, r5, r4
+    924c: e0842002     	add	r2, r4, r2
+    9250: e00c5003     	and	r5, r12, r3
+    9254: e1ce4003     	bic	r4, lr, r3
+    9258: e1854004     	orr	r4, r5, r4
+    925c: e0822004     	add	r2, r2, r4
+    9260: e59fb654     	ldr	r11, [pc, #0x654]       @ 0x98bc <cen_rsaVerifySignature+0xb38>
+    9264: e59d4000     	ldr	r4, [sp]
+    9268: e08c2962     	add	r2, r12, r2, ror #18
+    926c: e084b00b     	add	r11, r4, r11
+    9270: e08b3003     	add	r3, r11, r3
+    9274: e1cc400e     	bic	r4, r12, lr
+    9278: e002b00e     	and	r11, r2, lr
+    927c: e18bb004     	orr	r11, r11, r4
+    9280: e083b00b     	add	r11, r3, r11
+    9284: e59f5634     	ldr	r5, [pc, #0x634]        @ 0x98c0 <cen_rsaVerifySignature+0xb3c>
+    9288: e59d3014     	ldr	r3, [sp, #0x14]
+    928c: e082b66b     	add	r11, r2, r11, ror #12
+    9290: e0835005     	add	r5, r3, r5
+    9294: e085e00e     	add	lr, r5, lr
+    9298: e1c2300c     	bic	r3, r2, r12
+    929c: e00b500c     	and	r5, r11, r12
+    92a0: e1855003     	orr	r5, r5, r3
+    92a4: e08e5005     	add	r5, lr, r5
+    92a8: e59f3614     	ldr	r3, [pc, #0x614]        @ 0x98c4 <cen_rsaVerifySignature+0xb40>
+    92ac: e59de024     	ldr	lr, [sp, #0x24]
+    92b0: e08b5de5     	add	r5, r11, r5, ror #27
+    92b4: e08e3003     	add	r3, lr, r3
+    92b8: e083c00c     	add	r12, r3, r12
+    92bc: e005e002     	and	lr, r5, r2
+    92c0: e1cb3002     	bic	r3, r11, r2
+    92c4: e18e3003     	orr	r3, lr, r3
+    92c8: e59fe5f8     	ldr	lr, [pc, #0x5f8]        @ 0x98c8 <cen_rsaVerifySignature+0xb44>
+    92cc: e08cc003     	add	r12, r12, r3
+    92d0: e085cbec     	add	r12, r5, r12, ror #23
+    92d4: e081e00e     	add	lr, r1, lr
+    92d8: e1c5300b     	bic	r3, r5, r11
+    92dc: e08e2002     	add	r2, lr, r2
+    92e0: e00ce00b     	and	lr, r12, r11
+    92e4: e18ee003     	orr	lr, lr, r3
+    92e8: e082e00e     	add	lr, r2, lr
+    92ec: e59f35d8     	ldr	r3, [pc, #0x5d8]        @ 0x98cc <cen_rsaVerifySignature+0xb48>
+    92f0: e59d2010     	ldr	r2, [sp, #0x10]
+    92f4: e08ce96e     	add	lr, r12, lr, ror #18
+    92f8: e0823003     	add	r3, r2, r3
+    92fc: e083b00b     	add	r11, r3, r11
+    9300: e00e2005     	and	r2, lr, r5
+    9304: e1cc3005     	bic	r3, r12, r5
+    9308: e1823003     	orr	r3, r2, r3
+    930c: e08bb003     	add	r11, r11, r3
+    9310: e59d2020     	ldr	r2, [sp, #0x20]
+    9314: e59f35b4     	ldr	r3, [pc, #0x5b4]        @ 0x98d0 <cen_rsaVerifySignature+0xb4c>
+    9318: e08eb66b     	add	r11, lr, r11, ror #12
+    931c: e0823003     	add	r3, r2, r3
+    9320: e0835005     	add	r5, r3, r5
+    9324: e00b200c     	and	r2, r11, r12
+    9328: e1ce300c     	bic	r3, lr, r12
+    932c: e1823003     	orr	r3, r2, r3
+    9330: e59f259c     	ldr	r2, [pc, #0x59c]        @ 0x98d4 <cen_rsaVerifySignature+0xb50>
+    9334: e0853003     	add	r3, r5, r3
+    9338: e08b3de3     	add	r3, r11, r3, ror #27
+    933c: e0882002     	add	r2, r8, r2
+    9340: e003400e     	and	r4, r3, lr
+    9344: e082c00c     	add	r12, r2, r12
+    9348: e1cb200e     	bic	r2, r11, lr
+    934c: e1842002     	orr	r2, r4, r2
+    9350: e08cc002     	add	r12, r12, r2
+    9354: e59d400c     	ldr	r4, [sp, #0xc]
+    9358: e59f2578     	ldr	r2, [pc, #0x578]        @ 0x98d8 <cen_rsaVerifySignature+0xb54>
+    935c: e083cbec     	add	r12, r3, r12, ror #23
+    9360: e0842002     	add	r2, r4, r2
+    9364: e082e00e     	add	lr, r2, lr
+    9368: e00c400b     	and	r4, r12, r11
+    936c: e1c3200b     	bic	r2, r3, r11
+    9370: e1842002     	orr	r2, r4, r2
+    9374: e08ee002     	add	lr, lr, r2
+    9378: e59d401c     	ldr	r4, [sp, #0x1c]
+    937c: e59f2558     	ldr	r2, [pc, #0x558]        @ 0x98dc <cen_rsaVerifySignature+0xb58>
+    9380: e08ce96e     	add	lr, r12, lr, ror #18
+    9384: e0842002     	add	r2, r4, r2
+    9388: e082b00b     	add	r11, r2, r11
+    938c: e00e4003     	and	r4, lr, r3
+    9390: e1cc2003     	bic	r2, r12, r3
+    9394: e59d502c     	ldr	r5, [sp, #0x2c]
+    9398: e1842002     	orr	r2, r4, r2
+    939c: e59f453c     	ldr	r4, [pc, #0x53c]        @ 0x98e0 <cen_rsaVerifySignature+0xb5c>
+    93a0: e08b2002     	add	r2, r11, r2
+    93a4: e08e2662     	add	r2, lr, r2, ror #12
+    93a8: e0854004     	add	r4, r5, r4
+    93ac: e0843003     	add	r3, r4, r3
+    93b0: e002500c     	and	r5, r2, r12
+    93b4: e1ce400c     	bic	r4, lr, r12
+    93b8: e1854004     	orr	r4, r5, r4
+    93bc: e0833004     	add	r3, r3, r4
+    93c0: e59d5008     	ldr	r5, [sp, #0x8]
+    93c4: e59f4518     	ldr	r4, [pc, #0x518]        @ 0x98e4 <cen_rsaVerifySignature+0xb60>
+    93c8: e0823de3     	add	r3, r2, r3, ror #27
+    93cc: e0854004     	add	r4, r5, r4
+    93d0: e084c00c     	add	r12, r4, r12
+    93d4: e003500e     	and	r5, r3, lr
+    93d8: e1c2400e     	bic	r4, r2, lr
+    93dc: e1854004     	orr	r4, r5, r4
+    93e0: e08cc004     	add	r12, r12, r4
+    93e4: e59f44fc     	ldr	r4, [pc, #0x4fc]        @ 0x98e8 <cen_rsaVerifySignature+0xb64>
+    93e8: e083cbec     	add	r12, r3, r12, ror #23
+    93ec: e0894004     	add	r4, r9, r4
+    93f0: e00c5002     	and	r5, r12, r2
+    93f4: e084e00e     	add	lr, r4, lr
+    93f8: e1c34002     	bic	r4, r3, r2
+    93fc: e1854004     	orr	r4, r5, r4
+    9400: e08ee004     	add	lr, lr, r4
+    9404: e59f44e0     	ldr	r4, [pc, #0x4e0]        @ 0x98ec <cen_rsaVerifySignature+0xb68>
+    9408: e08ce96e     	add	lr, r12, lr, ror #18
+    940c: e0874004     	add	r4, r7, r4
+    9410: e00e5003     	and	r5, lr, r3
+    9414: e0842002     	add	r2, r4, r2
+    9418: e1cc4003     	bic	r4, r12, r3
+    941c: e1854004     	orr	r4, r5, r4
+    9420: e0822004     	add	r2, r2, r4
+    9424: e59d5014     	ldr	r5, [sp, #0x14]
+    9428: e59f44c0     	ldr	r4, [pc, #0x4c0]        @ 0x98f0 <cen_rsaVerifySignature+0xb6c>
+    942c: e08e2662     	add	r2, lr, r2, ror #12
+    9430: e0854004     	add	r4, r5, r4
+    9434: e0843003     	add	r3, r4, r3
+    9438: e02e400c     	eor	r4, lr, r12
+    943c: e0244002     	eor	r4, r4, r2
+    9440: e59d501c     	ldr	r5, [sp, #0x1c]
+    9444: e0833004     	add	r3, r3, r4
+    9448: e59f44a4     	ldr	r4, [pc, #0x4a4]        @ 0x98f4 <cen_rsaVerifySignature+0xb70>
+    944c: e0823e63     	add	r3, r2, r3, ror #28
+    9450: e0854004     	add	r4, r5, r4
+    9454: e084c00c     	add	r12, r4, r12
+    9458: e022400e     	eor	r4, r2, lr
+    945c: e0244003     	eor	r4, r4, r3
+    9460: e59d5028     	ldr	r5, [sp, #0x28]
+    9464: e08cc004     	add	r12, r12, r4
+    9468: e59f4488     	ldr	r4, [pc, #0x488]        @ 0x98f8 <cen_rsaVerifySignature+0xb74>
+    946c: e083caec     	add	r12, r3, r12, ror #21
+    9470: e0854004     	add	r4, r5, r4
+    9474: e084e00e     	add	lr, r4, lr
+    9478: e0234002     	eor	r4, r3, r2
+    947c: e024400c     	eor	r4, r4, r12
+    9480: e08ee004     	add	lr, lr, r4
+    9484: e59f4470     	ldr	r4, [pc, #0x470]        @ 0x98fc <cen_rsaVerifySignature+0xb78>
+    9488: e08ce86e     	add	lr, r12, lr, ror #16
+    948c: e0884004     	add	r4, r8, r4
+    9490: e0842002     	add	r2, r4, r2
+    9494: e02c4003     	eor	r4, r12, r3
+    9498: e024400e     	eor	r4, r4, lr
+    949c: e59d5004     	ldr	r5, [sp, #0x4]
+    94a0: e0822004     	add	r2, r2, r4
+    94a4: e59f4454     	ldr	r4, [pc, #0x454]        @ 0x9900 <cen_rsaVerifySignature+0xb7c>
+    94a8: e08e24e2     	add	r2, lr, r2, ror #9
+    94ac: e0854004     	add	r4, r5, r4
+    94b0: e0843003     	add	r3, r4, r3
+    94b4: e02e400c     	eor	r4, lr, r12
+    94b8: e0244002     	eor	r4, r4, r2
+    94bc: e59d5010     	ldr	r5, [sp, #0x10]
+    94c0: e0833004     	add	r3, r3, r4
+    94c4: e59f4438     	ldr	r4, [pc, #0x438]        @ 0x9904 <cen_rsaVerifySignature+0xb80>
+    94c8: e0823e63     	add	r3, r2, r3, ror #28
+    94cc: e0854004     	add	r4, r5, r4
+    94d0: e084c00c     	add	r12, r4, r12
+    94d4: e022400e     	eor	r4, r2, lr
+    94d8: e0244003     	eor	r4, r4, r3
+    94dc: e08cc004     	add	r12, r12, r4
+    94e0: e59f4420     	ldr	r4, [pc, #0x420]        @ 0x9908 <cen_rsaVerifySignature+0xb84>
+    94e4: e083caec     	add	r12, r3, r12, ror #21
+    94e8: e0894004     	add	r4, r9, r4
+    94ec: e084e00e     	add	lr, r4, lr
+    94f0: e0234002     	eor	r4, r3, r2
+    94f4: e024400c     	eor	r4, r4, r12
+    94f8: e59d5024     	ldr	r5, [sp, #0x24]
+    94fc: e08ee004     	add	lr, lr, r4
+    9500: e59f4404     	ldr	r4, [pc, #0x404]        @ 0x990c <cen_rsaVerifySignature+0xb88>
+    9504: e08ce86e     	add	lr, r12, lr, ror #16
+    9508: e0854004     	add	r4, r5, r4
+    950c: e0842002     	add	r2, r4, r2
+    9510: e02c4003     	eor	r4, r12, r3
+    9514: e024400e     	eor	r4, r4, lr
+    9518: e0822004     	add	r2, r2, r4
+    951c: e08e44e2     	add	r4, lr, r2, ror #9
+    9520: e59d502c     	ldr	r5, [sp, #0x2c]
+    9524: e59f23e4     	ldr	r2, [pc, #0x3e4]        @ 0x9910 <cen_rsaVerifySignature+0xb8c>
+    9528: e0852002     	add	r2, r5, r2
+    952c: e0823003     	add	r3, r2, r3
+    9530: e02e200c     	eor	r2, lr, r12
+    9534: e0222004     	eor	r2, r2, r4
+    9538: e59d5000     	ldr	r5, [sp]
+    953c: e0833002     	add	r3, r3, r2
+    9540: e59f23cc     	ldr	r2, [pc, #0x3cc]        @ 0x9914 <cen_rsaVerifySignature+0xb90>
+    9544: e0843e63     	add	r3, r4, r3, ror #28
+    9548: e0852002     	add	r2, r5, r2
+    954c: e082c00c     	add	r12, r2, r12
+    9550: e024200e     	eor	r2, r4, lr
+    9554: e0222003     	eor	r2, r2, r3
+    9558: e59d500c     	ldr	r5, [sp, #0xc]
+    955c: e08cc002     	add	r12, r12, r2
+    9560: e59f23b0     	ldr	r2, [pc, #0x3b0]        @ 0x9918 <cen_rsaVerifySignature+0xb94>
+    9564: e083caec     	add	r12, r3, r12, ror #21
+    9568: e0852002     	add	r2, r5, r2
+    956c: e082e00e     	add	lr, r2, lr
+    9570: e0232004     	eor	r2, r3, r4
+    9574: e022200c     	eor	r2, r2, r12
+    9578: e08ee002     	add	lr, lr, r2
+    957c: e59f2398     	ldr	r2, [pc, #0x398]        @ 0x991c <cen_rsaVerifySignature+0xb98>
+    9580: e08ce86e     	add	lr, r12, lr, ror #16
+    9584: e08a2002     	add	r2, r10, r2
+    9588: e0824004     	add	r4, r2, r4
+    958c: e02c2003     	eor	r2, r12, r3
+    9590: e022200e     	eor	r2, r2, lr
+    9594: e59d5020     	ldr	r5, [sp, #0x20]
+    9598: e0844002     	add	r4, r4, r2
+    959c: e59f237c     	ldr	r2, [pc, #0x37c]        @ 0x9920 <cen_rsaVerifySignature+0xb9c>
+    95a0: e08e44e4     	add	r4, lr, r4, ror #9
+    95a4: e0852002     	add	r2, r5, r2
+    95a8: e0823003     	add	r3, r2, r3
+    95ac: e02e200c     	eor	r2, lr, r12
+    95b0: e0222004     	eor	r2, r2, r4
+    95b4: e0833002     	add	r3, r3, r2
+    95b8: e0842e63     	add	r2, r4, r3, ror #28
+    95bc: e59f3360     	ldr	r3, [pc, #0x360]        @ 0x9924 <cen_rsaVerifySignature+0xba0>
+    95c0: e59d5008     	ldr	r5, [sp, #0x8]
+    95c4: e0873003     	add	r3, r7, r3
+    95c8: e083c00c     	add	r12, r3, r12
+    95cc: e024300e     	eor	r3, r4, lr
+    95d0: e0233002     	eor	r3, r3, r2
+    95d4: e08cc003     	add	r12, r12, r3
+    95d8: e59f3348     	ldr	r3, [pc, #0x348]        @ 0x9928 <cen_rsaVerifySignature+0xba4>
+    95dc: e082caec     	add	r12, r2, r12, ror #21
+    95e0: e0813003     	add	r3, r1, r3
+    95e4: e083e00e     	add	lr, r3, lr
+    95e8: e0223004     	eor	r3, r2, r4
+    95ec: e023300c     	eor	r3, r3, r12
+    95f0: e08ee003     	add	lr, lr, r3
+    95f4: e59f3330     	ldr	r3, [pc, #0x330]        @ 0x992c <cen_rsaVerifySignature+0xba8>
+    95f8: e08ce86e     	add	lr, r12, lr, ror #16
+    95fc: e0853003     	add	r3, r5, r3
+    9600: e0834004     	add	r4, r3, r4
+    9604: e02c3002     	eor	r3, r12, r2
+    9608: e023300e     	eor	r3, r3, lr
+    960c: e59d5000     	ldr	r5, [sp]
+    9610: e0844003     	add	r4, r4, r3
+    9614: e59f3314     	ldr	r3, [pc, #0x314]        @ 0x9930 <cen_rsaVerifySignature+0xbac>
+    9618: e08e44e4     	add	r4, lr, r4, ror #9
+    961c: e0853003     	add	r3, r5, r3
+    9620: e0833002     	add	r3, r3, r2
+    9624: e59f5308     	ldr	r5, [pc, #0x308]        @ 0x9934 <cen_rsaVerifySignature+0xbb0>
+    9628: e1e0200c     	mvn	r2, r12
+    962c: e1842002     	orr	r2, r4, r2
+    9630: e022200e     	eor	r2, r2, lr
+    9634: e0895005     	add	r5, r9, r5
+    9638: e0833002     	add	r3, r3, r2
+    963c: e0843d63     	add	r3, r4, r3, ror #26
+    9640: e085c00c     	add	r12, r5, r12
+    9644: e59f22ec     	ldr	r2, [pc, #0x2ec]        @ 0x9938 <cen_rsaVerifySignature+0xbb4>
+    9648: e1e0500e     	mvn	r5, lr
+    964c: e1835005     	orr	r5, r3, r5
+    9650: e0255004     	eor	r5, r5, r4
+    9654: e0882002     	add	r2, r8, r2
+    9658: e08cc005     	add	r12, r12, r5
+    965c: e083cb6c     	add	r12, r3, r12, ror #22
+    9660: e082e00e     	add	lr, r2, lr
+    9664: e1e02004     	mvn	r2, r4
+    9668: e18c2002     	orr	r2, r12, r2
+    966c: e0222003     	eor	r2, r2, r3
+    9670: e08ee002     	add	lr, lr, r2
+    9674: e59f52c0     	ldr	r5, [pc, #0x2c0]        @ 0x993c <cen_rsaVerifySignature+0xbb8>
+    9678: e59d2014     	ldr	r2, [sp, #0x14]
+    967c: e08ce8ee     	add	lr, r12, lr, ror #17
+    9680: e0825005     	add	r5, r2, r5
+    9684: e0854004     	add	r4, r5, r4
+    9688: e59f22b0     	ldr	r2, [pc, #0x2b0]        @ 0x9940 <cen_rsaVerifySignature+0xbbc>
+    968c: e1e05003     	mvn	r5, r3
+    9690: e18e5005     	orr	r5, lr, r5
+    9694: e025500c     	eor	r5, r5, r12
+    9698: e0872002     	add	r2, r7, r2
+    969c: e0844005     	add	r4, r4, r5
+    96a0: e08e45e4     	add	r4, lr, r4, ror #11
+    96a4: e0823003     	add	r3, r2, r3
+    96a8: e1e0200c     	mvn	r2, r12
+    96ac: e1842002     	orr	r2, r4, r2
+    96b0: e022200e     	eor	r2, r2, lr
+    96b4: e0833002     	add	r3, r3, r2
+    96b8: e59f5284     	ldr	r5, [pc, #0x284]        @ 0x9944 <cen_rsaVerifySignature+0xbc0>
+    96bc: e59d200c     	ldr	r2, [sp, #0xc]
+    96c0: e0843d63     	add	r3, r4, r3, ror #26
+    96c4: e0825005     	add	r5, r2, r5
+    96c8: e085c00c     	add	r12, r5, r12
+    96cc: e1e0500e     	mvn	r5, lr
+    96d0: e1835005     	orr	r5, r3, r5
+    96d4: e0255004     	eor	r5, r5, r4
+    96d8: e08cc005     	add	r12, r12, r5
+    96dc: e59f2264     	ldr	r2, [pc, #0x264]        @ 0x9948 <cen_rsaVerifySignature+0xbc4>
+    96e0: e59d5024     	ldr	r5, [sp, #0x24]
+    96e4: e083cb6c     	add	r12, r3, r12, ror #22
+    96e8: e0852002     	add	r2, r5, r2
+    96ec: e082e00e     	add	lr, r2, lr
+    96f0: e1e02004     	mvn	r2, r4
+    96f4: e18c2002     	orr	r2, r12, r2
+    96f8: e0222003     	eor	r2, r2, r3
+    96fc: e08ee002     	add	lr, lr, r2
+    9700: e59f5244     	ldr	r5, [pc, #0x244]        @ 0x994c <cen_rsaVerifySignature+0xbc8>
+    9704: e59d2004     	ldr	r2, [sp, #0x4]
+    9708: e08ce8ee     	add	lr, r12, lr, ror #17
+    970c: e0825005     	add	r5, r2, r5
+    9710: e0854004     	add	r4, r5, r4
+    9714: e1e05003     	mvn	r5, r3
+    9718: e18e5005     	orr	r5, lr, r5
+    971c: e025500c     	eor	r5, r5, r12
+    9720: e0844005     	add	r4, r4, r5
+    9724: e59f2224     	ldr	r2, [pc, #0x224]        @ 0x9950 <cen_rsaVerifySignature+0xbcc>
+    9728: e59d501c     	ldr	r5, [sp, #0x1c]
+    972c: e08e45e4     	add	r4, lr, r4, ror #11
+    9730: e0852002     	add	r2, r5, r2
+    9734: e0823003     	add	r3, r2, r3
+    9738: e59f5214     	ldr	r5, [pc, #0x214]        @ 0x9954 <cen_rsaVerifySignature+0xbd0>
+    973c: e1e0200c     	mvn	r2, r12
+    9740: e1842002     	orr	r2, r4, r2
+    9744: e022200e     	eor	r2, r2, lr
+    9748: e0815005     	add	r5, r1, r5
+    974c: e0833002     	add	r3, r3, r2
+    9750: e0843d63     	add	r3, r4, r3, ror #26
+    9754: e085c00c     	add	r12, r5, r12
+    9758: e59f21f8     	ldr	r2, [pc, #0x1f8]        @ 0x9958 <cen_rsaVerifySignature+0xbd4>
+    975c: e1e0500e     	mvn	r5, lr
+    9760: e1835005     	orr	r5, r3, r5
+    9764: e0255004     	eor	r5, r5, r4
+    9768: e08a2002     	add	r2, r10, r2
+    976c: e08cc005     	add	r12, r12, r5
+    9770: e083cb6c     	add	r12, r3, r12, ror #22
+    9774: e082e00e     	add	lr, r2, lr
+    9778: e1e02004     	mvn	r2, r4
+    977c: e18c2002     	orr	r2, r12, r2
+    9780: e0222003     	eor	r2, r2, r3
+    9784: e08ee002     	add	lr, lr, r2
+    9788: e59f51cc     	ldr	r5, [pc, #0x1cc]        @ 0x995c <cen_rsaVerifySignature+0xbd8>
+    978c: e59d202c     	ldr	r2, [sp, #0x2c]
+    9790: e08ce8ee     	add	lr, r12, lr, ror #17
+    9794: e0825005     	add	r5, r2, r5
+    9798: e1e02003     	mvn	r2, r3
+    979c: e18e2002     	orr	r2, lr, r2
+    97a0: e022200c     	eor	r2, r2, r12
+    97a4: e0854004     	add	r4, r5, r4
+    97a8: e59d1010     	ldr	r1, [sp, #0x10]
+    97ac: e0844002     	add	r4, r4, r2
+    97b0: e59f21a8     	ldr	r2, [pc, #0x1a8]        @ 0x9960 <cen_rsaVerifySignature+0xbdc>
+    97b4: e08e45e4     	add	r4, lr, r4, ror #11
+    97b8: e0812002     	add	r2, r1, r2
+    97bc: e0823003     	add	r3, r2, r3
+    97c0: e1e0200c     	mvn	r2, r12
+    97c4: e1842002     	orr	r2, r4, r2
+    97c8: e022200e     	eor	r2, r2, lr
+    97cc: e0833002     	add	r3, r3, r2
+    97d0: e59f518c     	ldr	r5, [pc, #0x18c]        @ 0x9964 <cen_rsaVerifySignature+0xbe0>
+    97d4: e59d2028     	ldr	r2, [sp, #0x28]
+    97d8: e0843d63     	add	r3, r4, r3, ror #26
+    97dc: e0825005     	add	r5, r2, r5
+    97e0: e085500c     	add	r5, r5, r12
+    97e4: e59d1008     	ldr	r1, [sp, #0x8]
+    97e8: e1e0c00e     	mvn	r12, lr
+    97ec: e59f2174     	ldr	r2, [pc, #0x174]        @ 0x9968 <cen_rsaVerifySignature+0xbe4>
+    97f0: e183c00c     	orr	r12, r3, r12
+    97f4: e02cc004     	eor	r12, r12, r4
+    97f8: e085c00c     	add	r12, r5, r12
+    97fc: e0812002     	add	r2, r1, r2
+    9800: e083cb6c     	add	r12, r3, r12, ror #22
+    9804: e082200e     	add	r2, r2, lr
+    9808: e1e0e004     	mvn	lr, r4
+    980c: e18ce00e     	orr	lr, r12, lr
+    9810: e02ee003     	eor	lr, lr, r3
+    9814: e082e00e     	add	lr, r2, lr
+    9818: e59f514c     	ldr	r5, [pc, #0x14c]        @ 0x996c <cen_rsaVerifySignature+0xbe8>
+    981c: e59d2020     	ldr	r2, [sp, #0x20]
+    9820: e08ce8ee     	add	lr, r12, lr, ror #17
+    9824: e0825005     	add	r5, r2, r5
+    9828: e5902000     	ldr	r2, [r0]
+    982c: e0855004     	add	r5, r5, r4
+    9830: e1e04003     	mvn	r4, r3
+    9834: e18e4004     	orr	r4, lr, r4
+    9838: e0833002     	add	r3, r3, r2
+    983c: e024400c     	eor	r4, r4, r12
+    9840: e0854004     	add	r4, r5, r4
+    9844: e5803000     	str	r3, [r0]
+    9848: e08e3006     	add	r3, lr, r6
+    984c: e08345e4     	add	r4, r3, r4, ror #11
+    9850: e5903008     	ldr	r3, [r0, #0x8]
+    9854: e5804004     	str	r4, [r0, #0x4]
+    9858: e08ee003     	add	lr, lr, r3
+    985c: e590300c     	ldr	r3, [r0, #0xc]
+    9860: e580e008     	str	lr, [r0, #0x8]
+    9864: e08cc003     	add	r12, r12, r3
+    9868: e580c00c     	str	r12, [r0, #0xc]
+    986c: e28dd034     	add	sp, sp, #52
+    9870: e8bd8ff0     	pop	{r4, r5, r6, r7, r8, r9, r10, r11, pc}
+    9874: d76aa478     	<unknown>
+    9878: e8c7b756     	stm	r7, {r1, r2, r4, r6, r8, r9, r10, r12, sp, pc} ^
+    987c: 242070db     	strths	r7, [r0], #-219
+    9880: c1bdceee     	<unknown>
+    9884: f57c0faf     	<unknown>
+    9888: 4787c62a     	strmi	r12, [r7, r10, lsr #12]
+    988c: a8304613     	ldmdage	r0!, {r0, r1, r4, r9, r10, lr}
+    9890: fd469501     	stc2l	p5, c9, [r6, #-4]
+    9894: 698098d8     	stmibvs	r0, {r3, r4, r6, r7, r11, r12, pc}
+    9898: 8b44f7af     	blhi	0x114775c               @ imm = #0x113debc
+    989c: 895cd7be     	ldmdbhi	r12, {r1, r2, r3, r4, r5, r7, r8, r9, r10, r12, lr, pc} ^
+    98a0: 6b901122     	blvs	0xfe40dd30              @ imm = #-0x1bfbb78
+    98a4: fd987193     	ldc2	p1, c7, [r8, #588]
+    98a8: a679438e     	ldrbtge	r4, [r9], -lr, lsl #7
+    98ac: 49b40821     	ldmibmi	r4!, {r0, r5, r11}
+    98b0: f61e2562     	<unknown>
+    98b4: c040b340     	subgt	r11, r0, r0, asr #6
+    98b8: 265e5a51     	usaxhs	r5, lr, r1
+    98bc: e9b6c7aa     	ldmib	r6!, {r1, r3, r5, r7, r8, r9, r10, lr, pc}
+    98c0: d62f105d     	qsaxle	r1, pc, sp
+    98c4: 02441453     	subeq	r1, r4, #1392508928
+    98c8: d8a1e681     	stmle	r1!, {r0, r7, r9, r10, sp, lr, pc}
+    98cc: e7d3fbc8     	ldrb	pc, [r3, r8, asr #23]
+    98d0: 21e1cde6     	mvnhs	r12, r6, ror #27
+    98d4: c33707d6     	teqgt	r7, #56098816
+    98d8: f4d50d87     	<unknown>
+    98dc: 455a14ed     	ldrbmi	r1, [r10, #-0x4ed]
+    98e0: a9e3e905     	stmibge	r3!, {r0, r2, r8, r11, sp, lr, pc} ^
+    98e4: fcefa3f8     	stc2l	p3, c10, [pc], #992
+    98e8: 676f02d9     	<unknown>
+    98ec: 8d2a4c8a     	stchi	p12, c4, [r10, #-552]!
+    98f0: fffa3942     	<unknown>
+    98f4: 8771f681     	ldrbhi	pc, [r1, -r1, lsl #13]!
+    98f8: 6d9d6122     	ldcvs	p1, c6, [sp, #136]
+    98fc: fde5380c     	stc2l	p8, c3, [r5, #48]!
+    9900: a4beea44     	ldrtge	lr, [lr], #2628
+    9904: 4bdecfa9     	blmi	0xff7bd7b0              @ imm = #-0x84c15c
+    9908: f6bb4b60     	<unknown>
+    990c: bebfbc70     	mrclt	p12, #0x5, r11, c15, c0, #0x3
+    9910: 289b7ec6     	ldmhs	r11, {r1, r2, r6, r7, r9, r10, r11, r12, sp, lr}
+    9914: eaa127fa     	b	0xfe853904              @ imm = #-0x17b6018
+    9918: d4ef3085     	strbtle	r3, [pc], #133
+    991c: 04881d05     	streq	r1, [r8], #3333
+    9920: d9d4d039     	ldmible	r4, {r0, r3, r4, r5, r12, lr, pc} ^
+    9924: e6db99e5     	ldrb	r9, [r11], r5, ror #19
+    9928: 1fa27cf8     	svcne	#0xa27cf8
+    992c: c4ac5665     	strtgt	r5, [r12], #1637
+    9930: f4292244     	<unknown>
+    9934: 432aff97     	msrmi	CPSR_fx, #604
+    9938: ab9423a7     	blge	0xfe5127dc              @ imm = #-0x1af7164
+    993c: fc93a039     	ldc2	p0, c10, [r3], {57}
+    9940: 655b59c3     	ldrbvs	r5, [r11, #-0x9c3]
+    9944: 8f0ccc92     	svchi	#0xccc92
+    9948: ffeff47d     	<unknown>
+    994c: 85845dd1     	strhi	r5, [r4, #0xdd1]
+    9950: 6fa87e4f     	svcvs	#0xa87e4f
+    9954: fe2ce6e0     	cdp2	p6, #0x2, c14, c12, c0, #0x7
+    9958: a3014314     	<unknown>
+    995c: 4e0811a1     	cdpmi	p1, #0x0, c1, c8, c1, #0x5
+    9960: f7537e82     	<unknown>
+    9964: bd3af235     	ldclt	p2, c15, [r10, #-212]!
+    9968: 2ad7d2bb     	bhs	0xff5fe45c              @ imm = #-0xa0b514
+    996c: eb86d391     	bl	0xfe1be7b8              @ imm = #-0x1e4b1bc
+
+00009b54 <cen_md5MakeDigest>:
+    9b54: e92d40f0     	push	{r4, r5, r6, r7, lr}
+    9b58: e24dd05c     	sub	sp, sp, #92
+    9b5c: e1a05000     	mov	r5, r0
+    9b60: e1a07001     	mov	r7, r1
+    9b64: e1a06002     	mov	r6, r2
+    9b68: e1a0000d     	mov	r0, sp
+    9b6c: ebffe19a     	bl	0x21dc <MD5_Init@plt>   @ imm = #-0x7998
+    9b70: e1a0000d     	mov	r0, sp
+    9b74: e1a01007     	mov	r1, r7
+    9b78: e1a02006     	mov	r2, r6
+    9b7c: ebffe21a     	bl	0x23ec <MD5_Update@plt> @ imm = #-0x7798
+    9b80: e1a00005     	mov	r0, r5
+    9b84: e1a0100d     	mov	r1, sp
+    9b88: ebffe1b4     	bl	0x2260 <MD5_Final@plt>  @ imm = #-0x7930
+    9b8c: e28dd05c     	add	sp, sp, #92
+    9b90: e8bd80f0     	pop	{r4, r5, r6, r7, pc}
+
+00009b94 <cen_md5VerifyDigest>:
+    9b94: e92d4030     	push	{r4, r5, lr}
+    9b98: e24dd014     	sub	sp, sp, #20
+    9b9c: e1a05000     	mov	r5, r0
+    9ba0: e1a0000d     	mov	r0, sp
+    9ba4: ebffe1e6     	bl	0x2344 <cen_md5MakeDigest@plt> @ imm = #-0x7868
+    9ba8: e1a0000d     	mov	r0, sp
+    9bac: e1a01005     	mov	r1, r5
+    9bb0: e3a02010     	mov	r2, #16
+    9bb4: ebffe1a3     	bl	0x2248 <memcmp@plt>     @ imm = #-0x7974
+    9bb8: e16f0f10     	clz	r0, r0
+    9bbc: e1a002a0     	lsr	r0, r0, #5
+    9bc0: e28dd014     	add	sp, sp, #20
+    9bc4: e8bd8030     	pop	{r4, r5, pc}

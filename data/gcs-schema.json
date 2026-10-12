@@ -1,0 +1,3541 @@
+{
+  "scope": "schema only; no values, pointers into live data, or capture hashes",
+  "objects": [
+    {
+      "name": "InternetGatewayDevice",
+      "path": "InternetGatewayDevice",
+      "flags": "0x1",
+      "parameters": [
+        {
+          "name": "WANDeviceNumberOfEntries",
+          "type_tag": "0x1"
+        },
+        {
+          "name": "LANDeviceNumberOfEntries",
+          "type_tag": "0x1"
+        },
+        {
+          "name": "DeviceSummary",
+          "type_tag": "0xc0000401"
+        }
+      ]
+    },
+    {
+      "name": "DeviceInfo",
+      "path": "InternetGatewayDevice.DeviceInfo",
+      "flags": "0x1",
+      "parameters": [
+        {
+          "name": "ProvisioningCode",
+          "type_tag": "0xc0000041"
+        },
+        {
+          "name": "UpTime",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "X_CT-COM_UPLink",
+          "type_tag": "0x1"
+        },
+        {
+          "name": "Manufacturer",
+          "type_tag": "0xc0000041"
+        },
+        {
+          "name": "ManufacturerOUI",
+          "type_tag": "0xc0000041"
+        },
+        {
+          "name": "ModelName",
+          "type_tag": "0xc0000041"
+        },
+        {
+          "name": "Description",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "ProductClass",
+          "type_tag": "0xc0000041"
+        },
+        {
+          "name": "SerialNumber",
+          "type_tag": "0xc0000041"
+        },
+        {
+          "name": "HardwareVersion",
+          "type_tag": "0xc0000041"
+        },
+        {
+          "name": "SoftwareVersion",
+          "type_tag": "0xc0000041"
+        },
+        {
+          "name": "SpecVersion",
+          "type_tag": "0xc0000011"
+        },
+        {
+          "name": "Province",
+          "type_tag": "0xc0000011"
+        },
+        {
+          "name": "DeviceLog",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "X_CT-COM_MACAddress",
+          "type_tag": "0xc0000041"
+        },
+        {
+          "name": "X_GC_BootLoaderVersion",
+          "type_tag": "0xc0000041"
+        },
+        {
+          "name": "X_GC_RealSoftwareVersion",
+          "type_tag": "0xc0000041"
+        }
+      ]
+    },
+    {
+      "name": "DeviceConfig",
+      "path": "InternetGatewayDevice.DeviceConfig",
+      "flags": "0x1",
+      "parameters": [
+        {
+          "name": "PresistentData",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "ConfigFile",
+          "type_tag": "0xc0001389"
+        }
+      ]
+    },
+    {
+      "name": "ManagementServer",
+      "path": "InternetGatewayDevice.ManagementServer",
+      "flags": "0x1",
+      "parameters": [
+        {
+          "name": "PeriodicInformInterval",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "UDPConnectionRequestAddressNotificationLimit",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "STUNMaximumKeepAlivePeriod",
+          "type_tag": "0x80000004"
+        },
+        {
+          "name": "STUNMinimumKeepAlivePeriod",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "STUNServerPort",
+          "type_tag": "0x2"
+        },
+        {
+          "name": "ManageableDeviceNotificationLimit",
+          "type_tag": "0x2"
+        },
+        {
+          "name": "EnableCWMP",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "PeriodicInformEnable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "UpgradesManaged",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "STUNEnable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "URL",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "Username",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "Password",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "PeriodicInformTime",
+          "type_tag": "0x1b"
+        },
+        {
+          "name": "ConnectionRequestUsername",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "ConnectionRequestPassword",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "STUNServerAddress",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "STUNUsername",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "STUNPassword",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "ManageableDeviceNumberOfEntries",
+          "type_tag": "0x2"
+        },
+        {
+          "name": "NATDetected",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "ParameterKey",
+          "type_tag": "0xc0000021"
+        },
+        {
+          "name": "ConnectionRequestURL",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "KickURL",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "UDPConnectionRequestAddress",
+          "type_tag": "0xc0000101"
+        }
+      ]
+    },
+    {
+      "name": "ManageableDevice",
+      "path": "InternetGatewayDevice.ManagementServer.ManageableDevice",
+      "flags": "0x2",
+      "parameters": []
+    },
+    {
+      "name": "i",
+      "path": "InternetGatewayDevice.ManagementServer.ManageableDevice.i",
+      "flags": "0xd",
+      "parameters": [
+        {
+          "name": "ManufacturerOUI",
+          "type_tag": "0xc0000041"
+        },
+        {
+          "name": "SerialNumber",
+          "type_tag": "0xc0000041"
+        },
+        {
+          "name": "ProductClass",
+          "type_tag": "0xc0000041"
+        },
+        {
+          "name": "Host",
+          "type_tag": "0xc0000401"
+        }
+      ]
+    },
+    {
+      "name": "Time",
+      "path": "InternetGatewayDevice.Time",
+      "flags": "0x1",
+      "parameters": [
+        {
+          "name": "Enable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "NTPServer1",
+          "type_tag": "0xc0000041"
+        },
+        {
+          "name": "NTPServer2",
+          "type_tag": "0xc0000041"
+        },
+        {
+          "name": "NTPServer3",
+          "type_tag": "0xc0000041"
+        },
+        {
+          "name": "NTPServer4",
+          "type_tag": "0xc0000041"
+        },
+        {
+          "name": "NTPServer5",
+          "type_tag": "0xc0000041"
+        },
+        {
+          "name": "LocalTimeZone",
+          "type_tag": "0xc0000007"
+        },
+        {
+          "name": "LocalTimeZoneName",
+          "type_tag": "0xc0000041"
+        },
+        {
+          "name": "Status",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "CurrentLocalTime",
+          "type_tag": "0xc00000fb"
+        }
+      ]
+    },
+    {
+      "name": "Layer3Forwarding",
+      "path": "InternetGatewayDevice.Layer3Forwarding",
+      "flags": "0x1",
+      "parameters": [
+        {
+          "name": "DefaultConnectionService",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "X_GC_Ipv6DefaultConnectionService",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "ForwardNumberOfEntries",
+          "type_tag": "0x2"
+        }
+      ]
+    },
+    {
+      "name": "Forwarding",
+      "path": "InternetGatewayDevice.Layer3Forwarding.Forwarding",
+      "flags": "0x22",
+      "parameters": []
+    },
+    {
+      "name": "i",
+      "path": "InternetGatewayDevice.Layer3Forwarding.Forwarding.i",
+      "flags": "0x2d",
+      "parameters": [
+        {
+          "name": "ForwardingPolicy",
+          "type_tag": "0x80000002"
+        },
+        {
+          "name": "MTU",
+          "type_tag": "0x2"
+        },
+        {
+          "name": "Enable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "ForwardingMetric",
+          "type_tag": "0x80000001"
+        },
+        {
+          "name": "Type",
+          "type_tag": "0xc0000009"
+        },
+        {
+          "name": "DestIPAddress",
+          "type_tag": "0xc0000011"
+        },
+        {
+          "name": "DestSubnetMask",
+          "type_tag": "0xc0000011"
+        },
+        {
+          "name": "SourceIPAddress",
+          "type_tag": "0xc0000011"
+        },
+        {
+          "name": "SourceSubnetMask",
+          "type_tag": "0xc0000011"
+        },
+        {
+          "name": "GatewayIPAddress",
+          "type_tag": "0xc0000011"
+        },
+        {
+          "name": "Interface",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "StaticRoute",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "Status",
+          "type_tag": "0xc0000009"
+        }
+      ]
+    },
+    {
+      "name": "Layer2Bridging",
+      "path": "InternetGatewayDevice.Layer2Bridging",
+      "flags": "0x1",
+      "parameters": [
+        {
+          "name": "MaxBridgeEntries",
+          "type_tag": "0x1"
+        },
+        {
+          "name": "MaxFilterEntries",
+          "type_tag": "0x1"
+        },
+        {
+          "name": "MaxVLANEntries",
+          "type_tag": "0x1"
+        },
+        {
+          "name": "MaxMarkingEntries",
+          "type_tag": "0x1"
+        },
+        {
+          "name": "BridgeNumberOfEntries",
+          "type_tag": "0x1"
+        },
+        {
+          "name": "FilterNumberOfEntries",
+          "type_tag": "0x1"
+        },
+        {
+          "name": "MarkingNumberOfEntries",
+          "type_tag": "0x1"
+        },
+        {
+          "name": "AvailableInterfaceNumberOfEntries",
+          "type_tag": "0x1"
+        }
+      ]
+    },
+    {
+      "name": "Bridge",
+      "path": "InternetGatewayDevice.Layer2Bridging.Bridge",
+      "flags": "0x22",
+      "parameters": []
+    },
+    {
+      "name": "i",
+      "path": "InternetGatewayDevice.Layer2Bridging.Bridge.i",
+      "flags": "0x2d",
+      "parameters": [
+        {
+          "name": "VLANID",
+          "type_tag": "0x2"
+        },
+        {
+          "name": "BridgeKey",
+          "type_tag": "0x1"
+        },
+        {
+          "name": "BridgeEnable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "BridgeName",
+          "type_tag": "0xc0000041"
+        },
+        {
+          "name": "PortNumberOfEntries",
+          "type_tag": "0x1"
+        },
+        {
+          "name": "VLANNumberOfEntries",
+          "type_tag": "0x1"
+        },
+        {
+          "name": "BridgeStatus",
+          "type_tag": "0xc0000011"
+        }
+      ]
+    },
+    {
+      "name": "Filter",
+      "path": "InternetGatewayDevice.Layer2Bridging.Filter",
+      "flags": "0x22",
+      "parameters": []
+    },
+    {
+      "name": "i",
+      "path": "InternetGatewayDevice.Layer2Bridging.Filter.i",
+      "flags": "0x2d",
+      "parameters": [
+        {
+          "name": "ExclusivityOrder",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "VLANIDFilter",
+          "type_tag": "0x80000002"
+        },
+        {
+          "name": "FilterEnable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "FilterBridgeReference",
+          "type_tag": "0x80000001"
+        },
+        {
+          "name": "AdmitOnlyVLANTagged",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "EthertypeFilterExclude",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "SourceMACAddressFilterExclude",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "DestMACAddressFilterExclude",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "SourceMACFromVendorClassIDFilterExclude",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "DestMACFromVendorClassIDFilterExclude",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "SourceMACFromClientIDFilterExclude",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "DestMACFromClientIDFilterExclude",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "SourceMACFromUserClassIDFilterExclude",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "DestMACFromUserClassIDFilterExclude",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "FilterInterface",
+          "type_tag": "0xc0000011"
+        },
+        {
+          "name": "EthertypeFilterList",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "SourceMACAddressFilterList",
+          "type_tag": "0xc0000201"
+        },
+        {
+          "name": "DestMACAddressFilterList",
+          "type_tag": "0xc0000201"
+        },
+        {
+          "name": "SourceMACFromVendorClassIDFilter",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "SourceMACFromVendorClassIDMode",
+          "type_tag": "0xc0000011"
+        },
+        {
+          "name": "DestMACFromVendorClassIDFilter",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "DestMACFromVendorClassIDMode",
+          "type_tag": "0xc0000011"
+        },
+        {
+          "name": "SourceMACFromClientIDFilter",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "DestMACFromClientIDFilter",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "SourceMACFromUserClassIDFilter",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "DestMACFromUserClassIDFilter",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "FilterKey",
+          "type_tag": "0x1"
+        },
+        {
+          "name": "FilterStatus",
+          "type_tag": "0xc0000011"
+        }
+      ]
+    },
+    {
+      "name": "Marking",
+      "path": "InternetGatewayDevice.Layer2Bridging.Marking",
+      "flags": "0x22",
+      "parameters": []
+    },
+    {
+      "name": "i",
+      "path": "InternetGatewayDevice.Layer2Bridging.Marking.i",
+      "flags": "0x2d",
+      "parameters": [
+        {
+          "name": "VLANIDMark",
+          "type_tag": "0x80000002"
+        },
+        {
+          "name": "MarkingEnable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "MarkingBridgeReference",
+          "type_tag": "0x80000001"
+        },
+        {
+          "name": "VLANIDUntag",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "VLANIDMarkOverride",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "EthernetPriorityMark",
+          "type_tag": "0x80000001"
+        },
+        {
+          "name": "EthernetPriorityOverride",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "MarkingInterface",
+          "type_tag": "0xc0000021"
+        },
+        {
+          "name": "MarkingKey",
+          "type_tag": "0x2"
+        },
+        {
+          "name": "MarkingStatus",
+          "type_tag": "0xc0000011"
+        }
+      ]
+    },
+    {
+      "name": "AvailableInterface",
+      "path": "InternetGatewayDevice.Layer2Bridging.AvailableInterface",
+      "flags": "0x2",
+      "parameters": []
+    },
+    {
+      "name": "i",
+      "path": "InternetGatewayDevice.Layer2Bridging.AvailableInterface.i",
+      "flags": "0xd",
+      "parameters": [
+        {
+          "name": "AvailableInterfaceKey",
+          "type_tag": "0x1"
+        },
+        {
+          "name": "InterfaceType",
+          "type_tag": "0xc0000021"
+        },
+        {
+          "name": "InterfaceReference",
+          "type_tag": "0xc0000101"
+        }
+      ]
+    },
+    {
+      "name": "LANConfigSecurity",
+      "path": "InternetGatewayDevice.LANConfigSecurity",
+      "flags": "0x1",
+      "parameters": [
+        {
+          "name": "ConfigPassword",
+          "type_tag": "0xc0000041"
+        }
+      ]
+    },
+    {
+      "name": "IPPingDiagnostics",
+      "path": "InternetGatewayDevice.IPPingDiagnostics",
+      "flags": "0x1",
+      "parameters": [
+        {
+          "name": "NumberOfRepetitions",
+          "type_tag": "0x2"
+        },
+        {
+          "name": "Timeout",
+          "type_tag": "0x2"
+        },
+        {
+          "name": "DataBlockSize",
+          "type_tag": "0x2"
+        },
+        {
+          "name": "DSCP",
+          "type_tag": "0x1"
+        },
+        {
+          "name": "DiagnosticsState",
+          "type_tag": "0xc0000041"
+        },
+        {
+          "name": "Interface",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "Host",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "AverageResponseTime",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "MinimumResponseTime",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "MaximumResponseTime",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "SuccessCount",
+          "type_tag": "0x2"
+        },
+        {
+          "name": "FailureCount",
+          "type_tag": "0x2"
+        }
+      ]
+    },
+    {
+      "name": "TraceRouteDiagnostics",
+      "path": "InternetGatewayDevice.TraceRouteDiagnostics",
+      "flags": "0x1",
+      "parameters": [
+        {
+          "name": "Timeout",
+          "type_tag": "0x2"
+        },
+        {
+          "name": "DataBlockSize",
+          "type_tag": "0x2"
+        },
+        {
+          "name": "NumberOfTries",
+          "type_tag": "0x1"
+        },
+        {
+          "name": "DSCP",
+          "type_tag": "0x1"
+        },
+        {
+          "name": "MaxHopCount",
+          "type_tag": "0x1"
+        },
+        {
+          "name": "DiagnosticsState",
+          "type_tag": "0xc0000041"
+        },
+        {
+          "name": "Interface",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "Host",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "ResponseTime",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "RouteHopsNumberOfEntries",
+          "type_tag": "0x1"
+        }
+      ]
+    },
+    {
+      "name": "RouteHops",
+      "path": "InternetGatewayDevice.TraceRouteDiagnostics.RouteHops",
+      "flags": "0x2",
+      "parameters": []
+    },
+    {
+      "name": "i",
+      "path": "InternetGatewayDevice.TraceRouteDiagnostics.RouteHops.i",
+      "flags": "0xd",
+      "parameters": [
+        {
+          "name": "HopErrorCode",
+          "type_tag": "0x1"
+        },
+        {
+          "name": "HopHost",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "HopHostAddress",
+          "type_tag": "0xc000002d"
+        },
+        {
+          "name": "HopRTTimes",
+          "type_tag": "0xc0000011"
+        }
+      ]
+    },
+    {
+      "name": "LANDevice",
+      "path": "InternetGatewayDevice.LANDevice",
+      "flags": "0x2",
+      "parameters": []
+    },
+    {
+      "name": "i",
+      "path": "InternetGatewayDevice.LANDevice.i",
+      "flags": "0xd",
+      "parameters": [
+        {
+          "name": "LANEthernetInterfaceNumberOfEntries",
+          "type_tag": "0x1"
+        },
+        {
+          "name": "LANUSBInterfaceNumberOfEntries",
+          "type_tag": "0x1"
+        },
+        {
+          "name": "LANWLANConfigurationNumberOfEntries",
+          "type_tag": "0x1"
+        }
+      ]
+    },
+    {
+      "name": "X_CT-COM_IPv6Config",
+      "path": "InternetGatewayDevice.LANDevice.i.X_CT-COM_IPv6Config",
+      "flags": "0x1",
+      "parameters": [
+        {
+          "name": "DomainName",
+          "type_tag": "0xc0000041"
+        },
+        {
+          "name": "IPv6DNSConfigType",
+          "type_tag": "0xc0000021"
+        },
+        {
+          "name": "IPv6DNSWANConnection",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "IPv6DNSServers",
+          "type_tag": "0xc0000081"
+        },
+        {
+          "name": "LANStaticPrefix",
+          "type_tag": "0xc0000031"
+        }
+      ]
+    },
+    {
+      "name": "PrefixInformation",
+      "path": "InternetGatewayDevice.LANDevice.i.X_CT-COM_IPv6Config.PrefixInformation",
+      "flags": "0x22",
+      "parameters": []
+    },
+    {
+      "name": "i",
+      "path": "InternetGatewayDevice.LANDevice.i.X_CT-COM_IPv6Config.PrefixInformation.i",
+      "flags": "0x2d",
+      "parameters": [
+        {
+          "name": "PreferredLifeTime",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "ValidLifeTime",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "RouterLifeTime",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "Mode",
+          "type_tag": "0xc0000021"
+        },
+        {
+          "name": "DelegatedWanConnection",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "IPv6PrefixDelegatedMethod",
+          "type_tag": "0xc0000021"
+        },
+        {
+          "name": "IPv6WanPrefixDelegatedMethod",
+          "type_tag": "0xc0000021"
+        },
+        {
+          "name": "Prefix",
+          "type_tag": "0xc0000031"
+        }
+      ]
+    },
+    {
+      "name": "X_CT-COM_DHCPv6Server",
+      "path": "InternetGatewayDevice.LANDevice.i.X_CT-COM_DHCPv6Server",
+      "flags": "0x1",
+      "parameters": [
+        {
+          "name": "PreferredLifeTime",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "ValidLifeTime",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "DNSRefreshTime",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "Enable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "Option16Enable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "Option17Enable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "MinAddress",
+          "type_tag": "0xc0000041"
+        },
+        {
+          "name": "MaxAddress",
+          "type_tag": "0xc0000041"
+        }
+      ]
+    },
+    {
+      "name": "X_CT-COM_RouterAdvertisement",
+      "path": "InternetGatewayDevice.LANDevice.i.X_CT-COM_RouterAdvertisement",
+      "flags": "0x1",
+      "parameters": [
+        {
+          "name": "MaxRtrAdvInterval",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "MinRtrAdvInterval",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "Enable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "AdvManagedFlag",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "AdvOtherConfigFlag",
+          "type_tag": "0x20000001"
+        }
+      ]
+    },
+    {
+      "name": "LANHostConfigManagement",
+      "path": "InternetGatewayDevice.LANDevice.i.LANHostConfigManagement",
+      "flags": "0x1",
+      "parameters": [
+        {
+          "name": "DHCPLeaseTime",
+          "type_tag": "0x80000004"
+        },
+        {
+          "name": "PassthroughLease",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "DHCPServerConfigurable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "DHCPServerEnable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "DHCPRelay",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "X_GC_LANISPDNS",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "MinAddress",
+          "type_tag": "0xc0000011"
+        },
+        {
+          "name": "MaxAddress",
+          "type_tag": "0xc0000011"
+        },
+        {
+          "name": "ReservedAddresses",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "SubnetMask",
+          "type_tag": "0xc0000011"
+        },
+        {
+          "name": "DNSServers",
+          "type_tag": "0xc0000041"
+        },
+        {
+          "name": "DomainName",
+          "type_tag": "0xc0000041"
+        },
+        {
+          "name": "IPRouters",
+          "type_tag": "0xc0000041"
+        },
+        {
+          "name": "UseAllocatedWAN",
+          "type_tag": "0xc0000041"
+        },
+        {
+          "name": "AssociatedConnection",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "PassthroughMACAddress",
+          "type_tag": "0xc0000041"
+        },
+        {
+          "name": "AllowedMACAddresses",
+          "type_tag": "0xc0000245"
+        },
+        {
+          "name": "X_GC_DefaultGW",
+          "type_tag": "0xc0000011"
+        },
+        {
+          "name": "MACAddress",
+          "type_tag": "0x6"
+        },
+        {
+          "name": "IPInterfaceNumberOfEntries",
+          "type_tag": "0x1"
+        },
+        {
+          "name": "DHCPStaticAddressNumberOfEntries",
+          "type_tag": "0x1"
+        }
+      ]
+    },
+    {
+      "name": "IPInterface",
+      "path": "InternetGatewayDevice.LANDevice.i.LANHostConfigManagement.IPInterface",
+      "flags": "0x22",
+      "parameters": []
+    },
+    {
+      "name": "i",
+      "path": "InternetGatewayDevice.LANDevice.i.LANHostConfigManagement.IPInterface.i",
+      "flags": "0x2d",
+      "parameters": [
+        {
+          "name": "Enable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "IPInterfaceIPAddress",
+          "type_tag": "0xc0000011"
+        },
+        {
+          "name": "IPInterfaceSubnetMask",
+          "type_tag": "0xc0000011"
+        },
+        {
+          "name": "IPInterfaceAddressingType",
+          "type_tag": "0xc0000009"
+        }
+      ]
+    },
+    {
+      "name": "X_CT-COM_IPv6Address",
+      "path": "InternetGatewayDevice.LANDevice.i.LANHostConfigManagement.IPInterface.i.X_CT-COM_IPv6Address",
+      "flags": "0x1",
+      "parameters": [
+        {
+          "name": "LocalAddress",
+          "type_tag": "0xc0000081"
+        }
+      ]
+    },
+    {
+      "name": "DHCPStaticAddress",
+      "path": "InternetGatewayDevice.LANDevice.i.LANHostConfigManagement.DHCPStaticAddress",
+      "flags": "0xa2",
+      "parameters": []
+    },
+    {
+      "name": "i",
+      "path": "InternetGatewayDevice.LANDevice.i.LANHostConfigManagement.DHCPStaticAddress.i",
+      "flags": "0x2d",
+      "parameters": [
+        {
+          "name": "Enable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "Chaddr",
+          "type_tag": "0x6"
+        },
+        {
+          "name": "Yiaddr",
+          "type_tag": "0xc0000011"
+        }
+      ]
+    },
+    {
+      "name": "DHCPOption",
+      "path": "InternetGatewayDevice.LANDevice.i.LANHostConfigManagement.DHCPOption",
+      "flags": "0xa2",
+      "parameters": []
+    },
+    {
+      "name": "i",
+      "path": "InternetGatewayDevice.LANDevice.i.LANHostConfigManagement.DHCPOption.i",
+      "flags": "0x2d",
+      "parameters": [
+        {
+          "name": "Enable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "Tag",
+          "type_tag": "0x1"
+        },
+        {
+          "name": "Value",
+          "type_tag": "0xc0000155"
+        }
+      ]
+    },
+    {
+      "name": "DHCPConditionalServingPool",
+      "path": "InternetGatewayDevice.LANDevice.i.LANHostConfigManagement.DHCPConditionalServingPool",
+      "flags": "0xa2",
+      "parameters": []
+    },
+    {
+      "name": "i",
+      "path": "InternetGatewayDevice.LANDevice.i.LANHostConfigManagement.DHCPConditionalServingPool.i",
+      "flags": "0xad",
+      "parameters": [
+        {
+          "name": "DHCPLeaseTime",
+          "type_tag": "0x80000004"
+        },
+        {
+          "name": "PoolOrder",
+          "type_tag": "0x2"
+        },
+        {
+          "name": "Enable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "SourceInterface",
+          "type_tag": "0xc0000401"
+        },
+        {
+          "name": "VendorClassID",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "ClientID",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "UserClassID",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "Chaddr",
+          "type_tag": "0xc0000021"
+        },
+        {
+          "name": "ChaddrMask",
+          "type_tag": "0xc0000021"
+        },
+        {
+          "name": "MinAddress",
+          "type_tag": "0xc0000011"
+        },
+        {
+          "name": "MaxAddress",
+          "type_tag": "0xc0000011"
+        },
+        {
+          "name": "SubnetMask",
+          "type_tag": "0xc0000011"
+        },
+        {
+          "name": "DNSServers",
+          "type_tag": "0xc0000041"
+        },
+        {
+          "name": "DomainName",
+          "type_tag": "0xc0000041"
+        },
+        {
+          "name": "IPRouters",
+          "type_tag": "0xc0000041"
+        }
+      ]
+    },
+    {
+      "name": "DHCPOption",
+      "path": "InternetGatewayDevice.LANDevice.i.LANHostConfigManagement.DHCPConditionalServingPool.i.DHCPOption",
+      "flags": "0xa2",
+      "parameters": []
+    },
+    {
+      "name": "i",
+      "path": "InternetGatewayDevice.LANDevice.i.LANHostConfigManagement.DHCPConditionalServingPool.i.DHCPOption.i",
+      "flags": "0x8d",
+      "parameters": [
+        {
+          "name": "Enable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "Tag",
+          "type_tag": "0x1"
+        },
+        {
+          "name": "Value",
+          "type_tag": "0xc0000155"
+        }
+      ]
+    },
+    {
+      "name": "LANEthernetInterfaceConfig",
+      "path": "InternetGatewayDevice.LANDevice.i.LANEthernetInterfaceConfig",
+      "flags": "0x2",
+      "parameters": []
+    },
+    {
+      "name": "i",
+      "path": "InternetGatewayDevice.LANDevice.i.LANEthernetInterfaceConfig.i",
+      "flags": "0xd",
+      "parameters": [
+        {
+          "name": "X_GC_Ingress_RateLimit",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "X_GC_DS_RateLimit",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "X_GC_MAC_AgingTime",
+          "type_tag": "0x2"
+        },
+        {
+          "name": "X_GC_MAC_LearningLimit",
+          "type_tag": "0x2"
+        },
+        {
+          "name": "X_GC_VLAN_PVID",
+          "type_tag": "0x2"
+        },
+        {
+          "name": "X_GC_MTU",
+          "type_tag": "0x2"
+        },
+        {
+          "name": "Enable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "MACAddressControlEnabled",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "X_GC_PortIsolation",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "X_GC_FlowControl",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "MaxBitRate",
+          "type_tag": "0xc0000006"
+        },
+        {
+          "name": "DuplexMode",
+          "type_tag": "0xc0000006"
+        },
+        {
+          "name": "X_GC_VLAN_Mode",
+          "type_tag": "0xc0000015"
+        },
+        {
+          "name": "X_GC_ONU_VLAN_PVID",
+          "type_tag": "0x2"
+        },
+        {
+          "name": "MACAddress",
+          "type_tag": "0x6"
+        },
+        {
+          "name": "Status",
+          "type_tag": "0xc000000a"
+        },
+        {
+          "name": "Name",
+          "type_tag": "0xc0000011"
+        },
+        {
+          "name": "X_GC_ONU_VLAN_Mode",
+          "type_tag": "0xc0000015"
+        },
+        {
+          "name": "X_GC_Sync_MaxBitRate",
+          "type_tag": "0xc000000a"
+        },
+        {
+          "name": "X_GC_Sync_DuplexMode",
+          "type_tag": "0xc0000006"
+        }
+      ]
+    },
+    {
+      "name": "Stats",
+      "path": "InternetGatewayDevice.LANDevice.i.LANEthernetInterfaceConfig.i.Stats",
+      "flags": "0x1",
+      "parameters": [
+        {
+          "name": "BytesSent",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "BytesReceived",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "PacketsSent",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "PacketsReceived",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "ErrorsSent",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "ErrorsReceived",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "UnicastPacketsSent",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "UnicastPacketsReceived",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "DiscardPacketsSent",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "DiscardPacketsReceived",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "MulticastPacketsSent",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "MulticastPacketsReceived",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "BroadcastPacketsSent",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "BroadcastPacketsReceived",
+          "type_tag": "0x4"
+        }
+      ]
+    },
+    {
+      "name": "X_GC_VLAN_Translation",
+      "path": "InternetGatewayDevice.LANDevice.i.LANEthernetInterfaceConfig.i.X_GC_VLAN_Translation",
+      "flags": "0x2",
+      "parameters": []
+    },
+    {
+      "name": "i",
+      "path": "InternetGatewayDevice.LANDevice.i.LANEthernetInterfaceConfig.i.X_GC_VLAN_Translation.i",
+      "flags": "0xd",
+      "parameters": [
+        {
+          "name": "OldVLAN",
+          "type_tag": "0x2"
+        },
+        {
+          "name": "NewVLAN",
+          "type_tag": "0x2"
+        }
+      ]
+    },
+    {
+      "name": "X_GC_VLAN_Trunk",
+      "path": "InternetGatewayDevice.LANDevice.i.LANEthernetInterfaceConfig.i.X_GC_VLAN_Trunk",
+      "flags": "0x2",
+      "parameters": []
+    },
+    {
+      "name": "i",
+      "path": "InternetGatewayDevice.LANDevice.i.LANEthernetInterfaceConfig.i.X_GC_VLAN_Trunk.i",
+      "flags": "0xd",
+      "parameters": [
+        {
+          "name": "NewVLAN",
+          "type_tag": "0x2"
+        }
+      ]
+    },
+    {
+      "name": "X_GC_ONU_VLAN_Translation",
+      "path": "InternetGatewayDevice.LANDevice.i.LANEthernetInterfaceConfig.i.X_GC_ONU_VLAN_Translation",
+      "flags": "0x2",
+      "parameters": []
+    },
+    {
+      "name": "i",
+      "path": "InternetGatewayDevice.LANDevice.i.LANEthernetInterfaceConfig.i.X_GC_ONU_VLAN_Translation.i",
+      "flags": "0xd",
+      "parameters": [
+        {
+          "name": "ONU_OldVLAN",
+          "type_tag": "0x2"
+        },
+        {
+          "name": "ONU_NewVLAN",
+          "type_tag": "0x2"
+        }
+      ]
+    },
+    {
+      "name": "X_GC_ONU_VLAN_Trunk",
+      "path": "InternetGatewayDevice.LANDevice.i.LANEthernetInterfaceConfig.i.X_GC_ONU_VLAN_Trunk",
+      "flags": "0x2",
+      "parameters": []
+    },
+    {
+      "name": "i",
+      "path": "InternetGatewayDevice.LANDevice.i.LANEthernetInterfaceConfig.i.X_GC_ONU_VLAN_Trunk.i",
+      "flags": "0xd",
+      "parameters": [
+        {
+          "name": "ONU_NewVLAN",
+          "type_tag": "0x2"
+        }
+      ]
+    },
+    {
+      "name": "Hosts",
+      "path": "InternetGatewayDevice.LANDevice.i.Hosts",
+      "flags": "0x1",
+      "parameters": [
+        {
+          "name": "HostNumberOfEntries",
+          "type_tag": "0x2"
+        }
+      ]
+    },
+    {
+      "name": "Host",
+      "path": "InternetGatewayDevice.LANDevice.i.Hosts.Host",
+      "flags": "0x2",
+      "parameters": []
+    },
+    {
+      "name": "i",
+      "path": "InternetGatewayDevice.LANDevice.i.Hosts.Host.i",
+      "flags": "0xd",
+      "parameters": [
+        {
+          "name": "LeaseTimeRemaining",
+          "type_tag": "0x80000004"
+        },
+        {
+          "name": "DeviceType",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "X_GC_V6LeaseTimeRemaining",
+          "type_tag": "0x80000004"
+        },
+        {
+          "name": "MACAddress",
+          "type_tag": "0x6"
+        },
+        {
+          "name": "Active",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "IPAddress",
+          "type_tag": "0xc0000011"
+        },
+        {
+          "name": "AddressSource",
+          "type_tag": "0xc0000008"
+        },
+        {
+          "name": "Layer2Interface",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "HostName",
+          "type_tag": "0xc0000041"
+        },
+        {
+          "name": "InterfaceType",
+          "type_tag": "0xc000000a"
+        },
+        {
+          "name": "X_GC_GUAIPAddress",
+          "type_tag": "0xc0000081"
+        },
+        {
+          "name": "X_GC_DUID",
+          "type_tag": "0xc0000081"
+        }
+      ]
+    },
+    {
+      "name": "X_CT-COM_LoopbackDetection",
+      "path": "InternetGatewayDevice.LANDevice.i.X_CT-COM_LoopbackDetection",
+      "flags": "0x1",
+      "parameters": [
+        {
+          "name": "LoopExistPeriod",
+          "type_tag": "0x2"
+        },
+        {
+          "name": "LoopCancelPeriod",
+          "type_tag": "0x2"
+        },
+        {
+          "name": "X_GC_SendInterval",
+          "type_tag": "0x2"
+        },
+        {
+          "name": "LoopbackEnable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "X_GC_AlarmEnable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "X_GC_PortDisloopedEnable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "VlanTag",
+          "type_tag": "0xc0000011"
+        },
+        {
+          "name": "EthernetType",
+          "type_tag": "0xc0000009"
+        },
+        {
+          "name": "X_GC_DestMAC",
+          "type_tag": "0xc0000021"
+        }
+      ]
+    },
+    {
+      "name": "WANDevice",
+      "path": "InternetGatewayDevice.WANDevice",
+      "flags": "0x2",
+      "parameters": []
+    },
+    {
+      "name": "i",
+      "path": "InternetGatewayDevice.WANDevice.i",
+      "flags": "0xd",
+      "parameters": [
+        {
+          "name": "WANConnectionNumberOfEntries",
+          "type_tag": "0x1"
+        }
+      ]
+    },
+    {
+      "name": "WANCommonInterfaceConfig",
+      "path": "InternetGatewayDevice.WANDevice.i.WANCommonInterfaceConfig",
+      "flags": "0x1",
+      "parameters": [
+        {
+          "name": "EnabledForInternet",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "X_GC_WANAccessType",
+          "type_tag": "0xc0000011"
+        },
+        {
+          "name": "Layer1UpstreamMaxBitRate",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "Layer1DownstreamMaxBitRate",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "TotalBytesSent",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "TotalBytesReceived",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "TotalPacketsSent",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "TotalPacketsReceived",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "WANAccessType",
+          "type_tag": "0xc0000041"
+        },
+        {
+          "name": "PhysicalLinkStatus",
+          "type_tag": "0xc0000041"
+        }
+      ]
+    },
+    {
+      "name": "WANConnectionDevice",
+      "path": "InternetGatewayDevice.WANDevice.i.WANConnectionDevice",
+      "flags": "0x22",
+      "parameters": []
+    },
+    {
+      "name": "i",
+      "path": "InternetGatewayDevice.WANDevice.i.WANConnectionDevice.i",
+      "flags": "0x2d",
+      "parameters": [
+        {
+          "name": "WANIPConnectionNumberOfEntries",
+          "type_tag": "0x1"
+        },
+        {
+          "name": "WANPPPConnectionNumberOfEntries",
+          "type_tag": "0x1"
+        }
+      ]
+    },
+    {
+      "name": "WANIPConnection",
+      "path": "InternetGatewayDevice.WANDevice.i.WANConnectionDevice.i.WANIPConnection",
+      "flags": "0x22",
+      "parameters": []
+    },
+    {
+      "name": "i",
+      "path": "InternetGatewayDevice.WANDevice.i.WANConnectionDevice.i.WANIPConnection.i",
+      "flags": "0x2d",
+      "parameters": [
+        {
+          "name": "AutoDisconnectTime",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "IdleDisconnectTime",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "ShapingRate",
+          "type_tag": "0x80000004"
+        },
+        {
+          "name": "X_CT-COM_IPv6PrefixPltime",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "X_CT-COM_IPv6PrefixVltime",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "X_GC_RouterLifeTime",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "X_GC_LeaseTimeRemaining",
+          "type_tag": "0x80000004"
+        },
+        {
+          "name": "MaxMTUSize",
+          "type_tag": "0x2"
+        },
+        {
+          "name": "X_GC_VLANID",
+          "type_tag": "0x2"
+        },
+        {
+          "name": "Enable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "Reset",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "X_GC_OLTCreateFlag",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "NATEnabled",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "DNSEnabled",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "DNSOverrideAllowed",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "MACAddress",
+          "type_tag": "0x6"
+        },
+        {
+          "name": "MACAddressOverride",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "X_GC_DefaultGWEnable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "X_GC_802-1p",
+          "type_tag": "0x1"
+        },
+        {
+          "name": "X_CT-COM_IPMode",
+          "type_tag": "0x1"
+        },
+        {
+          "name": "X_CT-COM_IPv6PrefxiDelegationEnabled",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "X_GC_COM_IPv6GUAFromPDEnable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "X_CT-COM_Dslite_Enable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "X_CT-COM_AftrMode",
+          "type_tag": "0x1"
+        },
+        {
+          "name": "X_GC_IPv6PrefixLflag",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "X_GC_IGMPProxyEnable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "ConnectionType",
+          "type_tag": "0xc0000011"
+        },
+        {
+          "name": "Name",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "AddressingType",
+          "type_tag": "0xc0000009"
+        },
+        {
+          "name": "ExternalIPAddress",
+          "type_tag": "0xc0000011"
+        },
+        {
+          "name": "SubnetMask",
+          "type_tag": "0xc0000011"
+        },
+        {
+          "name": "DefaultGateway",
+          "type_tag": "0xc0000011"
+        },
+        {
+          "name": "DNSServers",
+          "type_tag": "0xc0000041"
+        },
+        {
+          "name": "ConnectionTrigger",
+          "type_tag": "0xc000000b"
+        },
+        {
+          "name": "RouteProtocolRx",
+          "type_tag": "0xc000000b"
+        },
+        {
+          "name": "X_CT-COM_ServiceList",
+          "type_tag": "0xc000002f"
+        },
+        {
+          "name": "X_CT-COM_Aftr",
+          "type_tag": "0xc0000041"
+        },
+        {
+          "name": "X_GC_COM_IPv6IPGetMethodOrigin",
+          "type_tag": "0xc0000021"
+        },
+        {
+          "name": "X_CT-COM_IPv6IPAddressOrigin",
+          "type_tag": "0xc0000021"
+        },
+        {
+          "name": "X_GC_COM_IPv6GUAFromOrigin",
+          "type_tag": "0xc0000021"
+        },
+        {
+          "name": "X_CT-COM_IPv6IPAddress",
+          "type_tag": "0xc000002d"
+        },
+        {
+          "name": "X_CT-COM_IPv6IPAddressAlias",
+          "type_tag": "0xc000002d"
+        },
+        {
+          "name": "X_CT-COM_IPv6Prefix",
+          "type_tag": "0xc0000029"
+        },
+        {
+          "name": "X_CT-COM_IPv6PrefixOrigin",
+          "type_tag": "0xc0000021"
+        },
+        {
+          "name": "X_CT-COM_IPv6PrefixAlias",
+          "type_tag": "0xc0000029"
+        },
+        {
+          "name": "X_GC_COM_IPv6DNSFromOrigin",
+          "type_tag": "0xc0000021"
+        },
+        {
+          "name": "X_CT-COM_IPv6DNSServers",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "X_GC_COM_IPv6GWFromOrigin",
+          "type_tag": "0xc0000021"
+        },
+        {
+          "name": "X_CT-COM_DefaultIPv6Gateway",
+          "type_tag": "0xc0000029"
+        },
+        {
+          "name": "X_CT-COM_IPv6DomainName",
+          "type_tag": "0xc0000041"
+        },
+        {
+          "name": "X_GC_IfName",
+          "type_tag": "0xc0000041"
+        },
+        {
+          "name": "X_GC_L2IfName",
+          "type_tag": "0xc0000041"
+        },
+        {
+          "name": "X_GC_Option60Name",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "Uptime",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "X_GC_IPv6Uptime",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "X_GC_StartUptime",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "X_GC_IPv6StartUptime",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "PortMappingNumberOfEntries",
+          "type_tag": "0x2"
+        },
+        {
+          "name": "X_CT-MFLAG",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "X_CT-OFLAG",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "X_CT-RASet",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "ConnectionStatus",
+          "type_tag": "0xc0000015"
+        },
+        {
+          "name": "PossibleConnectionTypes",
+          "type_tag": "0xc0000021"
+        },
+        {
+          "name": "LastConnectionError",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "X_CT-COM_IPv6ConnStatus",
+          "type_tag": "0xc0000021"
+        },
+        {
+          "name": "X_GC_LLAIPAddress",
+          "type_tag": "0xc0000029"
+        }
+      ]
+    },
+    {
+      "name": "DHCPClient",
+      "path": "InternetGatewayDevice.WANDevice.i.WANConnectionDevice.i.WANIPConnection.i.DHCPClient",
+      "flags": "0x1",
+      "parameters": [
+        {
+          "name": "SentDHCPOptionNumberOfEntries",
+          "type_tag": "0x2"
+        }
+      ]
+    },
+    {
+      "name": "SentDHCPOption",
+      "path": "InternetGatewayDevice.WANDevice.i.WANConnectionDevice.i.WANIPConnection.i.DHCPClient.SentDHCPOption",
+      "flags": "0x22",
+      "parameters": []
+    },
+    {
+      "name": "i",
+      "path": "InternetGatewayDevice.WANDevice.i.WANConnectionDevice.i.WANIPConnection.i.DHCPClient.SentDHCPOption.i",
+      "flags": "0x2d",
+      "parameters": [
+        {
+          "name": "Enable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "Tag",
+          "type_tag": "0x1"
+        },
+        {
+          "name": "Value",
+          "type_tag": "0xc0000155"
+        }
+      ]
+    },
+    {
+      "name": "PortMapping",
+      "path": "InternetGatewayDevice.WANDevice.i.WANConnectionDevice.i.WANIPConnection.i.PortMapping",
+      "flags": "0x22",
+      "parameters": []
+    },
+    {
+      "name": "i",
+      "path": "InternetGatewayDevice.WANDevice.i.WANConnectionDevice.i.WANIPConnection.i.PortMapping.i",
+      "flags": "0x2d",
+      "parameters": [
+        {
+          "name": "PortMappingLeaseDuration",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "ExternalPort",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "ExternalPortEndRange",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "InternalPort",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "InternalPortEndRange",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "PortMappingEnabled",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "RemoteHost",
+          "type_tag": "0xc0000041"
+        },
+        {
+          "name": "PortMappingProtocol",
+          "type_tag": "0xc0000009"
+        },
+        {
+          "name": "InternalClient",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "PortMappingDescription",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "X_GC_RemoteHostIPEnd",
+          "type_tag": "0xc0000011"
+        },
+        {
+          "name": "X_GC_InternalIPEnd",
+          "type_tag": "0xc0000011"
+        },
+        {
+          "name": "X_GC_RemoteHostNetmask",
+          "type_tag": "0xc0000011"
+        }
+      ]
+    },
+    {
+      "name": "Stats",
+      "path": "InternetGatewayDevice.WANDevice.i.WANConnectionDevice.i.WANIPConnection.i.Stats",
+      "flags": "0x1",
+      "parameters": [
+        {
+          "name": "EthernetBytesSent",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "EthernetBytesReceived",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "EthernetPacketsSent",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "EthernetPacketsReceived",
+          "type_tag": "0x4"
+        }
+      ]
+    },
+    {
+      "name": "WANPPPConnection",
+      "path": "InternetGatewayDevice.WANDevice.i.WANConnectionDevice.i.WANPPPConnection",
+      "flags": "0x22",
+      "parameters": []
+    },
+    {
+      "name": "i",
+      "path": "InternetGatewayDevice.WANDevice.i.WANConnectionDevice.i.WANPPPConnection.i",
+      "flags": "0x2d",
+      "parameters": [
+        {
+          "name": "AutoDisconnectTime",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "IdleDisconnectTime",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "X_CT-COM_IPv6PrefixPltime",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "X_CT-COM_IPv6PrefixVltime",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "X_GC_RouterLifeTime",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "MaxMRUSize",
+          "type_tag": "0x2"
+        },
+        {
+          "name": "X_GC_VLANID",
+          "type_tag": "0x2"
+        },
+        {
+          "name": "Enable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "Reset",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "X_GC_OLTCreateFlag",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "NATEnabled",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "DNSEnabled",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "DNSOverrideAllowed",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "MACAddress",
+          "type_tag": "0x6"
+        },
+        {
+          "name": "MACAddressOverride",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "X_CT-COM_IPMode",
+          "type_tag": "0x1"
+        },
+        {
+          "name": "X_CT-COM_IPv6PrefxiDelegationEnabled",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "X_GC_COM_IPv6GUAFromPDEnable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "X_CT-COM_Dslite_Enable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "X_CT-COM_AftrMode",
+          "type_tag": "0x1"
+        },
+        {
+          "name": "X_GC_IPv6PrefixLflag",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "X_GC_802-1p",
+          "type_tag": "0x1"
+        },
+        {
+          "name": "X_GC_DefaultGWEnable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "X_GC_IGMPProxyEnable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "ConnectionType",
+          "type_tag": "0xc0000011"
+        },
+        {
+          "name": "Name",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "Username",
+          "type_tag": "0xc0000041"
+        },
+        {
+          "name": "Password",
+          "type_tag": "0xc0000041"
+        },
+        {
+          "name": "DNSServers",
+          "type_tag": "0xc0000041"
+        },
+        {
+          "name": "PPPoEACName",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "PPPoEServiceName",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "ConnectionTrigger",
+          "type_tag": "0xc000000b"
+        },
+        {
+          "name": "RouteProtocolRx",
+          "type_tag": "0xc000000b"
+        },
+        {
+          "name": "X_GC_COM_IPv6IPGetMethodOrigin",
+          "type_tag": "0xc0000021"
+        },
+        {
+          "name": "X_CT-COM_IPv6IPAddressOrigin",
+          "type_tag": "0xc0000021"
+        },
+        {
+          "name": "X_GC_COM_IPv6GUAFromOrigin",
+          "type_tag": "0xc0000021"
+        },
+        {
+          "name": "X_CT-COM_IPv6IPAddress",
+          "type_tag": "0xc000002d"
+        },
+        {
+          "name": "X_CT-COM_IPv6IPAddressAlias",
+          "type_tag": "0xc000002d"
+        },
+        {
+          "name": "X_CT-COM_IPv6Prefix",
+          "type_tag": "0xc0000029"
+        },
+        {
+          "name": "X_CT-COM_IPv6PrefixOrigin",
+          "type_tag": "0xc0000021"
+        },
+        {
+          "name": "X_CT-COM_IPv6PrefixAlias",
+          "type_tag": "0xc0000029"
+        },
+        {
+          "name": "X_GC_COM_IPv6DNSFromOrigin",
+          "type_tag": "0xc0000021"
+        },
+        {
+          "name": "X_CT-COM_IPv6DNSServers",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "X_CT-COM_DefaultIPv6Gateway",
+          "type_tag": "0xc0000029"
+        },
+        {
+          "name": "X_CT-COM_IPv6DomainName",
+          "type_tag": "0xc0000041"
+        },
+        {
+          "name": "X_CT-COM_ServiceList",
+          "type_tag": "0xc000002f"
+        },
+        {
+          "name": "X_CT-COM_Aftr",
+          "type_tag": "0xc0000041"
+        },
+        {
+          "name": "X_GC_IfName",
+          "type_tag": "0xc0000041"
+        },
+        {
+          "name": "X_GC_L2IfName",
+          "type_tag": "0xc0000041"
+        },
+        {
+          "name": "X_GC_SubnetMask",
+          "type_tag": "0xc0000011"
+        },
+        {
+          "name": "Uptime",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "X_GC_IPv6Uptime",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "X_GC_StartUptime",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "X_GC_IPv6StartUptime",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "CurrentMRUSize",
+          "type_tag": "0x2"
+        },
+        {
+          "name": "PortMappingNumberOfEntries",
+          "type_tag": "0x2"
+        },
+        {
+          "name": "X_CT-MFLAG",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "X_CT-OFLAG",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "X_CT-RASet",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "ConnectionStatus",
+          "type_tag": "0xc0000015"
+        },
+        {
+          "name": "PossibleConnectionTypes",
+          "type_tag": "0xc0000081"
+        },
+        {
+          "name": "LastConnectionError",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "PPPAuthenticationProtocol",
+          "type_tag": "0xc0000021"
+        },
+        {
+          "name": "ExternalIPAddress",
+          "type_tag": "0xc0000011"
+        },
+        {
+          "name": "RemoteIPAddress",
+          "type_tag": "0xc0000011"
+        },
+        {
+          "name": "TransportType",
+          "type_tag": "0xc0000009"
+        },
+        {
+          "name": "X_CT-COM_IPv6ConnStatus",
+          "type_tag": "0xc0000021"
+        },
+        {
+          "name": "X_GC_LLAIPAddress",
+          "type_tag": "0xc0000029"
+        }
+      ]
+    },
+    {
+      "name": "PortMapping",
+      "path": "InternetGatewayDevice.WANDevice.i.WANConnectionDevice.i.WANPPPConnection.i.PortMapping",
+      "flags": "0x22",
+      "parameters": []
+    },
+    {
+      "name": "i",
+      "path": "InternetGatewayDevice.WANDevice.i.WANConnectionDevice.i.WANPPPConnection.i.PortMapping.i",
+      "flags": "0x2d",
+      "parameters": [
+        {
+          "name": "ExternalPort",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "InternalPort",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "ExternalPortEndRange",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "PortMappingLeaseDuration",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "InternalPortEndRange",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "PortMappingEnabled",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "PortMappingProtocol",
+          "type_tag": "0xc0000009"
+        },
+        {
+          "name": "InternalClient",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "PortMappingDescription",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "RemoteHost",
+          "type_tag": "0xc0000041"
+        },
+        {
+          "name": "X_GC_RemoteHostIPEnd",
+          "type_tag": "0xc0000011"
+        },
+        {
+          "name": "X_GC_InternalIPEnd",
+          "type_tag": "0xc0000011"
+        },
+        {
+          "name": "X_GC_RemoteHostNetmask",
+          "type_tag": "0xc0000011"
+        }
+      ]
+    },
+    {
+      "name": "Stats",
+      "path": "InternetGatewayDevice.WANDevice.i.WANConnectionDevice.i.WANPPPConnection.i.Stats",
+      "flags": "0x1",
+      "parameters": [
+        {
+          "name": "EthernetBytesSent",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "EthernetBytesReceived",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "EthernetPacketsSent",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "EthernetPacketsReceived",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "EthernetErrorsReceived",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "EthernetDiscardPacketsReceived",
+          "type_tag": "0x4"
+        }
+      ]
+    },
+    {
+      "name": "X_CT-COM_WANGponLinkConfig",
+      "path": "InternetGatewayDevice.WANDevice.i.WANConnectionDevice.i.X_CT-COM_WANGponLinkConfig",
+      "flags": "0x1",
+      "parameters": [
+        {
+          "name": "VLANIDMark",
+          "type_tag": "0x2"
+        },
+        {
+          "name": "Enable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "Mode",
+          "type_tag": "0x1"
+        },
+        {
+          "name": "X_GC_802-1p_Mark",
+          "type_tag": "0x1"
+        },
+        {
+          "name": "X_GC_IfName",
+          "type_tag": "0xc0000041"
+        }
+      ]
+    },
+    {
+      "name": "X_CT-COM_WANEponLinkConfig",
+      "path": "InternetGatewayDevice.WANDevice.i.WANConnectionDevice.i.X_CT-COM_WANEponLinkConfig",
+      "flags": "0x1",
+      "parameters": [
+        {
+          "name": "VLANIDMark",
+          "type_tag": "0x2"
+        },
+        {
+          "name": "Enable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "Mode",
+          "type_tag": "0x1"
+        },
+        {
+          "name": "X_GC_802-1p_Mark",
+          "type_tag": "0x1"
+        },
+        {
+          "name": "X_GC_IfName",
+          "type_tag": "0xc0000041"
+        }
+      ]
+    },
+    {
+      "name": "X_CT-COM_GponInterfaceConfig",
+      "path": "InternetGatewayDevice.WANDevice.i.X_CT-COM_GponInterfaceConfig",
+      "flags": "0x1",
+      "parameters": [
+        {
+          "name": "TXPower",
+          "type_tag": "0x80000004"
+        },
+        {
+          "name": "RXPower",
+          "type_tag": "0x80000004"
+        },
+        {
+          "name": "TransceiverTemperature",
+          "type_tag": "0x80000004"
+        },
+        {
+          "name": "SupplyVottage",
+          "type_tag": "0x80000004"
+        },
+        {
+          "name": "BiasCurrent",
+          "type_tag": "0x80000004"
+        },
+        {
+          "name": "Status",
+          "type_tag": "0xc0000015"
+        }
+      ]
+    },
+    {
+      "name": "Stats",
+      "path": "InternetGatewayDevice.WANDevice.i.X_CT-COM_GponInterfaceConfig.Stats",
+      "flags": "0x1",
+      "parameters": [
+        {
+          "name": "BytesSent",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "BytesReceived",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "PacketsSent",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "PacketsReceived",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "SUnicastPackets",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "RUnicastPackets",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "SMulticastPackets",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "RMulticastPackets",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "SBroadcastPackets",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "RBroadcastPackets",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "FECError",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "HECError",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "DropPackets",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "SPausePackets",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "RPausePackets",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "SpausePackets",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "RpausePackets",
+          "type_tag": "0x4"
+        }
+      ]
+    },
+    {
+      "name": "X_CT-COM_EponInterafceConfig",
+      "path": "InternetGatewayDevice.WANDevice.i.X_CT-COM_EponInterafceConfig",
+      "flags": "0x1",
+      "parameters": [
+        {
+          "name": "TXPower",
+          "type_tag": "0x80000004"
+        },
+        {
+          "name": "RXPower",
+          "type_tag": "0x80000004"
+        },
+        {
+          "name": "TransceiverTemperature",
+          "type_tag": "0x80000004"
+        },
+        {
+          "name": "SupplyVottage",
+          "type_tag": "0x80000004"
+        },
+        {
+          "name": "BiasCurrent",
+          "type_tag": "0x80000004"
+        },
+        {
+          "name": "Status",
+          "type_tag": "0xc0000029"
+        },
+        {
+          "name": "LinkStatus",
+          "type_tag": "0xc0000029"
+        }
+      ]
+    },
+    {
+      "name": "Stats",
+      "path": "InternetGatewayDevice.WANDevice.i.X_CT-COM_EponInterafceConfig.Stats",
+      "flags": "0x1",
+      "parameters": [
+        {
+          "name": "BytesSent",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "BytesReceived",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "PacketsSent",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "PacketsReceived",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "SUnicastPackets",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "RUnicastPackets",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "SMulticastPackets",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "RMulticastPackets",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "SBroadcastPackets",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "RBroadcastPackets",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "FECError",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "HECError",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "DropPackets",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "SPausePackets",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "RPausePackets",
+          "type_tag": "0x4"
+        }
+      ]
+    },
+    {
+      "name": "X_GC_PonAlarm",
+      "path": "InternetGatewayDevice.WANDevice.i.X_CT-COM_EponInterafceConfig.X_GC_PonAlarm",
+      "flags": "0x1",
+      "parameters": [
+        {
+          "name": "X_GC_PonSymPerAlarm",
+          "type_tag": "0x80000002"
+        },
+        {
+          "name": "X_GC_PonFrameAlarm",
+          "type_tag": "0x80000002"
+        },
+        {
+          "name": "X_GC_PonFraPerAlarm",
+          "type_tag": "0x80000002"
+        },
+        {
+          "name": "X_GC_PonSecSumAlarm",
+          "type_tag": "0x80000002"
+        },
+        {
+          "name": "X_GC_PonDygaspAlarm",
+          "type_tag": "0x80000002"
+        },
+        {
+          "name": "X_GC_PonLinkAlarm",
+          "type_tag": "0x80000002"
+        },
+        {
+          "name": "X_GC_PonCirEveAlarm",
+          "type_tag": "0x80000002"
+        }
+      ]
+    },
+    {
+      "name": "X_GC_EXT",
+      "path": "InternetGatewayDevice.X_GC_EXT",
+      "flags": "0x0",
+      "parameters": []
+    },
+    {
+      "name": "X_GC_LED",
+      "path": "InternetGatewayDevice.X_GC_EXT.X_GC_LED",
+      "flags": "0x1",
+      "parameters": [
+        {
+          "name": "Leds_Turnoff",
+          "type_tag": "0x20000001"
+        }
+      ]
+    },
+    {
+      "name": "X_GC_BPDU",
+      "path": "InternetGatewayDevice.X_GC_EXT.X_GC_BPDU",
+      "flags": "0x1",
+      "parameters": [
+        {
+          "name": "bpduenable",
+          "type_tag": "0x20000001"
+        }
+      ]
+    },
+    {
+      "name": "X_GC_DMZ",
+      "path": "InternetGatewayDevice.X_GC_EXT.X_GC_DMZ",
+      "flags": "0x1",
+      "parameters": [
+        {
+          "name": "IPAddress",
+          "type_tag": "0xc0000011"
+        }
+      ]
+    },
+    {
+      "name": "X_GC_MultiLanguage",
+      "path": "InternetGatewayDevice.X_GC_EXT.X_GC_MultiLanguage",
+      "flags": "0x1",
+      "parameters": [
+        {
+          "name": "Language",
+          "type_tag": "0xc0000011"
+        },
+        {
+          "name": "Json_Version",
+          "type_tag": "0xc0000011"
+        }
+      ]
+    },
+    {
+      "name": "X_GC_LOGIIN",
+      "path": "InternetGatewayDevice.X_GC_EXT.X_GC_LOGIIN",
+      "flags": "0x2",
+      "parameters": []
+    },
+    {
+      "name": "i",
+      "path": "InternetGatewayDevice.X_GC_EXT.X_GC_LOGIIN.i",
+      "flags": "0xd",
+      "parameters": [
+        {
+          "name": "UserLevel",
+          "type_tag": "0xc0000011"
+        },
+        {
+          "name": "Username",
+          "type_tag": "0xc0000021"
+        },
+        {
+          "name": "Passwd",
+          "type_tag": "0xc0000021"
+        }
+      ]
+    },
+    {
+      "name": "GPONConfig",
+      "path": "InternetGatewayDevice.X_GC_EXT.GPONConfig",
+      "flags": "0x81",
+      "parameters": [
+        {
+          "name": "GPONMode",
+          "type_tag": "0xc0000005"
+        }
+      ]
+    },
+    {
+      "name": "Firewall",
+      "path": "InternetGatewayDevice.X_GC_EXT.Firewall",
+      "flags": "0x1",
+      "parameters": [
+        {
+          "name": "MaxSessionNumber",
+          "type_tag": "0x2"
+        },
+        {
+          "name": "Enable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "BypassTriangleRoute",
+          "type_tag": "0x1"
+        },
+        {
+          "name": "AntiHacking_Enable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "ipfilter_enable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "Level",
+          "type_tag": "0xc0000011"
+        }
+      ]
+    },
+    {
+      "name": "ipfilter_Entry",
+      "path": "InternetGatewayDevice.X_GC_EXT.Firewall.ipfilter_Entry",
+      "flags": "0x2",
+      "parameters": []
+    },
+    {
+      "name": "i",
+      "path": "InternetGatewayDevice.X_GC_EXT.Firewall.ipfilter_Entry.i",
+      "flags": "0xd",
+      "parameters": [
+        {
+          "name": "SourcePortStart",
+          "type_tag": "0x2"
+        },
+        {
+          "name": "SourcePortEnd",
+          "type_tag": "0x2"
+        },
+        {
+          "name": "DestinationPortStart",
+          "type_tag": "0x2"
+        },
+        {
+          "name": "DestinationPortEnd",
+          "type_tag": "0x2"
+        },
+        {
+          "name": "Enable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "IPVersion",
+          "type_tag": "0x1"
+        },
+        {
+          "name": "Order",
+          "type_tag": "0x1"
+        },
+        {
+          "name": "FilterName",
+          "type_tag": "0xc0000081"
+        },
+        {
+          "name": "Protocol",
+          "type_tag": "0xc0000011"
+        },
+        {
+          "name": "State",
+          "type_tag": "0xc0000081"
+        },
+        {
+          "name": "SourceIPAddress",
+          "type_tag": "0xc0000011"
+        },
+        {
+          "name": "SourceNetMask",
+          "type_tag": "0xc0000011"
+        },
+        {
+          "name": "SourceIPAddressEnd",
+          "type_tag": "0xc0000011"
+        },
+        {
+          "name": "DestinationIPAddress",
+          "type_tag": "0xc0000011"
+        },
+        {
+          "name": "DestinationNetMask",
+          "type_tag": "0xc0000011"
+        },
+        {
+          "name": "DestinationIPAddressEnd",
+          "type_tag": "0xc0000011"
+        },
+        {
+          "name": "SourcePrefix",
+          "type_tag": "0xc0000081"
+        },
+        {
+          "name": "DestPrefix",
+          "type_tag": "0xc0000081"
+        },
+        {
+          "name": "Direction",
+          "type_tag": "0xc0000081"
+        },
+        {
+          "name": "Policy",
+          "type_tag": "0xc0000081"
+        }
+      ]
+    },
+    {
+      "name": "MacFilter",
+      "path": "InternetGatewayDevice.X_GC_EXT.MacFilter",
+      "flags": "0x1",
+      "parameters": [
+        {
+          "name": "Enable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "Policy",
+          "type_tag": "0xc0000081"
+        }
+      ]
+    },
+    {
+      "name": "MacFilter_Include",
+      "path": "InternetGatewayDevice.X_GC_EXT.MacFilter.MacFilter_Include",
+      "flags": "0x2",
+      "parameters": []
+    },
+    {
+      "name": "i",
+      "path": "InternetGatewayDevice.X_GC_EXT.MacFilter.MacFilter_Include.i",
+      "flags": "0xd",
+      "parameters": [
+        {
+          "name": "Enable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "SourceMAC",
+          "type_tag": "0x6"
+        },
+        {
+          "name": "DestinationMAC",
+          "type_tag": "0x6"
+        },
+        {
+          "name": "Protocol",
+          "type_tag": "0xc0000081"
+        },
+        {
+          "name": "Direction",
+          "type_tag": "0xc0000081"
+        },
+        {
+          "name": "Interface",
+          "type_tag": "0xc0000081"
+        },
+        {
+          "name": "Type",
+          "type_tag": "0xc0000021"
+        }
+      ]
+    },
+    {
+      "name": "MacFilter_Exclude",
+      "path": "InternetGatewayDevice.X_GC_EXT.MacFilter.MacFilter_Exclude",
+      "flags": "0x2",
+      "parameters": []
+    },
+    {
+      "name": "i",
+      "path": "InternetGatewayDevice.X_GC_EXT.MacFilter.MacFilter_Exclude.i",
+      "flags": "0xd",
+      "parameters": [
+        {
+          "name": "Enable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "SourceMAC",
+          "type_tag": "0x6"
+        },
+        {
+          "name": "DestinationMAC",
+          "type_tag": "0x6"
+        },
+        {
+          "name": "Protocol",
+          "type_tag": "0xc0000081"
+        },
+        {
+          "name": "Direction",
+          "type_tag": "0xc0000081"
+        },
+        {
+          "name": "Interface",
+          "type_tag": "0xc0000081"
+        },
+        {
+          "name": "Type",
+          "type_tag": "0xc0000021"
+        }
+      ]
+    },
+    {
+      "name": "RemoteManagement",
+      "path": "InternetGatewayDevice.X_GC_EXT.RemoteManagement",
+      "flags": "0x1",
+      "parameters": [
+        {
+          "name": "DefaultConnection",
+          "type_tag": "0xc0000101"
+        }
+      ]
+    },
+    {
+      "name": "HTTP",
+      "path": "InternetGatewayDevice.X_GC_EXT.RemoteManagement.HTTP",
+      "flags": "0x1",
+      "parameters": [
+        {
+          "name": "ServerPort",
+          "type_tag": "0x2"
+        },
+        {
+          "name": "ServerStatus",
+          "type_tag": "0x20000001"
+        }
+      ]
+    },
+    {
+      "name": "TELNET",
+      "path": "InternetGatewayDevice.X_GC_EXT.RemoteManagement.TELNET",
+      "flags": "0x1",
+      "parameters": [
+        {
+          "name": "ServerPort",
+          "type_tag": "0x2"
+        },
+        {
+          "name": "ServerStatus",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "TelnetEnable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "TelnetUserName",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "TelnetPassword",
+          "type_tag": "0xc0000101"
+        }
+      ]
+    },
+    {
+      "name": "FTP",
+      "path": "InternetGatewayDevice.X_GC_EXT.RemoteManagement.FTP",
+      "flags": "0x1",
+      "parameters": [
+        {
+          "name": "ServerPort",
+          "type_tag": "0x2"
+        },
+        {
+          "name": "ServerStatus",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "FtpEnable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "FtpUserName",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "FtpPassWord",
+          "type_tag": "0xc0000101"
+        }
+      ]
+    },
+    {
+      "name": "SSH",
+      "path": "InternetGatewayDevice.X_GC_EXT.RemoteManagement.SSH",
+      "flags": "0x1",
+      "parameters": [
+        {
+          "name": "ServerPort",
+          "type_tag": "0x2"
+        },
+        {
+          "name": "ServerStatus",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "SSHEnable",
+          "type_tag": "0x20000001"
+        }
+      ]
+    },
+    {
+      "name": "X_GC_HTTPDINFO",
+      "path": "InternetGatewayDevice.X_GC_EXT.RemoteManagement.X_GC_HTTPDINFO",
+      "flags": "0x1",
+      "parameters": [
+        {
+          "name": "X_GC_ExpireTime",
+          "type_tag": "0xc0000041"
+        },
+        {
+          "name": "X_GC_LoginErrorNum",
+          "type_tag": "0xc000000b"
+        },
+        {
+          "name": "X_GC_LoginUserLevel",
+          "type_tag": "0xc0000011"
+        },
+        {
+          "name": "X_GC_LoginFlag",
+          "type_tag": "0xc0000003"
+        },
+        {
+          "name": "X_GC_LockTime",
+          "type_tag": "0xc0000041"
+        },
+        {
+          "name": "X_GC_LoginSessionId",
+          "type_tag": "0xc0000079"
+        },
+        {
+          "name": "X_GC_LoginIPAddr",
+          "type_tag": "0xc0000041"
+        },
+        {
+          "name": "X_GC_LockStatus",
+          "type_tag": "0xc0000041"
+        }
+      ]
+    },
+    {
+      "name": "ServiceControl",
+      "path": "InternetGatewayDevice.X_GC_EXT.ServiceControl",
+      "flags": "0x2",
+      "parameters": []
+    },
+    {
+      "name": "i",
+      "path": "InternetGatewayDevice.X_GC_EXT.ServiceControl.i",
+      "flags": "0xd",
+      "parameters": [
+        {
+          "name": "Enable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "Protocol",
+          "type_tag": "0xc0000081"
+        },
+        {
+          "name": "Interface",
+          "type_tag": "0xc0000081"
+        },
+        {
+          "name": "StartIPAddress",
+          "type_tag": "0xc0000011"
+        },
+        {
+          "name": "EndIPAddress",
+          "type_tag": "0xc0000011"
+        },
+        {
+          "name": "Policy",
+          "type_tag": "0xc0000081"
+        },
+        {
+          "name": "ServiceList",
+          "type_tag": "0xc0000081"
+        },
+        {
+          "name": "ipv6prefix",
+          "type_tag": "0xc0000029"
+        }
+      ]
+    },
+    {
+      "name": "Mirror_Test",
+      "path": "InternetGatewayDevice.X_GC_EXT.Mirror_Test",
+      "flags": "0x2",
+      "parameters": []
+    },
+    {
+      "name": "i",
+      "path": "InternetGatewayDevice.X_GC_EXT.Mirror_Test.i",
+      "flags": "0xd",
+      "parameters": [
+        {
+          "name": "Source_TxEnable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "Source_RxEnable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "Dest_Enable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "Source_IFName",
+          "type_tag": "0xc0000041"
+        },
+        {
+          "name": "Source_WANNAME",
+          "type_tag": "0xc0000041"
+        },
+        {
+          "name": "Dest_IFNAME",
+          "type_tag": "0xc0000041"
+        },
+        {
+          "name": "Dest_LANNAME",
+          "type_tag": "0xc0000041"
+        }
+      ]
+    },
+    {
+      "name": "X_CT-COM_UserInfo",
+      "path": "InternetGatewayDevice.X_CT-COM_UserInfo",
+      "flags": "0x1",
+      "parameters": [
+        {
+          "name": "Limit",
+          "type_tag": "0x2"
+        },
+        {
+          "name": "Times",
+          "type_tag": "0x2"
+        },
+        {
+          "name": "ServiceNum",
+          "type_tag": "0x2"
+        },
+        {
+          "name": "Status",
+          "type_tag": "0x1"
+        },
+        {
+          "name": "Result",
+          "type_tag": "0x1"
+        },
+        {
+          "name": "ForceRestart",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "RouteStatus",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "UserCpu",
+          "type_tag": "0x1"
+        },
+        {
+          "name": "UserMemory",
+          "type_tag": "0x1"
+        },
+        {
+          "name": "UserName",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "UserId",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "ProvisioningCode",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "ServiceName",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "X_GC_ONTAUTH_SN",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "X_GC_ONTAUTH_SNPassword",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "X_GC_ONTAUTH_Method",
+          "type_tag": "0xc0000011"
+        },
+        {
+          "name": "X_GC_LastAuthedUserName",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "X_GC_LastAuthedUserId",
+          "type_tag": "0xc0000101"
+        }
+      ]
+    },
+    {
+      "name": "Services",
+      "path": "InternetGatewayDevice.Services",
+      "flags": "0x0",
+      "parameters": []
+    },
+    {
+      "name": "X_CT-COM_IPTV",
+      "path": "InternetGatewayDevice.Services.X_CT-COM_IPTV",
+      "flags": "0x1",
+      "parameters": [
+        {
+          "name": "STBNumber",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "IGMPEnable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "ProxyEnable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "SnoopingEnable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "MLDSnoopingEnable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "MLDProxyEnable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "Status",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "STBMAC",
+          "type_tag": "0xc0000101"
+        }
+      ]
+    },
+    {
+      "name": "X_GC_IGMPCfg",
+      "path": "InternetGatewayDevice.Services.X_GC_IGMPCfg",
+      "flags": "0x81",
+      "parameters": [
+        {
+          "name": "groupMemberAgingTime",
+          "type_tag": "0x4"
+        },
+        {
+          "name": "IgmpFastLeaveEnable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "IgmpLan2LanMulticastEnable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "IgmpUntag",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "OltIgmpUntag",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "OLTSet",
+          "type_tag": "0x20000001"
+        }
+      ]
+    },
+    {
+      "name": "VLANCfg",
+      "path": "InternetGatewayDevice.Services.X_GC_IGMPCfg.VLANCfg",
+      "flags": "0x2",
+      "parameters": []
+    },
+    {
+      "name": "i",
+      "path": "InternetGatewayDevice.Services.X_GC_IGMPCfg.VLANCfg.i",
+      "flags": "0xd",
+      "parameters": [
+        {
+          "name": "LANVLAN",
+          "type_tag": "0x2"
+        },
+        {
+          "name": "WANVLAN",
+          "type_tag": "0x2"
+        },
+        {
+          "name": "OLTSet",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "Port",
+          "type_tag": "0xc0000011"
+        }
+      ]
+    },
+    {
+      "name": "X_GC_Watchdog",
+      "path": "InternetGatewayDevice.X_GC_Watchdog",
+      "flags": "0x1",
+      "parameters": [
+        {
+          "name": "HWEnable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "SWEnable",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "AppReboot",
+          "type_tag": "0xc0000101"
+        },
+        {
+          "name": "SysReboot",
+          "type_tag": "0xc0000101"
+        }
+      ]
+    },
+    {
+      "name": "X_GC_PPPManual",
+      "path": "InternetGatewayDevice.X_GC_PPPManual",
+      "flags": "0x1",
+      "parameters": [
+        {
+          "name": "path",
+          "type_tag": "0xc0000081"
+        },
+        {
+          "name": "command",
+          "type_tag": "0xc0000041"
+        }
+      ]
+    },
+    {
+      "name": "X_GC_PrivateAppDebugCtrl",
+      "path": "InternetGatewayDevice.X_GC_PrivateAppDebugCtrl",
+      "flags": "0x0",
+      "parameters": []
+    },
+    {
+      "name": "gc_omcid",
+      "path": "InternetGatewayDevice.X_GC_PrivateAppDebugCtrl.gc_omcid",
+      "flags": "0x1",
+      "parameters": [
+        {
+          "name": "omcilogOn",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "omcilogNextOn",
+          "type_tag": "0x20000001"
+        },
+        {
+          "name": "dbgLevel",
+          "type_tag": "0x1"
+        }
+      ]
+    }
+  ]
+}

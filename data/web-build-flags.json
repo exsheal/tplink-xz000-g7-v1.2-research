@@ -1,0 +1,2683 @@
+{
+  "INCLUDE_BETA_UPGRATE": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 30391
+    }
+  ],
+  "INCLUDE_TRANS_UPGRATE": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 30418
+    }
+  ],
+  "INCLUDE_DATECODE_UPGRATE": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 30446
+    }
+  ],
+  "INCLUDE_SPEC_XZ000G7V1_2": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 30477
+    }
+  ],
+  "CONFIG_TP_IMAGE": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 30508
+    }
+  ],
+  "CONFIG_MIC": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 30530
+    }
+  ],
+  "INCLUDE_GALACHIP": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 30547
+    }
+  ],
+  "INCLUDE_ARM": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 30649
+    }
+  ],
+  "INCLUDE_KERNEL_ARM": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 30690
+    }
+  ],
+  "INCLUDE_LITTLE_ENDIAN": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 30739
+    }
+  ],
+  "INCLUDE_ENDIAN_FLAG_IMAGE": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 30767
+    }
+  ],
+  "INCLUDE_COMPRESS_XZ": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 30836
+    }
+  ],
+  "INCLUDE_FLASH_SPINOR": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 30893
+    }
+  ],
+  "INCLUDE_DUAL_IMAGE": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 30920
+    }
+  ],
+  "INCLUDE_DUAL_CONFIG": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 30945
+    }
+  ],
+  "INCLUDE_MTD_TYPE_RAW1": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 30971
+    }
+  ],
+  "INCLUDE_FLASH_8M": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 30999
+    }
+  ],
+  "INCLUDE_IMPORTANT_CONFIG": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 31206
+    }
+  ],
+  "INCLUDE_FWUPGRADE_CHECK": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 31237
+    }
+  ],
+  "INCLUDE_FWUPGRADE_CHECK_MD5": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 31267
+    }
+  ],
+  "INCLUDE_FWUPGRADE_CHECK_RSA": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 31301
+    }
+  ],
+  "INCLUDE_FWUPGRADE_CHECK_PRODUCT_ID": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 31335
+    }
+  ],
+  "INCLUDE_FWUPGRADE_CHECK_ADDHWVER": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 31376
+    }
+  ],
+  "INCLUDE_FWUPGRADE_CHECK_SPECIAL_VER": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 31415
+    }
+  ],
+  "INCLUDE_FWUPGRADE_BOOT_UPDATE": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 31457
+    }
+  ],
+  "INCLUDE_REGION_US": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 31493
+    }
+  ],
+  "INCLUDE_MIC": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 31517
+    }
+  ],
+  "INCLUDE_CLI_FULL_FEATURE": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 31535
+    }
+  ],
+  "INCLUDE_USER_ACCOUNT": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 31566
+    }
+  ],
+  "INCLUDE_CHGINIT_PWD": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 31593
+    }
+  ],
+  "INCLUDE_OPTION66": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 31619
+    }
+  ],
+  "INCLUDE_USER_RESTRICTION": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 31642
+    }
+  ],
+  "INCLUDE_MULTICAST_VLAN": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 31673
+    }
+  ],
+  "INCLUDE_ETH_ECN": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 31752
+    }
+  ],
+  "INCLUDE_ETHERNET_LAN_WAN_REUSE": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 32354
+    }
+  ],
+  "INCLUDE_WIFI_11R": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 33312
+    }
+  ],
+  "INCLUDE_PON": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 33519
+    }
+  ],
+  "INCLUDE_PON_GLC": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 33537
+    }
+  ],
+  "INCLUDE_PON_GPON": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 33559
+    }
+  ],
+  "INCLUDE_PON_XPON": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 33582
+    }
+  ],
+  "INCLUDE_GPON_SFU": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 33605
+    }
+  ],
+  "INCLUDE_GPON_BOB7572": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 33628
+    }
+  ],
+  "INCLUDE_GPON_BOBUX3320S": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 33655
+    }
+  ],
+  "INCLUDE_GPON_INFO": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 33685
+    }
+  ],
+  "INCLUDE_GPON_CTC": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 33709
+    }
+  ],
+  "INCLUDE_KEEP_AUTHINFO": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 33732
+    }
+  ],
+  "INCLUDE_MULTI_PRIO": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 33760
+    }
+  ],
+  "INCLUDE_VLAN_SEARCH": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 33785
+    }
+  ],
+  "INCLUDE_SEARCH_PRIO": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 33811
+    }
+  ],
+  "INCLUDE_TP_GPIO_SUPPORT": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 33837
+    }
+  ],
+  "INCLUDE_TP_GPIO_BTN_RESETDEF": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 33867
+    }
+  ],
+  "INCLUDE_TP_GPIO_LED_POWR": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 33902
+    }
+  ],
+  "INCLUDE_TP_GPIO_LED_INET": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 33933
+    }
+  ],
+  "INCLUDE_TP_GPIO_LED_WL_SINGLE": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 33964
+    }
+  ],
+  "INCLUDE_TP_GPIO_LED_LAN": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 34031
+    }
+  ],
+  "INCLUDE_TP_GPIO_LED_USB": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 34061
+    }
+  ],
+  "INCLUDE_IPV6": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 34091
+    }
+  ],
+  "INCLUDE_IPV6_SLAAC": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 34110
+    }
+  ],
+  "INCLUDE_IPV6_HTTP": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 34135
+    }
+  ],
+  "INCLUDE_IPV6_MAP": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 34159
+    }
+  ],
+  "INCLUDE_FIREWALL_DDOS": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 34248
+    }
+  ],
+  "INCLUDE_WAN_802_1P": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 34350
+    }
+  ],
+  "INCLUDE_WAN_VLAN_ID_MIN": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 34375
+    }
+  ],
+  "INCLUDE_NETFILTER_FULLCONE": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 34438
+    }
+  ],
+  "INCLUDE_NETFILTER_XT_TARGET_TRIGGER": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 34471
+    }
+  ],
+  "INCLUDE_NETFILTER_XT_MATCH_MASSURL": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 34513
+    }
+  ],
+  "INCLUDE_ALG": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 34554
+    }
+  ],
+  "INCLUDE_ALG_H323": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 34572
+    }
+  ],
+  "INCLUDE_ALG_SIP": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 34595
+    }
+  ],
+  "INCLUDE_ALG_RTSP": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 34617
+    }
+  ],
+  "INCLUDE_TP_MARK": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 34640
+    }
+  ],
+  "INCLUDE_ACL": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 34662
+    }
+  ],
+  "INCLUDE_CPU_MEMORY_DISPLAY": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 34680
+    }
+  ],
+  "INCLUDE_DNS_PROXY": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 34713
+    }
+  ],
+  "INCLUDE_WRITE_SN": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 34737
+    }
+  ],
+  "INCLUDE_WRITE_COUNTRY": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 34760
+    }
+  ],
+  "INCLUDE_HOSTNAME_EDITABLE": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 34788
+    }
+  ],
+  "INCLUDE_WRITE_FUNCTION_CODE": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 34820
+    }
+  ],
+  "INCLUDE_DHCP_OPTION42_LAN": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 34854
+    }
+  ],
+  "INCLUDE_NO_WAN": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 34886
+    }
+  ],
+  "INCLUDE_TP_MESH_NO_EXECUTE": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 34938
+    }
+  ],
+  "WEB_INCLUDE_MULTI_EWAN": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 35076
+    }
+  ],
+  "WEB_INCLUDE_DST": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 35105
+    }
+  ],
+  "WEB_INCLUDE_HELP": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 35127
+    }
+  ],
+  "INCLUDE_MULTI_LANGUAGE": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 35150
+    }
+  ],
+  "INCLUDE_LANGUAGE_EN_US": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 35179
+    }
+  ],
+  "INCLUDE_LANGUAGE_TR_TR": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 35208
+    }
+  ],
+  "INCLUDE_CMM_OPTIMIZE_SIZE": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 35237
+    }
+  ],
+  "INCLUDE_HTTP_JSON_FMT": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 35269
+    }
+  ],
+  "INCLUDE_DEBUG_CWMP_PRINT": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 35297
+    }
+  ],
+  "INCLUDE_DEBUG_TPAPP_PRINT": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 35328
+    }
+  ],
+  "INCLUDE_TRWISP": [
+    {
+      "value": 1,
+      "path": "web/js/oid_str.js",
+      "offset": 35410
+    }
+  ],
+  "INCLUDE_SPEC_EX220": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 35431
+    }
+  ],
+  "INCLUDE_SPEC_EX440": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 35456
+    }
+  ],
+  "INCLUDE_SPEC_VX220": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 35481
+    }
+  ],
+  "INCLUDE_SPEC_VX230v": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 35506
+    }
+  ],
+  "INCLUDE_SPEC_EX420": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 35532
+    }
+  ],
+  "INCLUDE_SPEC_EX510": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 35557
+    }
+  ],
+  "INCLUDE_SPEC_EX511": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 35582
+    }
+  ],
+  "INCLUDE_SPEC_EX511V2": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 35607
+    }
+  ],
+  "INCLUDE_SPEC_HX223": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 35634
+    }
+  ],
+  "INCLUDE_SPEC_VX420": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 35659
+    }
+  ],
+  "INCLUDE_SPEC_HC220": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 35684
+    }
+  ],
+  "INCLUDE_SPEC_HX220": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 35709
+    }
+  ],
+  "INCLUDE_SPEC_EX221": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 35734
+    }
+  ],
+  "INCLUDE_SPEC_EC223": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 35759
+    }
+  ],
+  "INCLUDE_SPEC_XX230v": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 35784
+    }
+  ],
+  "INCLUDE_SPEC_XX530v": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 35810
+    }
+  ],
+  "INCLUDE_SPEC_SZ030": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 35836
+    }
+  ],
+  "INCLUDE_SPEC_HX510": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 35861
+    }
+  ],
+  "INCLUDE_SPEC_HX716": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 35886
+    }
+  ],
+  "INCLUDE_SPEC_EX820V1": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 35911
+    }
+  ],
+  "INCLUDE_SPEC_HX820V1": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 35938
+    }
+  ],
+  "INCLUDE_SPEC_MX50V": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 35965
+    }
+  ],
+  "INCLUDE_SPEC_NX510V": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 35990
+    }
+  ],
+  "INCLUDE_SPEC_MX223": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 36016
+    }
+  ],
+  "INCLUDE_SPEC_NX440": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 36041
+    }
+  ],
+  "INCLUDE_SPEC_HX710": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 36066
+    }
+  ],
+  "INCLUDE_SPEC_EX710": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 36091
+    }
+  ],
+  "INCLUDE_SPEC_EX230": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 36116
+    }
+  ],
+  "INCLUDE_SPEC_HX230": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 36141
+    }
+  ],
+  "INCLUDE_SPEC_VX700v": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 36166
+    }
+  ],
+  "INCLUDE_SPEC_HX706": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 36192
+    }
+  ],
+  "INCLUDE_SPEC_VX800v": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 36217
+    }
+  ],
+  "INCLUDE_SPEC_XX800v": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 36243
+    }
+  ],
+  "INCLUDE_SPEC_VR1210v": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 36269
+    }
+  ],
+  "INCLUDE_SPEC_VX231v": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 36296
+    }
+  ],
+  "INCLUDE_SPEC_VC223G3v": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 36322
+    }
+  ],
+  "INCLUDE_SPEC_VC220G3u": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 36350
+    }
+  ],
+  "INCLUDE_SPEC_TX6610": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 36378
+    }
+  ],
+  "INCLUDE_SPEC_XZ000G7": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 36404
+    }
+  ],
+  "INCLUDE_SPEC_OPTUS": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 36431
+    }
+  ],
+  "INCLUDE_HTTPS_RSA_BITS_2048": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 36456
+    }
+  ],
+  "INCLUDE_MUSL_LIBC": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 36490
+    }
+  ],
+  "INCLUDE_CUSTOM_DM_SHM_SIZE": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 36514
+    }
+  ],
+  "INCLUDE_BROADCOM": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 36547
+    }
+  ],
+  "INCLUDE_QUALCOMM": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 36570
+    }
+  ],
+  "INCLUDE_ECONET": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 36593
+    }
+  ],
+  "INCLUDE_MTK": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 36614
+    }
+  ],
+  "INCLUDE_QUECTEL": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 36632
+    }
+  ],
+  "INCLUDE_ECONET_MT7513": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 36654
+    }
+  ],
+  "INCLUDE_MIPS": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 36682
+    }
+  ],
+  "INCLUDE_MIPSEL": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 36701
+    }
+  ],
+  "INCLUDE_ARM64": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 36722
+    }
+  ],
+  "INCLUDE_KERNEL_MIPS": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 36742
+    }
+  ],
+  "INCLUDE_KERNEL_MIPSEL": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 36768
+    }
+  ],
+  "INCLUDE_KERNEL_ARM64": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 36796
+    }
+  ],
+  "INCLUDE_BIG_ENDIAN": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 36823
+    }
+  ],
+  "INCLUDE_COMPRESS_LZMA": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 36848
+    }
+  ],
+  "INCLUDE_LINUX_DTS_SUPPORT": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 36876
+    }
+  ],
+  "INCLUDE_FLASH_NAND": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 36908
+    }
+  ],
+  "INCLUDE_FLASH_SPINAND": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 36933
+    }
+  ],
+  "INCLUDE_MTD_TYPE_RAW2": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 36961
+    }
+  ],
+  "INCLUDE_MTD_TYPE_FS": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 36989
+    }
+  ],
+  "INCLUDE_FLASH_16M": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 37015
+    }
+  ],
+  "INCLUDE_FLASH_32M": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 37039
+    }
+  ],
+  "INCLUDE_FLASH_64M": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 37063
+    }
+  ],
+  "INCLUDE_FLASH_128M": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 37087
+    }
+  ],
+  "INCLUDE_FLASH_256M": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 37112
+    }
+  ],
+  "INCLUDE_FLASH_512M": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 37137
+    }
+  ],
+  "INCLUDE_FLASH_1024M": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 37162
+    }
+  ],
+  "INCLUDE_SPEC_SQUASH_BLOCK_SIZE": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 37188
+    }
+  ],
+  "INCLUDE_FWUPGRADE_CHECK_MD5_KERNEL_KEY": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 37225
+    }
+  ],
+  "INCLUDE_RECORD_UPGRADE_INFO": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 37270
+    }
+  ],
+  "INCLUDE_REGION_EU": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 37304
+    }
+  ],
+  "INCLUDE_REGION_AU": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 37328
+    }
+  ],
+  "INCLUDE_DIGITAL_SIGNATURE": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 37352
+    }
+  ],
+  "INCLUDE_SOCKET_LOCK": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 37384
+    }
+  ],
+  "INCLUDE_CLI_CMD_SH": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 37410
+    }
+  ],
+  "INCLUDE_CLI_CMD_DUMP_OID": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 37435
+    }
+  ],
+  "INCLUDE_CLI_ENC_CMD_DEBUG": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 37466
+    }
+  ],
+  "INCLUDE_USER_DEFAULT_PWD_WARN": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 37498
+    }
+  ],
+  "INCLUDE_CHGINIT_PWD_CN": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 37534
+    }
+  ],
+  "INCLUDE_DHCP_OPTION133": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 37563
+    }
+  ],
+  "INCLUDE_DHCP_OPTION60": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 37592
+    }
+  ],
+  "INCLUDE_OPTION66_NEED_TAG": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 37620
+    }
+  ],
+  "INCLUDE_OPTION66_LAN": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 37652
+    }
+  ],
+  "INCLUDE_DHCP_ADDRESS_RESERVE_CONFLICT": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 37679
+    }
+  ],
+  "INCLUDE_WEB_AGILECONFIG": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 37723
+    }
+  ],
+  "INCLUDE_AUTH_PASSWORD": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 37753
+    }
+  ],
+  "INCLUDE_PORTABLE_APP": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 37781
+    }
+  ],
+  "INCLUDE_DEV_TYPE": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 37808
+    }
+  ],
+  "INCLUDE_WEB_TELNET": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 37831
+    }
+  ],
+  "INCLUDE_REMOTE_TELNET": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 37856
+    }
+  ],
+  "INCLUDE_SSH_ACCESS": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 37884
+    }
+  ],
+  "INCLUDE_CONTAINER": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 37909
+    }
+  ],
+  "INCLUDE_DISABLE_ROOT_ACCOUNT_AFTER_UPGRADE": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 37933
+    }
+  ],
+  "INCLUDE_ETH_MTK": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 37982
+    }
+  ],
+  "INCLUDE_ETH_ATH": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 38004
+    }
+  ],
+  "INCLUDE_ETH_QCA": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 38026
+    }
+  ],
+  "INCLUDE_ETH_BCM": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 38048
+    }
+  ],
+  "INCLUDE_ETH_RTL": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 38070
+    }
+  ],
+  "INCLUDE_ETH_FAKE": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 38092
+    }
+  ],
+  "INCLUDE_ETHERNET_VIRTUAL_LAN_PORT": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 38115
+    }
+  ],
+  "INCLUDE_TR143_GRO": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 38155
+    }
+  ],
+  "INCLUDE_WIFI": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 38179
+    }
+  ],
+  "INCLUDE_11AXONLY_SUPPORT": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 38198
+    }
+  ],
+  "INCLUDE_PERCENT_TRANSMITPOWER": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 38229
+    }
+  ],
+  "INCLUDE_ACT_AUTO_CHAN_SELECTION": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 38265
+    }
+  ],
+  "INCLUDE_WIFI_MODE_EXTENDED": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 38303
+    }
+  ],
+  "INCLUDE_WIRELESS_SURVEY": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 38336
+    }
+  ],
+  "INCLUDE_TIMELY_AUTO_CHAN_SELECTION": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 38366
+    }
+  ],
+  "INCLUDE_ADV_WIFI_SCAN": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 38407
+    }
+  ],
+  "INCLUDE_LTEWAN": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 38435
+    }
+  ],
+  "INCLUDE_ADSLWAN": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 38456
+    }
+  ],
+  "INCLUDE_AUTO_PVC": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 38478
+    }
+  ],
+  "INCLUDE_DSL_BR2684CTL": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 38501
+    }
+  ],
+  "INCLUDE_PON_MARVELL": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 38529
+    }
+  ],
+  "INCLUDE_PON_BCM": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 38555
+    }
+  ],
+  "INCLUDE_PON_MTK": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 38577
+    }
+  ],
+  "INCLUDE_PON_EPON": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 38599
+    }
+  ],
+  "INCLUDE_PON_FAKE_DUAL_IMAGE": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 38622
+    }
+  ],
+  "INCLUDE_GPON_XGSPON": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 38656
+    }
+  ],
+  "INCLUDE_GPON_FWDRULE": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 38691
+    }
+  ],
+  "INCLUDE_GPON_IOT": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 38718
+    }
+  ],
+  "INCLUDE_DEVICE_TREE": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 38741
+    }
+  ],
+  "INCLUDE_TP_GPIO_BTN_WIFI": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 38767
+    }
+  ],
+  "INCLUDE_TP_GPIO_BTN_WIFI_RESET": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 38798
+    }
+  ],
+  "INCLUDE_TP_GPIO_BTN_WPS": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 38835
+    }
+  ],
+  "INCLUDE_TP_GPIO_BTN_WIFI_WPS": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 38865
+    }
+  ],
+  "INCLUDE_TP_GPIO_BTN_LED": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 38900
+    }
+  ],
+  "INCLUDE_TP_GPIO_BTN_ECO": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 38930
+    }
+  ],
+  "INCLUDE_TP_GPIO_SLIDE_SWITCH": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 38960
+    }
+  ],
+  "INCLUDE_TP_GPIO_BTN_FUNC_CTRL": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 38995
+    }
+  ],
+  "INCLUDE_TP_GPIO_LED_DUAL_POWR": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 39031
+    }
+  ],
+  "INCLUDE_TP_GPIO_LED_XDSL": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 39067
+    }
+  ],
+  "INCLUDE_TP_GPIO_LED_DUAL_XDSL": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 39098
+    }
+  ],
+  "INCLUDE_TP_GPIO_LED_DUAL_INET": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 39134
+    }
+  ],
+  "INCLUDE_TP_GPIO_LED_WL_DOUBLE": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 39170
+    }
+  ],
+  "INCLUDE_TP_GPIO_LED_WPS_SINGLE": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 39206
+    }
+  ],
+  "INCLUDE_TP_GPIO_LED_WPS_DOUBLE": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 39243
+    }
+  ],
+  "INCLUDE_TP_GPIO_LED_WAN": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 39280
+    }
+  ],
+  "INCLUDE_TP_GPIO_LED_FXS": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 39310
+    }
+  ],
+  "INCLUDE_TP_GPIO_LED_DUAL_VOIP": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 39340
+    }
+  ],
+  "INCLUDE_TP_GPIO_LED_USB_TRANSMIT_FLASHING": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 39376
+    }
+  ],
+  "INCLUDE_TP_GPIO_LED_SINGLE_RGB": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 39424
+    }
+  ],
+  "INCLUDE_TP_GPIO_LED_NET_SINGLE": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 39461
+    }
+  ],
+  "INCLUDE_IPV6_MLD": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 39498
+    }
+  ],
+  "INCLUDE_IPV6_CE_ROUTER_AUTH": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 39521
+    }
+  ],
+  "INCLUDE_IPV6_PASSTHROUGH": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 39555
+    }
+  ],
+  "INCLUDE_USB": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 39586
+    }
+  ],
+  "INCLUDE_VOIP": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 39604
+    }
+  ],
+  "INCLUDE_DSP_SOCKET_OPEN": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 39623
+    }
+  ],
+  "INCLUDE_SMART_DHCP": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 39653
+    }
+  ],
+  "INCLUDE_MULTIMODE": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 39678
+    }
+  ],
+  "INCLUDE_FACTORY_TEST_RANDOM_MAC": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 39702
+    }
+  ],
+  "INCLUDE_SYSMODE": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 39740
+    }
+  ],
+  "INCLUDE_AUTOGATEWAY": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 39762
+    }
+  ],
+  "INCLUDE_ONLINE_DETECTION": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 39788
+    }
+  ],
+  "INCLUDE_CUSTOM_CONNNAME": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 39819
+    }
+  ],
+  "INCLUDE_APPS_MONITOR": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 39849
+    }
+  ],
+  "INCLUDE_QOS_ENABLE": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 39876
+    }
+  ],
+  "INCLUDE_SSL": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 39901
+    }
+  ],
+  "INCLUDE_CLIENT_TYPE_RECOGNITION": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 39919
+    }
+  ],
+  "INCLUDE_IPSEC": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 39957
+    }
+  ],
+  "INCLUDE_LOGIN_GDPR_ENCRYPT": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 39977
+    }
+  ],
+  "INCLUDE_CWMP": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 40010
+    }
+  ],
+  "INCLUDE_FIREWALL_LEVEL": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 40029
+    }
+  ],
+  "INCLUDE_ADVANCED_FIREWALL": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 40058
+    }
+  ],
+  "INCLUDE_AGILEACS_SIG": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 40090
+    }
+  ],
+  "INCLUDE_RIP": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 40117
+    }
+  ],
+  "INCLUDE_SNMP": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 40135
+    }
+  ],
+  "INCLUDE_DDNS": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 40154
+    }
+  ],
+  "INCLUDE_IPTV": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 40173
+    }
+  ],
+  "INCLUDE_BCM_IGMP_MCPD": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 40201
+    }
+  ],
+  "INCLUDE_IGMP_ETHPROXY": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 40229
+    }
+  ],
+  "INCLUDE_BCM_NETFILTER": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 40257
+    }
+  ],
+  "INCLUDE_IGMP_HWNAT": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 40285
+    }
+  ],
+  "INCLUDE_IGMP_SNOOPING_BY_BRCTL": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 40310
+    }
+  ],
+  "CONFIG_TP_IGMP_SNOOPING": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 40347
+    }
+  ],
+  "INCLUDE_IGMP_SRC_CARE": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 40377
+    }
+  ],
+  "INCLUDE_ETHERNET_WAN": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 40405
+    }
+  ],
+  "INCLUDE_BRIDGING": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 40432
+    }
+  ],
+  "INCLUDE_WAN_DETECT": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 40455
+    }
+  ],
+  "INCLUDE_INTF_BINDING": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 40480
+    }
+  ],
+  "INCLUDE_PPTP": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 40507
+    }
+  ],
+  "INCLUDE_L2TP": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 40526
+    }
+  ],
+  "INCLUDE_PADT_PRECEDE": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 40545
+    }
+  ],
+  "INCLUDE_PPP_DRYRUN_EMPTY_ACCOUNT": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 40572
+    }
+  ],
+  "INCLUDE_ACL_ADVANCE": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 40611
+    }
+  ],
+  "INCLUDE_FIREWALL_IPFILTER": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 40637
+    }
+  ],
+  "INCLUDE_GERMANY_SPEC": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 40669
+    }
+  ],
+  "INCLUDE_PPP_RECONN": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 40696
+    }
+  ],
+  "INCLUDE_VPN": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 40721
+    }
+  ],
+  "INCLUDE_SPEEDTEST": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 40739
+    }
+  ],
+  "INCLUDE_HTTP_SSL_MIN_TLS1_0": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 40772
+    }
+  ],
+  "INCLUDE_HTTP_SSL_MIN_TLS1_1": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 40806
+    }
+  ],
+  "INCLUDE_HTTP_SSL_MIN_TLS1_2": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 40840
+    }
+  ],
+  "INCLUDE_HTTP_SSL_MIN_TLS1_3": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 40874
+    }
+  ],
+  "INCLUDE_HTTP_FILTER_BY_ACL": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 40908
+    }
+  ],
+  "INCLUDE_WRITE_MNGT_URL": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 40941
+    }
+  ],
+  "INCLUDE_WRITE_WIFI_PWD": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 40970
+    }
+  ],
+  "INCLUDE_WRITE_ADMIN_PWD": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 40999
+    }
+  ],
+  "INCLUDE_WRITE_USER_PWD": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 41029
+    }
+  ],
+  "INCLUDE_WRITE_HARDVER": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 41058
+    }
+  ],
+  "INCLUDE_PORT_MIRROR": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 41086
+    }
+  ],
+  "INCLUDE_PACKET_CAPTURE": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 41112
+    }
+  ],
+  "INCLUDE_CLOUD": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 41141
+    }
+  ],
+  "INCLUDE_XMPP": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 41161
+    }
+  ],
+  "INCLUDE_TR369": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 41180
+    }
+  ],
+  "INCLUDE_QOE": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 41200
+    }
+  ],
+  "INCLUDE_PARENTCONTROL_V2": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 41218
+    }
+  ],
+  "INCLUDE_CLI_DIAGNOSIS": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 41249
+    }
+  ],
+  "INCLUDE_TAUC": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 41277
+    }
+  ],
+  "INCLUDE_REDIRECT_HTTP_TO_HTTPS": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 41296
+    }
+  ],
+  "INCLUDE_REDIRECT_REMOTE_HTTP_TO_HTTPS": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 41333
+    }
+  ],
+  "INCLUDE_HIDDEN_CWMP_PAGE": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 41377
+    }
+  ],
+  "INCLUDE_NO_CONSECUTIVE_SAME_CHAR": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 41408
+    }
+  ],
+  "INCLUDE_CLS_L1_IMDA_LOGIN_WAIT": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 41447
+    }
+  ],
+  "INCLUDE_SAVE_KEY_AS_HASH": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 41484
+    }
+  ],
+  "INCLUDE_CLS_L1_IMDA_TPAPP": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 41515
+    }
+  ],
+  "INCLUDE_IMDA": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 41547
+    }
+  ],
+  "INCLUDE_UPNP_PORTMAP_SWITCH": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 41566
+    }
+  ],
+  "INCLUDE_UPNP_DYNAMIC_INIT": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 41600
+    }
+  ],
+  "INCLUDE_ROUTE_TBL": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 41632
+    }
+  ],
+  "INCLUDE_CWMP_DMMAP_PORT_TRIGGER": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 41656
+    }
+  ],
+  "INCLUDE_CWMP_DMMAP_DMZ": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 41694
+    }
+  ],
+  "INCLUDE_MULTIPORT_FORWARD_VS": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 41723
+    }
+  ],
+  "INCLUDE_MAC_CLIENT_FORWARD_VS": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 41758
+    }
+  ],
+  "INCLUDE_IP_RESTRIC_FORWARD_VS": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 41794
+    }
+  ],
+  "INCLUDE_SESSION_TIMEOUT": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 41830
+    }
+  ],
+  "INCLUDE_MULTICORES_WATCHDOG": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 41860
+    }
+  ],
+  "INCLUDE_DUALLAN": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 41894
+    }
+  ],
+  "INCLUDE_LIFEMOTE": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 41916
+    }
+  ],
+  "INCLUDE_UDPXY": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 41939
+    }
+  ],
+  "INLCUDE_WAN_LOCK": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 41959
+    }
+  ],
+  "INCLUDE_SYSLOG_SECURITY_SPEC": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 41982
+    }
+  ],
+  "INCLUDE_MULTIPLE_NAT": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 42017
+    }
+  ],
+  "INCLUDE_DEV_EXTSTATS": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 42044
+    }
+  ],
+  "INCLUDE_WIFI_MESH_SUPPORT": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 42071
+    }
+  ],
+  "WEB_INCLUDE_MOBILE_UI": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 42103
+    }
+  ],
+  "INCLUDE_DAY_MONTH_YEAR": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 42131
+    }
+  ],
+  "INCLUDE_LANGUAGE_DE_DE": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 42160
+    }
+  ],
+  "INCLUDE_LANGUAGE_IT_IT": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 42189
+    }
+  ],
+  "INCLUDE_LANGUAGE_RU_RU": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 42218
+    }
+  ],
+  "INCLUDE_LANGUAGE_PL_PL": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 42247
+    }
+  ],
+  "INCLUDE_LANGUAGE_FR_FR": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 42276
+    }
+  ],
+  "INCLUDE_LANGUAGE_ES_ES": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 42305
+    }
+  ],
+  "INCLUDE_LANGUAGE_ES_LA": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 42334
+    }
+  ],
+  "INCLUDE_LANGUAGE_PT_PT": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 42363
+    }
+  ],
+  "INCLUDE_LANGUAGE_PT_BR": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 42392
+    }
+  ],
+  "INCLUDE_LANGUAGE_EL_GR": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 42421
+    }
+  ],
+  "INCLUDE_LANGUAGE_TH_TH": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 42450
+    }
+  ],
+  "INCLUDE_LANGUAGE_RO_RO": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 42479
+    }
+  ],
+  "INCLUDE_LANGUAGE_AR_AR": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 42508
+    }
+  ],
+  "INCLUDE_QS_REGION_SETUP": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 42537
+    }
+  ],
+  "INCLUDE_CDBG_LEVEL2": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 42567
+    }
+  ],
+  "INCLUDE_CDBG_LEVEL3": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 42593
+    }
+  ],
+  "INCLUDE_CDBG_RUNTIME": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 42619
+    }
+  ],
+  "INCLUDE_CDBG_DUMPSTACK": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 42646
+    }
+  ],
+  "INCLUDE_KEEP_CMM_SYMBOL": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 42675
+    }
+  ],
+  "INCLUDE_KEEP_LIB_SYMBOL": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 42705
+    }
+  ],
+  "INCLUDE_BCM_DSLDIAGD": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 42735
+    }
+  ],
+  "INCLUDE_TCPDUMP": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 42762
+    }
+  ],
+  "INCLUDE_STRACE": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 42784
+    }
+  ],
+  "INCLUDE_VALGRIND": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 42805
+    }
+  ],
+  "INCLUDE_MEM_DBG_SCRIPT": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 42828
+    }
+  ],
+  "INCLUDE_TEST": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 42857
+    }
+  ],
+  "INCLUDE_DEBUG_LOCK": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 42876
+    }
+  ],
+  "INCLUDE_MSG_DEBUG": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 42901
+    }
+  ],
+  "INCLUDE_CMM_DEBUG_CALL_TRACE": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 42925
+    }
+  ],
+  "INCLUDE_BETA_SIGNAL": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 42960
+    }
+  ],
+  "INCLUDE_WEB_WATERMARK": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 42986
+    }
+  ],
+  "INCLUDE_BCM_IPTABLES": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 43014
+    }
+  ],
+  "INCLUDE_CUSTOMER_OUI": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 43041
+    }
+  ],
+  "INCLUDE_LED_SCHEDULE": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 43068
+    }
+  ],
+  "INCLUDE_REBOOT_SCHEDULE": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 43095
+    }
+  ],
+  "INCLUDE_POWER_SCHEDULE": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 43125
+    }
+  ],
+  "INCLUDE_TEST_SUIT": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 43154
+    }
+  ],
+  "INCLUDE_NO_ISP": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 43178
+    }
+  ],
+  "INCLUDE_TTNET": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 43199
+    }
+  ],
+  "INCLUDE_RUMTS": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 43219
+    }
+  ],
+  "INCLUDE_ATA1": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 43239
+    }
+  ],
+  "INCLUDE_WISP_DE": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 43258
+    }
+  ],
+  "INCLUDE_MYTM": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 43280
+    }
+  ],
+  "INCLUDE_UNMNV": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 43299
+    }
+  ],
+  "INCLUDE_TRTS": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 43319
+    }
+  ],
+  "INCLUDE_HKPCCW": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 43338
+    }
+  ],
+  "INCLUDE_WE": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 43359
+    }
+  ],
+  "INCLUDE_DOCLARO": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 43376
+    }
+  ],
+  "INCLUDE_ITEO": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 43398
+    }
+  ],
+  "INCLUDE_ITWIND3": [
+    {
+      "value": 0,
+      "path": "web/js/oid_str.js",
+      "offset": 43417
+    }
+  ],
+  "INCLUDE_LOGIN_USERNAME": [
+    {
+      "value": 0,
+      "path": "web/frame/login.htm",
+      "offset": 14760
+    }
+  ]
+}

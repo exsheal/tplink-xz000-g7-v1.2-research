@@ -1,0 +1,256 @@
+path	bytes	mode	kind	semantic_status	role
+/bin/busybox	284892	0o755	elf	targeted-native-review	UART/Linux utilities; Telnet default launches vendor cli, not login/sh.
+/bin/cli	61960	0o755	elf	targeted-native-review	Authenticated vendor CLI; all 42 command tables and 130 entries decoded; selected handlers traced.
+/bin/cmmsyslogc	9536	0o755	elf	targeted-native-review	Syslog client; ELF imports/strings/disassembly indexed.
+/bin/cmmsyslogd	13748	0o755	elf	targeted-native-review	Syslog daemon; launch requested by rcS; exact runtime persistence unproven.
+/bin/cos	51428	0o755	elf	targeted-native-review	TP-Link COS/Device data-model service; entry/dependencies/messages catalogued; not every function proven.
+/bin/dhcpd	34796	0o755	elf	targeted-native-review	DHCP daemon present/running in snapshot; empty pool config; client lease behavior untested.
+/bin/diagTool	13652	0o755	elf	targeted-native-review	Diagnostics dispatcher; executable present; all runtime diagnostics not exercised.
+/bin/httpd	67932	0o755	elf	targeted-native-review	Native CGI web server; auth, role-0/account limitation and config-message startup traced.
+/bin/rcsHook	9528	0o755	elf	targeted-native-review	Startup hook runner; executable present; no custom rcS_hook content captured.
+/etc/GN25L95	242	0o755	text	source-or-state-reviewed	Configuration, captured state or shell helper; contents compared to init/schemas/runtime.
+/etc/board.conf	376	0o755	text	source-or-state-reviewed	Configuration, captured state or shell helper; contents compared to init/schemas/runtime.
+/etc/config/config.default.gcs	12733	0o755	binary	structure-decoded-with-limits	LZMA serialized GCS heap; 119 schema nodes and typed bounded values decoded; instance ordering unresolved.
+/etc/config/config.default.xml	12493	0o755	text	source-or-state-reviewed	Configuration, captured state or shell helper; contents compared to init/schemas/runtime.
+/etc/config.bba	15679	0o755	text	source-reviewed	Startup/build/hotplug source; command order and absent feature dependencies compared to extracted binaries/runtime.
+/etc/config.sdk	3997	0o755	text	source-reviewed	Startup/build/hotplug source; command order and absent feature dependencies compared to extracted binaries/runtime.
+/etc/default_config.xml	23320	0o775	binary	structure-decoded	DES-ECB encoded vendor XML; decrypted entire file and indexed every element/attribute.
+/etc/downgrade_exe/.gitkeep	1	0o755	text	source-or-state-reviewed	Configuration, captured state or shell helper; contents compared to init/schemas/runtime.
+/etc/downgrade_xml/.gitkeep	1	0o755	text	source-or-state-reviewed	Configuration, captured state or shell helper; contents compared to init/schemas/runtime.
+/etc/ethertypes	1362	0o755	text	data-classified	Protocol/service-name dictionary; not proof that listed protocols run.
+/etc/fstab	95	0o775	text	source-or-state-reviewed	Configuration, captured state or shell helper; contents compared to init/schemas/runtime.
+/etc/gc_default_bob.bin	8538	0o755	text	structure-decoded	Optical default register table; every section/index/value parsed; no calibration settings changed.
+/etc/gc_default_bob_gn25l95.bin	10567	0o755	text	structure-decoded	Optical default register table; every section/index/value parsed; no calibration settings changed.
+/etc/gc_default_bob_tso40202.bin	12732	0o755	text	structure-decoded	Optical default register table; every section/index/value parsed; no calibration settings changed.
+/etc/gc_default_bob_ux3320s.bin	8635	0o755	text	structure-decoded	Optical default register table; every section/index/value parsed; no calibration settings changed.
+/etc/gc_fw_info	86	0o755	text	source-or-state-reviewed	Configuration, captured state or shell helper; contents compared to init/schemas/runtime.
+/etc/gc_svn_version	49	0o755	text	source-or-state-reviewed	Configuration, captured state or shell helper; contents compared to init/schemas/runtime.
+/etc/gc_sys_info	407	0o755	text	records-verified	Device identity/calibration byte block; equality to main NOR records checked; BOB meanings partially mapped.
+/etc/gponOmciConfig	190	0o755	text	source-or-state-reviewed	Configuration, captured state or shell helper; contents compared to init/schemas/runtime.
+/etc/group	53	0o775	text	source-or-state-reviewed	Configuration, captured state or shell helper; contents compared to init/schemas/runtime.
+/etc/hotplug.d/button/00-button	793	0o775	text	source-reviewed	Startup/build/hotplug source; command order and absent feature dependencies compared to extracted binaries/runtime.
+/etc/hotplug.d/dhcp6c/10-dnsmasq	847	0o775	text	source-reviewed	Startup/build/hotplug source; command order and absent feature dependencies compared to extracted binaries/runtime.
+/etc/hotplug.d/dhcp6c/20-radvd	65	0o775	text	source-reviewed	Startup/build/hotplug source; command order and absent feature dependencies compared to extracted binaries/runtime.
+/etc/hotplug.d/firewall/10-nat-reflection	3935	0o775	text	source-reviewed	Startup/build/hotplug source; command order and absent feature dependencies compared to extracted binaries/runtime.
+/etc/hotplug.d/firewall/20-streamboost	463	0o775	text	source-reviewed	Startup/build/hotplug source; command order and absent feature dependencies compared to extracted binaries/runtime.
+/etc/hotplug.d/ieee1394/10-ieee1394	129	0o775	text	source-reviewed	Startup/build/hotplug source; command order and absent feature dependencies compared to extracted binaries/runtime.
+/etc/hotplug.d/iface/00-netstate	337	0o775	text	source-reviewed	Startup/build/hotplug source; command order and absent feature dependencies compared to extracted binaries/runtime.
+/etc/hotplug.d/iface/10-sysctl	821	0o775	text	source-reviewed	Startup/build/hotplug source; command order and absent feature dependencies compared to extracted binaries/runtime.
+/etc/hotplug.d/iface/20-firewall	537	0o775	text	source-reviewed	Startup/build/hotplug source; command order and absent feature dependencies compared to extracted binaries/runtime.
+/etc/hotplug.d/iface/25-ddns	139	0o775	text	source-reviewed	Startup/build/hotplug source; command order and absent feature dependencies compared to extracted binaries/runtime.
+/etc/hotplug.d/iface/30-teql	486	0o775	text	source-reviewed	Startup/build/hotplug source; command order and absent feature dependencies compared to extracted binaries/runtime.
+/etc/hotplug.d/iface/40-dhcp6c	417	0o775	text	source-reviewed	Startup/build/hotplug source; command order and absent feature dependencies compared to extracted binaries/runtime.
+/etc/hotplug.d/iface/40-streamboost	465	0o775	text	source-reviewed	Startup/build/hotplug source; command order and absent feature dependencies compared to extracted binaries/runtime.
+/etc/hotplug.d/iface/50-mcproxy	251	0o775	text	source-reviewed	Startup/build/hotplug source; command order and absent feature dependencies compared to extracted binaries/runtime.
+/etc/hotplug.d/iface/50-miniupnpd	946	0o775	text	source-reviewed	Startup/build/hotplug source; command order and absent feature dependencies compared to extracted binaries/runtime.
+/etc/hotplug.d/iface/60-dnsmasq	502	0o775	text	source-reviewed	Startup/build/hotplug source; command order and absent feature dependencies compared to extracted binaries/runtime.
+/etc/hotplug.d/iface/65-pppoe	356	0o775	text	source-reviewed	Startup/build/hotplug source; command order and absent feature dependencies compared to extracted binaries/runtime.
+/etc/hotplug.d/iface/70-quagga	249	0o775	text	source-reviewed	Startup/build/hotplug source; command order and absent feature dependencies compared to extracted binaries/runtime.
+/etc/hotplug.d/net/20-wsplcd	2319	0o775	text	source-reviewed	Startup/build/hotplug source; command order and absent feature dependencies compared to extracted binaries/runtime.
+/etc/hotplug.d/net/30-hyd	923	0o775	text	source-reviewed	Startup/build/hotplug source; command order and absent feature dependencies compared to extracted binaries/runtime.
+/etc/hotplug.d/usb/10-usb	129	0o775	text	source-reviewed	Startup/build/hotplug source; command order and absent feature dependencies compared to extracted binaries/runtime.
+/etc/hotplug2-common.rules	871	0o775	text	source-reviewed	Startup/build/hotplug source; command order and absent feature dependencies compared to extracted binaries/runtime.
+/etc/hotplug2-init.rules	80	0o775	text	source-reviewed	Startup/build/hotplug source; command order and absent feature dependencies compared to extracted binaries/runtime.
+/etc/hotplug2.rules	319	0o775	text	source-reviewed	Startup/build/hotplug source; command order and absent feature dependencies compared to extracted binaries/runtime.
+/etc/init.d/S03sdk	3796	0o755	text	source-reviewed	Startup/build/hotplug source; command order and absent feature dependencies compared to extracted binaries/runtime.
+/etc/init.d/S10ethernet	1223	0o755	text	source-reviewed	Startup/build/hotplug source; command order and absent feature dependencies compared to extracted binaries/runtime.
+/etc/init.d/rcS	8385	0o775	text	source-reviewed	Startup/build/hotplug source; command order and absent feature dependencies compared to extracted binaries/runtime.
+/etc/init.d/rcS.galachip	720	0o755	text	source-reviewed	Startup/build/hotplug source; command order and absent feature dependencies compared to extracted binaries/runtime.
+/etc/init.d/rcS.model	46	0o755	text	source-reviewed	Startup/build/hotplug source; command order and absent feature dependencies compared to extracted binaries/runtime.
+/etc/inittab	202	0o775	text	source-or-state-reviewed	Configuration, captured state or shell helper; contents compared to init/schemas/runtime.
+/etc/iproute2/bpf_pinning	85	0o755	text	data-classified	Protocol/service-name dictionary; not proof that listed protocols run.
+/etc/iproute2/ematch_map	81	0o755	text	data-classified	Protocol/service-name dictionary; not proof that listed protocols run.
+/etc/iproute2/group	31	0o755	text	data-classified	Protocol/service-name dictionary; not proof that listed protocols run.
+/etc/iproute2/nl_protos	262	0o755	text	data-classified	Protocol/service-name dictionary; not proof that listed protocols run.
+/etc/iproute2/rt_dsfield	331	0o755	text	data-classified	Protocol/service-name dictionary; not proof that listed protocols run.
+/etc/iproute2/rt_protos	201	0o755	text	data-classified	Protocol/service-name dictionary; not proof that listed protocols run.
+/etc/iproute2/rt_realms	112	0o755	text	data-classified	Protocol/service-name dictionary; not proof that listed protocols run.
+/etc/iproute2/rt_scopes	92	0o755	text	data-classified	Protocol/service-name dictionary; not proof that listed protocols run.
+/etc/iproute2/rt_tables	87	0o755	text	data-classified	Protocol/service-name dictionary; not proof that listed protocols run.
+/etc/iptables-stop	284	0o775	text	source-or-state-reviewed	Configuration, captured state or shell helper; contents compared to init/schemas/runtime.
+/etc/iqos/database.bin	2148	0o775	binary	structure-decoded	Five-byte header + LZMA XML: TL-R4XX app classification defaults; inactive build feature.
+/etc/issue.net	7	0o755	text	source-or-state-reviewed	Configuration, captured state or shell helper; contents compared to init/schemas/runtime.
+/etc/mcpd.conf	987	0o775	text	source-or-state-reviewed	Configuration, captured state or shell helper; contents compared to init/schemas/runtime.
+/etc/mkstatic-dev.sh	2273	0o775	text	source-or-state-reviewed	Configuration, captured state or shell helper; contents compared to init/schemas/runtime.
+/etc/motd	85	0o755	text	source-or-state-reviewed	Configuration, captured state or shell helper; contents compared to init/schemas/runtime.
+/etc/ntp.conf	43	0o755	text	source-or-state-reviewed	Configuration, captured state or shell helper; contents compared to init/schemas/runtime.
+/etc/passwd.bak	123	0o775	text	source-or-state-reviewed	Configuration, captured state or shell helper; contents compared to init/schemas/runtime.
+/etc/platform_ver	32	0o755	text	source-or-state-reviewed	Configuration, captured state or shell helper; contents compared to init/schemas/runtime.
+/etc/profile	108	0o755	text	source-or-state-reviewed	Configuration, captured state or shell helper; contents compared to init/schemas/runtime.
+/etc/profile_telnet	99	0o755	text	source-or-state-reviewed	Configuration, captured state or shell helper; contents compared to init/schemas/runtime.
+/etc/rcS_hook/.gitkeep	1	0o755	text	source-or-state-reviewed	Configuration, captured state or shell helper; contents compared to init/schemas/runtime.
+/etc/reduced_data_model.xml	261056	0o644	binary	structure-decoded	DES-ECB encoded vendor XML; decrypted entire file and indexed every element/attribute.
+/etc/reslov.dnsmasq.conf	40	0o755	text	source-or-state-reviewed	Configuration, captured state or shell helper; contents compared to init/schemas/runtime.
+/etc/services	19935	0o775	text	data-classified	Protocol/service-name dictionary; not proof that listed protocols run.
+/etc/shadow	119	0o755	text	source-or-state-reviewed	Configuration, captured state or shell helper; contents compared to init/schemas/runtime.
+/etc/trust-anchors.conf	391	0o755	text	source-or-state-reviewed	Configuration, captured state or shell helper; contents compared to init/schemas/runtime.
+/etc/unvlan_setting.sh	1327	0o775	text	source-or-state-reviewed	Configuration, captured state or shell helper; contents compared to init/schemas/runtime.
+/etc/upgrade_xml/.gitkeep	1	0o755	text	source-or-state-reviewed	Configuration, captured state or shell helper; contents compared to init/schemas/runtime.
+/etc/vlan_setting.sh	1945	0o775	text	source-or-state-reviewed	Configuration, captured state or shell helper; contents compared to init/schemas/runtime.
+/lib/functions.sh	7065	0o775	text	source-reviewed	Startup/build/hotplug source; command order and absent feature dependencies compared to extracted binaries/runtime.
+/lib/ld-uClibc-1.0.31.so	33544	0o775	elf	targeted-native-review	ARM EABI dynamic loader; binary/header/import/link inventory.
+/lib/libcJSON.so	17796	0o755	elf	targeted-native-review	JSON parsing library; imports/exports/disassembly catalogued.
+/lib/libcgic.so	75648	0o775	elf	targeted-native-review	CGI/form helper library; imports/exports/disassembly catalogued.
+/lib/libcmm.so	877900	0o755	elf	targeted-native-review	COS object handlers; password, flash identity, GPON getters/setters, upgrade path traced.
+/lib/libcutil.so	63308	0o755	elf	targeted-native-review	Crypto/system utility library; DES/MD5 helper and relevant caller paths traced.
+/lib/libebtc.so.0.0.0	123560	0o775	elf	targeted-native-review	Ethernet table filtering support; catalogue, not every extension audited.
+/lib/libgc.so	91952	0o775	elf	targeted-native-review	Vendor ioctl API; real VLAN/PON wrappers and numerous constant-return stubs distinguished.
+/lib/libgcsmsg.so	63020	0o775	elf	targeted-native-review	GCS IPC/message library; imports/exports/disassembly catalogued.
+/lib/liblog.so	5416	0o775	elf	targeted-native-review	GCS logging library; imports/exports/disassembly catalogued.
+/lib/libmdm.so	276220	0o775	elf	targeted-native-review	GCS XML/MDM serialized heap API; schema/value decoding derived from ARM getters.
+/lib/libmodule.so	277792	0o775	elf	targeted-native-review	GCS feature modules; PON configuration and VLAN generation selectively traced.
+/lib/libos.so	42700	0o755	elf	targeted-native-review	OS abstraction; imports/exports/disassembly catalogued.
+/lib/libuClibc-1.0.31.so	420660	0o775	elf	targeted-native-review	uClibc runtime; binary/header/import/link inventory.
+/lib/libxml.so	13760	0o755	elf	targeted-native-review	GCS XML implementation/exports; framework interface catalogued.
+/lib/modules/3.16.0/extra/gcnat.ko	73208	0o775	elf	native-catalogued	Kernel driver/module: API symbols, parameters, licenses and ARM code catalogued; full behavior not proved.
+/lib/modules/3.16.0/extra/gcnet.ko	79736	0o775	elf	native-catalogued	Kernel driver/module: API symbols, parameters, licenses and ARM code catalogued; full behavior not proved.
+/lib/modules/3.16.0/extra/gcponmap.ko	9976	0o775	elf	native-catalogued	Kernel driver/module: API symbols, parameters, licenses and ARM code catalogued; full behavior not proved.
+/lib/modules/3.16.0/extra/xpon_sdk.ko	687700	0o775	elf	native-catalogued	Kernel driver/module: API symbols, parameters, licenses and ARM code catalogued; full behavior not proved.
+/lib/modules/tp_board.ko	9148	0o644	elf	native-catalogued	Kernel driver/module: API symbols, parameters, licenses and ARM code catalogued; full behavior not proved.
+/lib/modules/tp_domain.ko	10768	0o644	elf	native-catalogued	Kernel driver/module: API symbols, parameters, licenses and ARM code catalogued; full behavior not proved.
+/lib/modules/tp_gpio.ko	21816	0o644	elf	native-catalogued	Kernel driver/module: API symbols, parameters, licenses and ARM code catalogued; full behavior not proved.
+/lib/rp-pppoe.so	26612	0o775	elf	targeted-native-review	PPPoE plugin exists; pppd executable absent, not an operational PPPoE client proof.
+/root/.gitignore	0	0o755	empty	indexed	Capture or analysis artifact.
+/sbin/brctl	30216	0o775	elf	targeted-native-review	Linux Ethernet bridge control; br0 topology established by init/runtime.
+/sbin/devmem2	4248	0o775	elf	targeted-native-review	Memory-mapped register tool; missing DT_NEEDED libgcc_s.so.1 noted; BusyBox devmem separate.
+/sbin/ebtables-legacy	5404	0o775	elf	targeted-native-review	Ethernet filtering; startup rules read, final full live table not captured.
+/sbin/firmware.agent	1184	0o775	text	source-or-state-reviewed	Configuration, captured state or shell helper; contents compared to init/schemas/runtime.
+/sbin/gcsUtil	21936	0o775	elf	targeted-native-review	GCS command/event utility; PON reload event call traced.
+/sbin/gcs_core	30208	0o775	elf	targeted-native-review	Galachip GCS core/message framework; present/running.
+/sbin/gcs_db	34372	0o775	elf	targeted-native-review	Galachip GCS serialized configuration database; present/running.
+/sbin/gcs_task	38760	0o775	elf	targeted-native-review	Galachip GCS event/task process; present/running.
+/sbin/hotplug-call	344	0o775	text	source-or-state-reviewed	Configuration, captured state or shell helper; contents compared to init/schemas/runtime.
+/sbin/update_smp_affinity	867	0o775	text	source-or-state-reviewed	Configuration, captured state or shell helper; contents compared to init/schemas/runtime.
+/sbin/xtables-legacy-multi	273416	0o775	elf	targeted-native-review	iptables/ip6tables/ARP filtering multi-call executable; kernel support catalogued.
+/usr/bin/call	71	0o755	text	source-or-state-reviewed	Configuration, captured state or shell helper; contents compared to init/schemas/runtime.
+/usr/bin/cmd	73	0o755	text	source-or-state-reviewed	Configuration, captured state or shell helper; contents compared to init/schemas/runtime.
+/usr/bin/gc_omcicli	17820	0o755	elf	targeted-native-review	OMCI MIB debug client; numeric parser/MIB get command traced; OLT-G not actually captured.
+/usr/bin/gc_omcid	284184	0o755	elf	targeted-native-review	GPON OMCI daemon; VLAN application, reload events and MIB routines selectively traced.
+/usr/bin/gccli	81448	0o755	elf	targeted-native-review	SDK low-level interface; native commands/strings plus web getter invocation paths traced.
+/usr/bin/gcloopdetect	17876	0o755	elf	targeted-native-review	Ethernet loop detection daemon; present/running with -d 4.
+/usr/bin/gcnetctl	21936	0o755	elf	targeted-native-review	Vendor virtual Ethernet/VLAN control; eth0.0/pon0.0 init calls confirmed.
+/usr/bin/gcoamcli	17952	0o755	elf	targeted-native-review	EPON OAM CLI; present, actual EPON service not demonstrated.
+/usr/bin/gcoamd	182448	0o755	elf	targeted-native-review	EPON OAM daemon; present, not in captured running processes.
+/usr/bin/gcponctl	5432	0o755	elf	targeted-native-review	PON driver control; imports/strings/symbols/catalogue; not every command exercised.
+/usr/bin/gcponmapctl	9548	0o755	elf	targeted-native-review	GEM/port mapping driver interface; present, command execution not performed.
+/usr/bin/gcswctl	5432	0o755	elf	targeted-native-review	Switch driver control; present, command execution not performed.
+/usr/lib/libc.so	312	0o755	text	source-or-state-reviewed	Configuration, captured state or shell helper; contents compared to init/schemas/runtime.
+/usr/sbin/redir	32	0o775	text	source-or-state-reviewed	Configuration, captured state or shell helper; contents compared to init/schemas/runtime.
+/web/css/ie.file.css	211	0o644	text	data-classified	Translation/style data; protocol/feature names alone do not establish implementation.
+/web/css/jquery.tpAddress.css	1002	0o644	text	data-classified	Translation/style data; protocol/feature names alone do not establish implementation.
+/web/css/jquery.tpBtnGroup.css	2758	0o644	text	data-classified	Translation/style data; protocol/feature names alone do not establish implementation.
+/web/css/jquery.tpDial.css	1303	0o644	text	data-classified	Translation/style data; protocol/feature names alone do not establish implementation.
+/web/css/jquery.tpFlowBar.css	993	0o644	text	data-classified	Translation/style data; protocol/feature names alone do not establish implementation.
+/web/css/jquery.tpInput.css	1290	0o644	text	data-classified	Translation/style data; protocol/feature names alone do not establish implementation.
+/web/css/jquery.tpPassword.css	933	0o644	text	data-classified	Translation/style data; protocol/feature names alone do not establish implementation.
+/web/css/jquery.tpSearchInput.css	2163	0o644	text	data-classified	Translation/style data; protocol/feature names alone do not establish implementation.
+/web/css/jquery.tpSelect.css	2549	0o644	text	data-classified	Translation/style data; protocol/feature names alone do not establish implementation.
+/web/css/jquery.tpTimeBar.css	1139	0o644	text	data-classified	Translation/style data; protocol/feature names alone do not establish implementation.
+/web/css/jquery.tpTimeSetting.css	1111	0o644	text	data-classified	Translation/style data; protocol/feature names alone do not establish implementation.
+/web/css/jquery.tpWifisharing.css	5975	0o644	text	data-classified	Translation/style data; protocol/feature names alone do not establish implementation.
+/web/css/login.css	17127	0o644	text	data-classified	Translation/style data; protocol/feature names alone do not establish implementation.
+/web/css/main.css	76522	0o644	text	data-classified	Translation/style data; protocol/feature names alone do not establish implementation.
+/web/css/perfect-scrollbar.css	2889	0o644	text	data-classified	Translation/style data; protocol/feature names alone do not establish implementation.
+/web/css/pure-min.css	19468	0o644	text	data-classified	Translation/style data; protocol/feature names alone do not establish implementation.
+/web/css/simple-slider.css	336	0o644	text	data-classified	Translation/style data; protocol/feature names alone do not establish implementation.
+/web/css/tpTable.css	7948	0o644	text	data-classified	Translation/style data; protocol/feature names alone do not establish implementation.
+/web/frame/bot.htm	2790	0o775	text	web-source-review	Web page; OIDs/actions/CGIs/build conditions catalogued; active functions cross-checked in report.
+/web/frame/login.htm	39524	0o775	text	web-source-review	Web page; OIDs/actions/CGIs/build conditions catalogued; active functions cross-checked in report.
+/web/frame/loginUsername.htm	16771	0o775	text	web-source-review	Web page; OIDs/actions/CGIs/build conditions catalogued; active functions cross-checked in report.
+/web/frame/menu.htm	21209	0o775	text	web-source-review	Web page; OIDs/actions/CGIs/build conditions catalogued; active functions cross-checked in report.
+/web/frame/setPwd.htm	22651	0o775	text	web-source-review	Web page; OIDs/actions/CGIs/build conditions catalogued; active functions cross-checked in report.
+/web/frame/top.htm	13550	0o775	text	web-source-review	Web page; OIDs/actions/CGIs/build conditions catalogued; active functions cross-checked in report.
+/web/help/.gitignore	0	0o775	empty	indexed	Capture or analysis artifact.
+/web/img/banner.png	4355	0o775	binary	structure-verified	Raster web asset; image format/dimensions/frames verified; mesh/SIM icons are not hardware evidence.
+/web/img/detect.png	2503	0o775	binary	structure-verified	Raster web asset; image format/dimensions/frames verified; mesh/SIM icons are not hardware evidence.
+/web/img/favicon.ico	4286	0o775	binary	structure-verified	Raster web asset; image format/dimensions/frames verified; mesh/SIM icons are not hardware evidence.
+/web/img/icons.png	130111	0o775	binary	structure-verified	Raster web asset; image format/dimensions/frames verified; mesh/SIM icons are not hardware evidence.
+/web/img/ie-01.png	1419	0o775	binary	structure-verified	Raster web asset; image format/dimensions/frames verified; mesh/SIM icons are not hardware evidence.
+/web/img/ie-02.png	1963	0o775	binary	structure-verified	Raster web asset; image format/dimensions/frames verified; mesh/SIM icons are not hardware evidence.
+/web/img/ie-03.png	3490	0o775	binary	structure-verified	Raster web asset; image format/dimensions/frames verified; mesh/SIM icons are not hardware evidence.
+/web/img/ie-04.png	3614	0o775	binary	structure-verified	Raster web asset; image format/dimensions/frames verified; mesh/SIM icons are not hardware evidence.
+/web/img/ie-05.png	5168	0o775	binary	structure-verified	Raster web asset; image format/dimensions/frames verified; mesh/SIM icons are not hardware evidence.
+/web/img/ie-06.png	2546	0o775	binary	structure-verified	Raster web asset; image format/dimensions/frames verified; mesh/SIM icons are not hardware evidence.
+/web/img/ie-border-radius.png	5989	0o775	binary	structure-verified	Raster web asset; image format/dimensions/frames verified; mesh/SIM icons are not hardware evidence.
+/web/img/ie.png	9461	0o775	binary	structure-verified	Raster web asset; image format/dimensions/frames verified; mesh/SIM icons are not hardware evidence.
+/web/img/login/logo.png	935	0o775	binary	structure-verified	Raster web asset; image format/dimensions/frames verified; mesh/SIM icons are not hardware evidence.
+/web/img/logo-icon.png	4547	0o775	binary	structure-verified	Raster web asset; image format/dimensions/frames verified; mesh/SIM icons are not hardware evidence.
+/web/img/logo.png	935	0o775	binary	structure-verified	Raster web asset; image format/dimensions/frames verified; mesh/SIM icons are not hardware evidence.
+/web/img/mark_copy.gif	1117	0o775	binary	structure-verified	Raster web asset; image format/dimensions/frames verified; mesh/SIM icons are not hardware evidence.
+/web/img/mesh_sprites.png	4103	0o775	binary	structure-verified	Raster web asset; image format/dimensions/frames verified; mesh/SIM icons are not hardware evidence.
+/web/img/no-record.png	1754	0o775	binary	structure-verified	Raster web asset; image format/dimensions/frames verified; mesh/SIM icons are not hardware evidence.
+/web/img/power.png	1511	0o775	binary	structure-verified	Raster web asset; image format/dimensions/frames verified; mesh/SIM icons are not hardware evidence.
+/web/img/shorcut.png	331	0o775	binary	structure-verified	Raster web asset; image format/dimensions/frames verified; mesh/SIM icons are not hardware evidence.
+/web/img/sim.png	604	0o775	binary	structure-verified	Raster web asset; image format/dimensions/frames verified; mesh/SIM icons are not hardware evidence.
+/web/img/step1.png	1164	0o775	binary	structure-verified	Raster web asset; image format/dimensions/frames verified; mesh/SIM icons are not hardware evidence.
+/web/img/step2.png	1316	0o775	binary	structure-verified	Raster web asset; image format/dimensions/frames verified; mesh/SIM icons are not hardware evidence.
+/web/img/up.png	3045	0o775	binary	structure-verified	Raster web asset; image format/dimensions/frames verified; mesh/SIM icons are not hardware evidence.
+/web/index.htm	8389	0o775	text	web-source-review	Web page; OIDs/actions/CGIs/build conditions catalogued; active functions cross-checked in report.
+/web/js/corner.js	6754	0o644	text	web-source-indexed	Web JavaScript/UI or crypto helper; flags/OID/CGI dependencies inspected; not a complete library security audit.
+/web/js/draggabilly.pkgd.min.js	20728	0o644	text	web-source-indexed	Web JavaScript/UI or crypto helper; flags/OID/CGI dependencies inspected; not a complete library security audit.
+/web/js/encrypt.js	24387	0o644	text	web-source-indexed	Web JavaScript/UI or crypto helper; flags/OID/CGI dependencies inspected; not a complete library security audit.
+/web/js/excanvas.js	24397	0o644	text	web-source-indexed	Web JavaScript/UI or crypto helper; flags/OID/CGI dependencies inspected; not a complete library security audit.
+/web/js/html2canvas.min.js	36924	0o644	text	web-source-indexed	Web JavaScript/UI or crypto helper; flags/OID/CGI dependencies inspected; not a complete library security audit.
+/web/js/include.js	519	0o644	text	web-source-indexed	Web JavaScript/UI or crypto helper; flags/OID/CGI dependencies inspected; not a complete library security audit.
+/web/js/ispVoIP.js	822	0o644	text	web-source-indexed	Web JavaScript/UI or crypto helper; flags/OID/CGI dependencies inspected; not a complete library security audit.
+/web/js/jquery-1.8.3.min.js	94210	0o644	text	web-source-indexed	Web JavaScript/UI or crypto helper; flags/OID/CGI dependencies inspected; not a complete library security audit.
+/web/js/jquery.mousewheel.js	3474	0o644	text	web-source-indexed	Web JavaScript/UI or crypto helper; flags/OID/CGI dependencies inspected; not a complete library security audit.
+/web/js/jquery.nicescroll.min.js	61187	0o644	text	web-source-indexed	Web JavaScript/UI or crypto helper; flags/OID/CGI dependencies inspected; not a complete library security audit.
+/web/js/jquery.qrcode.min.js	14072	0o644	text	web-source-indexed	Web JavaScript/UI or crypto helper; flags/OID/CGI dependencies inspected; not a complete library security audit.
+/web/js/jquery.tpAddress.js	5959	0o644	text	web-source-indexed	Web JavaScript/UI or crypto helper; flags/OID/CGI dependencies inspected; not a complete library security audit.
+/web/js/jquery.tpBtnGroup.js	3107	0o644	text	web-source-indexed	Web JavaScript/UI or crypto helper; flags/OID/CGI dependencies inspected; not a complete library security audit.
+/web/js/jquery.tpCheckPort.js	4584	0o644	text	web-source-indexed	Web JavaScript/UI or crypto helper; flags/OID/CGI dependencies inspected; not a complete library security audit.
+/web/js/jquery.tpCheckbox.js	4735	0o644	text	web-source-indexed	Web JavaScript/UI or crypto helper; flags/OID/CGI dependencies inspected; not a complete library security audit.
+/web/js/jquery.tpDial.js	6001	0o644	text	web-source-indexed	Web JavaScript/UI or crypto helper; flags/OID/CGI dependencies inspected; not a complete library security audit.
+/web/js/jquery.tpFile.js	1823	0o644	text	web-source-indexed	Web JavaScript/UI or crypto helper; flags/OID/CGI dependencies inspected; not a complete library security audit.
+/web/js/jquery.tpFlowBar.js	2779	0o644	text	web-source-indexed	Web JavaScript/UI or crypto helper; flags/OID/CGI dependencies inspected; not a complete library security audit.
+/web/js/jquery.tpGridSelect.js	9049	0o644	text	web-source-indexed	Web JavaScript/UI or crypto helper; flags/OID/CGI dependencies inspected; not a complete library security audit.
+/web/js/jquery.tpInit.js	1622	0o644	text	web-source-indexed	Web JavaScript/UI or crypto helper; flags/OID/CGI dependencies inspected; not a complete library security audit.
+/web/js/jquery.tpInput.js	2829	0o644	text	web-source-indexed	Web JavaScript/UI or crypto helper; flags/OID/CGI dependencies inspected; not a complete library security audit.
+/web/js/jquery.tpModal.js	6592	0o644	text	web-source-indexed	Web JavaScript/UI or crypto helper; flags/OID/CGI dependencies inspected; not a complete library security audit.
+/web/js/jquery.tpModeSelect.js	4220	0o644	text	web-source-indexed	Web JavaScript/UI or crypto helper; flags/OID/CGI dependencies inspected; not a complete library security audit.
+/web/js/jquery.tpMsg.js	12394	0o644	text	web-source-indexed	Web JavaScript/UI or crypto helper; flags/OID/CGI dependencies inspected; not a complete library security audit.
+/web/js/jquery.tpPassword.js	3265	0o644	text	web-source-indexed	Web JavaScript/UI or crypto helper; flags/OID/CGI dependencies inspected; not a complete library security audit.
+/web/js/jquery.tpRadio.js	4562	0o644	text	web-source-indexed	Web JavaScript/UI or crypto helper; flags/OID/CGI dependencies inspected; not a complete library security audit.
+/web/js/jquery.tpSearchInput.js	7926	0o644	text	web-source-indexed	Web JavaScript/UI or crypto helper; flags/OID/CGI dependencies inspected; not a complete library security audit.
+/web/js/jquery.tpSelect.js	7177	0o644	text	web-source-indexed	Web JavaScript/UI or crypto helper; flags/OID/CGI dependencies inspected; not a complete library security audit.
+/web/js/jquery.tpTable.js	16474	0o644	text	web-source-indexed	Web JavaScript/UI or crypto helper; flags/OID/CGI dependencies inspected; not a complete library security audit.
+/web/js/jquery.tpTimeBar.js	3554	0o644	text	web-source-indexed	Web JavaScript/UI or crypto helper; flags/OID/CGI dependencies inspected; not a complete library security audit.
+/web/js/jquery.tpTimeBoard.js	5863	0o644	text	web-source-indexed	Web JavaScript/UI or crypto helper; flags/OID/CGI dependencies inspected; not a complete library security audit.
+/web/js/jquery.tpTimeSetting.js	4254	0o644	text	web-source-indexed	Web JavaScript/UI or crypto helper; flags/OID/CGI dependencies inspected; not a complete library security audit.
+/web/js/jquery.tpWifisharing.js	13230	0o644	text	web-source-indexed	Web JavaScript/UI or crypto helper; flags/OID/CGI dependencies inspected; not a complete library security audit.
+/web/js/keycode.js	2181	0o644	text	web-source-indexed	Web JavaScript/UI or crypto helper; flags/OID/CGI dependencies inspected; not a complete library security audit.
+/web/js/lib.js	51702	0o644	text	web-source-indexed	Web JavaScript/UI or crypto helper; flags/OID/CGI dependencies inspected; not a complete library security audit.
+/web/js/locale.js	3621	0o644	text	web-source-indexed	Web JavaScript/UI or crypto helper; flags/OID/CGI dependencies inspected; not a complete library security audit.
+/web/js/oid_str.js	43435	0o644	text	web-source-indexed	Web JavaScript/UI or crypto helper; flags/OID/CGI dependencies inspected; not a complete library security audit.
+/web/js/perfect-scrollbar.js	15281	0o644	text	web-source-indexed	Web JavaScript/UI or crypto helper; flags/OID/CGI dependencies inspected; not a complete library security audit.
+/web/js/proxy.js	14625	0o644	text	web-source-indexed	Web JavaScript/UI or crypto helper; flags/OID/CGI dependencies inspected; not a complete library security audit.
+/web/js/simple-slider.js	8537	0o644	text	web-source-indexed	Web JavaScript/UI or crypto helper; flags/OID/CGI dependencies inspected; not a complete library security audit.
+/web/js/su.js	20125	0o775	text	web-source-indexed	Web JavaScript/UI or crypto helper; flags/OID/CGI dependencies inspected; not a complete library security audit.
+/web/locale/en_US/array.js	1283	0o644	text	data-classified	Translation/style data; protocol/feature names alone do not establish implementation.
+/web/locale/en_US/err.js	121472	0o644	text	data-classified	Translation/style data; protocol/feature names alone do not establish implementation.
+/web/locale/en_US/help.js	15674	0o644	text	data-classified	Translation/style data; protocol/feature names alone do not establish implementation.
+/web/locale/en_US/lan.css	3	0o644	text	data-classified	Translation/style data; protocol/feature names alone do not establish implementation.
+/web/locale/en_US/str.js	68146	0o644	text	data-classified	Translation/style data; protocol/feature names alone do not establish implementation.
+/web/locale/language.js	1448	0o644	text	data-classified	Translation/style data; protocol/feature names alone do not establish implementation.
+/web/locale/tr_TR/array.js	107170	0o644	text	data-classified	Translation/style data; protocol/feature names alone do not establish implementation.
+/web/locale/tr_TR/err.js	102734	0o644	text	data-classified	Translation/style data; protocol/feature names alone do not establish implementation.
+/web/locale/tr_TR/help.js	17253	0o644	text	data-classified	Translation/style data; protocol/feature names alone do not establish implementation.
+/web/locale/tr_TR/lan.css	179	0o644	text	data-classified	Translation/style data; protocol/feature names alone do not establish implementation.
+/web/locale/tr_TR/str.js	63547	0o644	text	data-classified	Translation/style data; protocol/feature names alone do not establish implementation.
+/web/main/backNRestore.htm	5042	0o775	text	web-source-review	Web page; OIDs/actions/CGIs/build conditions catalogued; active functions cross-checked in report.
+/web/main/dhcp.htm	37868	0o775	text	web-source-review	Web page; OIDs/actions/CGIs/build conditions catalogued; active functions cross-checked in report.
+/web/main/dhcpEdit.htm	21687	0o775	text	web-source-review	Web page; OIDs/actions/CGIs/build conditions catalogued; active functions cross-checked in report.
+/web/main/dhcpServer.htm	2138	0o775	text	web-source-review	Web page; OIDs/actions/CGIs/build conditions catalogued; active functions cross-checked in report.
+/web/main/dhcpStaticEdit.htm	6987	0o775	text	web-source-review	Web page; OIDs/actions/CGIs/build conditions catalogued; active functions cross-checked in report.
+/web/main/div.htm	21665	0o775	text	web-source-review	Web page; OIDs/actions/CGIs/build conditions catalogued; active functions cross-checked in report.
+/web/main/fwUpInfoBlock.htm	12248	0o775	text	web-source-review	Web page; OIDs/actions/CGIs/build conditions catalogued; active functions cross-checked in report.
+/web/main/gponcfg.htm	5945	0o755	text	web-source-review	Web page; OIDs/actions/CGIs/build conditions catalogued; active functions cross-checked in report.
+/web/main/gponctc.htm	1169	0o755	text	web-source-review	Web page; OIDs/actions/CGIs/build conditions catalogued; active functions cross-checked in report.
+/web/main/manageCtrl.htm	121511	0o775	text	web-source-review	Web page; OIDs/actions/CGIs/build conditions catalogued; active functions cross-checked in report.
+/web/main/restart.htm	747	0o775	text	web-source-review	Web page; OIDs/actions/CGIs/build conditions catalogued; active functions cross-checked in report.
+/web/main/sfuVlanCfg.htm	2579	0o755	text	web-source-review	Web page; OIDs/actions/CGIs/build conditions catalogued; active functions cross-checked in report.
+/web/main/softup.htm	33496	0o775	text	web-source-review	Web page; OIDs/actions/CGIs/build conditions catalogued; active functions cross-checked in report.
+/web/main/status.htm	53353	0o775	text	web-source-review	Web page; OIDs/actions/CGIs/build conditions catalogued; active functions cross-checked in report.
+/web/main/wanBasic.htm	41688	0o775	text	web-source-review	Web page; OIDs/actions/CGIs/build conditions catalogued; active functions cross-checked in report.
+/web/xml/log.txt	1964	0o775	text	indexed	Capture or analysis artifact.

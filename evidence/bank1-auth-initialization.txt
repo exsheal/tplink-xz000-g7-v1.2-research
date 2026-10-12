@@ -1,0 +1,290 @@
+00075394 <rsl_initDev2GponAuthObj>:
+   75394: e3510000     	cmp	r1, #0
+   75398: 13500000     	cmpne	r0, #0
+   7539c: e92d43f0     	push	{r4, r5, r6, r7, r8, r9, lr}
+   753a0: e1a09000     	mov	r9, r0
+   753a4: e24dd02c     	sub	sp, sp, #44
+   753a8: e1a04001     	mov	r4, r1
+   753ac: 03a06001     	moveq	r6, #1
+   753b0: 13a06000     	movne	r6, #0
+   753b4: 1a000009     	bne	0x753e0 <rsl_initDev2GponAuthObj+0x4c> @ imm = #0x24
+   753b8: e59f322c     	ldr	r3, [pc, #0x22c]        @ 0x755ec <rsl_initDev2GponAuthObj+0x258>
+   753bc: e59f022c     	ldr	r0, [pc, #0x22c]        @ 0x755f0 <rsl_initDev2GponAuthObj+0x25c>
+   753c0: e59f122c     	ldr	r1, [pc, #0x22c]        @ 0x755f4 <rsl_initDev2GponAuthObj+0x260>
+   753c4: e08f3003     	add	r3, pc, r3
+   753c8: e2833e1a     	add	r3, r3, #416
+   753cc: e08f0000     	add	r0, pc, r0  ; PIC literal "(pNumStack != ((void *)0)) && (pNewObj != ((void *)0))" @0xabeb3
+   753d0: e08f1001     	add	r1, pc, r1  ; PIC literal "./src/rsl_optical.c" @0xb81ee
+   753d4: e59f221c     	ldr	r2, [pc, #0x21c]        @ 0x755f8 <rsl_initDev2GponAuthObj+0x264>
+   753d8: e2833002     	add	r3, r3, #2
+   753dc: ebfe8ebc     	bl	0x18ed4 <__assert@plt>  @ imm = #-0x5c510
+   753e0: e28d5014     	add	r5, sp, #20
+   753e4: e1a01006     	mov	r1, r6
+   753e8: e3a02014     	mov	r2, #20
+   753ec: e28d7028     	add	r7, sp, #40
+   753f0: e1a00005     	mov	r0, r5
+   753f4: ebfe8ebc     	bl	0x18eec <memset@plt>    @ imm = #-0x5c510
+   753f8: e5276018     	str	r6, [r7, #-0x18]!
+   753fc: e2846020     	add	r6, r4, #32
+   75400: e58d6000     	str	r6, [sp]
+   75404: e594301c     	ldr	r3, [r4, #0x1c]
+   75408: e59f11ec     	ldr	r1, [pc, #0x1ec]        @ 0x755fc <rsl_initDev2GponAuthObj+0x268>
+   7540c: e2848002     	add	r8, r4, #2
+   75410: e98d0108     	stmib	sp, {r3, r8}
+   75414: e59f31e4     	ldr	r3, [pc, #0x1e4]        @ 0x75600 <rsl_initDev2GponAuthObj+0x26c>
+   75418: e08f1001     	add	r1, pc, r1
+   7541c: e2811f6e     	add	r1, r1, #440
+   75420: e59f21dc     	ldr	r2, [pc, #0x1dc]        @ 0x75604 <rsl_initDev2GponAuthObj+0x270>
+   75424: e08f3003     	add	r3, pc, r3  ; PIC literal "pNewObj:gponPwd=%s, oltMode=%d, gponSn=%s" @0xb8532
+   75428: e3a00009     	mov	r0, #9
+   7542c: e2811002     	add	r1, r1, #2
+   75430: ebfe9282     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0x5b5f8
+   75434: e1a01007     	mov	r1, r7
+   75438: e1a00005     	mov	r0, r5
+   7543c: ebfe8df6     	bl	0x18c1c <oal_sys_readGponAuthFlashSn@plt> @ imm = #-0x5c828
+   75440: e1a00005     	mov	r0, r5
+   75444: ebfe9370     	bl	0x1a20c <util_netChkStrSn@plt> @ imm = #-0x5b240
+   75448: e3500000     	cmp	r0, #0
+   7544c: 1a000023     	bne	0x754e0 <rsl_initDev2GponAuthObj+0x14c> @ imm = #0x8c
+   75450: e1a00005     	mov	r0, r5
+   75454: e1a01007     	mov	r1, r7
+   75458: ebfe9578     	bl	0x1aa40 <oal_sys_readGponSnFlash@plt> @ imm = #-0x5aa20
+   7545c: e3500000     	cmp	r0, #0
+   75460: 0a00000c     	beq	0x75498 <rsl_initDev2GponAuthObj+0x104> @ imm = #0x30
+   75464: e59f119c     	ldr	r1, [pc, #0x19c]        @ 0x75608 <rsl_initDev2GponAuthObj+0x274>
+   75468: e59f319c     	ldr	r3, [pc, #0x19c]        @ 0x7560c <rsl_initDev2GponAuthObj+0x278>
+   7546c: e08f1001     	add	r1, pc, r1  ; PIC literal "rsl_initDev2GponAuthObj" @0xaa0af
+   75470: e2811f6e     	add	r1, r1, #440
+   75474: e3a00009     	mov	r0, #9
+   75478: e2811002     	add	r1, r1, #2
+   7547c: e59f218c     	ldr	r2, [pc, #0x18c]        @ 0x75610 <rsl_initDev2GponAuthObj+0x27c>
+   75480: e08f3003     	add	r3, pc, r3  ; PIC literal "oal_gpon_autogenSn \n" @0xb855c
+   75484: ebfe926d     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0x5b64c
+   75488: e1a00005     	mov	r0, r5
+   7548c: e1a01007     	mov	r1, r7
+   75490: ebfe8dc9     	bl	0x18bbc <oal_gpon_autogenSn@plt> @ imm = #-0x5c8dc
+   75494: ea000003     	b	0x754a8 <rsl_initDev2GponAuthObj+0x114> @ imm = #0xc
+   75498: e1a00005     	mov	r0, r5
+   7549c: ebfe935a     	bl	0x1a20c <util_netChkStrSn@plt> @ imm = #-0x5b298
+   754a0: e3500000     	cmp	r0, #0
+   754a4: 0affffee     	beq	0x75464 <rsl_initDev2GponAuthObj+0xd0> @ imm = #-0x48
+   754a8: e1a00005     	mov	r0, r5
+   754ac: e59d1010     	ldr	r1, [sp, #0x10]
+   754b0: ebfe8f35     	bl	0x1918c <oal_sys_writeGponAuthFlashSn@plt> @ imm = #-0x5c32c
+   754b4: e3500000     	cmp	r0, #0
+   754b8: 0a000008     	beq	0x754e0 <rsl_initDev2GponAuthObj+0x14c> @ imm = #0x20
+   754bc: e59f1150     	ldr	r1, [pc, #0x150]        @ 0x75614 <rsl_initDev2GponAuthObj+0x280>
+   754c0: e59f3150     	ldr	r3, [pc, #0x150]        @ 0x75618 <rsl_initDev2GponAuthObj+0x284>
+   754c4: e08f1001     	add	r1, pc, r1  ; PIC literal "rsl_initDev2GponAuthObj" @0xaa0af
+   754c8: e2811f6e     	add	r1, r1, #440
+   754cc: e3a00008     	mov	r0, #8
+   754d0: e2811002     	add	r1, r1, #2
+   754d4: e3a02ff5     	mov	r2, #980
+   754d8: e08f3003     	add	r3, pc, r3  ; PIC literal "Write sn to flash error!\n" @0xb84e1
+   754dc: ea00001b     	b	0x75550 <rsl_initDev2GponAuthObj+0x1bc> @ imm = #0x6c
+   754e0: e1a01005     	mov	r1, r5
+   754e4: e3a02014     	mov	r2, #20
+   754e8: e1a00008     	mov	r0, r8
+   754ec: ebfe94ff     	bl	0x1a8f0 <memcpy@plt>    @ imm = #-0x5ac04
+   754f0: e59d3010     	ldr	r3, [sp, #0x10]
+   754f4: e1a00006     	mov	r0, r6
+   754f8: e5843018     	str	r3, [r4, #0x18]
+   754fc: e2841038     	add	r1, r4, #56
+   75500: ebfe8cc3     	bl	0x18814 <oal_sys_readGponAuthFlashPwd@plt> @ imm = #-0x5ccf4
+   75504: e3500000     	cmp	r0, #0
+   75508: 0a000013     	beq	0x7555c <rsl_initDev2GponAuthObj+0x1c8> @ imm = #0x4c
+   7550c: e3a01000     	mov	r1, #0
+   75510: e3a02015     	mov	r2, #21
+   75514: e1a00006     	mov	r0, r6
+   75518: ebfe8e73     	bl	0x18eec <memset@plt>    @ imm = #-0x5c634
+   7551c: e1a00006     	mov	r0, r6
+   75520: e5941038     	ldr	r1, [r4, #0x38]
+   75524: ebfe902f     	bl	0x195e8 <oal_sys_writeGponAuthFlashPwd@plt> @ imm = #-0x5bf44
+   75528: e3500000     	cmp	r0, #0
+   7552c: 0a00000a     	beq	0x7555c <rsl_initDev2GponAuthObj+0x1c8> @ imm = #0x28
+   75530: e59f10e4     	ldr	r1, [pc, #0xe4]         @ 0x7561c <rsl_initDev2GponAuthObj+0x288>
+   75534: e59f30e4     	ldr	r3, [pc, #0xe4]         @ 0x75620 <rsl_initDev2GponAuthObj+0x28c>
+   75538: e08f1001     	add	r1, pc, r1  ; PIC literal "rsl_initDev2GponAuthObj" @0xaa0af
+   7553c: e59f20e0     	ldr	r2, [pc, #0xe0]         @ 0x75624 <rsl_initDev2GponAuthObj+0x290>
+   75540: e2811f6e     	add	r1, r1, #440
+   75544: e3a00008     	mov	r0, #8
+   75548: e2811002     	add	r1, r1, #2
+   7554c: e08f3003     	add	r3, pc, r3  ; PIC literal "Write pwd to flash error!\n" @0xb84fb
+   75550: ebfe923a     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0x5b718
+   75554: e59f00cc     	ldr	r0, [pc, #0xcc]         @ 0x75628 <rsl_initDev2GponAuthObj+0x294>
+   75558: ea000021     	b	0x755e4 <rsl_initDev2GponAuthObj+0x250> @ imm = #0x84
+   7555c: e59f00c8     	ldr	r0, [pc, #0xc8]         @ 0x7562c <rsl_initDev2GponAuthObj+0x298>
+   75560: e1a01009     	mov	r1, r9
+   75564: e1a02004     	mov	r2, r4
+   75568: ebfe9192     	bl	0x19bb8 <dm_setObj@plt> @ imm = #-0x5b9b8
+   7556c: e3500000     	cmp	r0, #0
+   75570: 0a00000a     	beq	0x755a0 <rsl_initDev2GponAuthObj+0x20c> @ imm = #0x28
+   75574: e59f10b4     	ldr	r1, [pc, #0xb4]         @ 0x75630 <rsl_initDev2GponAuthObj+0x29c>
+   75578: e59f30b4     	ldr	r3, [pc, #0xb4]         @ 0x75634 <rsl_initDev2GponAuthObj+0x2a0>
+   7557c: e08f1001     	add	r1, pc, r1  ; PIC literal "rsl_initDev2GponAuthObj" @0xaa0af
+   75580: e2811f6e     	add	r1, r1, #440
+   75584: e58d6000     	str	r6, [sp]
+   75588: e3a00008     	mov	r0, #8
+   7558c: e2811002     	add	r1, r1, #2
+   75590: e3a02ffd     	mov	r2, #1012
+   75594: e08f3003     	add	r3, pc, r3  ; PIC literal "Set pwd %s to dm error\n" @0xb8571
+   75598: ebfe9228     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0x5b760
+   7559c: eaffffec     	b	0x75554 <rsl_initDev2GponAuthObj+0x1c0> @ imm = #-0x50
+   755a0: e1a00008     	mov	r0, r8
+   755a4: e1a01006     	mov	r1, r6
+   755a8: e5942038     	ldr	r2, [r4, #0x38]
+   755ac: e5943018     	ldr	r3, [r4, #0x18]
+   755b0: ebfe90d5     	bl	0x1990c <oal_gpon_setGponParameter@plt> @ imm = #-0x5bcac
+   755b4: e3500000     	cmp	r0, #0
+   755b8: 0a000009     	beq	0x755e4 <rsl_initDev2GponAuthObj+0x250> @ imm = #0x24
+   755bc: e59f1074     	ldr	r1, [pc, #0x74]         @ 0x75638 <rsl_initDev2GponAuthObj+0x2a4>
+   755c0: e59f3074     	ldr	r3, [pc, #0x74]         @ 0x7563c <rsl_initDev2GponAuthObj+0x2a8>
+   755c4: e08f1001     	add	r1, pc, r1  ; PIC literal "rsl_initDev2GponAuthObj" @0xaa0af
+   755c8: e2811f6e     	add	r1, r1, #440
+   755cc: e3a00008     	mov	r0, #8
+   755d0: e2811002     	add	r1, r1, #2
+   755d4: e59f2064     	ldr	r2, [pc, #0x64]         @ 0x75640 <rsl_initDev2GponAuthObj+0x2ac>
+   755d8: e08f3003     	add	r3, pc, r3  ; PIC literal "Setting link parameters failed\n" @0xb8589
+   755dc: ebfe9217     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0x5b7a4
+   755e0: e3a00001     	mov	r0, #1
+   755e4: e28dd02c     	add	sp, sp, #44
+   755e8: e8bd83f0     	pop	{r4, r5, r6, r7, r8, r9, pc}
+   755ec: 00034b29     	andeq	r4, r3, r9, lsr #22
+   755f0: 00036adf     	ldrdeq	r6, r7, [r3], -pc
+   755f4: 00042e16     	andeq	r2, r4, r6, lsl lr
+   755f8: 000003a7     	andeq	r0, r0, r7, lsr #7
+   755fc: 00034ad5     	ldrdeq	r4, r5, [r3], -r5
+   75600: 00043106     	andeq	r3, r4, r6, lsl #2
+   75604: 000003ab     	andeq	r0, r0, r11, lsr #7
+   75608: 00034a81     	andeq	r4, r3, r1, lsl #21
+   7560c: 000430d4     	ldrdeq	r3, r4, [r4], -r4
+   75610: 000003cd     	andeq	r0, r0, sp, asr #7
+   75614: 00034a29     	andeq	r4, r3, r9, lsr #20
+   75618: 00043001     	andeq	r3, r4, r1
+   7561c: 000349b5     	strheq	r4, [r3], -r5
+   75620: 00042fa7     	andeq	r2, r4, r7, lsr #31
+   75624: 000003ed     	andeq	r0, r0, sp, ror #7
+   75628: 0000232a     	andeq	r2, r0, r10, lsr #6
+   7562c: 0000019d     	<unknown>
+   75630: 00034971     	andeq	r4, r3, r1, ror r9
+   75634: 00042fd5     	ldrdeq	r2, r3, [r4], -r5
+   75638: 00034929     	andeq	r4, r3, r9, lsr #18
+   7563c: 00042fa9     	andeq	r2, r4, r9, lsr #31
+   75640: 0000040a     	andeq	r0, r0, r10, lsl #8
+
+0007564c <rsl_setDev2GponAuthCtcObj>:
+   7564c: e3510000     	cmp	r1, #0
+   75650: 13500000     	cmpne	r0, #0
+   75654: e92d41f0     	push	{r4, r5, r6, r7, r8, lr}
+   75658: e1a04000     	mov	r4, r0
+   7565c: e24dd038     	sub	sp, sp, #56
+   75660: 1a000009     	bne	0x7568c <rsl_setDev2GponAuthCtcObj+0x40> @ imm = #0x24
+   75664: e59f3164     	ldr	r3, [pc, #0x164]        @ 0x757d0 <rsl_setDev2GponAuthCtcObj+0x184>
+   75668: e59f0164     	ldr	r0, [pc, #0x164]        @ 0x757d4 <rsl_setDev2GponAuthCtcObj+0x188>
+   7566c: e59f1164     	ldr	r1, [pc, #0x164]        @ 0x757d8 <rsl_setDev2GponAuthCtcObj+0x18c>
+   75670: e08f3003     	add	r3, pc, r3
+   75674: e2833e1d     	add	r3, r3, #464
+   75678: e08f0000     	add	r0, pc, r0  ; PIC literal "(pNumStack != ((void *)0)) && (pNewObj != ((void *)0))" @0xabeb3
+   7567c: e08f1001     	add	r1, pc, r1  ; PIC literal "./src/rsl_optical.c" @0xb81ee
+   75680: e59f2154     	ldr	r2, [pc, #0x154]        @ 0x757dc <rsl_setDev2GponAuthCtcObj+0x190>
+   75684: e2833002     	add	r3, r3, #2
+   75688: ebfe8e11     	bl	0x18ed4 <__assert@plt>  @ imm = #-0x5c7bc
+   7568c: e59f714c     	ldr	r7, [pc, #0x14c]        @ 0x757e0 <rsl_setDev2GponAuthCtcObj+0x194>
+   75690: e59f314c     	ldr	r3, [pc, #0x14c]        @ 0x757e4 <rsl_setDev2GponAuthCtcObj+0x198>
+   75694: e08f7007     	add	r7, pc, r7  ; PIC literal "rsl_setDev2GponAuthCtcObj" @0xaa0e1
+   75698: e281600f     	add	r6, r1, #15
+   7569c: e2815002     	add	r5, r1, #2
+   756a0: e2877f7b     	add	r7, r7, #492
+   756a4: e3a00008     	mov	r0, #8
+   756a8: e1a01007     	mov	r1, r7
+   756ac: e59f2134     	ldr	r2, [pc, #0x134]        @ 0x757e8 <rsl_setDev2GponAuthCtcObj+0x19c>
+   756b0: e08f3003     	add	r3, pc, r3  ; PIC literal "RSL loid<%s>  pwd<%s>\n" @0xb85a9
+   756b4: e58d6000     	str	r6, [sp]
+   756b8: e58d5004     	str	r5, [sp, #0x4]
+   756bc: e28d800c     	add	r8, sp, #12
+   756c0: ebfe91de     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0x5b888
+   756c4: e1a01004     	mov	r1, r4
+   756c8: e59f011c     	ldr	r0, [pc, #0x11c]        @ 0x757ec <rsl_setDev2GponAuthCtcObj+0x1a0>
+   756cc: e3a0202a     	mov	r2, #42
+   756d0: e1a03008     	mov	r3, r8
+   756d4: ebfe9182     	bl	0x19ce4 <rsl_getObj@plt> @ imm = #-0x5b9f8
+   756d8: e2504000     	subs	r4, r0, #0
+   756dc: 0a000005     	beq	0x756f8 <rsl_setDev2GponAuthCtcObj+0xac> @ imm = #0x14
+   756e0: e1a00007     	mov	r0, r7
+   756e4: e59f1104     	ldr	r1, [pc, #0x104]        @ 0x757f0 <rsl_setDev2GponAuthCtcObj+0x1a4>
+   756e8: e1a02004     	mov	r2, r4
+   756ec: ebfe905c     	bl	0x19864 <cdbg_perror@plt> @ imm = #-0x5be90
+   756f0: e1a00004     	mov	r0, r4
+   756f4: ea000033     	b	0x757c8 <rsl_setDev2GponAuthCtcObj+0x17c> @ imm = #0xcc
+   756f8: e1a00006     	mov	r0, r6
+   756fc: e288100f     	add	r1, r8, #15
+   75700: ebfe933c     	bl	0x1a3f8 <strcmp@plt>    @ imm = #-0x5b310
+   75704: e3500000     	cmp	r0, #0
+   75708: 1a000004     	bne	0x75720 <rsl_setDev2GponAuthCtcObj+0xd4> @ imm = #0x10
+   7570c: e1a00005     	mov	r0, r5
+   75710: e2881002     	add	r1, r8, #2
+   75714: ebfe9337     	bl	0x1a3f8 <strcmp@plt>    @ imm = #-0x5b324
+   75718: e3500000     	cmp	r0, #0
+   7571c: 0a00001d     	beq	0x75798 <rsl_setDev2GponAuthCtcObj+0x14c> @ imm = #0x74
+   75720: e1a00006     	mov	r0, r6
+   75724: e1a01005     	mov	r1, r5
+   75728: ebfe91fd     	bl	0x19f24 <oal_gpon_set_remote_auth_ctc@plt> @ imm = #-0x5b80c
+   7572c: e3500000     	cmp	r0, #0
+   75730: 0a000007     	beq	0x75754 <rsl_setDev2GponAuthCtcObj+0x108> @ imm = #0x1c
+   75734: e59f10b8     	ldr	r1, [pc, #0xb8]         @ 0x757f4 <rsl_setDev2GponAuthCtcObj+0x1a8>
+   75738: e59f30b8     	ldr	r3, [pc, #0xb8]         @ 0x757f8 <rsl_setDev2GponAuthCtcObj+0x1ac>
+   7573c: e08f1001     	add	r1, pc, r1  ; PIC literal "rsl_setDev2GponAuthCtcObj" @0xaa0e1
+   75740: e3a00008     	mov	r0, #8
+   75744: e2811f7b     	add	r1, r1, #492
+   75748: e59f20ac     	ldr	r2, [pc, #0xac]         @ 0x757fc <rsl_setDev2GponAuthCtcObj+0x1b0>
+   7574c: e08f3003     	add	r3, pc, r3  ; PIC literal "Setting CTC auth info failed \n" @0xb85c0
+   75750: ea00001a     	b	0x757c0 <rsl_setDev2GponAuthCtcObj+0x174> @ imm = #0x68
+   75754: e1a00006     	mov	r0, r6
+   75758: e1a01005     	mov	r1, r5
+   7575c: e3a02019     	mov	r2, #25
+   75760: e3a0300d     	mov	r3, #13
+   75764: ebfe91c4     	bl	0x19e7c <oal_sys_writeLoidFlash@plt> @ imm = #-0x5b8f0
+   75768: e3500000     	cmp	r0, #0
+   7576c: 0a000009     	beq	0x75798 <rsl_setDev2GponAuthCtcObj+0x14c> @ imm = #0x24
+   75770: e59f1088     	ldr	r1, [pc, #0x88]         @ 0x75800 <rsl_setDev2GponAuthCtcObj+0x1b4>
+   75774: e59f3088     	ldr	r3, [pc, #0x88]         @ 0x75804 <rsl_setDev2GponAuthCtcObj+0x1b8>
+   75778: e08f1001     	add	r1, pc, r1  ; PIC literal "rsl_setDev2GponAuthCtcObj" @0xaa0e1
+   7577c: e3a00008     	mov	r0, #8
+   75780: e2811f7b     	add	r1, r1, #492
+   75784: e59f207c     	ldr	r2, [pc, #0x7c]         @ 0x75808 <rsl_setDev2GponAuthCtcObj+0x1bc>
+   75788: e08f3003     	add	r3, pc, r3  ; PIC literal "Write loid to flash error!\n" @0xb85df
+   7578c: ebfe91ab     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0x5b954
+   75790: e59f0074     	ldr	r0, [pc, #0x74]         @ 0x7580c <rsl_setDev2GponAuthCtcObj+0x1c0>
+   75794: ea00000b     	b	0x757c8 <rsl_setDev2GponAuthCtcObj+0x17c> @ imm = #0x2c
+   75798: ebfe9004     	bl	0x197b0 <oal_gpon_restartOmci@plt> @ imm = #-0x5bff0
+   7579c: e3500000     	cmp	r0, #0
+   757a0: 0a000008     	beq	0x757c8 <rsl_setDev2GponAuthCtcObj+0x17c> @ imm = #0x20
+   757a4: e59f1064     	ldr	r1, [pc, #0x64]         @ 0x75810 <rsl_setDev2GponAuthCtcObj+0x1c4>
+   757a8: e59f3064     	ldr	r3, [pc, #0x64]         @ 0x75814 <rsl_setDev2GponAuthCtcObj+0x1c8>
+   757ac: e08f1001     	add	r1, pc, r1  ; PIC literal "rsl_setDev2GponAuthCtcObj" @0xaa0e1
+   757b0: e3a00008     	mov	r0, #8
+   757b4: e2811f7b     	add	r1, r1, #492
+   757b8: e3a02e47     	mov	r2, #1136
+   757bc: e08f3003     	add	r3, pc, r3  ; PIC literal "oal_gponOmciRestart failed\n" @0xb8516
+   757c0: ebfe919e     	bl	0x19e40 <cdbg_printf@plt> @ imm = #-0x5b988
+   757c4: e3a00001     	mov	r0, #1
+   757c8: e28dd038     	add	sp, sp, #56
+   757cc: e8bd81f0     	pop	{r4, r5, r6, r7, r8, pc}
+   757d0: 0003487d     	andeq	r4, r3, sp, ror r8
+   757d4: 00036833     	andeq	r6, r3, r3, lsr r8
+   757d8: 00042b6a     	andeq	r2, r4, r10, ror #22
+   757dc: 0000044f     	andeq	r0, r0, pc, asr #8
+   757e0: 00034859     	andeq	r4, r3, r9, asr r8
+   757e4: 00042ef1     	strdeq	r2, r3, [r4], -r1
+   757e8: 00000451     	andeq	r0, r0, r1, asr r4
+   757ec: 0000019e     	<unknown>
+   757f0: 00000459     	andeq	r0, r0, r9, asr r4
+   757f4: 000347b1     	strheq	r4, [r3], -r1
+   757f8: 00042e6c     	andeq	r2, r4, r12, ror #28
+   757fc: 00000462     	andeq	r0, r0, r2, ror #8
+   75800: 00034775     	andeq	r4, r3, r5, ror r7
+   75804: 00042e4f     	andeq	r2, r4, pc, asr #28
+   75808: 00000469     	andeq	r0, r0, r9, ror #8
+   7580c: 0000232a     	andeq	r2, r0, r10, lsr #6
+   75810: 00034741     	andeq	r4, r3, r1, asr #14
+   75814: 00042d52     	andeq	r2, r4, r2, asr sp
