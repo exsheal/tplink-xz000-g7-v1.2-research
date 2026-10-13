@@ -1,13 +1,13 @@
 <h1 align="center">TP-Link XZ000-G7 v1.2</h1>
 <p align="center">
-  <img src="https://github.com/exsheal/tplink-xz000-g7-v1.2-research/blob/main/assets/xz000-g7.webp?raw=true" alt="TP-Link XZ000-G7 ONT — front and rear views" width="420">
+  <img src="assets/xz000-g7.png" alt="TP-Link XZ000-G7 ONT — front and rear views" width="420">
 </p>
 <p align="center"><strong>Local access · Admin password · Flash backups · Firmware internals</strong></p>
 <p align="center">TR variant · Hardware revision v1.20 · Galachip GC1601</p>
 
 The XZ000-G7 is a small GPON/EPON ONT with one Gigabit Ethernet port. This repository documents the TR v1.2 revision: how to reach its management interface, how its default admin password is generated, what a full flash backup contains, and what the firmware actually implements.
 
-The access procedures were tested on **0.8.0 3.0.0 v608e.0 Build 250926 Rel.61253n**. Hardware revision **v1.20** is the version reported by the device. Firmware findings apply to this build unless stated otherwise.
+Device observations and live access tests used **0.8.0 3.0.0 v608e.0 Build 250926 Rel.61253n**. Hardware revision **v1.20** is the version reported by the device. Firmware findings apply to this build unless stated otherwise.
 
 ### Contents
 
@@ -49,7 +49,30 @@ GPON operation and Ethernet bridging were observed. The firmware also contains E
 
 The management address on the examined unit is **[http://192.168.10.254/](http://192.168.10.254/)**, with a `/24` subnet mask. Use **HTTP**; HTTPS service was not observed.
 
-For a direct connection, connect the ONT's RJ45 port to your computer and assign the computer an unused address in that subnet. On Linux:
+For a direct connection, connect the ONT's RJ45 port to your computer and assign the computer an unused address in that subnet.
+
+### Windows 11
+
+1. Connect the ONT's Ethernet port directly to the PC.
+2. Press **Win + R**, enter `ncpa.cpl`, and open the connected **Ethernet** adapter's **Properties**. Select **Internet Protocol Version 4 (TCP/IPv4)** and open **Properties**.
+3. Select **Use the following IP address** and enter:
+
+   | Setting | Value |
+   |---|---|
+   | IP address | `192.168.10.2`, if unused |
+   | Subnet mask | `255.255.255.0` |
+   | Default gateway | Leave blank |
+   | DNS servers | Leave blank; the connection uses a numeric address |
+
+4. Save the settings, open **http://192.168.10.254/**, and sign in as `admin` using the password for your own ONT.
+
+After a temporary direct connection, restore the adapter's previous IP and DNS settings. If the ONT stays on your router's WAN port, keep the PC on the router's LAN or Wi-Fi with its usual LAN settings; configure the management path on the router.
+
+The [Windows 11 guide](docs/windows.md) covers both connection methods, PowerShell checks and restoring DHCP.
+
+### Linux
+
+On the directly connected computer:
 
 ```sh
 PC_IFACE='YOUR_ETHERNET_INTERFACE'
@@ -233,7 +256,7 @@ The older generic V1 firmware package contains a July 2023 build. It shares the 
 
 **Compatibility with TR v1.20 has not been established.** The normal updater is expected to reject the older package's identifiers; no upload or flash test was performed. The GPL archive also lacks parts of the proprietary application and PON source needed for a complete build.
 
-A raw full-flash backup is not a web-upgrade image. No OpenWrt firmware port, replacement firmware or verified root-unlock image is provided here.
+A raw full-flash backup is not a web-upgrade image.
 
 [Upgrade checks](docs/firmware.md) · [2023 firmware and GPL comparison](research/firmware-comparison.md)
 

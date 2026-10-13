@@ -4,7 +4,9 @@
 
 ## Web and Telnet login
 
-HTTP on port 80 and Telnet on port 23 were observed on the examined firmware. Both accepted the admin account. Reach `192.168.10.254` by a direct Ethernet connection or through the [OpenWrt management interface](openwrt.md), then use the [default password calculation](passwords.md) if the default is still in effect.
+HTTP on port 80 and Telnet on port 23 were observed on the examined firmware. Both accepted the admin account. Reach `192.168.10.254` by a direct Ethernet connection or through [an OpenWrt router](openwrt.md), then use the [default password calculation](passwords.md) if the default is still in effect.
+
+For Windows 11, see the [web-access guide](windows.md), including direct Ethernet settings and access through a router.
 
 ```sh
 telnet 192.168.10.254 23

@@ -4,12 +4,21 @@
 
 ## Cannot reach the web page or Telnet
 
-Check reachability before changing credentials:
+Check reachability before changing credentials. On Linux:
 
 ```sh
 ip -4 route get 192.168.10.254
 ping -c 3 192.168.10.254
 ```
+
+On Windows 11, use PowerShell:
+
+```powershell
+Test-NetConnection -ComputerName 192.168.10.254 -Port 80
+Test-NetConnection -ComputerName 192.168.10.254 -DiagnoseRouting -InformationLevel Detailed
+```
+
+The [Windows guide](windows.md) covers adapter settings, DHCP restoration and interpreting the results.
 
 If the router can ping the ONT but the computer cannot, inspect the computer's route and any old direct-Ethernet test address. The [OpenWrt guide](openwrt.md) explains the management interface, NAT and return path.
 

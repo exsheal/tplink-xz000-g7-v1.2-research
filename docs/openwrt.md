@@ -1,4 +1,4 @@
-# Reach the ONT through OpenWrt
+# Reach the ONT through an OpenWrt router
 
 [Back to the guide](../README.md#openwrt)
 
@@ -72,7 +72,9 @@ The management interface inherits the zone's existing forwarding policy. Custom 
 
 ## 4. Check the computer's route
 
-On the computer:
+On a Windows 11 computer, follow the [Windows guide](windows.md#access-through-a-router): keep the usual LAN settings and test port 80 with PowerShell. The commands below are for a Linux computer.
+
+On Linux:
 
 ```sh
 ip -4 route get 192.168.10.254

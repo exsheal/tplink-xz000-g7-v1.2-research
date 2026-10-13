@@ -8,7 +8,7 @@ This matrix describes **TR v1.20 Build 250926**. It separates working behavior f
 |---|---|---|
 | GPON activation and service | Live | O5 and Internet service observed |
 | Ethernet–PON bridge | Live and traced code | `br0`, `eth0.0`, `pon0.0` and SFU driver |
-| HTTP management, port 80 | Live | Admin login directly and through OpenWrt |
+| HTTP management, port 80 | Live | Admin login directly and through an OpenWrt router |
 | Telnet, port 23 | Live | Admin vendor-CLI session |
 | UART Linux root | Live | Account named `admin`, UID/GID 0 |
 | Linux shell over the network | Unresolved | Normal Telnet is a CLI; privileged shell path is separate |
@@ -33,7 +33,6 @@ This matrix describes **TR v1.20 Build 250926**. It separates working behavior f
 | Jumbo frames | Unresolved | DT says 9000; no end-to-end test |
 | TFTP / HTTP / XMODEM recovery | Code present | Restoration not tested |
 | Firmware validation | Traced code | MD5 and product/version checks; signature chain remains unresolved |
-| OpenWrt on the ONT | Unverified | Generic GPL kernel source is not a working port |
 
 The 32 MiB RAM and 8 MiB flash also constrain additional workloads. No NAT, VPN or forwarding-performance benchmark was performed.
 

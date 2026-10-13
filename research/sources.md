@@ -14,6 +14,8 @@
 | [RFC 2347](https://www.rfc-editor.org/rfc/rfc2347.html) | TFTP option negotiation |
 | [tio manual source](https://github.com/tio/tio/blob/master/man/tio.1.in) | UART terminal settings |
 | [OpenWrt modem-management guide](https://openwrt.org/docs/guide-user/network/wan/access.modem.through.nat) | Separate management access through a router |
+| [Microsoft Windows network settings](https://support.microsoft.com/en-us/windows/experience/connectivity-networking/essential-network-settings-and-tasks-in-windows) | Manual IPv4 configuration and restoring DHCP on Windows 11 |
+| [Microsoft Test-NetConnection](https://learn.microsoft.com/en-us/powershell/module/nettcpip/test-netconnection) | Windows HTTP-port and route diagnostics |
 
 ## Repository evidence
 

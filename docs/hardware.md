@@ -37,4 +37,4 @@ The PHY address appears as decimal `24` in one source and hexadecimal `0x18` in 
 
 ## Still to establish
 
-The board pinout, UART electrical level, full EEPROM/OTP map and effects of low-level register changes are not documented from measurements. There is no confirmed OpenWrt port for this ONT in this research.
+The board pinout, UART electrical level, full EEPROM/OTP map and effects of low-level register changes are not documented from measurements.

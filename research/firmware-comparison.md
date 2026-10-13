@@ -71,4 +71,4 @@ The snapshot combines source and prebuilts from different dates, including a 202
 
 The UN `config.kernel` matches the real kernel configuration, while another `kernel.config` differs in 80 options. The build copy path determines which file matters. An enabled Dropbear option in a source configuration also does not place an SSH binary in the examined firmware.
 
-The archive is useful for understanding platform and build choices. It is not an established complete TR firmware build or a ready OpenWrt port.
+The archive is useful for understanding platform and build choices. A complete TR firmware build from these sources has not been established.
